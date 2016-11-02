@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> {{ 'gfac'|capitalize }} | {% block Title %}  {% endblock %}</title>
+
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="{{ asset('bundles/labslimitlesstpl/assets/css/icons/icomoon/styles.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/labslimitlesstpl/assets/css/minified/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/labslimitlesstpl/assets/css/minified/core.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/labslimitlesstpl/assets/css/minified/components.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/labslimitlesstpl/assets/css/minified/colors.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
+    {% block stylesheets %} {% endblock %}
+    <!-- /global stylesheets -->
+</head>
+
+<body>
+
+<!-- Main navbar -->
+{% include 'LabsLimitlessTplBundle:Includes:main-navbar.html.twig' %}
+<!-- /main navbar -->
+
+
+<!-- Second navbar -->
+{% include'LabsLimitlessTplBundle:Includes:second-nav-bar.html.twig' %}
+<!-- /second navbar -->
+
+
+<!-- Page header -->
+{% include 'LabsLimitlessTplBundle:Includes:page_header.html.twig' %}
+<!-- /page header -->
+
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    {% block body %} {% endblock %}
+    <!-- /page content -->
+
+
+    <!-- Footer -->
+    {% include 'LabsLimitlessTplBundle:Includes:footer.html.twig' %}
+    <!-- /footer -->
+
+</div>
+<!-- /page container -->
+
+<!-- Core JS files -->
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/core/libraries/jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/plugins/mustache.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/loaders/pace.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/core/libraries/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/loaders/blockui.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/ui/nicescroll.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/ui/drilldown.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/core/jquery.livequery.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/core/jquery.form.min.js') }}" type="text/javascript"></script>
+
+
+{% block Core_JS_files %} {% endblock %}
+<!-- /core JS files -->
+
+<!-- Theme JS files -->
+
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/visualization/d3/d3.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/visualization/d3/d3_tooltip.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/styling/uniform.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/styling/switchery.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/selects/bootstrap_multiselect.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/ui/moment/moment.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/pickers/daterangepicker.js') }}" type="text/javascript"></script>
+
+<script src="{{ asset('bundles/labslimitlesstpl/assets/js/core/app.js') }}" type="text/javascript"></script>
+{% block themes %} {% endblock %}
+
+<!-- /theme JS files -->
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+labs_limitless_tpl_homepage:
+    path:     /
+    defaults: { _controller: LabsLimitlessTplBundle:Default:index }
