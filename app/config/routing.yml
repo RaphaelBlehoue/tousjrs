@@ -1,3 +1,8 @@
+labs_front:
+    resource: "@LabsFrontBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 labs_admin:
     resource: "@LabsAdminBundle/Controller/"
     type:     annotation

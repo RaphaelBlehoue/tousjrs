@@ -16,20 +16,20 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <i class="icon-git-compare"></i>
-                    <span class="visible-xs-inline-block position-right">Git updates</span>
-                    <span class="badge bg-warning-400">9</span>
+                    <span class="visible-xs-inline-block position-right">{{ 'Notification' }}</span>
+                    <span class="badge bg-warning-400">0</span>
                 </a>
 
                 <div class="dropdown-menu dropdown-content">
                     <div class="dropdown-content-heading">
-                        Git updates
+                        {{ 'Notification' }}
                         <ul class="icons-list">
                             <li><a href="#"><i class="icon-sync"></i></a></li>
                         </ul>
                     </div>
 
                     <ul class="media-list dropdown-content-body width-350">
-                        <li class="media">
+                        <!-- <li class="media">
                             <div class="media-left">
                                 <a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-pull-request"></i></a>
                             </div>
@@ -82,11 +82,11 @@
                                 Have Carousel ignore keyboard events
                                 <div class="media-annotation">Dec 12, 05:46</div>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
 
                     <div class="dropdown-content-footer">
-                        <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
+                        <a href="#" data-popup="tooltip" title="{{ 'toutes les notifications' }}"><i class="icon-menu display-block"></i></a>
                     </div>
                 </div>
             </li>
@@ -210,12 +210,12 @@
                 </a>
 
                 <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                    <li><a href="{{ path('fos_user_profile_edit') }}"><i class="icon-user-plus"></i> Mon profile</a></li>
                     <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
-                    <li><a href="#"><span class="badge bg-teal-400 pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+                    <li><a href="#"><span class="badge bg-teal-400 pull-right">0</span> <i class="icon-comment-discussion"></i> Messages</a></li>
                     <li class="divider"></li>
                     <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                    <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                    <li><a href="{{ path('fos_user_security_logout') }}"><i class="icon-switch2"></i> {{ 'deconnection'|capitalize }}</a></li>
                 </ul>
             </li>
         </ul>

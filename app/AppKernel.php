@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Labs\LimitlessTplBundle\LabsLimitlessTplBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Labs\AdminBundle\LabsAdminBundle(),
+            new Labs\FrontBundle\LabsFrontBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

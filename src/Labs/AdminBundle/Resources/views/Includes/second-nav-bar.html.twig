@@ -1,0 +1,172 @@
+<div class="navbar navbar-default" id="navbar-second">
+    <ul class="nav navbar-nav no-border visible-xs-block">
+        <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-menu7"></i></a></li>
+    </ul>
+
+    <div class="navbar-collapse collapse" id="navbar-second-toggle">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href=""><i class="icon-display4 position-left"></i>{{ 'vue globale'|capitalize }}</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-make-group position-left"></i>{{ 'Entrepôts'|capitalize }} <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu width-250">
+                    <li class="dropdown-header">{{ 'Gestion des Entrepôts'|capitalize }} </li>
+                    <li>
+                        <a href=""><i class="icon-package"></i> {{ 'Ajouter un entrepôt'|capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-list2"></i> {{ 'Liste des entrepôts'|capitalize }}</a>
+                    </li>
+                    <li class="dropdown-header">{{ 'Gestion des Sites'|capitalize }} </li>
+                    <li>
+                        <a href=""><i class="icon-task"></i> {{ 'Ajouter un site'|capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-list2"></i> {{'Liste des sites'|capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-map4"></i> {{ 'Vue maps des sites'|capitalize }}</a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-book3 position-left"></i> {{ 'Articles'|capitalize }} <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu width-250">
+
+                    <li class="dropdown-header">{{ 'Gestion des Produits'|capitalize }} &nbsp; <span class="badge badge-danger">0</span></li>
+                    <li>
+                        <a href=""><i class="icon-task"></i> {{ 'Ajouter un produit'|capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-list2"></i> {{ 'Liste des produits'|capitalize }}</a>
+                    </li>
+
+                    <li class="dropdown-header">{{ 'Gestion des Catégories'|capitalize }}</li>
+                    <li>
+                        <a href=""><i class="icon-task"></i> {{ 'Ajouter un catégorie'|capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-list2"></i> {{ 'Liste des catégories'|capitalize }}</a>
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-cabinet position-left"></i> {{ 'Gestion de Stock'|capitalize }} <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu width-250">
+                    <li class="dropdown-header">{{ 'inventaire de Stock '|capitalize }} </li>
+                    <li>
+                        <a href=""><i class="icon-enter2"></i> {{ 'Entrée Stock'|capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-exit2"></i> {{'Sortie Stock'|capitalize }}</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-file-spreadsheet position-left"></i> {{ 'documents'|capitalize }} <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu width-250">
+                    <li class="dropdown-header">{{ 'Gestion des pro-formas'|capitalize }} </li>
+                    <li>
+                        <a href=""><i class="icon-task"></i> {{ 'Créer une pro-forma'|capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-list2"></i> {{'Liste des pro-formas'|capitalize }}</a>
+                    </li>
+
+                    <li class="dropdown-header">{{ 'Gestion des commandes'|capitalize }} </li>
+                    <li>
+                        <a href=""><i class="icon-list2"></i> {{'Liste des commandes'|capitalize }}</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-user-tie position-left"></i> {{ 'Clients'|capitalize }} <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu width-250">
+                    <li class="dropdown-header">{{ 'Gestion des Clients'|capitalize }} </li>
+                    <li>
+                        <a href=""><i class="icon-task"></i> {{ 'Ajouter un clients'|capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-list2"></i> {{'Liste des clients'|capitalize }}</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-cog7 position-left"></i> {{ 'Configurations'|capitalize }} <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu with-250">
+                    <li class="dropdown-header">{{ 'Gestion des Unités'|capitalize }}</li>
+                    <li>
+                        <a href=""><i class="icon-task"></i> {{ 'Ajouter Unité de mesure'|capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-list2"></i> {{ 'Liste des Unités de mesures'|capitalize }}</a>
+                    </li>
+
+                    <li class="dropdown-header">{{ 'Gestion des Marques'|capitalize }}</li>
+                    <li>
+                        <a href=""><i class="icon-task"></i> {{ 'Ajouter une marque'|capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-list2"></i> {{ 'Liste des marques'|capitalize }}</a>
+                    </li>
+
+                    <li class="dropdown-header">{{ 'Conditions de règlement'|capitalize }}</li>
+                    <li>
+                        <a href=""><i class="icon-task"></i> {{ 'Créer une condition'|capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-list2"></i> {{ 'Liste des conditions'|capitalize }}</a>
+                    </li>
+
+                </ul>
+            </li>
+
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="changelog.html">
+                    <i class="icon-history position-left"></i>
+                    Version bêta
+                    <span class="label label-inline position-right bg-success-400">0.8.0</span>
+                </a>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-cog3"></i>
+                    <span class="visible-xs-inline-block position-right">{{ 'Paramètres'|capitalize }}</span>
+                    <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#"><i class="icon-user-lock"></i> {{ 'Utilisateurs'|capitalize  }}</a></li>
+                    <li><a href="#"><i class="icon-statistics"></i> {{ 'Analyses'|capitalize }}</a></li>
+                    <li><a href=""><i class="icon-accessibility"></i> {{ 'Configuration'|capitalize }}</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="icon-gear"></i>{{ 'Paramètres'|capitalize }}</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

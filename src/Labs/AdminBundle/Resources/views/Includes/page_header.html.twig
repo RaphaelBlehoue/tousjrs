@@ -2,8 +2,7 @@
 <div class="page-header">
     <div class="breadcrumb-line breadcrumb-line-wide">
         <ul class="breadcrumb">
-            <li><a href="index.html"><i class="icon-home2 position-left"></i> Home</a></li>
-            <li class="active">Dashboard</li>
+            <li class="active"> <a href=""><i class="icon-home2 position-left"></i> Dashboard</a></li>
         </ul>
 
         <ul class="breadcrumb-elements">
@@ -11,7 +10,7 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <i class="icon-gear position-left"></i>
-                    Settings
+                    {{ 'paramètres'|capitalize }}
                     <span class="caret"></span>
                 </a>
 
@@ -33,9 +32,11 @@
 
         <div class="heading-elements">
             <div class="heading-btn-group">
-                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
-                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calculator text-primary"></i> <span>Invoices</span></a>
-                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>Schedule</span></a>
+                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-newspaper text-primary"></i><span>{{ 'Créer un article'|capitalize }}</span></a>
+                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-folder-plus2 text-primary"></i> <span>{{ 'Créer un dossier' }}</span></a>
+                {% if is_granted("ROLE_SUPER_ADMIN") %}
+                    <a href="#" class="btn btn-link btn-float has-text"><i class="icon-plus-circle2  text-primary"></i> <span>{{ 'Ajouter une publicité' }}</span></a>
+                {% endif %}
             </div>
         </div>
     </div>

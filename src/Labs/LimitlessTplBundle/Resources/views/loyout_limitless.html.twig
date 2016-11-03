@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> {{ 'gfac'|capitalize }} | {% block Title %}  {% endblock %}</title>
+    <title> {{ 'Dashboard'|capitalize }} | {% block Title %}  {% endblock %}</title>
 
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -18,20 +18,20 @@
     <!-- /global stylesheets -->
 </head>
 
-<body>
+<body class="navbar-bottom-xs">
 
 <!-- Main navbar -->
-{% include 'LabsLimitlessTplBundle:Includes:main-navbar.html.twig' %}
+{% include 'LabsAdminBundle:Includes:main-navbar.html.twig' %}
 <!-- /main navbar -->
 
 
 <!-- Second navbar -->
-{% include'LabsLimitlessTplBundle:Includes:second-nav-bar.html.twig' %}
+{# include'LabsAdminBundle:Includes:second-nav-bar.html.twig' #}
 <!-- /second navbar -->
 
 
 <!-- Page header -->
-{% include 'LabsLimitlessTplBundle:Includes:page_header.html.twig' %}
+{% include 'LabsAdminBundle:Includes:page_header.html.twig' %}
 <!-- /page header -->
 
 
@@ -39,12 +39,14 @@
 <div class="page-container">
 
     <!-- Page content -->
-    {% block body %} {% endblock %}
+    <div class="page-content no-padding-bottom">
+        {% block body %} {% endblock %}
+    </div>
     <!-- /page content -->
 
 
     <!-- Footer -->
-    {% include 'LabsLimitlessTplBundle:Includes:footer.html.twig' %}
+    {% include 'LabsAdminBundle:Includes:footer.html.twig' %}
     <!-- /footer -->
 
 </div>

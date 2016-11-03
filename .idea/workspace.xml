@@ -2,383 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85828300-8469-4298-9e55-7f970975b2ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/logo_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.af.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.ar.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.bg.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.ca.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.cs.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.da.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.de.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.el.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.en.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.es.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.et.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.eu.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.fa.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.fi.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.fr.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.he.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.hr.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.hu.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.id.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.it.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.ja.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.ky.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.lb.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.lt.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.lv.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.nb.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.nl.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.pl.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.pt.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.pt_BR.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.ro.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.ru.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.sk.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.sl.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.sr_Latn.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.sv.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.th.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.tr.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.uk.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.vi.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/FOSUserBundle.zh_CN.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.ar.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.bg.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.ca.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.cs.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.da.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.de.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.el.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.en.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.es.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.eu.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.fa.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.fi.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.fr.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.he.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.hr.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.hu.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.id.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.it.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.ja.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.ky.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.lt.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.lv.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.nb.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.nl.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.pl.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.pt.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.pt_BR.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.ro.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.ru.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.sk.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.sl.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.sr_Latn.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.sv.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.th.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.tr.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.uk.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.vi.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/validators.zh_CN.yml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/logo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/translations/messages.fr.xlf" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/ChangePassword/change_password.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/ChangePassword/change_password.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/ChangePassword/change_password_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/ChangePassword/change_password_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/edit.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/edit.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/edit_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/edit_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/list.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/list.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/list_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/list_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/new.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/new.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/new_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/new_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/show.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/show.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/show_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/show_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/edit.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/edit.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/edit_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/edit_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/show.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/show.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/show_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/show_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/check_email.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/check_email.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/confirmed.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/confirmed.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/email.txt.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/email.txt.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/register.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/register.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/register_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/register_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/check_email.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/check_email.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/email.txt.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/email.txt.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/request.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/request.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/request_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/request_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/reset.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/reset.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/reset_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/reset_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Security/login.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Security/login_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/cover.jpg" afterPath="$PROJECT_DIR$/web/images/cover.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ad.png" afterPath="$PROJECT_DIR$/web/images/flags/ad.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ae.png" afterPath="$PROJECT_DIR$/web/images/flags/ae.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/af.png" afterPath="$PROJECT_DIR$/web/images/flags/af.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ag.png" afterPath="$PROJECT_DIR$/web/images/flags/ag.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ai.png" afterPath="$PROJECT_DIR$/web/images/flags/ai.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/al.png" afterPath="$PROJECT_DIR$/web/images/flags/al.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/am.png" afterPath="$PROJECT_DIR$/web/images/flags/am.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/an.png" afterPath="$PROJECT_DIR$/web/images/flags/an.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ao.png" afterPath="$PROJECT_DIR$/web/images/flags/ao.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ar.png" afterPath="$PROJECT_DIR$/web/images/flags/ar.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/as.png" afterPath="$PROJECT_DIR$/web/images/flags/as.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/at.png" afterPath="$PROJECT_DIR$/web/images/flags/at.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/au.png" afterPath="$PROJECT_DIR$/web/images/flags/au.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/aw.png" afterPath="$PROJECT_DIR$/web/images/flags/aw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ax.png" afterPath="$PROJECT_DIR$/web/images/flags/ax.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/az.png" afterPath="$PROJECT_DIR$/web/images/flags/az.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ba.png" afterPath="$PROJECT_DIR$/web/images/flags/ba.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bb.png" afterPath="$PROJECT_DIR$/web/images/flags/bb.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bd.png" afterPath="$PROJECT_DIR$/web/images/flags/bd.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/be.png" afterPath="$PROJECT_DIR$/web/images/flags/be.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bf.png" afterPath="$PROJECT_DIR$/web/images/flags/bf.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bg.png" afterPath="$PROJECT_DIR$/web/images/flags/bg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bh.png" afterPath="$PROJECT_DIR$/web/images/flags/bh.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bi.png" afterPath="$PROJECT_DIR$/web/images/flags/bi.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bj.png" afterPath="$PROJECT_DIR$/web/images/flags/bj.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bm.png" afterPath="$PROJECT_DIR$/web/images/flags/bm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bn.png" afterPath="$PROJECT_DIR$/web/images/flags/bn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bo.png" afterPath="$PROJECT_DIR$/web/images/flags/bo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/br.png" afterPath="$PROJECT_DIR$/web/images/flags/br.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bs.png" afterPath="$PROJECT_DIR$/web/images/flags/bs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bt.png" afterPath="$PROJECT_DIR$/web/images/flags/bt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bv.png" afterPath="$PROJECT_DIR$/web/images/flags/bv.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bw.png" afterPath="$PROJECT_DIR$/web/images/flags/bw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/by.png" afterPath="$PROJECT_DIR$/web/images/flags/by.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/bz.png" afterPath="$PROJECT_DIR$/web/images/flags/bz.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ca.png" afterPath="$PROJECT_DIR$/web/images/flags/ca.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/catalonia.png" afterPath="$PROJECT_DIR$/web/images/flags/catalonia.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cc.png" afterPath="$PROJECT_DIR$/web/images/flags/cc.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cd.png" afterPath="$PROJECT_DIR$/web/images/flags/cd.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cf.png" afterPath="$PROJECT_DIR$/web/images/flags/cf.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cg.png" afterPath="$PROJECT_DIR$/web/images/flags/cg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ch.png" afterPath="$PROJECT_DIR$/web/images/flags/ch.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ci.png" afterPath="$PROJECT_DIR$/web/images/flags/ci.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ck.png" afterPath="$PROJECT_DIR$/web/images/flags/ck.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cl.png" afterPath="$PROJECT_DIR$/web/images/flags/cl.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cm.png" afterPath="$PROJECT_DIR$/web/images/flags/cm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cn.png" afterPath="$PROJECT_DIR$/web/images/flags/cn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/co.png" afterPath="$PROJECT_DIR$/web/images/flags/co.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cr.png" afterPath="$PROJECT_DIR$/web/images/flags/cr.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cs.png" afterPath="$PROJECT_DIR$/web/images/flags/cs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cu.png" afterPath="$PROJECT_DIR$/web/images/flags/cu.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cv.png" afterPath="$PROJECT_DIR$/web/images/flags/cv.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cx.png" afterPath="$PROJECT_DIR$/web/images/flags/cx.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cy.png" afterPath="$PROJECT_DIR$/web/images/flags/cy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/cz.png" afterPath="$PROJECT_DIR$/web/images/flags/cz.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/de.png" afterPath="$PROJECT_DIR$/web/images/flags/de.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/dj.png" afterPath="$PROJECT_DIR$/web/images/flags/dj.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/dk.png" afterPath="$PROJECT_DIR$/web/images/flags/dk.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/dm.png" afterPath="$PROJECT_DIR$/web/images/flags/dm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/do.png" afterPath="$PROJECT_DIR$/web/images/flags/do.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/dz.png" afterPath="$PROJECT_DIR$/web/images/flags/dz.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ec.png" afterPath="$PROJECT_DIR$/web/images/flags/ec.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ee.png" afterPath="$PROJECT_DIR$/web/images/flags/ee.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/eg.png" afterPath="$PROJECT_DIR$/web/images/flags/eg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/eh.png" afterPath="$PROJECT_DIR$/web/images/flags/eh.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/england.png" afterPath="$PROJECT_DIR$/web/images/flags/england.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/er.png" afterPath="$PROJECT_DIR$/web/images/flags/er.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/es.png" afterPath="$PROJECT_DIR$/web/images/flags/es.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/et.png" afterPath="$PROJECT_DIR$/web/images/flags/et.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/europeanunion.png" afterPath="$PROJECT_DIR$/web/images/flags/europeanunion.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/fam.png" afterPath="$PROJECT_DIR$/web/images/flags/fam.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/fi.png" afterPath="$PROJECT_DIR$/web/images/flags/fi.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/fj.png" afterPath="$PROJECT_DIR$/web/images/flags/fj.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/fk.png" afterPath="$PROJECT_DIR$/web/images/flags/fk.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/fm.png" afterPath="$PROJECT_DIR$/web/images/flags/fm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/fo.png" afterPath="$PROJECT_DIR$/web/images/flags/fo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/fr.png" afterPath="$PROJECT_DIR$/web/images/flags/fr.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ga.png" afterPath="$PROJECT_DIR$/web/images/flags/ga.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gb.png" afterPath="$PROJECT_DIR$/web/images/flags/gb.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gd.png" afterPath="$PROJECT_DIR$/web/images/flags/gd.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ge.png" afterPath="$PROJECT_DIR$/web/images/flags/ge.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gf.png" afterPath="$PROJECT_DIR$/web/images/flags/gf.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gh.png" afterPath="$PROJECT_DIR$/web/images/flags/gh.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gi.png" afterPath="$PROJECT_DIR$/web/images/flags/gi.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gl.png" afterPath="$PROJECT_DIR$/web/images/flags/gl.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gm.png" afterPath="$PROJECT_DIR$/web/images/flags/gm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gn.png" afterPath="$PROJECT_DIR$/web/images/flags/gn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gp.png" afterPath="$PROJECT_DIR$/web/images/flags/gp.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gq.png" afterPath="$PROJECT_DIR$/web/images/flags/gq.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gr.png" afterPath="$PROJECT_DIR$/web/images/flags/gr.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gs.png" afterPath="$PROJECT_DIR$/web/images/flags/gs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gt.png" afterPath="$PROJECT_DIR$/web/images/flags/gt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gu.png" afterPath="$PROJECT_DIR$/web/images/flags/gu.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gw.png" afterPath="$PROJECT_DIR$/web/images/flags/gw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/gy.png" afterPath="$PROJECT_DIR$/web/images/flags/gy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/hk.png" afterPath="$PROJECT_DIR$/web/images/flags/hk.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/hm.png" afterPath="$PROJECT_DIR$/web/images/flags/hm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/hn.png" afterPath="$PROJECT_DIR$/web/images/flags/hn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/hr.png" afterPath="$PROJECT_DIR$/web/images/flags/hr.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ht.png" afterPath="$PROJECT_DIR$/web/images/flags/ht.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/hu.png" afterPath="$PROJECT_DIR$/web/images/flags/hu.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/id.png" afterPath="$PROJECT_DIR$/web/images/flags/id.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ie.png" afterPath="$PROJECT_DIR$/web/images/flags/ie.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/il.png" afterPath="$PROJECT_DIR$/web/images/flags/il.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/in.png" afterPath="$PROJECT_DIR$/web/images/flags/in.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/io.png" afterPath="$PROJECT_DIR$/web/images/flags/io.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/iq.png" afterPath="$PROJECT_DIR$/web/images/flags/iq.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ir.png" afterPath="$PROJECT_DIR$/web/images/flags/ir.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/is.png" afterPath="$PROJECT_DIR$/web/images/flags/is.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/it.png" afterPath="$PROJECT_DIR$/web/images/flags/it.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/jm.png" afterPath="$PROJECT_DIR$/web/images/flags/jm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/jo.png" afterPath="$PROJECT_DIR$/web/images/flags/jo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/jp.png" afterPath="$PROJECT_DIR$/web/images/flags/jp.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ke.png" afterPath="$PROJECT_DIR$/web/images/flags/ke.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/kg.png" afterPath="$PROJECT_DIR$/web/images/flags/kg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/kh.png" afterPath="$PROJECT_DIR$/web/images/flags/kh.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ki.png" afterPath="$PROJECT_DIR$/web/images/flags/ki.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/km.png" afterPath="$PROJECT_DIR$/web/images/flags/km.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/kn.png" afterPath="$PROJECT_DIR$/web/images/flags/kn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/kp.png" afterPath="$PROJECT_DIR$/web/images/flags/kp.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/kr.png" afterPath="$PROJECT_DIR$/web/images/flags/kr.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/kw.png" afterPath="$PROJECT_DIR$/web/images/flags/kw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ky.png" afterPath="$PROJECT_DIR$/web/images/flags/ky.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/kz.png" afterPath="$PROJECT_DIR$/web/images/flags/kz.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/la.png" afterPath="$PROJECT_DIR$/web/images/flags/la.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/lb.png" afterPath="$PROJECT_DIR$/web/images/flags/lb.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/lc.png" afterPath="$PROJECT_DIR$/web/images/flags/lc.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/li.png" afterPath="$PROJECT_DIR$/web/images/flags/li.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/lk.png" afterPath="$PROJECT_DIR$/web/images/flags/lk.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/lr.png" afterPath="$PROJECT_DIR$/web/images/flags/lr.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ls.png" afterPath="$PROJECT_DIR$/web/images/flags/ls.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/lt.png" afterPath="$PROJECT_DIR$/web/images/flags/lt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/lu.png" afterPath="$PROJECT_DIR$/web/images/flags/lu.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/lv.png" afterPath="$PROJECT_DIR$/web/images/flags/lv.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ly.png" afterPath="$PROJECT_DIR$/web/images/flags/ly.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ma.png" afterPath="$PROJECT_DIR$/web/images/flags/ma.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mc.png" afterPath="$PROJECT_DIR$/web/images/flags/mc.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/md.png" afterPath="$PROJECT_DIR$/web/images/flags/md.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/me.png" afterPath="$PROJECT_DIR$/web/images/flags/me.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mg.png" afterPath="$PROJECT_DIR$/web/images/flags/mg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mh.png" afterPath="$PROJECT_DIR$/web/images/flags/mh.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mk.png" afterPath="$PROJECT_DIR$/web/images/flags/mk.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ml.png" afterPath="$PROJECT_DIR$/web/images/flags/ml.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mm.png" afterPath="$PROJECT_DIR$/web/images/flags/mm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mn.png" afterPath="$PROJECT_DIR$/web/images/flags/mn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mo.png" afterPath="$PROJECT_DIR$/web/images/flags/mo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mp.png" afterPath="$PROJECT_DIR$/web/images/flags/mp.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mq.png" afterPath="$PROJECT_DIR$/web/images/flags/mq.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mr.png" afterPath="$PROJECT_DIR$/web/images/flags/mr.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ms.png" afterPath="$PROJECT_DIR$/web/images/flags/ms.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mt.png" afterPath="$PROJECT_DIR$/web/images/flags/mt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mu.png" afterPath="$PROJECT_DIR$/web/images/flags/mu.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mv.png" afterPath="$PROJECT_DIR$/web/images/flags/mv.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mw.png" afterPath="$PROJECT_DIR$/web/images/flags/mw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mx.png" afterPath="$PROJECT_DIR$/web/images/flags/mx.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/my.png" afterPath="$PROJECT_DIR$/web/images/flags/my.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/mz.png" afterPath="$PROJECT_DIR$/web/images/flags/mz.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/na.png" afterPath="$PROJECT_DIR$/web/images/flags/na.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/nc.png" afterPath="$PROJECT_DIR$/web/images/flags/nc.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ne.png" afterPath="$PROJECT_DIR$/web/images/flags/ne.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/nf.png" afterPath="$PROJECT_DIR$/web/images/flags/nf.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ng.png" afterPath="$PROJECT_DIR$/web/images/flags/ng.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ni.png" afterPath="$PROJECT_DIR$/web/images/flags/ni.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/nl.png" afterPath="$PROJECT_DIR$/web/images/flags/nl.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/no.png" afterPath="$PROJECT_DIR$/web/images/flags/no.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/np.png" afterPath="$PROJECT_DIR$/web/images/flags/np.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/nr.png" afterPath="$PROJECT_DIR$/web/images/flags/nr.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/nu.png" afterPath="$PROJECT_DIR$/web/images/flags/nu.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/nz.png" afterPath="$PROJECT_DIR$/web/images/flags/nz.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/om.png" afterPath="$PROJECT_DIR$/web/images/flags/om.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/pa.png" afterPath="$PROJECT_DIR$/web/images/flags/pa.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/pe.png" afterPath="$PROJECT_DIR$/web/images/flags/pe.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/pf.png" afterPath="$PROJECT_DIR$/web/images/flags/pf.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/pg.png" afterPath="$PROJECT_DIR$/web/images/flags/pg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ph.png" afterPath="$PROJECT_DIR$/web/images/flags/ph.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/pk.png" afterPath="$PROJECT_DIR$/web/images/flags/pk.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/pl.png" afterPath="$PROJECT_DIR$/web/images/flags/pl.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/pm.png" afterPath="$PROJECT_DIR$/web/images/flags/pm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/pn.png" afterPath="$PROJECT_DIR$/web/images/flags/pn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/pr.png" afterPath="$PROJECT_DIR$/web/images/flags/pr.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ps.png" afterPath="$PROJECT_DIR$/web/images/flags/ps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/pt.png" afterPath="$PROJECT_DIR$/web/images/flags/pt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/pw.png" afterPath="$PROJECT_DIR$/web/images/flags/pw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/py.png" afterPath="$PROJECT_DIR$/web/images/flags/py.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/qa.png" afterPath="$PROJECT_DIR$/web/images/flags/qa.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/re.png" afterPath="$PROJECT_DIR$/web/images/flags/re.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ro.png" afterPath="$PROJECT_DIR$/web/images/flags/ro.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/rs.png" afterPath="$PROJECT_DIR$/web/images/flags/rs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ru.png" afterPath="$PROJECT_DIR$/web/images/flags/ru.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/rw.png" afterPath="$PROJECT_DIR$/web/images/flags/rw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sa.png" afterPath="$PROJECT_DIR$/web/images/flags/sa.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sb.png" afterPath="$PROJECT_DIR$/web/images/flags/sb.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sc.png" afterPath="$PROJECT_DIR$/web/images/flags/sc.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/scotland.png" afterPath="$PROJECT_DIR$/web/images/flags/scotland.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sd.png" afterPath="$PROJECT_DIR$/web/images/flags/sd.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/se.png" afterPath="$PROJECT_DIR$/web/images/flags/se.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sg.png" afterPath="$PROJECT_DIR$/web/images/flags/sg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sh.png" afterPath="$PROJECT_DIR$/web/images/flags/sh.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/si.png" afterPath="$PROJECT_DIR$/web/images/flags/si.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sj.png" afterPath="$PROJECT_DIR$/web/images/flags/sj.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sk.png" afterPath="$PROJECT_DIR$/web/images/flags/sk.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sl.png" afterPath="$PROJECT_DIR$/web/images/flags/sl.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sm.png" afterPath="$PROJECT_DIR$/web/images/flags/sm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sn.png" afterPath="$PROJECT_DIR$/web/images/flags/sn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/so.png" afterPath="$PROJECT_DIR$/web/images/flags/so.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sr.png" afterPath="$PROJECT_DIR$/web/images/flags/sr.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/st.png" afterPath="$PROJECT_DIR$/web/images/flags/st.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sv.png" afterPath="$PROJECT_DIR$/web/images/flags/sv.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sy.png" afterPath="$PROJECT_DIR$/web/images/flags/sy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/sz.png" afterPath="$PROJECT_DIR$/web/images/flags/sz.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tc.png" afterPath="$PROJECT_DIR$/web/images/flags/tc.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/td.png" afterPath="$PROJECT_DIR$/web/images/flags/td.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tf.png" afterPath="$PROJECT_DIR$/web/images/flags/tf.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tg.png" afterPath="$PROJECT_DIR$/web/images/flags/tg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/th.png" afterPath="$PROJECT_DIR$/web/images/flags/th.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tj.png" afterPath="$PROJECT_DIR$/web/images/flags/tj.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tk.png" afterPath="$PROJECT_DIR$/web/images/flags/tk.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tl.png" afterPath="$PROJECT_DIR$/web/images/flags/tl.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tm.png" afterPath="$PROJECT_DIR$/web/images/flags/tm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tn.png" afterPath="$PROJECT_DIR$/web/images/flags/tn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/to.png" afterPath="$PROJECT_DIR$/web/images/flags/to.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tr.png" afterPath="$PROJECT_DIR$/web/images/flags/tr.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tt.png" afterPath="$PROJECT_DIR$/web/images/flags/tt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tv.png" afterPath="$PROJECT_DIR$/web/images/flags/tv.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tw.png" afterPath="$PROJECT_DIR$/web/images/flags/tw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/tz.png" afterPath="$PROJECT_DIR$/web/images/flags/tz.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ua.png" afterPath="$PROJECT_DIR$/web/images/flags/ua.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ug.png" afterPath="$PROJECT_DIR$/web/images/flags/ug.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/um.png" afterPath="$PROJECT_DIR$/web/images/flags/um.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/us.png" afterPath="$PROJECT_DIR$/web/images/flags/us.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/uy.png" afterPath="$PROJECT_DIR$/web/images/flags/uy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/uz.png" afterPath="$PROJECT_DIR$/web/images/flags/uz.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/va.png" afterPath="$PROJECT_DIR$/web/images/flags/va.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/vc.png" afterPath="$PROJECT_DIR$/web/images/flags/vc.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ve.png" afterPath="$PROJECT_DIR$/web/images/flags/ve.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/vg.png" afterPath="$PROJECT_DIR$/web/images/flags/vg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/vi.png" afterPath="$PROJECT_DIR$/web/images/flags/vi.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/vn.png" afterPath="$PROJECT_DIR$/web/images/flags/vn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/vu.png" afterPath="$PROJECT_DIR$/web/images/flags/vu.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/wales.png" afterPath="$PROJECT_DIR$/web/images/flags/wales.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/wf.png" afterPath="$PROJECT_DIR$/web/images/flags/wf.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ws.png" afterPath="$PROJECT_DIR$/web/images/flags/ws.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/ye.png" afterPath="$PROJECT_DIR$/web/images/flags/ye.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/yt.png" afterPath="$PROJECT_DIR$/web/images/flags/yt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/za.png" afterPath="$PROJECT_DIR$/web/images/flags/za.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/zm.png" afterPath="$PROJECT_DIR$/web/images/flags/zm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/flags/zw.png" afterPath="$PROJECT_DIR$/web/images/flags/zw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/logo_dark.png" afterPath="$PROJECT_DIR$/web/images/logo_dark.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/logo_demo.png" afterPath="$PROJECT_DIR$/web/images/logo_demo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/logo_icon_dark.png" afterPath="$PROJECT_DIR$/web/images/logo_icon_dark.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/logo_icon_light.png" afterPath="$PROJECT_DIR$/web/images/logo_icon_light.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/placeholder.jpg" afterPath="$PROJECT_DIR$/web/images/placeholder.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/pnotify/danger.png" afterPath="$PROJECT_DIR$/web/images/pnotify/danger.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/pnotify/default.png" afterPath="$PROJECT_DIR$/web/images/pnotify/default.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/pnotify/info.png" afterPath="$PROJECT_DIR$/web/images/pnotify/info.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/pnotify/success.png" afterPath="$PROJECT_DIR$/web/images/pnotify/success.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/pnotify/warning.png" afterPath="$PROJECT_DIR$/web/images/pnotify/warning.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/signature.png" afterPath="$PROJECT_DIR$/web/images/signature.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/ui/datepicker_trigger.png" afterPath="$PROJECT_DIR$/web/images/ui/datepicker_trigger.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/images/ui/map_marker.png" afterPath="$PROJECT_DIR$/web/images/ui/map_marker.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/touslesjours.dev.iml" afterPath="$PROJECT_DIR$/.idea/touslesjours.dev.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/footer.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/main-navbar.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/page_header.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/second-nav-bar.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/ChangePassword/change_password.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/ChangePassword/change_password.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/ChangePassword/change_password_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/ChangePassword/change_password_content.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/edit.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/edit.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/edit_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/edit_content.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/list.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/list.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/list_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/list_content.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/new.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/new.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/new_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/new_content.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/show.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/show.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/show_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/show_content.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/edit.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/edit.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/edit_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/edit_content.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/show.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/show.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/show_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/show_content.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/check_email.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/check_email.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/confirmed.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/confirmed.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/email.txt.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/email.txt.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/register.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/register.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/register_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/register_content.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/check_email.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/check_email.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/email.txt.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/email.txt.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/request.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/request.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/request_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/request_content.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/reset.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/reset.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/reset_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/reset_content.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Security/login_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login_content.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/footer.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/footer.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/main-navbar.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/main-navbar.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/page_header.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/page_header.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/layout_login_limitless.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/layout_login_limitless.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig" />
     </list>
     <ignored path="touslesjours.dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -400,56 +67,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login_content.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login_content.html.twig">
+      <file leaf-file-name="layout_login.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout_login.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="552">
-              <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout_login_limitless.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/layout_login_limitless.html.twig">
+      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#1655#1703#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/footer.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="966">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="667">
               <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
               <folding>
-                <element signature="e#12#68#0#Twig" expanded="true" />
+                <element signature="e#12#62#0#Twig" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="security.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -465,20 +110,28 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/web/app_dev.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/LabsAdminBundle.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Users.php" />
-        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login.html.twig" />
-        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Security/login.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login_content.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/second-nav-bar.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/page_header.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/main-navbar.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/footer.html.twig" />
-        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/layout_login_limitless.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/page_header.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login_content.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/main-navbar.html.twig" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -547,38 +200,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -598,148 +219,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LimitlessTplBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LimitlessTplBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LimitlessTplBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LimitlessTplBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -790,11 +269,14 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources" />
       <recent name="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views" />
-      <recent name="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views" />
       <recent name="$PROJECT_DIR$/src/Labs/LimitlessTplBundle" />
     </key>
   </component>
@@ -858,12 +340,12 @@
       <updated>1477925328353</updated>
       <workItem from="1477925339636" duration="831000" />
       <workItem from="1478102619903" duration="3836000" />
-      <workItem from="1478138706886" duration="6078000" />
+      <workItem from="1478138706886" duration="11506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10745000" />
+    <option name="totallyTimeSpent" value="16173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
@@ -938,14 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app_dev.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -964,17 +438,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Entity/User.php" />
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/all.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -992,41 +460,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/LabsAdminBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#128#170#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,17 +478,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#62#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/ChangePassword/change_password.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/ChangePassword/change_password.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1079,24 +509,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../templates/limitless_v10/Layout 3/LTR/login_simple.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-          <folding>
-            <element signature="e#12#45#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1134,8 +546,219 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/footer.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state relative-caret-position="138">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/page_header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/second-nav-bar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="171" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/main-navbar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3524">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../templates/limitless_v10/Layout 3/LTR/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../templates/limitless_v10/Layout 3/LTR/layout_footer_fixed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="2703" column="0" selection-start-line="2703" selection-start-column="0" selection-end-line="2706" selection-end-column="22" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/footer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <element signature="e#1539#1585#0#Twig" expanded="true" />
+            <element signature="e#1859#1900#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/layout_login_limitless.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/LabsLimitlessTplBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/LabsAdminBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#62#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../templates/limitless_v10/Layout 3/LTR/login_simple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="109" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="938">
+          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="e#323#364#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#51#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/main-navbar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="182" column="34" selection-start-line="182" selection-start-column="34" selection-end-line="182" selection-end-column="34" />
+          <folding>
+            <element signature="e#1511#4480#0#HTML" expanded="false" />
+            <element signature="e#11027#11048#0#Twig" expanded="true" />
+            <element signature="e#11512#11536#0#Twig" expanded="true" />
+            <marker date="1478190174000" expanded="false" signature="2124:2653" ph="..." />
+            <marker date="1478190174000" expanded="false" signature="2697:3258" ph="..." />
+            <marker date="1478190174000" expanded="false" signature="3302:3910" ph="..." />
+            <marker date="1478190174000" expanded="false" signature="3954:4475" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/page_header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout_login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1145,26 +768,8 @@
         <state relative-caret-position="667">
           <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
           <folding>
-            <element signature="e#12#68#0#Twig" expanded="true" />
+            <element signature="e#12#62#0#Twig" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/layout_login_limitless.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#1655#1703#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
