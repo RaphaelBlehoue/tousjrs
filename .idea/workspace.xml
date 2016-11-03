@@ -2,49 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85828300-8469-4298-9e55-7f970975b2ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/footer.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/main-navbar.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/page_header.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/second-nav-bar.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/ChangePassword/change_password.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/ChangePassword/change_password.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/ChangePassword/change_password_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/ChangePassword/change_password_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/edit.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/edit.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/edit_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/edit_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/list.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/list.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/list_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/list_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/new.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/new.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/new_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/new_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/show.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/show.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Group/show_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Group/show_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/edit.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/edit.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/edit_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/edit_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/show.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/show.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Profile/show_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Profile/show_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/check_email.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/check_email.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/confirmed.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/confirmed.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/email.txt.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/email.txt.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/register.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/register.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Registration/register_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Registration/register_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/check_email.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/check_email.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/email.txt.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/email.txt.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/request.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/request.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/request_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/request_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/reset.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/reset.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Resetting/reset_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Resetting/reset_content.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Security/login_content.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login_content.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/main-navbar.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/main-navbar.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/page_header.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/page_header.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/footer.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/footer.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/main-navbar.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/main-navbar.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/page_header.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/page_header.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/layout_login_limitless.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/layout_login_limitless.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig" />
     </list>
     <ignored path="touslesjours.dev.iws" />
@@ -67,22 +29,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layout_login.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout_login.html.twig">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="92">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#62#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,10 +44,49 @@
       <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state relative-caret-position="529">
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding>
                 <element signature="e#12#62#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../templates/limitless_v10/Layout 3/LTR/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="266" column="0" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/sidebar.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="13961">
+              <caret line="607" column="6" selection-start-line="607" selection-start-column="6" selection-end-line="607" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loyout_limitless.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <element signature="e#1317#1363#0#Twig" expanded="true" />
+                <element signature="e#1539#1585#0#Twig" expanded="true" />
+                <element signature="e#1826#1868#0#Twig" expanded="true" />
+                <element signature="e#2007#2048#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,21 +110,22 @@
         <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Security/login.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/second-nav-bar.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/page_header.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/main-navbar.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/Includes/footer.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/layout_login_limitless.html.twig" />
-        <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/page_header.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Security/login.html.twig" />
-        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/main-navbar.html.twig" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/main-navbar.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/page_header.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/sidebar.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Default/index.html.twig" />
       </list>
     </option>
   </component>
@@ -219,6 +213,230 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Labs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LimitlessTplBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LimitlessTplBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LimitlessTplBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Includes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,12 +558,12 @@
       <updated>1477925328353</updated>
       <workItem from="1477925339636" duration="831000" />
       <workItem from="1478102619903" duration="3836000" />
-      <workItem from="1478138706886" duration="11506000" />
+      <workItem from="1478138706886" duration="12533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16173000" />
+    <option name="totallyTimeSpent" value="17200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
@@ -578,18 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../templates/limitless_v10/Layout 3/LTR/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../templates/limitless_v10/Layout 3/LTR/layout_footer_fixed.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
@@ -615,17 +821,6 @@
         <state relative-caret-position="138">
           <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <element signature="e#1539#1585#0#Twig" expanded="true" />
-            <element signature="e#1859#1900#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -658,16 +853,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#62#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,26 +908,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/main-navbar.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="182" column="34" selection-start-line="182" selection-start-column="34" selection-end-line="182" selection-end-column="34" />
-          <folding>
-            <element signature="e#1511#4480#0#HTML" expanded="false" />
-            <element signature="e#11027#11048#0#Twig" expanded="true" />
-            <element signature="e#11512#11536#0#Twig" expanded="true" />
-            <marker date="1478190174000" expanded="false" signature="2124:2653" ph="..." />
-            <marker date="1478190174000" expanded="false" signature="2697:3258" ph="..." />
-            <marker date="1478190174000" expanded="false" signature="3302:3910" ph="..." />
-            <marker date="1478190174000" expanded="false" signature="3954:4475" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/page_header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+        <state relative-caret-position="966">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -755,18 +924,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/main-navbar.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="644">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <element signature="e#10121#10142#0#Twig" expanded="true" />
+            <element signature="e#10606#10630#0#Twig" expanded="true" />
+            <marker date="1478195406000" expanded="false" signature="2124:2653" ph="..." />
+            <marker date="1478195406000" expanded="false" signature="2697:3258" ph="..." />
+            <marker date="1478195406000" expanded="false" signature="3302:3910" ph="..." />
+            <marker date="1478195406000" expanded="false" signature="3954:4475" ph="..." />
+            <marker date="1478195406000" expanded="false" signature="6571:7365" ph="..." />
+            <marker date="1478195406000" expanded="false" signature="7409:8063" ph="..." />
+            <marker date="1478195406000" expanded="false" signature="8107:8750" ph="..." />
+            <marker date="1478195406000" expanded="false" signature="8794:9439" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/page_header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/views/loyout_limitless.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#1317#1363#0#Twig" expanded="true" />
+            <element signature="e#1539#1585#0#Twig" expanded="true" />
+            <element signature="e#1826#1868#0#Twig" expanded="true" />
+            <element signature="e#2007#2048#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/sidebar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13961">
+          <caret line="607" column="6" selection-start-line="607" selection-start-column="6" selection-end-line="607" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#62#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../templates/limitless_v10/Layout 3/LTR/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="266" column="0" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        <state relative-caret-position="529">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
           <folding>
             <element signature="e#12#62#0#Twig" expanded="true" />
           </folding>

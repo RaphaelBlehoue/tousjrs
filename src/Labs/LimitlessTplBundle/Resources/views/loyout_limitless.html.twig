@@ -40,7 +40,11 @@
 
     <!-- Page content -->
     <div class="page-content no-padding-bottom">
-        {% block body %} {% endblock %}
+        {% block body %}
+            <!-- Main sidebar -->
+            {% include 'LabsAdminBundle:Includes:sidebar.html.twig' %}
+            <!-- /main sidebar -->
+        {% endblock %}
     </div>
     <!-- /page content -->
 
