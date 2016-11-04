@@ -1269,7 +1269,7 @@ $(function() {
         // Load data
         // ------------------------------
 
-        d3.json("assets/demo_data/dashboard/monthly_sales.json", function (error, data) {
+        d3.json("../demo_data/dashboard/monthly_sales.json", function (error, data) {
 
             // Show what's wrong if error
             if (error) return console.error(error);
