@@ -762,17 +762,16 @@
                         <table class="table text-nowrap">
                             <thead>
                             <tr>
-                                <th>Application</th>
-                                <th>Time</th>
-                                <th>Price</th>
+                                <th>{{ 'Titre' }}</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
+                                <tr>
                                 <td>
                                     <div class="media-left media-middle">
-                                        <a href="#" class="btn bg-primary-400 btn-rounded btn-icon btn-xs">
-                                            <span class="letter-icon"></span>
+                                        <a href="#" class="btn bg-danger-400 btn-rounded btn-icon btn-xs">
+                                            <span class="icon-book"></span>
                                         </a>
                                     </div>
 
@@ -785,106 +784,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <span class="text-muted text-size-small">06:28 pm</span>
-                                </td>
-                                <td>
-                                    <h6 class="text-semibold no-margin">$49.90</h6>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <div class="media-left media-middle">
-                                        <a href="#" class="btn bg-danger-400 btn-rounded btn-icon btn-xs">
-                                            <span class="letter-icon"></span>
-                                        </a>
-                                    </div>
-
-                                    <div class="media-body">
-                                        <div class="media-heading">
-                                            <a href="#" class="letter-icon-title">Alpha application</a>
-                                        </div>
-
-                                        <div class="text-muted text-size-small"><i class="icon-spinner11 text-size-mini position-left"></i> Renewal</div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="text-muted text-size-small">04:52 pm</span>
-                                </td>
-                                <td>
-                                    <h6 class="text-semibold no-margin">$90.50</h6>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <div class="media-left media-middle">
-                                        <a href="#" class="btn bg-indigo-400 btn-rounded btn-icon btn-xs">
-                                            <span class="letter-icon"></span>
-                                        </a>
-                                    </div>
-
-                                    <div class="media-body">
-                                        <div class="media-heading">
-                                            <a href="#" class="letter-icon-title">Delta application</a>
-                                        </div>
-
-                                        <div class="text-muted text-size-small"><i class="icon-lifebuoy text-size-mini position-left"></i> Support</div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="text-muted text-size-small">01:26 pm</span>
-                                </td>
-                                <td>
-                                    <h6 class="text-semibold no-margin">$60.00</h6>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <div class="media-left media-middle">
-                                        <a href="#" class="btn bg-success-400 btn-rounded btn-icon btn-xs">
-                                            <span class="letter-icon"></span>
-                                        </a>
-                                    </div>
-
-                                    <div class="media-body">
-                                        <div class="media-heading">
-                                            <a href="#" class="letter-icon-title">Omega application</a>
-                                        </div>
-
-                                        <div class="text-muted text-size-small"><i class="icon-lifebuoy text-size-mini position-left"></i> Support</div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="text-muted text-size-small">11:46 am</span>
-                                </td>
-                                <td>
-                                    <h6 class="text-semibold no-margin">$55.00</h6>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <div class="media-left media-middle">
-                                        <a href="#" class="btn bg-danger-400 btn-rounded btn-icon btn-xs">
-                                            <span class="letter-icon"></span>
-                                        </a>
-                                    </div>
-
-                                    <div class="media-body">
-                                        <div class="media-heading">
-                                            <a href="#" class="letter-icon-title">Alpha application</a>
-                                        </div>
-
-                                        <div class="text-muted text-size-small"><i class="icon-spinner11 text-size-mini position-left"></i> Renewal</div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="text-muted text-size-small">10:29 am</span>
-                                </td>
-                                <td>
-                                    <h6 class="text-semibold no-margin">$90.50</h6>
+                                    <a class="btn btn-blue bg-blue">{{ 'activer'|capitalize }}</a>
                                 </td>
                             </tr>
                             </tbody>
@@ -895,17 +795,17 @@
 
 
                 <!-- My messages -->
-                <div class="panel panel-flat">
-                    <div class="panel-heading">
+               <!-- <div class="panel panel-flat">
+                  <!--  <div class="panel-heading">
                         <h6 class="panel-title">My messages</h6>
                         <div class="heading-elements">
                             <span class="heading-text"><i class="icon-history text-warning position-left"></i> Jul 7, 10:30</span>
                             <span class="label bg-success heading-text">Online</span>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Numbers -->
-                    <div class="container-fluid">
+                   <!-- <div class="container-fluid">
                         <div class="row text-center">
                             <div class="col-md-4">
                                 <div class="content-group">
@@ -928,17 +828,17 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- /numbers -->
 
 
                     <!-- Area chart -->
-                    <div id="messages-stats"></div>
+                <!--    <div id="messages-stats"></div> -->
                     <!-- /area chart -->
 
 
                     <!-- Tabs -->
-                    <ul class="nav nav-lg nav-tabs nav-justified no-margin no-border-radius bg-indigo-400 border-top border-top-indigo-300">
+                 <!--   <ul class="nav nav-lg nav-tabs nav-justified no-margin no-border-radius bg-indigo-400 border-top border-top-indigo-300">
                         <li class="active">
                             <a href="#messages-tue" class="text-size-small text-uppercase" data-toggle="tab">
                                 Tuesday
@@ -961,7 +861,7 @@
 
 
                     <!-- Tabs content -->
-                    <div class="tab-content">
+                 <!--   <div class="tab-content">
                         <div class="tab-pane active fade in has-padding" id="messages-tue">
                             <ul class="media-list">
                                 <li class="media">
@@ -1200,27 +1100,20 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- /tabs content -->
 
-                </div>
+                <!-- </div> -->
                 <!-- /my messages -->
 
 
-                <!-- Daily financials -->
-                <div class="panel panel-flat">
+                <!-- publicité -->
+                {% if is_granted('ROLE_SUPER_ADMIN') %}
+                    <div class="panel panel-flat">
                     <div class="panel-heading">
-                        <h6 class="panel-title">Daily financials</h6>
+                        <h6 class="panel-title">{{ 'Publicité en ligne'|capitalize }}</h6>
                         <div class="heading-elements">
-                            <form class="heading-form" action="#">
-                                <div class="form-group">
-                                    <label class="checkbox checkbox-inline checkbox-switchery checkbox-right switchery-xs">
-                                        <input type="checkbox" class="switcher" id="realtime" checked="checked">
-                                        Realtime
-                                    </label>
-                                </div>
-                            </form>
-                            <span class="badge bg-danger-400 heading-text">+86</span>
+                            <a href="" class="btn btn-success">{{ 'ajouter'|capitalize }}</a>
                         </div>
                     </div>
 
@@ -1230,7 +1123,7 @@
                         <ul class="media-list">
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn border-pink text-pink btn-flat btn-rounded btn-icon btn-xs"><i class="icon-statistics"></i></a>
+                                    <a href="#" class="btn border-pink text-pink btn-flat btn-rounded btn-icon btn-xs"><i class="icon-info3"></i></a>
                                 </div>
 
                                 <div class="media-body">
@@ -1241,87 +1134,51 @@
                                 <div class="media-right media-middle">
                                     <ul class="icons-list">
                                         <li>
-                                            <a href="#"><i class="icon-arrow-right13"></i></a>
+                                            <a href="#"><i class="icon-cancel-circle2"></i></a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
 
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+                <!-- /publicité -->
+
+
+                <!-- Daily financials -->
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <h6 class="panel-title">{{ 'derniers flash info'|capitalize }}</h6>
+                        <div class="heading-elements">
+                            <a href="" class="btn btn-success">{{ 'ajouter'|capitalize }}</a>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="content-group-xs" id="bullets"></div>
+
+                        <ul class="media-list">
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="#" class="btn border-success text-success btn-flat btn-rounded btn-icon btn-xs"><i class="icon-checkmark3"></i></a>
+                                    <a href="#" class="btn border-pink text-pink btn-flat btn-rounded btn-icon btn-xs"><i class="icon-info3"></i></a>
                                 </div>
 
                                 <div class="media-body">
-                                    Invoices <a href="#">#4732</a> and <a href="#">#4734</a> have been paid
-                                    <div class="media-annotation">Dec 18, 18:36</div>
+                                    Stats for July, 6: 1938 orders, $4220 revenue
+                                    <div class="media-annotation">2 hours ago</div>
                                 </div>
 
                                 <div class="media-right media-middle">
                                     <ul class="icons-list">
                                         <li>
-                                            <a href="#"><i class="icon-arrow-right13"></i></a>
+                                            <a href="#"><i class="icon-cancel-circle2"></i></a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
 
-                            <li class="media">
-                                <div class="media-left">
-                                    <a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-xs"><i class="icon-alignment-unalign"></i></a>
-                                </div>
-
-                                <div class="media-body">
-                                    Affiliate commission for June has been paid
-                                    <div class="media-annotation">36 minutes ago</div>
-                                </div>
-
-                                <div class="media-right media-middle">
-                                    <ul class="icons-list">
-                                        <li>
-                                            <a href="#"><i class="icon-arrow-right13"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="media">
-                                <div class="media-left">
-                                    <a href="#" class="btn border-warning-400 text-warning-400 btn-flat btn-rounded btn-icon btn-xs"><i class="icon-spinner11"></i></a>
-                                </div>
-
-                                <div class="media-body">
-                                    Order <a href="#">#37745</a> from July, 1st has been refunded
-                                    <div class="media-annotation">4 minutes ago</div>
-                                </div>
-
-                                <div class="media-right media-middle">
-                                    <ul class="icons-list">
-                                        <li>
-                                            <a href="#"><i class="icon-arrow-right13"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="media">
-                                <div class="media-left">
-                                    <a href="#" class="btn border-teal-400 text-teal btn-flat btn-rounded btn-icon btn-xs"><i class="icon-redo2"></i></a>
-                                </div>
-
-                                <div class="media-body">
-                                    Invoice <a href="#">#4769</a> has been sent to <a href="#">Robert Smith</a>
-                                    <div class="media-annotation">Dec 12, 05:46</div>
-                                </div>
-
-                                <div class="media-right media-middle">
-                                    <ul class="icons-list">
-                                        <li>
-                                            <a href="#"><i class="icon-arrow-right13"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
                         </ul>
                     </div>
                 </div>
