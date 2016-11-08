@@ -1,11 +1,202 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
     <!--meta-->
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" /><!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}" type="text/css" /><!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" /><!-- Style -->
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" type="text/css" /><!-- Responsive -->
+    <link rel="stylesheet" href="{{ asset('css/perfect-scrollbar.css') }}" /><!-- Scroll Bar -->
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css" /><!-- Owl Carousal -->
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}" type="text/css" /><!-- Animate -->
+
+    <link rel="stylesheet" href="{{ asset('css/colors/color.css') }}" type="text/css" /><!-- pink -->
     {% block stylesheets %}{% endblock %}
 </head>
-<body>
-{% block body %}{% endblock %}
+<body itemscope="" onLoad="goforit()">
+{% include 'LabsFrontBundle:Includes:header.html.twig' %}
+{% include 'LabsFrontBundle:Includes:responsive-header.html.twig' %}
+
+    {% block body %}{% endblock %}
+{% include 'LabsFrontBundle:Includes:footer.html.twig' %}
+
+<!-- Script -->
+<script type="text/javascript"  src="{{ asset('js/modernizr.js') }}"></script><!-- modernizr -->
+<script src="{{ asset('js/jquery-2.1.4.js') }}"></script><!-- Jquery -->
+<script type="text/javascript"  src="{{ asset('js/bootstrap.min.js') }}"></script><!-- Bootstrap -->
+<script type="text/javascript"  src="{{ asset('js/html5lightbox.js') }}"></script><!-- html5 Lightbox -->
+<script type="text/javascript"  src="{{ asset('js/scrolltopcontrol.js') }}"></script><!-- Scroll to Top -->
+<script type="text/javascript"  src="{{ asset('js/slick.min.js') }}"></script><!-- Carousal -->
+<script type="text/javascript"  src="{{ asset('js/owl.carousel.min.js') }}"></script><!-- Carousal -->
+<script type="text/javascript"  src="{{ asset('js/highlight.pack.js') }}"></script><!-- Highlight Pack -->
+<script type="text/javascript"  src="{{ asset('js/tabifier.js') }}"></script><!-- Tabifier -->
+<script type="text/javascript"  src="{{ asset('js/js.js') }}"></script><!-- Js -->
+<script type="text/javascript"  src="{{ asset('js/jPages.min.js') }}"></script><!-- JPages -->
+<script type="text/javascript" src="{{ asset('js/perfect-scrollbar.js') }}"></script><!-- Scroll Bar -->
+<script type="text/javascript" src="{{ asset('js/perfect-scrollbar.jquery.js') }}"></script><!-- Scroll Bar -->
+<script src="{{ asset('js/script.js') }}"></script>
+<script src="{{ asset('js/clock.js') }}"></script>
+{% block javascripts %}
+
+    <script>
+        $( document ).ready(function() {
+
+            'use strict';
+
+            $("#carousal").owlCarousel({
+                autoplay:true,
+                autoplayTimeout:3000,
+                smartSpeed:2000,
+                loop:true,
+                dots:false,
+                nav:true,
+                margin:30,
+                items:2,
+                singleItem:true,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:2,
+                        nav:false
+                    },
+                    900:{
+                        items:2,
+                        nav:true,
+                        loop:false
+                    }
+                }
+            });
+
+            $("#carousal-team").owlCarousel({
+                autoplay:true,
+                autoplayTimeout:3000,
+                smartSpeed:2000,
+                loop:true,
+                dots:false,
+                nav:false,
+                margin:10,
+                items:3,
+                singleItem:true
+            });
+
+            $("#carousal3").owlCarousel({
+                autoplay:true,
+                autoplayTimeout:3000,
+                smartSpeed:2000,
+                loop:true,
+                dots:false,
+                nav:true,
+                margin:0,
+                items:1,
+                singleItem:true
+            });
+
+            $("#carousal-widget").owlCarousel({
+                autoplay:true,
+                autoplayTimeout:3000,
+                smartSpeed:2000,
+                loop:false,
+                dots:true,
+                nav:false,
+                margin:0,
+                items:1,
+                singleItem:true
+            });
+
+            $("#carousal-footer-widget").owlCarousel({
+                autoplay:true,
+                autoplayTimeout:3000,
+                smartSpeed:2000,
+                loop:false,
+                dots:true,
+                nav:false,
+                margin:0,
+                items:1,
+                singleItem:true
+            });
+
+            $("#carousal-posts").owlCarousel({
+                autoplay:true,
+                autoplayTimeout:3000,
+                smartSpeed:2000,
+                loop:true,
+                dots:false,
+                nav:true,
+                margin:4,
+                items:3,
+                singleItem:true,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:2,
+                        nav:false
+                    },
+                    900:{
+                        items:2,
+                        nav:true,
+                        loop:false
+                    },
+                    1280:{
+                        items:3,
+                        nav:true,
+                        loop:false
+                    }
+
+                }
+            });
+
+            $(".big-post-carousel").owlCarousel({
+                autoplay:true,
+                autoplayTimeout:3000,
+                smartSpeed:2000,
+                loop:false,
+                dots:true,
+                nav:false,
+                margin:0,
+                items:1,
+                singleItem:true
+            });
+
+            $(function(){
+
+                /* initiciate jPages */
+                $("div.holder").jPages({
+                    containerID : "itemContainer",
+                    animation   : "fadeInUp",
+                    perPage : 4
+                });
+
+                /* on select change */
+                $("select").change(function(){
+                    /* get new css animation */
+                    var newAnimation = $(this).val();
+
+                    /* destroy jPages and initiate plugin again */
+                    $("div.holder").jPages("destroy").jPages({
+                        containerID   : "itemContainer",
+                        animation     : newAnimation
+                    });
+                });
+
+            });
+
+        });
+    </script>
+
+{% endblock %}
 </body>
 </html>
