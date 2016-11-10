@@ -15,16 +15,16 @@
     <link rel="stylesheet" href="{{ asset('css/perfect-scrollbar.css') }}" /><!-- Scroll Bar -->
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css" /><!-- Owl Carousal -->
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}" type="text/css" /><!-- Animate -->
-
     <link rel="stylesheet" href="{{ asset('css/colors/color.css') }}" type="text/css" /><!-- pink -->
     {% block stylesheets %}{% endblock %}
 </head>
 <body itemscope="" onLoad="goforit()">
-{% include 'LabsFrontBundle:Includes:header.html.twig' %}
-{% include 'LabsFrontBundle:Includes:responsive-header.html.twig' %}
+    {% include 'LabsFrontBundle:Includes:header.html.twig' %}
+    {% include 'LabsFrontBundle:Includes:responsive-header.html.twig' %}
 
     {% block body %}{% endblock %}
-{% include 'LabsFrontBundle:Includes:footer.html.twig' %}
+
+    {% include 'LabsFrontBundle:Includes:footer.html.twig' %}
 
 <!-- Script -->
 <script type="text/javascript"  src="{{ asset('js/modernizr.js') }}"></script><!-- modernizr -->

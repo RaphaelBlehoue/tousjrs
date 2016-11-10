@@ -1,0 +1,19 @@
+<section class="block">
+    <ul class="wide-carousal-post">
+        {%  for i in 1..5 %}
+        <li>
+            <div class="post-style16">
+                <img itemprop="image" src="http://lorempixel.com/650/300" alt="" />
+                <div class="post-detail16">
+                    <div class="cat">
+                        <a title="" href="#" itemprop="url">DESIGNER</a>
+                    </div>
+                    <h3 itemprop="headline"><a itemprop="url" href="" title="">Quisque sit amet aliquet sem.</a></h3>
+                    <p itemprop="description">Flexibility is important and we all agree. Here are some of the unlimited elements that the theme offers.</p>
+                    <a itemprop="url" href="" title="">{{ 'Lire la suite' }} <i class="fa fa-arrows-h"></i></a>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

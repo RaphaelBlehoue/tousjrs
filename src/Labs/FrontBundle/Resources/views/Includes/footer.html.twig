@@ -7,8 +7,8 @@
                         <div class="col-md-4 column">
                             <div class="widget">
                                 <div class="about-widget">
-                                    <span>ABOUT US</span>
-                                    <h3>MAGAZINE</h3>
+                                    <span>{{ 'Qui sommes nous'|upper }}</span>
+                                    <h3>{{ 'Touslesjours' }}</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ex quo illud efficitur, qui bene cenent omnis. Ex rebus enim timiditas, non ex vocabulis nascitur.</p>
                                     <h6>Rasuna Said 250 st, Vancouver - Canada</h6>
                                     <h6>Vocabulis nascitur Rasuna Said 250</h6>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="col-md-4 column">
                             <div class="widget">
-                                <h3 class="heading2">RECENT POST</h3>
+                                <h3 class="heading2">{{ 'derniers articles'|upper }}</h3>
                                 <div class="post-widget">
                                     <div class="top-margin">
                                         <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
@@ -70,7 +70,7 @@
                         </div>
                         <div class="col-md-4 column">
                             <div class="widget">
-                                <h3 class="heading2">MOST VIEWS</h3>
+                                <h3 class="heading2">{{ 'flash info'|upper }}</h3>
                                 <div class="post-widget-carousal">
                                     <ul class="carousal" id="carousal-footer-widget">
                                         <li>
@@ -158,78 +158,10 @@
             </div>
         </section>
     </div>
-    <div class="bottom-footer">
-        <section class="block">
-            <div class="layer">
-                <div class="fixed-img" style="background: url(http://placehold.it/1500x700) no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0);"></div>
-                <div class="container">
-                    <div class="top-margin">
-                        <div class="row">
-                            <div class="col-md-6 column">
-                                <div class="widget">
-                                    <h3 class="heading3">WEEKLY POST</h3>
-                                    <div class="top-margin">
-                                        <div class="post-style6" itemscope itemType="http://schema.org/BlogPosting">
-                                            <div class="row">
-                                                <div class="col-md-6 column">
-                                                    <ul class="carousal" id="carousal3">
-                                                        <li><img itemprop="image" src="http://placehold.it/270x191" alt="" /></li>
-                                                        <li><img itemprop="image" src="http://placehold.it/270x191" alt="" /></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-6 column">
-                                                    <div class="post-detail6">
-                                                        <h3 itemprop="headline"><a itemprop="url" href="single3.html" title="">pleasant readin experi ence..</a></h3>
-                                                        <div class="date">
-                                                            <ul>
-                                                                <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015 </a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <p itemprop="description">Etiam bibendum dolor malesuada erat tincidunt.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!-- post Style 6 -->
-                                    </div>
-                                </div><!-- Widget -->
-                            </div>
-                            <div class="col-md-6 column">
-                                <div class="widget">
-                                    <h3 class="heading3">MEET OUR CREATIVE AUTHOR</h3>
-                                    <div class="carousal" id="carousal-team">
-                                        <div class="posts-author">
-                                            <img itemprop="image" src="http://placehold.it/183x132" alt="">
-                                            <h5>Jone Mathu</h5>
-                                            <i>write</i>
-                                        </div><!-- Posts Author -->
-                                        <div class="posts-author">
-                                            <img itemprop="image" src="http://placehold.it/183x132" alt="">
-                                            <h5>Jone Mathu</h5>
-                                            <i>write</i>
-                                        </div><!-- Posts Author -->
-                                        <div class="posts-author">
-                                            <img itemprop="image" src="http://placehold.it/183x132" alt="">
-                                            <h5>Jone Mathu</h5>
-                                            <i>write</i>
-                                        </div><!-- Posts Author -->
-                                        <div class="posts-author">
-                                            <img itemprop="image" src="http://placehold.it/183x132" alt="">
-                                            <h5>Jone Mathu</h5>
-                                            <i>write</i>
-                                        </div><!-- Posts Author -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
     <div class="bottom-line">
         <div class="container">
 				<span>
-					COPYRIGHT 2015 Magazine Theme
+					COPYRIGHT {{ 'now'|date('Y') }} {{ 'touslesjours'|capitalize }}
 				</span>
             <ul class="footer-menu">
                 <li><a itemprop="url" href="#" title="">HOME</a></li>

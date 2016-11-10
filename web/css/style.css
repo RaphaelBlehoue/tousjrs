@@ -76,6 +76,7 @@
 75. Light Drop Down
 76. New Mega Menu Style
 77. Stickey Header
+78. background-style
 ===================================================== ***/
 
 /* Google Fonts */
@@ -108,6 +109,13 @@ p{
 .low-space > div {
     margin-top: 4px;
     padding: 0 2px;
+}
+
+/*background-style*/
+
+.background-style{
+    background-color:#F5F8F9;
+    border-bottom: 1px solid #EEF1F5;
 }
 
 /* General Setting */
@@ -2550,18 +2558,16 @@ nav.menu .container > ul > li a > i {
     width: 100%;
 }
 .post-detail16 {
-    background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
-    padding: 60px 40px;
+    background: rgba(62, 62, 62, 0.5) none repeat scroll 0 0;
+    padding: 15px 40px !important;
     position: absolute;
     right: 200px;
-    top: 50%;
-    
+    top: 60%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-
     width: 550px;
 }
 
@@ -2593,7 +2599,7 @@ nav.menu .container > ul > li a > i {
     width: 100%;
 }
 .post-detail16 > h3 a {
-    color: #232323;
+    color: #fff;
 }
 .post-detail16 > a {
     float: left;
@@ -2603,7 +2609,7 @@ nav.menu .container > ul > li a > i {
     letter-spacing: 0.3px;
     margin-top: 29px;
 }
-.post-detail16 > p {color: #4f4f4f;}
+.post-detail16 > p {color: #fff;}
 .wide-carousal-post {
     float: left;
     list-style: outside none none;
@@ -3521,7 +3527,7 @@ footer .heading3 {
     margin: 0 auto;
     padding: 0 100px;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 .heading5::before {
     background: #d7d7d7 none repeat scroll 0 0;
@@ -3547,7 +3553,7 @@ footer .heading3 {
     font-style: normal;
 }
 .heading5 h2 {
-    background: #ffffff none repeat scroll 0 0;
+    /*background: #ffffff none repeat scroll 0 0;*/
     color: #161616;
     display: table;
     float: none;
@@ -4418,7 +4424,7 @@ footer {
     color: #ffffff;
     float: left;
     font-family: Open Sans;
-    font-size: 37px;
+    font-size: 28px;
     font-weight: 900;
     letter-spacing: 10px;
     margin: 10px 0 18px;
@@ -8426,3 +8432,4 @@ nav.menu .container > ul > li:hover .mega-menu2 {
 .big-post-2 {
     margin-top: -8px;
 }
+
