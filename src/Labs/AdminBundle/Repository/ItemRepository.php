@@ -10,4 +10,25 @@ namespace Labs\AdminBundle\Repository;
  */
 class ItemRepository extends \Doctrine\ORM\EntityRepository
 {
+    /**
+     * @return array
+     */
+    public function getAll()
+    {
+        $qb = $this->createQueryBuilder('i');
+        return $qb->getQuery()->getResult();
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getOne($id)
+    {
+        $qb = $this->createQueryBuilder('i');
+        $qb->where($qb->expr()->eq('i.id', ':id'));
+        $qb->setParameter(':id', $id);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
 }

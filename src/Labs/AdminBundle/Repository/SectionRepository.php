@@ -10,4 +10,26 @@ namespace Labs\AdminBundle\Repository;
  */
 class SectionRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    /**
+     * @return array
+     */
+    public function getAll()
+    {
+        $qb = $this->createQueryBuilder('s');
+        return $qb->getQuery()->getResult();
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getOne($id)
+    {
+        $qb = $this->createQueryBuilder('s');
+        $qb->where($qb->expr()->eq('s.id', ':id'));
+        $qb->setParameter(':id', $id);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
 }
