@@ -6,7 +6,7 @@ labs_front:
 labs_admin:
     resource: "@LabsAdminBundle/Controller/"
     type:     annotation
-    prefix:   /tjr-admin
+    prefix:   /codepit
 
 labs_limitless_tpl:
     resource: "@LabsLimitlessTplBundle/Controller/"
