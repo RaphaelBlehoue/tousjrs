@@ -3,12 +3,16 @@
 namespace Labs\AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Section
  *
  * @ORM\Table(name="section")
  * @ORM\Entity(repositoryClass="Labs\AdminBundle\Repository\SectionRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Section
 {
@@ -56,8 +60,12 @@ class Section
      * @ORM\OneToMany(targetEntity="Labs\AdminBundle\Entity\Item", mappedBy="section")
      */
     protected $items;
-    
-    
+
+    /**
+     * @Gedmo\Slug(fields={"name", "id"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    protected $slug;
     
     public function __construct()
     {
@@ -200,4 +208,29 @@ class Section
     {
         return $this->items;
     }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Section
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
 }

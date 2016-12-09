@@ -1,4 +1,0 @@
-services:
-#    labs_limitless_tpl.example:
-#        class: Labs\LimitlessTplBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]

@@ -2,19 +2,20 @@
 
 namespace Labs\AdminBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 /**
  * Class DefaultController
  * @package Labs\AdminBundle\Controller
- * @Route("/dashboard")
+ * @Route("/")
  */
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
-     * 
+     * @Route("/", name="dashboard")
+     * @Method({"GET"})
      */
     public function indexAction()
     {

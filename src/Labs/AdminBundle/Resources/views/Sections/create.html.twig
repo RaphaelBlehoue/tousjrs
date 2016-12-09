@@ -1,2 +1,62 @@
 {% extends 'LabsAdminBundle::layout.html.twig' %}
-{% block body %}{% endblock %}
+{% block Title %}  {{ 'Gestion des Sections - Creation'|capitalize }} {% endblock %}
+{% block body %}
+    <!-- Main content -->
+        <!-- Form horizontal -->
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h5 class="panel-title">{{ 'Gestion des Sections - Creation' }}</h5>
+                <div class="heading-elements">
+                    <div class="icons-list">
+                        <a href="{{ path('section_index') }}" class="btn btn-primary btn-labeled"><b><i class="icon-menu7"></i></b> Afficher la liste</a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                {{ form_start(form, { 'action': path('section_create'), attr : { 'class':'form-horizontal'}}) }}
+                {{ form_errors(form) }}
+
+                <fieldset class="content-group col-lg-10 col-md-offset-2">
+
+                    <legend class="text-bold">Creation de section</legend>
+
+                    <div class="form-group">
+                        <label class="control-label col-lg-3">Nom de la section</label>
+                        <div class="col-lg-9">
+                            {{ form_row(form.name) }}
+                            {{ form_errors(form.name) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-lg-3">Code couleur</label>
+                        <div class="col-lg-9">
+                            {{ form_errors(form.color) }}
+                            {{ form_row(form.color) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-lg-3">Status de la section</label>
+                        <div class="col-lg-3">
+                            {{ form_errors(form.online) }}
+                            {{ form_row(form.online) }}
+                        </div>
+                    </div>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">Créer <i class="icon-database-add position-right"></i></button>
+                    </div>
+
+                </fieldset>
+                {{ form_end(form) }}
+            </div>
+        </div>
+{% endblock %}
+{% block themes %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/pages/form_inputs.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/core/libraries/jquery_ui/interactions.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/pages/form_select2.js') }}"></script>
+{% endblock %}

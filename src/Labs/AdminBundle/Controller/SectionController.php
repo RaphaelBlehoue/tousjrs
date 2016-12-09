@@ -56,7 +56,7 @@ class SectionController extends Controller
      * @param Request $request
      * @param Section $section
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
-     * @Route("/{id}/edit", name="section_edit")
+     * @Route("/{id}/edit/{slug}", name="section_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Section $section)
@@ -75,7 +75,7 @@ class SectionController extends Controller
         }
         return $this->render('LabsAdminBundle:Sections:edit.html.twig',array(
             'form' => $form->createView(),
-            'id'   => $sections->getId()
+            'section'   => $sections
         ));
     }
 

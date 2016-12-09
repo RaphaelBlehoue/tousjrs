@@ -1,2 +1,71 @@
 {% extends 'LabsAdminBundle::layout.html.twig' %}
-{% block body %}{% endblock %}
+{% block Title %}  {{ 'Gestion des Sections du site'|capitalize }} {% endblock %}
+{% block body %}
+     <!-- Individual column searching (text inputs) -->
+     <!-- START CONTAINER FLUID -->
+     {% for flashMessage in app.session.flashbag.get('success') %}
+          <div class="alert alert-success alert-styled-left alert-arrow-left alert-bordered">
+              <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+              <span class="text-semibold">{{ flashMessage|capitalize }}</span>
+          </div>
+     {% endfor %}
+
+ <!-- START PANEL -->
+ <div class="panel panel-flat">
+     <div class="panel-heading">
+          <h5 class="panel-title">Gestion des Sections du site</h5>
+          <div class="heading-elements">
+             <ul class="icons-list">
+                 <a href="{{ path('section_create') }}" class="btn btn-success btn-labeled"><b><i class="icon-plus3"></i></b> Créer une nouvelle section</a>
+             </ul>
+          </div>
+     </div>
+
+     <div class="panel-body">
+         Tableau des sections
+     </div>
+
+    <table class="table datatable-column-search-inputs">
+        <thead>
+            <tr>
+                 <th>Nom</th>
+                 <th>couleur</th>
+                 <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+     <tbody>
+        {% for section in sections %}
+               {% if section|length > 0 %}
+               <tr>
+                   <td>{{ section.name }}</td>
+                   <td><span class="label label-info">{{ section.color }}</span></td>
+                   <td class="text-center">
+                         <ul class="icons-list">
+                             <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                 <i class="icon-menu9"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="{{ path('section_edit', { 'id' : section.id, 'slug' : section.slug}) }}"><i class="icon-pencil5"></i>{{ 'Modifier'|capitalize }}</a></li>
+                                    <li><a href="{{ path('section_delete',{'id' : section.id} ) }}"><i class="icon-cancel-square2"></i>{{ 'Supprimer'|capitalize }}</a></li>
+                                </ul>
+                             </li>
+                         </ul>
+                   </td>
+               </tr>
+               {% endif %}
+        {% endfor %}
+     </tbody>
+    </table>
+   </div>
+   <!-- /individual column searching (text inputs) -->
+
+
+{% endblock %}
+
+{% block themes %}
+ {{ parent() }}
+ <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+ <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+ <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/pages/datatables_api.js') }}"></script>
+{% endblock %}
