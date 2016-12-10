@@ -32,11 +32,11 @@
                 </div>
 
                 <div class="category-content no-padding">
-                    <ul class="navigation navigation-main navigation-accordion">
+                    <ul class="navigation navigation-main navigation-accordion nav">
 
                         <!-- Main -->
                         <li class="navigation-header"><span>{{ 'edition'|capitalize }}</span> <i class="icon-menu" title="Main pages"></i></li>
-                        <li class="active"><a href=""><i class="icon-home4"></i> <span>{{ 'dasboard'|capitalize }}</span></a></li>
+                        <li><a href="{{ path('dashboard') }}"><i class="icon-home4"></i> <span>{{ 'dasboard'|capitalize }}</span></a></li>
                         <li><a href=""><i class="icon-compose"></i> <span>{{ 'articles'|capitalize }}</span></a></li>
                         <li><a href=""><i class="icon-images3"></i> <span>{{ 'Medias'|capitalize }}</span></a></li>
                         <li><a href=""><i class="icon-books"></i> <span>{{ 'dossiers'|capitalize }}</span></a></li>
@@ -48,7 +48,7 @@
                         <li class="navigation-header"><span>{{ 'Configuration du site'|capitalize }}</span> <i class="icon-menu" title="Main pages"></i></li>
                         <li><a href=""><i class="icon-compose"></i> <span>{{ 'articles hors ligne'|capitalize }}</span></a></li>
                         <li><a href="{{ path('section_index') }}"><i class="icon-tree6"></i> <span>{{ 'Rubriques'|capitalize }}</span></a></li>
-                        <li><a href=""><i class="icon-menu2"></i> <span>{{ 'Sous rubriques'|capitalize }}</span></a></li>
+                        <li><a href="{{ path('item_index') }}"><i class="icon-menu2"></i> <span>{{ 'Sous rubriques'|capitalize }}</span></a></li>
                         <li><a href=""><i class="icon-book"></i> <span>{{ 'Pages'|capitalize }}</span></a></li>
                         <!-- /configuration -->
                     </ul>

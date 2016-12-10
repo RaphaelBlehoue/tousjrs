@@ -3,12 +3,15 @@
 namespace Labs\AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Item
  *
  * @ORM\Table(name="item")
  * @ORM\Entity(repositoryClass="Labs\AdminBundle\Repository\ItemRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Item
 {
@@ -25,6 +28,7 @@ class Item
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank(message="entrez le nom de la sous rubrique")
      */
     protected $name;
 
@@ -41,6 +45,12 @@ class Item
      * @ORM\Column(name="online", type="boolean", nullable=true)
      */
     protected $online;
+
+    /**
+     * @Gedmo\Slug(fields={"name", "id"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    protected $slug;
 
     /**
      * @var
@@ -160,5 +170,29 @@ class Item
     public function getSection()
     {
         return $this->section;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Section
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }

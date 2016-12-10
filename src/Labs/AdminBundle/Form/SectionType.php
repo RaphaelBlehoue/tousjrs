@@ -21,6 +21,8 @@ class SectionType extends AbstractType
             ->add('online', ChoiceType::class, array(
                 'label' => false,
                 'attr'  => array('class' => 'form-control'),
+                'placeholder' => 'Choix du status',
+                'empty_data'  => null,
                 'choices' => array(
                     'En ligne' => true,
                     'Hors ligne' => false

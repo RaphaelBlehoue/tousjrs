@@ -789,7 +789,7 @@ $(function() {
      * Traitement de la commande script sur la selection de l'entrepot
      */
 
-        $('.entrepot').livequery('change', function(e){
+     /*   $('.entrepot').livequery('change', function(e){
             e.preventDefault();
             e.stopPropagation();
             var $this = $(this);
@@ -854,13 +854,13 @@ $(function() {
 
 
             });
-        });
+        }); */
 
     /**
      * Action keyup sur le champs inventaire de stock
      */
 
-    $('.qte_inventaire').livequery('keyup', function(e){
+   /* $('.qte_inventaire').livequery('keyup', function(e){
         e.preventDefault();
         e.stopPropagation();
 
@@ -897,14 +897,14 @@ $(function() {
             $btn.attr('disabled','disbled');
             $this.addClass('bg-danger');
         }
-    });
+    }); */
 
     /**
      * Fonction ajax send data in stock inventor
      */
 
         // Envoi l'arrete de la facture en ajax
-    $('.formCmd').livequery('submit',function(event){
+   /* $('.formCmd').livequery('submit',function(event){
         event.preventDefault();
         var $this = $(this);
         var $ids = $this.attr('id');
@@ -951,10 +951,7 @@ $(function() {
             clearForm : true
         }
         $this.ajaxSubmit(options);
-    });
-
-
-
+    });*/
 });
 
 

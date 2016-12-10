@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="panel-body">
-                {{ form_start(form, { 'action': path('section_create'), attr : { 'class':'form-horizontal'}}) }}
+                {{ form_start(form, { 'action': path('section_create'), attr : { 'class':'form-horizontal', 'novalidate': 'novalidate'}}) }}
                 {{ form_errors(form) }}
 
                 <fieldset class="content-group col-lg-10 col-md-offset-2">

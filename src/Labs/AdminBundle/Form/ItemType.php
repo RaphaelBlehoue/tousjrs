@@ -21,13 +21,19 @@ class ItemType extends AbstractType
             ->add('online', ChoiceType::class, array(
                 'label' => false,
                 'attr'  => array('class' => 'form-control'),
+                'placeholder' => 'Choix du status',
+                'empty_data'  => null,
                 'choices' => array(
                     'En ligne' => true,
                     'Hors ligne' => false
                 )))
             ->add('section', EntityType::class, array(
                 'class' => 'LabsAdminBundle:Section',
-                'choice_label' => 'name'
+                'choice_label' => 'name',
+                'label' => false,
+                'attr' => array('class' => 'form-control'),
+                'placeholder' => 'Choix de la rubrique',
+                'empty_data'  => null
             ))
         ;
     }

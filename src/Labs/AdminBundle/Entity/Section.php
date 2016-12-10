@@ -29,6 +29,7 @@ class Section
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank(message="Entrez un nom avant de continuer l'action")
      */
     protected $name;
 
@@ -36,6 +37,7 @@ class Section
      * @var string
      *
      * @ORM\Column(name="color", type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="Entrez le code couleur de la section")
      */
     protected $color;
 

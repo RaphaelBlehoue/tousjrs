@@ -56,7 +56,7 @@ class ItemController extends Controller
      * @param Request $request
      * @param Item $item
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
-     * @Route("/{id}/edit", name="item_edit")
+     * @Route("/{id}/edit/{slug}", name="item_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Item $item)
@@ -75,7 +75,7 @@ class ItemController extends Controller
         }
         return $this->render('LabsAdminBundle:Items:edit.html.twig',array(
             'form' => $form->createView(),
-            'id'   => $items->getId()
+            'item'   => $items
         ));
     }
 
