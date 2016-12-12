@@ -2,6 +2,7 @@
 
 namespace Labs\AdminBundle\Repository;
 
+
 /**
  * SectionRepository
  *
@@ -17,6 +18,7 @@ class SectionRepository extends \Doctrine\ORM\EntityRepository
     public function getAll()
     {
         $qb = $this->createQueryBuilder('s');
+        $qb->orderBy('s.name');
         return $qb->getQuery()->getResult();
     }
 
@@ -31,5 +33,34 @@ class SectionRepository extends \Doctrine\ORM\EntityRepository
         $qb->where($qb->expr()->eq('s.id', ':id'));
         $qb->setParameter(':id', $id);
         return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    /**
+     * @return array
+     */
+    public function getSectionsAndItems()
+    {
+            $qb = $this->createQueryBuilder('s');
+            $qb->leftJoin('s.items', 'i')
+                ->addSelect('i');
+            $qb->where($qb->expr()->eq('s.online', 1));
+            $qb->andWhere($qb->expr()->eq('i.online', 1));
+            return $qb->getQuery()->getResult();
+    }
+
+    /**
+     * @param $entity
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getSectionAllPosts($entity)
+    {
+            $qb = $this->createQueryBuilder('s');
+            $qb->leftJoin('s.items', 'i')
+                ->addSelect('i');
+            $qb->where($qb->expr()->eq('s.online', 1));
+            $qb->where($qb->expr()->eq('s.id', ':entity'));
+            $qb->setParameter(':entity', $entity);
+            return $qb->getQuery()->getOneOrNullResult();
     }
 }

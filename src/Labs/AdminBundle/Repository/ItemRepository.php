@@ -16,6 +16,7 @@ class ItemRepository extends \Doctrine\ORM\EntityRepository
     public function getAll()
     {
         $qb = $this->createQueryBuilder('i');
+        $qb->orderBy('i.name');
         return $qb->getQuery()->getResult();
     }
 
@@ -30,5 +31,19 @@ class ItemRepository extends \Doctrine\ORM\EntityRepository
         $qb->where($qb->expr()->eq('i.id', ':id'));
         $qb->setParameter(':id', $id);
         return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    /**
+     * @param $entity
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getItemAllPosts($entity)
+    {
+            $qb = $this->createQueryBuilder('i');
+            $qb->where('i.online = 1');
+            $qb->andWhere($qb->expr()->eq('i.id', ':entity'));
+            $qb->setParameter(':entity', $entity);
+            return $qb->getQuery()->getOneOrNullResult();
     }
 }

@@ -29,7 +29,8 @@
             <thead>
             <tr>
                 <th>Nom</th>
-                <th>couleur</th>
+                <th>Status</th>
+                <th>Section Associée</th>
                 <th class="text-center">Actions</th>
             </tr>
             </thead>
@@ -43,6 +44,7 @@
                                  {{ (item.online == 1) ? 'En ligne' : 'Hors Ligne' }}
                             </span>
                         </td>
+                        <td>{{ item.section.name }}</td>
                         <td class="text-center">
                             <ul class="icons-list">
                                 <li class="dropdown">

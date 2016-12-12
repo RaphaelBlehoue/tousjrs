@@ -19,7 +19,7 @@
     {% block stylesheets %}{% endblock %}
 </head>
 <body itemscope="" onLoad="goforit()">
-    {% include 'LabsFrontBundle:Includes:header.html.twig' %}
+    {{ render(controller('LabsFrontBundle:Default:getMenu')) }}
     {% include 'LabsFrontBundle:Includes:responsive-header.html.twig' %}
 
     {% block body %}{% endblock %}
