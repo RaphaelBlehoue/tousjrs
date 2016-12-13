@@ -10,4 +10,26 @@ namespace Labs\AdminBundle\Repository;
  */
 class PostRepository extends \Doctrine\ORM\EntityRepository
 {
+    
+    public function getDraftUser($user)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->where(
+            $qb->expr()->eq('p.user', ':user'),
+            $qb->expr()->eq('p.draft', 0)
+        );
+        $qb->setParameter('user', $user);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    /**
+     * @return array
+     */
+    public function getAll()
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->where('p.draft <> 0');
+        $qb->orderBy('p.created', 'Desc');
+        return $qb->getQuery()->getResult();
+    }
 }

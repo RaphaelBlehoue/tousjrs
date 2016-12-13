@@ -32,7 +32,7 @@
 
         <div class="heading-elements">
             <div class="heading-btn-group">
-                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-newspaper text-primary"></i><span>{{ 'Créer un article'|capitalize }}</span></a>
+                <a href="{{ path('post_create') }}" class="btn btn-link btn-float has-text"><i class="icon-newspaper text-primary"></i><span>{{ 'Créer un article'|capitalize }}</span></a>
                 <a href="#" class="btn btn-link btn-float has-text"><i class="icon-folder-plus2 text-primary"></i> <span>{{ 'Créer un dossier' }}</span></a>
                 {% if is_granted("ROLE_SUPER_ADMIN") %}
                     <a href="#" class="btn btn-link btn-float has-text"><i class="icon-plus-circle2  text-primary"></i> <span>{{ 'Ajouter une publicité' }}</span></a>

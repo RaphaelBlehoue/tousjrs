@@ -26,28 +26,30 @@ class Post
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="Le titre de l'article")
      */
     protected $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="content", type="text")
+     * @ORM\Column(name="content", type="text", nullable=true)
+     * @Assert\NotBlank(message="Le contenu de l'article")
      */
     protected $content;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="online", type="boolean")
+     * @ORM\Column(name="online", type="boolean", nullable=true)
      */
     protected $online;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="draft", type="boolean")
+     * @ORM\Column(name="draft", type="boolean", nullable=true)
      */
     protected $draft;
 
@@ -61,7 +63,8 @@ class Post
     /**
      * @var bool
      *
-     * @ORM\Column(name="has_video", type="boolean")
+     * @ORM\Column(name="has_video", type="boolean", nullable=true)
+     * @Assert\NotBlank(message="Signifier si l'articles à une video ou pas")
      */
     protected $hasVideo;
 

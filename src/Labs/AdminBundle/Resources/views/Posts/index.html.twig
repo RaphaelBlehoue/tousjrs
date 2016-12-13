@@ -1,0 +1,77 @@
+{% extends 'LabsAdminBundle::layout.html.twig' %}
+{% block Title %}  {{ 'Gestion des articles du site'|capitalize }} {% endblock %}
+{% block body %}
+    <!-- Individual column searching (text inputs) -->
+    <!-- START CONTAINER FLUID -->
+    {% for flashMessage in app.session.flashbag.get('success') %}
+        <div class="alert alert-success alert-styled-left alert-arrow-left alert-bordered">
+            <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+            <span class="text-semibold">{{ flashMessage|capitalize }}</span>
+        </div>
+    {% endfor %}
+
+    <!-- START PANEL -->
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h5 class="panel-title">Gestion des articles du site</h5>
+            <div class="heading-elements">
+                <ul class="icons-list">
+                    <a href="{{ path('post_create') }}" class="btn btn-success btn-labeled"><b><i class="icon-plus3"></i></b> Créer un nouvel article</a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            Liste des articles
+        </div>
+
+        <table class="table datatable-column-search-inputs">
+            <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Status</th>
+                <th>date de creation</th>
+                <th class="text-center">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for post in posts %}
+                {% if post|length > 0 %}
+                    <tr>
+                        <td>{{ post.name }}</td>
+                        <td>
+                            <span class="label {{ (post.online == 1) ? 'label-info' : 'label-danger' }}">
+                                 {{ (post.online == 1) ? 'En ligne' : 'Hors Ligne' }}
+                            </span>
+                        </td>
+                        <td><span class="label label-info">{{ post.created|date('Y-m-d') }}</span></td>
+                        <td class="text-center">
+                            <ul class="icons-list">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon-menu9"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="{{ path('post_edit', { 'id' : post.id}) }}"><i class="icon-pencil5"></i>{{ 'Modifier'|capitalize }}</a></li>
+                                        <li><a href="{{ path('post_delete',{'id' : post.id} ) }}"><i class="icon-cancel-square2"></i>{{ 'Supprimer'|capitalize }}</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- /individual column searching (text inputs) -->
+
+
+{% endblock %}
+
+{% block themes %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/pages/datatables_api.js') }}"></script>
+{% endblock %}
