@@ -28,12 +28,12 @@
                 <ul>
                     {% for section in sections %}
                         <li class="menu-item-has-children">
-                            <a itemprop="url" href="{{ path('section_front_view', {'slug' : section.slug}) }}" title="">{{ section.name|upper }}</a>
+                            <a itemprop="url" href="{{ path('front_section_page', {'slug' : section.slug}) }}" title="{{ section.name}}">{{ section.name|upper }}</a>
                         <ul>
                             {% set rubrique = section.slug %}
                             {% if section.items|length > 0 %}
                                 {% for item in section.items %}
-                                    <li><a itemprop="url" href="{{ path('item_front_view', {'rubrique': rubrique ,'slug' : item.slug}) }}" title="">{{ item.name|upper }}</a></li>
+                                    <li><a itemprop="url" href="{{ path('front_item_page', {'rubrique': rubrique ,'slug' : item.slug}) }}" title="{{ item.name }}">{{ item.name|upper }}</a></li>
                                 {% endfor %}
                             {% endif %}
                         </ul><!-- drop-down -->
