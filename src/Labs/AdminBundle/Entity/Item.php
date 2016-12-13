@@ -2,6 +2,7 @@
 
 namespace Labs\AdminBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -60,10 +61,18 @@ class Item
      */
     protected $section;
 
+    /**
+     * @var
+     *
+     * @ORM\OneToMany(targetEntity="Labs\AdminBundle\Entity\Post", mappedBy="item")
+     */
+    protected $posts;
+
 
     public function __construct()
     {
         $this->created = new \DateTime('now');
+        $this->posts = new ArrayCollection();
     }
 
     /**
@@ -194,5 +203,39 @@ class Item
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Add post
+     *
+     * @param \Labs\AdminBundle\Entity\Post $post
+     *
+     * @return Item
+     */
+    public function addPost(\Labs\AdminBundle\Entity\Post $post)
+    {
+        $this->posts[] = $post;
+
+        return $this;
+    }
+
+    /**
+     * Remove post
+     *
+     * @param \Labs\AdminBundle\Entity\Post $post
+     */
+    public function removePost(\Labs\AdminBundle\Entity\Post $post)
+    {
+        $this->posts->removeElement($post);
+    }
+
+    /**
+     * Get posts
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPosts()
+    {
+        return $this->posts;
     }
 }
