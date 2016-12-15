@@ -44,7 +44,6 @@ class SectionRepository extends \Doctrine\ORM\EntityRepository
             $qb->leftJoin('s.items', 'i')
                 ->addSelect('i');
             $qb->where($qb->expr()->eq('s.online', 1));
-            $qb->andWhere($qb->expr()->eq('i.online', 1));
             return $qb->getQuery()->getResult();
     }
 
