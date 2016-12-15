@@ -42,7 +42,7 @@ class Item
 
     /**
      * @var bool
-     *
+     * @Assert\NotBlank(message="Le status de l'item doit être selectionnez avant de contunuer")
      * @ORM\Column(name="online", type="boolean", nullable=true)
      */
     protected $online;
@@ -55,7 +55,7 @@ class Item
 
     /**
      * @var
-     *
+     * @Assert\NotBlank(message="L'item doit être lié a une rubrique")
      * @ORM\ManyToOne(targetEntity="Labs\AdminBundle\Entity\Section", inversedBy="items")
      * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      */
