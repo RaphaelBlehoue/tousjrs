@@ -10,7 +10,11 @@ namespace Labs\AdminBundle\Repository;
  */
 class PostRepository extends \Doctrine\ORM\EntityRepository
 {
-    
+    /**
+     * @param $user
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
     public function getDraftUser($user)
     {
         $qb = $this->createQueryBuilder('p');
@@ -32,4 +36,41 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         $qb->orderBy('p.created', 'Desc');
         return $qb->getQuery()->getResult();
     }
+
+    /**
+     * @param $user
+     * @param $post
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     * Recupere l'article de l'utilisateur couramment connecté avec l'id passé en paramètre
+     */
+    public function getPostForUser($user, $post)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->where(
+            $qb->expr()->eq('p.user', ':user'),
+            $qb->expr()->eq('p.id', ':post')
+        );
+        $qb->setParameter('user', $user);
+        $qb->setParameter('post', $post);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    /**
+     * @param $post
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     * Recupere l'article avec l'id passé en paramètre
+     */
+    public function getPost($post)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->where(
+            $qb->expr()->eq('p.id', ':post')
+        );
+        $qb->setParameter('post', $post);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+    
+    
 }

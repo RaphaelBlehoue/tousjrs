@@ -61,12 +61,27 @@ $(function() {
 
     // File limitations
     $("#dropzone_file_limits").dropzone({
+        url : $(this).attr('action'),
         paramName: "file", // The name that will be used to transfer the file
-        dictDefaultMessage: 'Drop files to upload <span>or CLICK</span>',
-        maxFilesize: 0.4, // MB
-        maxFiles: 4,
+        dictDefaultMessage: 'Faites glisser des fichiers ici <span>ou Sélectionnez des fichiers sur l\'ordinateur</span>',
+        maxFilesize: 2, // MB
+        maxFiles: 30,
         maxThumbnailFilesize: 1,
-        addRemoveLinks: true
+        acceptedFiles: 'image/*',
+        addRemoveLinks: true,
+        init : function(){
+            this.on('addedfile', function(file){
+                console.log("Added file.");
+                console.log($(this).attr('action'));
+            });
+            this.on('complete', function(file){
+                console.log(file);
+            });
+
+            this.on('maxfilesexceeded', function(){
+                console.log("Limite de fichier simultannée attient");
+            });
+        }
     });
     
 });

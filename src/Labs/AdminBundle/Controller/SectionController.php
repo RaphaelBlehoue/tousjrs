@@ -66,7 +66,7 @@ class SectionController extends Controller
         if(null === $sections){
             throw new NotFoundHttpException("L'element de id ".$section." n'existe pas");
         }
-        $form = $this->createForm(SectionType::class, $section);
+        $form = $this->createForm(SectionType::class, $sections);
         $form->handleRequest($request);
         if($form->isValid())
         {

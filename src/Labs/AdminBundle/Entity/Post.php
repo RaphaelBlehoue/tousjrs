@@ -99,6 +99,7 @@ class Post
     {
         $this->medias = new ArrayCollection();
         $this->created = new \DateTime("now");
+        $this->draft = false;
     }
     
 

@@ -2,7 +2,12 @@
 
 namespace Labs\AdminBundle\Form;
 
+use Ivory\CKEditorBundle\Form\Type\CKEditorType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,7 +18,43 @@ class PostType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('content')->add('online')->add('draft')->add('created')->add('hasVideo')->add('item')->add('user')        ;
+        $builder
+            ->add('name', TextType::class,array('label' => false, 'attr' => array('placeholder'=> 'Titre de l\'article')))
+            ->add('content', CKEditorType::class, array(
+                'label' => false
+            ))
+            ->add('online',ChoiceType::class, array(
+                'label' => false,
+                'choices' => array(
+                    'Status Article' => array(
+                        'En Ligne' => true,
+                        'Hors ligne' => false
+                )
+            )))
+            ->add('hasVideo',ChoiceType::class, array(
+                'label' => false,
+                'choices' => array(
+                    'Possède une video ?' => array(
+                        'Possède une video' => true,
+                        'Ne possède pas de video' => false
+                )
+            )))
+            ->add('item',EntityType::class, array(
+                'class' => 'LabsAdminBundle:Item',
+                'choice_label' => 'name',
+                'label' => false,
+                'placeholder' => 'Choix de la Rubrique',
+                'empty_data'  => null
+            ))
+            ->add('save', SubmitType::class, array(
+                'label' => 'Enregistrer',
+                'attr'  => array('class' => 'btn btn-primary')
+            ))
+            ->add('upload', SubmitType::class, array(
+                'label' => 'Ajouter photo ou images',
+                'attr'  => array('class' => 'btn btn-success')
+            ))
+        ;
     }
     
     /**

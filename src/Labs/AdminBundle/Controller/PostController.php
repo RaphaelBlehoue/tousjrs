@@ -3,12 +3,15 @@
 namespace Labs\AdminBundle\Controller;
 
 use Labs\AdminBundle\Entity\Post;
+use Labs\AdminBundle\Entity\Media;
 use Labs\AdminBundle\Form\PostType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
  * Class PostController
@@ -44,13 +47,35 @@ class PostController extends Controller
     /**
      * @param Request $request
      * @param Post $post
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/{id}/edit", name="post_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Post $post)
     {
-        die('Edition de articles');
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $posts = $em->getRepository('LabsAdminBundle:Post')->getPostForUser($post, $user);
+        if( null === $posts)
+        {
+            throw new NotFoundHttpException('Article introuvable');
+        }
+        // Upload Medias
+        $form = $this->createForm(PostType::class, $posts);
+        $form->handleRequest($request);
+        if($form->isValid() && $form->isSubmitted()){
+            
+            
+            $nextAction = $form->get('save')->isClicked()
+                ? $this->redirectToRoute('post_index')
+                : $this->redirectToRoute('upload_Media', ['posts' => $posts->getId()]);
+            return $nextAction;
+        }
+        return $this->render('LabsAdminBundle:Posts:edit_page.html.twig', [
+            'form' => $form->createView(),
+            'post' => $posts
+        ]);
+
     }
 
     /**

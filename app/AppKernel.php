@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new Labs\LimitlessTplBundle\LabsLimitlessTplBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Labs\AdminBundle\LabsAdminBundle(),
