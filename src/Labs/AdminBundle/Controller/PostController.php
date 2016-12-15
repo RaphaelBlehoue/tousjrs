@@ -56,7 +56,6 @@ class PostController extends Controller
         $em = $this->getDoctrine()->getManager();
         $user = $this->getUser();
         $posts = $em->getRepository('LabsAdminBundle:Post')->getPostForUser($post, $user);
-        dump($posts); die;
         if( null === $posts)
         {
             throw new NotFoundHttpException('Article introuvable');
