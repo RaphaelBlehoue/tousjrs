@@ -56,6 +56,7 @@ class PostController extends Controller
         $em = $this->getDoctrine()->getManager();
         $user = $this->getUser();
         $posts = $em->getRepository('LabsAdminBundle:Post')->getPostForUser($post, $user);
+        dump($posts); die;
         if( null === $posts)
         {
             throw new NotFoundHttpException('Article introuvable');
@@ -69,7 +70,7 @@ class PostController extends Controller
             $em->flush();
             $nextAction = $form->get('save')->isClicked()
                 ? $this->redirectToRoute('post_index')
-                : $this->redirectToRoute('upload_Media', ['posts' => $posts]);
+                : $this->redirectToRoute('upload_Media', ['posts' => $posts->getId()]);
             return $nextAction;
         }
         return $this->render('LabsAdminBundle:Posts:edit_page.html.twig', [
