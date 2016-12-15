@@ -27,7 +27,7 @@ class Post
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255, nullable=true)
-     * @Assert\NotBlank(message="Le titre de l'article")
+     * @Assert\NotBlank(message="L'article doit avoir un titre")
      */
     protected $name;
 
@@ -35,13 +35,17 @@ class Post
      * @var string
      *
      * @ORM\Column(name="content", type="text", nullable=true)
-     * @Assert\NotBlank(message="Le contenu de l'article")
+     * @Assert\NotBlank(message="Votre article n'a aucun contenu, veuillez entrer des informations avant de continuer")
+     * @Assert\Length(
+     *      min = 100,
+     *      minMessage = "Votre article doit comporter plus de 100 caractères",
+     * )
      */
     protected $content;
 
     /**
      * @var bool
-     *
+     * @Assert\NotBlank(message="L'article doit avoir un status")
      * @ORM\Column(name="online", type="boolean", nullable=true)
      */
     protected $online;
@@ -77,7 +81,7 @@ class Post
 
     /**
      * @var
-     * 
+     * @Assert\NotBlank(message="Votre article doit faire partir d'une sous-rubrique, avant de continuer")
      * @ORM\ManyToOne(targetEntity="Labs\AdminBundle\Entity\Item", inversedBy="posts")
      * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      */

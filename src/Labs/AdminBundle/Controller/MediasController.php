@@ -36,23 +36,25 @@ Class MediasController extends Controller
         {
             throw new NotFoundHttpException('Votre article est introuvable');
         }
+        dump($posts);
+        die;
 
-        if($request->isXmlHttpRequest()){
+       // if($request->isXmlHttpRequest()){
             /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
-            $file = $request->files->get('file');
+           /* $file = $request->files->get('file');
             dump($file);
             die();
             $fileName = $posts->getSlug().'_'.md5(uniqid()).'.'.$file->guessExtension();
             $file->move(
                 $this->container->getParameter('gallery_directory'),
                 $fileName
-            );
+            );*/
            /* $media->setUrl($fileName);
             $media->setDossier($posts);
             $em->persist($media);
             $em->flush($media);
             $response = ['success' => 'true'];
             return new JsonResponse($response);*/
-        }
+       // }
     }
 }

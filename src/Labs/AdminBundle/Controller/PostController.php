@@ -64,11 +64,12 @@ class PostController extends Controller
         $form = $this->createForm(PostType::class, $posts);
         $form->handleRequest($request);
         if($form->isValid() && $form->isSubmitted()){
-            
-            
+            $posts->setDraft(1);
+            $em->persist($posts);
+            $em->flush();
             $nextAction = $form->get('save')->isClicked()
                 ? $this->redirectToRoute('post_index')
-                : $this->redirectToRoute('upload_Media', ['posts' => $posts->getId()]);
+                : $this->redirectToRoute('upload_Media', ['posts' => $posts]);
             return $nextAction;
         }
         return $this->render('LabsAdminBundle:Posts:edit_page.html.twig', [
