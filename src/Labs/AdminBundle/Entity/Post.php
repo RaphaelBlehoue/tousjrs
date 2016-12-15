@@ -63,14 +63,7 @@ class Post
      * @ORM\Column(name="created", type="datetime")
      */
     protected $created;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="has_video", type="boolean", nullable=true)
-     * @Assert\NotBlank(message="Signifier si l'articles à une video ou pas")
-     */
-    protected $hasVideo;
+    
 
     /**
      * @var
@@ -104,7 +97,6 @@ class Post
         $this->medias = new ArrayCollection();
         $this->created = new \DateTime("now");
         $this->draft = false;
-        $this->hasVideo = false;
     }
     
 
@@ -237,31 +229,6 @@ class Post
     {
         return $this->created;
     }
-
-    /**
-     * Set hasVideo
-     *
-     * @param boolean $hasVideo
-     *
-     * @return Post
-     */
-    public function setHasVideo($hasVideo)
-    {
-        $this->hasVideo = $hasVideo;
-
-        return $this;
-    }
-
-    /**
-     * Get hasVideo
-     *
-     * @return bool
-     */
-    public function getHasVideo()
-    {
-        return $this->hasVideo;
-    }
-
 
     /**
      * Add media
