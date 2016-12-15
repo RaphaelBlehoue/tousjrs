@@ -26,19 +26,17 @@ class PostType extends AbstractType
             ->add('online',ChoiceType::class, array(
                 'label' => false,
                 'choices' => array(
-                    'Status Article' => array(
                         'En Ligne' => true,
                         'Hors ligne' => false
                 )
-            )))
+            ))
             ->add('hasVideo',ChoiceType::class, array(
                 'label' => false,
                 'choices' => array(
-                    'Possède une video ?' => array(
                         'Possède une video' => true,
                         'Ne possède pas de video' => false
                 )
-            )))
+            ))
             ->add('item',EntityType::class, array(
                 'class' => 'LabsAdminBundle:Item',
                 'choice_label' => 'name',
