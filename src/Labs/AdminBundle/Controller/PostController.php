@@ -54,8 +54,7 @@ class PostController extends Controller
     public function editAction(Request $request, Post $post)
     {
         $em = $this->getDoctrine()->getManager();
-        $user = $this->getUser();
-        $posts = $em->getRepository('LabsAdminBundle:Post')->getPostForUser($post, $user);
+        $posts = $em->getRepository('LabsAdminBundle:Post')->getPostForUser($this->getUser(), $post);
         if( null === $posts)
         {
             throw new NotFoundHttpException('Article introuvable');

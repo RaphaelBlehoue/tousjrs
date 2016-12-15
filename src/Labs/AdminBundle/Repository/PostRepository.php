@@ -2,6 +2,9 @@
 
 namespace Labs\AdminBundle\Repository;
 
+use Labs\AdminBundle\Entity\Post;
+use Labs\AdminBundle\Entity\Users;
+
 /**
  * PostRepository
  *
@@ -11,11 +14,11 @@ namespace Labs\AdminBundle\Repository;
 class PostRepository extends \Doctrine\ORM\EntityRepository
 {
     /**
-     * @param $user
+     * @param Users $user
      * @return mixed
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
-    public function getDraftUser($user)
+    public function getDraftUser(Users $user)
     {
         $qb = $this->createQueryBuilder('p');
         $qb->where(
@@ -38,31 +41,33 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
     }
 
     /**
-     * @param $user
-     * @param $post
+     * @param Users $user
+     * @param Post $post
      * @return mixed
      * @throws \Doctrine\ORM\NonUniqueResultException
      * Recupere l'article de l'utilisateur couramment connecté avec l'id passé en paramètre
      */
-    public function getPostForUser($user, $post)
+    public function getPostForUser(Users $user, Post $post)
     {
         $qb = $this->createQueryBuilder('p');
+        $qb->leftJoin('p.user', 'u');
+        $qb->addSelect('u');
         $qb->where(
-            $qb->expr()->eq('p.user', ':user'),
-            $qb->expr()->eq('p.id', ':post')
+            $qb->expr()->eq('p.id', ':post'),
+            $qb->expr()->eq('u.id', ':user')
         );
-        $qb->setParameter('user', $user);
         $qb->setParameter('post', $post);
+        $qb->setParameter('user', $user);
         return $qb->getQuery()->getOneOrNullResult();
     }
 
     /**
-     * @param $post
+     * @param Post $post
      * @return mixed
      * @throws \Doctrine\ORM\NonUniqueResultException
      * Recupere l'article avec l'id passé en paramètre
      */
-    public function getPost($post)
+    public function getPost(Post $post)
     {
         $qb = $this->createQueryBuilder('p');
         $qb->where(
