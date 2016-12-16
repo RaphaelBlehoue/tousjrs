@@ -37,14 +37,6 @@ class PostType extends AbstractType
                 'placeholder' => 'Choix de la Rubrique',
                 'empty_data'  => null
             ))
-            ->add('save', SubmitType::class, array(
-                'label' => 'Enregistrer',
-                'attr'  => array('class' => 'btn btn-primary')
-            ))
-            ->add('upload', SubmitType::class, array(
-                'label' => 'Ajouter photo ou images',
-                'attr'  => array('class' => 'btn btn-success')
-            ))
         ;
     }
     

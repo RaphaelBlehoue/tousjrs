@@ -4,6 +4,7 @@ namespace Labs\AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -11,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table(name="post")
  * @ORM\Entity(repositoryClass="Labs\AdminBundle\Repository\PostRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Post
 {
@@ -58,6 +60,12 @@ class Post
     protected $draft;
 
     /**
+     * @Gedmo\Slug(fields={"name", "id"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    protected $slug;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="created", type="datetime")
@@ -68,7 +76,7 @@ class Post
     /**
      * @var
      *
-     * @ORM\OneToMany(targetEntity="Labs\AdminBundle\Entity\Media", mappedBy="post")
+     * @ORM\OneToMany(targetEntity="Labs\AdminBundle\Entity\Media", mappedBy="post", cascade={"remove"})
      */
     protected $medias;
 
@@ -310,5 +318,29 @@ class Post
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Section
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }

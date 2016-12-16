@@ -15,11 +15,9 @@ $(document).ready(function(){
         init : function(){
             this.on('addedfile', function(file){
                 console.log("Added file." + file);
-                console.log(_actionToDropZone);
             });
             this.on('complete', function(file){
                 console.log('super '+file);
-                //$('#photoView').removeClass('photoView').show();
             });
 
             this.on('maxfilesexceeded', function(){

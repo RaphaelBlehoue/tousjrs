@@ -67,7 +67,7 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
      * @throws \Doctrine\ORM\NonUniqueResultException
      * Recupere l'article avec l'id passé en paramètre
      */
-    public function getPost(Post $post)
+    public function getArticles(Post $post)
     {
         $qb = $this->createQueryBuilder('p');
         $qb->where(

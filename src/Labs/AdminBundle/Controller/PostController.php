@@ -10,7 +10,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
@@ -47,33 +46,40 @@ class PostController extends Controller
     /**
      * @param Request $request
      * @param Post $post
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return JsonResponse|\Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      * @Route("/{id}/edit", name="post_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Post $post)
     {
         $em = $this->getDoctrine()->getManager();
-        $posts = $em->getRepository('LabsAdminBundle:Post')->getPostForUser($this->getUser(), $post);
-        if( null === $posts)
+        $datas = $em->getRepository('LabsAdminBundle:Post')->getPostForUser($this->getUser(), $post);
+        if( null === $datas)
         {
             throw new NotFoundHttpException('Article introuvable');
         }
         // Upload Medias
-        $form = $this->createForm(PostType::class, $posts);
+        if($request->isXmlHttpRequest()){
+            $response = [];
+            if($this->uploadMedia($request, $datas)){
+                $response = ['results' => 'true'];
+            }else{
+                $response = ['results' => 'false'];
+            }
+            return new JsonResponse($response);
+        }
+
+        $form = $this->createForm(PostType::class, $datas);
         $form->handleRequest($request);
         if($form->isValid() && $form->isSubmitted()){
-            $posts->setDraft(1);
-            $em->persist($posts);
+            $datas->setDraft(1);
+            $em->persist($datas);
             $em->flush();
-            $nextAction = $form->get('save')->isClicked()
-                ? $this->redirectToRoute('post_index')
-                : $this->redirectToRoute('upload_Media', ['posts' => $posts->getId()]);
-            return $nextAction;
+            return $this->redirectToRoute('post_index');
         }
         return $this->render('LabsAdminBundle:Posts:edit_page.html.twig', [
             'form' => $form->createView(),
-            'post' => $posts
+            'post' => $datas
         ]);
 
     }
@@ -107,5 +113,29 @@ class PostController extends Controller
           throw new NotFoundHttpException('Entity introuvable');
       }
       return $entity;
+    }
+
+    /**
+     * @param Request $request
+     * @param Post $post
+     * @return bool
+     */
+    private function uploadMedia(Request $request, Post $post)
+    {
+            $em = $this->getDoctrine()->getManager();
+            $media = new Media();
+            $article = $em->getRepository('LabsAdminBundle:Post')->getArticles($post);
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $request->files->get('file');
+            $fileName = $article->getSlug().'_'.md5(uniqid()).'.'.$file->guessExtension();
+            $file->move(
+                $this->container->getParameter('gallery_directory'),
+                $fileName
+            );
+            $media->setUrl($fileName);
+            $media->setPost($article);
+            $em->persist($media);
+            $em->flush($media);
+            return true;
     }
 }

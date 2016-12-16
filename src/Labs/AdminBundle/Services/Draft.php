@@ -26,7 +26,6 @@ class Draft
             $post = new Post();
             $post->setDraft(0);
             $post->setOnline(0);
-            $post->setHasVideo(0);
             $post->setUser($user);
             $this->em->persist($post);
             $this->em->flush();
