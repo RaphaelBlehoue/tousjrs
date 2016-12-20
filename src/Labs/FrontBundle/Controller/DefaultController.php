@@ -3,6 +3,7 @@
 namespace Labs\FrontBundle\Controller;
 
 use Labs\AdminBundle\Entity\Item;
+use Labs\AdminBundle\Entity\Post;
 use Labs\AdminBundle\Entity\Section;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -11,13 +12,18 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DefaultController extends Controller
 {
+    
     /**
      * @Route("/", name="homepage")
      * @Method({"GET"})
      */
     public function indexAction()
     {
-        return $this->render('LabsFrontBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $recent = $em->getRepository('LabsAdminBundle:Post')->findArticleNum(15);
+        return $this->render('LabsFrontBundle:Default:index.html.twig',[
+            'recent' => $recent
+        ]);
     }
 
     /**

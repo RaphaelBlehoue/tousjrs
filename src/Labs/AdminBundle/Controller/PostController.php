@@ -75,13 +75,22 @@ class PostController extends Controller
             $datas->setDraft(1);
             $em->persist($datas);
             $em->flush();
-            return $this->redirectToRoute('post_index');
+            return $this->redirectToRoute('media_list', ['id' => $post->getId()]);
         }
         return $this->render('LabsAdminBundle:Posts:edit_page.html.twig', [
             'form' => $form->createView(),
             'post' => $datas
         ]);
 
+    }
+
+    /**
+     * @Route("/", name="post_draft")
+     * @Method({"GET"})
+     */
+    public function postDraftAction()
+    {
+        die('Post Draft');
     }
 
     /**
@@ -138,4 +147,57 @@ class PostController extends Controller
             $em->flush($media);
             return true;
     }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Route("/load", name="loading")
+     */
+    public function loadAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $content = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.';
+
+        $items = $em->getRepository('LabsAdminBundle:Item')->findAll();
+        $item_tab = [];
+        foreach ($items as $item){
+            $item_tab[] = $item;
+        }
+        $image = array("1.jpg", "2.jpg", "4.jpg");
+
+        foreach ($item_tab as $k => $data){
+            $i = 1;
+            for ($i = 1; $i < 10; $i++){
+                $s = array_rand($image,1);
+                $v = $image[$s];
+                $media = new Media();
+                $media->setUrl($v);
+                $media->setActived(1);
+
+                $date = new \DateTime('now');
+                $date->modify('+'.$i.$k.'day');
+
+                $post = new Post();
+                $post->setName('Journal tout les Jours - Article titre '.$i.$k);
+                $post->setContent($content);
+                $post->setDraft(1);
+                $post->setOnline(1);
+                $post->setCreated($date);
+                $post->setItem($data);
+                $post->setUser($this->getUser());
+                $post->addMedia($media);
+                $media->setPost($post);
+                $em->persist($post);
+                $em->flush();
+            }
+        }
+        return $this->redirectToRoute('post_index');
+
+    }
+
 }

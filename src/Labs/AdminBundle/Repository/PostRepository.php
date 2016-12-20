@@ -76,6 +76,24 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         $qb->setParameter('post', $post);
         return $qb->getQuery()->getOneOrNullResult();
     }
+
+    /**
+     * @param $max
+     * @return array
+     */
+    public function findArticleNum($max)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->leftJoin('p.medias', 'm');
+        $qb->addSelect('m');
+        $qb->leftJoin('p.item', 'i');
+        $qb->addSelect('i');
+        $qb->where($qb->expr()->eq('p.online', 1));
+        $qb->andWhere($qb->expr()->eq('m.actived', 1));
+        $qb->orderBy('p.created', 'DESC');
+        $qb->setMaxResults($max);
+        return $qb->getQuery()->getResult();
+    }
     
     
 }

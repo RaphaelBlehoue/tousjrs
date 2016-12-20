@@ -52,7 +52,7 @@ class Media
 
     /**
      * @var
-     * @ORM\ManyToOne(targetEntity="Labs\AdminBundle\Entity\Post", inversedBy="medias")
+     * @ORM\ManyToOne(targetEntity="Labs\AdminBundle\Entity\Post", inversedBy="medias", cascade={"persist"})
      * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      */
     protected $post;

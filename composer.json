@@ -31,11 +31,14 @@
         "doctrine/doctrine-migrations-bundle": "^1.0",
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "stof/doctrine-extensions-bundle": "^1.2",
-        "egeloen/ckeditor-bundle": "^4.0"
+        "egeloen/ckeditor-bundle": "^4.0",
+        "liip/imagine-bundle": "^1.6",
+        "twig/extensions": "^1.4"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
-        "symfony/phpunit-bridge": "^3.0"
+        "symfony/phpunit-bridge": "^3.0",
+        "doctrine/doctrine-fixtures-bundle": "^2.3"
     },
     "scripts": {
         "symfony-scripts": [

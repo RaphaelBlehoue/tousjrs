@@ -10,4 +10,32 @@ namespace Labs\AdminBundle\Repository;
  */
 class MediaRepository extends \Doctrine\ORM\EntityRepository
 {
+    /**
+     * @param $post
+     * @return array
+     */
+    public function findForPostMedia($post)
+    {
+        $qb = $this->createQueryBuilder('m');
+        $qb->where(
+            $qb->expr()->eq('m.post', ':post')
+        );
+        $qb->setParameter('post', $post);
+        return $qb->getQuery()->getResult();
+    }
+
+    /**
+     * @param $media
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function findOneMedia($media)
+    {
+        $qb = $this->createQueryBuilder('m');
+        $qb->where(
+            $qb->expr()->eq('m.id', ':media')
+        );
+        $qb->setParameter('media', $media);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
 }

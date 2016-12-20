@@ -47,7 +47,6 @@ class Post
 
     /**
      * @var bool
-     * @Assert\NotBlank(message="L'article doit avoir un status")
      * @ORM\Column(name="online", type="boolean", nullable=true)
      */
     protected $online;
@@ -76,7 +75,7 @@ class Post
     /**
      * @var
      *
-     * @ORM\OneToMany(targetEntity="Labs\AdminBundle\Entity\Media", mappedBy="post", cascade={"remove"})
+     * @ORM\OneToMany(targetEntity="Labs\AdminBundle\Entity\Media", mappedBy="post", cascade={"remove","persist"})
      */
     protected $medias;
 
