@@ -95,5 +95,25 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         return $qb->getQuery()->getResult();
     }
     
+    public function findPostItemBySection($options = array(), $max = 9)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->leftJoin('p.medias', 'm');
+        $qb->addSelect('m');
+        $qb->leftJoin('p.item', 'i');
+        $qb->addSelect('i');
+        $qb->leftJoin('i.section', 's');
+        $qb->addSelect('s');
+        $qb->where(
+            $qb->expr()->eq('p.online', 1),
+            $qb->expr()->eq('m.actived', 1),
+            $qb->expr()->eq('s.id', ':options')
+        );
+        $qb->orderBy('p.created', 'DESC');
+        $qb->setMaxResults($max);
+        $qb->setParameter('options', $options);
+        return $qb->getQuery()->getResult();
+    }
+    
     
 }

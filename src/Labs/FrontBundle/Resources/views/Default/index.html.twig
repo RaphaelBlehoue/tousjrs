@@ -24,7 +24,7 @@
                                     </div>
                                     <div class="blog-single-details">
                                         <p itemprop="description">
-                                            {{ article.content|truncate(150, true) }}
+                                            {{ article.content|truncate(150, true)|raw }}
                                         </p>
                                     </div>
                                 </div>
@@ -390,14 +390,15 @@
         </section>
     </div>
     <div class="container">
-        {%  for i in 0..9 %}
+        {%  for section in sections %}
+            {% if section|length > 0 %}
             <section class="block remove-top remove-bottom">
             <div class="container">
                 <div class="row">
                     <section class="block remove-top">
-                        <div class="col-md-12 column background-style" style="border-top: 2px solid #D70204;">
+                        <div class="col-md-12 column background-style" style="border-top: 3px solid {{ section.color }};">
                             <div class="heading5">
-                                <h3 class="text-center">{{ 'Categorie'|capitalize }}</h3>
+                                <h3 class="text-center">{{ section.name|capitalize }}</h3>
                             </div><!-- Heading -->
                         </div>
                     </section>
@@ -405,143 +406,13 @@
                     <section class="block remove-top">
                         <div class="col-md-12 column">
                             <div class="row">
-                                <div class="col-md-5 column">
-                                    <div class="top-margin">
-                                        <div class="col-md-12">
-                                            <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style13">
-                                                <div class="post-detail13">
-                                                    <img itemprop="image" src="http://placehold.it/470x319" alt="">
-                                                </div>
-                                                <div class="post-metas4">
-                                                    <div class="date">
-                                                        <ul>
-                                                            <li><a itemprop="datePublished" content="December-29-2014" href="#" title="">11 Nov 2015</a></li>
-                                                            <li><a itemprop="url" href="#" title="">Jone Kilna</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!--<div class="total-comments">
-                                                        <a itemprop="url" href="#" title=""><i class="fa fa-comments-o"></i> 1</a>
-                                                    </div><!-- Total Comments -->
-                                                    <!--<span class="total-views"><i class="fa fa-eye"></i> 874</span>-->
-                                                </div>
-                                                <h3 itemprop="headline"><a itemprop="url" href="single.html" title="">A New Era of Solar Energy</a></h3>
-                                                <p itemprop="description">Etiam bibendum dolor malesuada erat tincidunt, et egestas magna molestie. </p>
-                                            </div><!-- Post Style 13 -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-7 column">
-                                    <div class="top-margin">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
-                                                    <div class="post-thumb1">
-                                                        <img alt="" src="http://placehold.it/108x102" itemprop="image" />
-                                                        <a href="single5.html" title="" itemprop="url" class="img-link"></a>
-                                                    </div>
-                                                    <div class="date">
-                                                        <ul>
-                                                            <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015 </a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <h3 itemprop="headline"><a title="" href="single5.html" itemprop="url">The Man who Vanished is for 14 Months</a></h3>
-                                                </div><!-- Post Style 1 -->
-                                                <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
-                                                    <div class="post-thumb1">
-                                                        <img alt="" src="http://placehold.it/108x102" itemprop="image" />
-                                                        <a href="single6.html" title="" itemprop="url" class="img-link"></a>
-                                                    </div>
-                                                    <div class="date">
-                                                        <ul>
-                                                            <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015 </a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <h3 itemprop="headline"><a title="" href="single6.html" itemprop="url">The Man who Vanished is for 14 Months</a></h3>
-                                                </div><!-- Post Style 1 -->
-                                                <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
-                                                    <div class="post-thumb1">
-                                                        <img alt="" src="http://placehold.it/108x102" itemprop="image" />
-                                                        <a href="single7.html" title="" itemprop="url" class="img-link"></a>
-                                                    </div>
-                                                    <div class="date">
-                                                        <ul>
-                                                            <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015 </a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <h3 itemprop="headline"><a title="" href="single7.html" itemprop="url">The Man who Vanished is for 14 Months</a></h3>
-                                                </div><!-- Post Style 1 -->
-                                                <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
-                                                    <div class="post-thumb1">
-                                                        <img alt="" src="http://placehold.it/108x102" itemprop="image" />
-                                                        <a href="single8.html" title="" itemprop="url" class="img-link"></a>
-                                                    </div>
-                                                    <div class="date">
-                                                        <ul>
-                                                            <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015 </a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <h3 itemprop="headline"><a title="" href="single8.html" itemprop="url">The Man who Vanished is for 14 Months</a></h3>
-                                                </div><!-- Post Style 1 -->
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
-                                                    <div class="post-thumb1">
-                                                        <img alt="" src="http://placehold.it/108x102" itemprop="image" />
-                                                        <a href="single.html" title="" itemprop="url" class="img-link"></a>
-                                                    </div>
-                                                    <div class="date">
-                                                        <ul>
-                                                            <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015 </a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <h3 itemprop="headline"><a title="" href="single.html" itemprop="url">The Man who Vanished is for 14 Months</a></h3>
-                                                </div><!-- Post Style 1 -->
-                                                <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
-                                                    <div class="post-thumb1">
-                                                        <img alt="" src="http://placehold.it/108x102" itemprop="image" />
-                                                        <a href="single2.html" title="" itemprop="url" class="img-link"></a>
-                                                    </div>
-                                                    <div class="date">
-                                                        <ul>
-                                                            <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015 </a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <h3 itemprop="headline"><a title="" href="single2.html" itemprop="url">The Man who Vanished is for 14 Months</a></h3>
-                                                </div><!-- Post Style 1 -->
-                                                <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
-                                                    <div class="post-thumb1">
-                                                        <img alt="" src="http://placehold.it/108x102" itemprop="image" />
-                                                        <a href="single3.html" title="" itemprop="url" class="img-link"></a>
-                                                    </div>
-                                                    <div class="date">
-                                                        <ul>
-                                                            <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015 </a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <h3 itemprop="headline"><a title="" href="single3.html" itemprop="url">The Man who Vanished is for 14 Months</a></h3>
-                                                </div><!-- Post Style 1 -->
-                                                <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
-                                                    <div class="post-thumb1">
-                                                        <img alt="" src="http://placehold.it/108x102" itemprop="image" />
-                                                        <a href="single4.html" title="" itemprop="url" class="img-link"></a>
-                                                    </div>
-                                                    <div class="date">
-                                                        <ul>
-                                                            <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015 </a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <h3 itemprop="headline"><a title="" href="single4.html" itemprop="url">The Man who Vanished is for 14 Months</a></h3>
-                                                </div><!-- Post Style 1 -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                {{ render(controller('LabsFrontBundle:Default:getArticleBySections', {'section' : section.id })) }}
                             </div>
                         </div>
                     </section>
                 </div>
             </div>
-        </section>
+            </section>
             {% if loop.index0 >= 2 and loop.index0 < 3 %}
                 <section class="block remove-top">
                     <div class="container">
@@ -699,6 +570,7 @@
                         </div>
                     </div>
                 </section>
+            {% endif %}
             {% endif %}
         {% endfor %}
     </div>

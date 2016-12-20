@@ -140,3 +140,9 @@ liip_imagine:
             filters:
                 thumbnail: { size: [106, 100], mode: outbound }
                 background: { size: [108, 102], position: center, color: '#EEF1F5' }
+
+        thumb_block_article:
+            quality: 95
+            filters:
+                thumbnail: { size: [468, 316], mode: outbound }
+                background: { size: [470, 319], position: center, color: '#EEF1F5' }

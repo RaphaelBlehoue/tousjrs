@@ -62,4 +62,5 @@ class SectionRepository extends \Doctrine\ORM\EntityRepository
             $qb->setParameter(':entity', $entity);
             return $qb->getQuery()->getOneOrNullResult();
     }
+    
 }

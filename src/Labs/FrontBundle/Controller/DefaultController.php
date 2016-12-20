@@ -21,9 +21,23 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $recent = $em->getRepository('LabsAdminBundle:Post')->findArticleNum(15);
+        $sections = $this->FindBySection();
         return $this->render('LabsFrontBundle:Default:index.html.twig',[
-            'recent' => $recent
+            'recent' => $recent,
+            'sections' => $sections
         ]);
+    }
+
+    /**
+     * @param $section
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function getArticleBySectionsAction($section)
+    {
+        $articles = $this->findPostSection($section);
+        return $this->render('LabsFrontBundle:Includes:articles.html.twig',
+            ['articles' => $articles]
+        );
     }
 
     /**
@@ -75,5 +89,30 @@ class DefaultController extends Controller
         return $this->render('LabsFrontBundle:Items:view_item.html.twig',[
             'items' => $items
         ]);
+    }
+
+    /**
+     * @return array
+     */
+    protected function FindBySection()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $sections = $em->getRepository('LabsAdminBundle:Section')->getAll();
+        $section_array = [];
+        foreach ($sections as $s){
+            $section_array[] = $s;
+        }
+        return $section_array;
+    }
+
+    /**
+     * @param $options
+     * @return array
+     */
+    private function findPostSection($options)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $posts = $em->getRepository('LabsAdminBundle:Post')->findPostItemBySection($options);
+        return $posts;
     }
 }
