@@ -4,9 +4,6 @@
     <list default="true" id="85828300-8469-4298-9e55-7f970975b2ac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/flash.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/flash.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
     </list>
     <ignored path="touslesjours.dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,12 +32,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
-              <caret line="99" column="131" selection-start-line="99" selection-start-column="131" selection-end-line="99" selection-end-column="131" />
-              <folding />
+            <state relative-caret-position="465">
+              <caret line="171" column="24" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
+              <folding>
+                <element signature="e#9184#12050#0#HTML" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flash.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="flash.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/flash.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
@@ -186,9 +185,9 @@
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Dossiers/edit_page.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/flash.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" />
       </list>
     </option>
   </component>
@@ -280,150 +279,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Includes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -661,12 +516,12 @@
       <workItem from="1481878438828" duration="2712000" />
       <workItem from="1482138926968" duration="22480000" />
       <workItem from="1482239004405" duration="2635000" />
-      <workItem from="1482249169385" duration="38808000" />
+      <workItem from="1482249169385" duration="39305000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194967000" />
+    <option name="totallyTimeSpent" value="195464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1185,14 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="99" column="131" selection-start-line="99" selection-start-column="131" selection-end-line="99" selection-end-column="131" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -1206,6 +1053,16 @@
         <state relative-caret-position="276">
           <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="171" column="24" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
+          <folding>
+            <element signature="e#9184#12050#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

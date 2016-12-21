@@ -121,6 +121,15 @@
                     </div>
                     <aside class="col-md-4 column">
                         {{ render(controller('LabsFrontBundle:Default:getflashInfos')) }}
+                        <div class="widget">
+                            <ul class="review-widget">
+                                <div class="post-style6" itemtype="http://schema.org/BlogPosting" itemscope="">
+                                    <div class="post-thumb6">
+                                        <a href=""><img itemprop="image" src="{{ asset('images/resource/pub.jpg') }}" alt="" /></a>
+                                    </div>
+                                </div><!-- Post Style 8 -->
+                            </ul>
+                        </div>
                         {{ render(controller('LabsFrontBundle:Default:getRecentArticle')) }}
                         <div class="widget">
                             <h3 class="heading4">{{ 'Les videos recentes' }}</h3>
@@ -160,17 +169,7 @@
                                 </li>
                             </ul>
                         </div>
-
-                        <div class="widget">
-                            <ul class="review-widget">
-                                <div class="post-style6" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                    <div class="post-thumb6">
-                                        <img itemprop="image" src="http://placehold.it/275x450" alt="" />
-                                    </div>
-                                </div><!-- Post Style 8 -->
-                            </ul>
-                        </div>
-
+                        
                         <div class="widget">
                             <h3 class="heading4">{{ 'Grand Format' }}</h3>
                             {{ render(controller('LabsFrontBundle:Default:getDossierInfo')) }}
