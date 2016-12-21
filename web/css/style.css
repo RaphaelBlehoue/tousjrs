@@ -1892,7 +1892,7 @@ nav.menu .container > ul > li a > i {
 /* Post Style 9 */
 .post-style9 {
     float: left;
-    padding-left: 35px;
+    padding-left: 0;
     position: relative;
     width: 100%;
 }

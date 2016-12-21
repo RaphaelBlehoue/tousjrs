@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85828300-8469-4298-9e55-7f970975b2ac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/InfoController.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/InfoController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Info.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Form/InfoType.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Form/InfoType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/FormatRepository.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/FormatRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/InfoRepository.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/InfoRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/ItemRepository.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/ItemRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/PostRepository.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/PostRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/SectionRepository.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/SectionRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Infos/create.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Infos/create.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Infos/edit.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Infos/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Infos/index.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Infos/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/flash.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/flash.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/recent.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/recent.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/js/core/app.js" afterPath="$PROJECT_DIR$/src/Labs/LimitlessTplBundle/Resources/public/assets/js/core/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
     </list>
     <ignored path="touslesjours.dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,11 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Infos/create.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="423">
               <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="1894" column="19" selection-start-line="1894" selection-start-column="19" selection-end-line="1894" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -146,7 +141,6 @@
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/header.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/responsive-header.html.twig" />
-        <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Format.php" />
@@ -182,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/recent.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/flash.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Infos/create.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
       </list>
     </option>
   </component>
@@ -273,6 +268,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -804,12 +831,12 @@
       <workItem from="1481878438828" duration="2712000" />
       <workItem from="1482138926968" duration="22480000" />
       <workItem from="1482239004405" duration="2635000" />
-      <workItem from="1482249169385" duration="33916000" />
+      <workItem from="1482249169385" duration="34059000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190075000" />
+    <option name="totallyTimeSpent" value="190218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -937,14 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="1762" column="16" selection-start-line="1762" selection-start-column="16" selection-end-line="1762" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1351,6 +1370,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
           <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="1894" column="19" selection-start-line="1894" selection-start-column="19" selection-end-line="1894" selection-end-column="19" />
           <folding />
         </state>
       </provider>
