@@ -10,7 +10,7 @@ parameters:
     gallery_directory: '%kernel.root_dir%/../web/uploads/posts'
 
 framework:
-    translator: ~
+    translator:     { fallback: '%locale%' }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -146,3 +146,23 @@ liip_imagine:
             filters:
                 thumbnail: { size: [468, 316], mode: outbound }
                 background: { size: [470, 319], position: center, color: '#EEF1F5' }
+
+        thumb_flash:
+            quality: 95
+            filters:
+                thumbnail: { size: [316, 142], mode: outbound }
+                background: { size: [318, 144], position: center, color: '#EEF1F5' }
+
+#vich_upload configuration
+vich_uploader:
+    db_driver: orm # or mongodb or propel or phpcr
+    twig:      true
+    storage:   file_system # or gaufrette or flysystem
+    mappings:
+        flash_image:
+            uri_prefix:         /uploads/flashInfo
+            upload_destination: "%kernel.root_dir%/../web/uploads/flashInfo"
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+            namer:              vich_uploader.namer_uniqid

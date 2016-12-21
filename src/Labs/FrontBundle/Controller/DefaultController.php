@@ -29,6 +29,31 @@ class DefaultController extends Controller
     }
 
     /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function getRecentArticleAction(){
+        $em = $this->getDoctrine()->getManager();
+        $recents = $em->getRepository('LabsAdminBundle:Post')->findArticleNum(4);
+        return $this->render('LabsFrontBundle:Includes:recent.html.twig',
+            ['recents' => $recents]
+        );
+
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function getflashInfosAction(){
+        
+        $em = $this->getDoctrine()->getManager();
+        $flashs = $em->getRepository('LabsAdminBundle:Info')->findInfoNum(4);
+        return $this->render('LabsFrontBundle:Includes:flash.html.twig',
+            ['flashs' => $flashs]
+        );
+
+    }
+
+    /**
      * @param $section
      * @return \Symfony\Component\HttpFoundation\Response
      */

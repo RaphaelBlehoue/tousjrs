@@ -24,6 +24,8 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
+            new Knp\Bundle\TimeBundle\KnpTimeBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
             new Labs\LimitlessTplBundle\LabsLimitlessTplBundle(),
             new FOS\UserBundle\FOSUserBundle(),
