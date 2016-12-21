@@ -46,7 +46,7 @@ class DefaultController extends Controller
     public function getflashInfosAction(){
         
         $em = $this->getDoctrine()->getManager();
-        $flashs = $em->getRepository('LabsAdminBundle:Info')->findInfoNum(4);
+        $flashs = $em->getRepository('LabsAdminBundle:Info')->findInfoNum(6);
         return $this->render('LabsFrontBundle:Includes:flash.html.twig',
             ['flashs' => $flashs]
         );
