@@ -95,11 +95,11 @@ body {
 }
 p{
 	font-family:Open Sans;
-	font-size:14px;
-	color:#717171;
+	font-size:1.3rem;
+	color:#515151;
 	float:left;
 	width:100%;
-	line-height:26px;
+	line-height:1.5rem;
 	letter-spacing: 0.5px;
 	margin:0;
 }
@@ -1184,10 +1184,10 @@ nav.menu .container > ul > li a > i {
     color: #333638;
     float: left;
     font-family: raleway;
-    font-size: 15px;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: .3px;
-    line-height: 22px;
+    line-height: 1.8rem;
     margin-top: 6px;
     width: 100%;
 
@@ -2382,7 +2382,7 @@ nav.menu .container > ul > li a > i {
     color: #333638;
     float: left;
     font-family: raleway;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1.3px;
     margin: 25px 0 14px;

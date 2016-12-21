@@ -32,7 +32,7 @@
                                     </div>
                                     <div class="blog-single-details">
                                         <p itemprop="description">
-                                            {{ article.content|truncate(150, true)|raw }}
+                                            {{ article.content|truncate(350, true)|raw }}
                                         </p>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@
                                                     </div>
                                                     <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ post.name|truncate('60', true, '...') }}</a></h3>
                                                     <p itemprop="description">
-                                                        {{ post.content|truncate('80', true)|raw }}
+                                                        {{ post.content|truncate('200', true)|raw }}
                                                     </p>
                                                 </div><!-- Post Stye 4 -->
                                             </li>
@@ -97,7 +97,7 @@
                                                         <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">{{ arts.created|date('d, m Y') }}</a></li>
                                                     </ul>
                                                 </div>
-                                                <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ arts.name|truncate('40', true,'...') }}</a>
+                                                <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ arts.name|truncate('50', true,'...') }}</a>
                                                 </h3>
                                             </div><!-- Post Style 1 -->
                                         </div>
