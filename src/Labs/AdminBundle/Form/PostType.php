@@ -19,6 +19,7 @@ class PostType extends AbstractType
     {
         $builder
             ->add('name', TextType::class,array('label' => false, 'attr' => array('placeholder'=> 'Titre de l\'article')))
+            ->add('legend', TextType::class,array('label' => false, 'attr' => array('placeholder'=> 'legend de l\'article')))
             ->add('content', CKEditorType::class, array(
                 'label' => false
             ))

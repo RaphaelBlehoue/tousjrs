@@ -15,13 +15,20 @@
                                         <ul>
                                             <li><span>{{ 'mise à jour le '|upper }} :</span><a itemprop="url" href="#" title="">{{ article.created|date('d, m Y') }}</a></li>
                                             <li><a itemprop="url" href="#" title="">{{ article.item.name }}</a></li>
-                                            <li><a itemprop="url" href="#" title="">Sia KAMBOU / AFP</a></li>
+                                            <li><a itemprop="url" href="#" title="">{{ 'touslesjours' }}</a></li>
                                         </ul>
                                     </div>
                                     <div class="single-post-thumb">
                                         {% for media in article.medias %}
                                             <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="" />
                                         {% endfor %}
+                                        <div class="post-metas4">
+                                            <div class="date">
+                                                <ul>
+                                                    <li><a itemprop="url" href="#" title=""> {% if article.legend|length > 0 %}{{article.legend }} {% endif %}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="blog-single-details">
                                         <p itemprop="description">
@@ -51,15 +58,15 @@
                                                     <div class="post-metas4">
                                                         <div class="date">
                                                             <ul>
-                                                                <li><a itemprop="datePublished" content="December-29-2014" href="#" title="">{{ post.created|date('d, m Y') }}</a></li>
-                                                                <li><a itemprop="url" href="#" title="">Jone Kilna</a></li>
+                                                                <li><a itemprop="datePublished" content="December-29-2014" href="#" title="">{{ post.created|date('d, m Y') }}</a></li><br/>
+                                                                <li><a itemprop="url" href="#" title="">{% if post.legend|length > 0 %}{{post.legend }} {% endif %}</a></li>
                                                             </ul>
                                                         </div>
                                                         <div class="total-comments">
                                                             <a itemprop="url" href="#" title="">{{ post.item.name }}</a>
                                                         </div><!-- Total Comments -->
                                                     </div>
-                                                    <h3 itemprop="headline"><a itemprop="url" href="single.html" title="">{{ post.name }}</a></h3>
+                                                    <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ post.name|truncate('60', true, '...') }}</a></h3>
                                                     <p itemprop="description">
                                                         {{ post.content|truncate('80', true)|raw }}
                                                     </p>
@@ -90,7 +97,7 @@
                                                         <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">{{ arts.created|date('d, m Y') }}</a></li>
                                                     </ul>
                                                 </div>
-                                                <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ arts.name }}</a>
+                                                <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ arts.name|truncate('60', true,'...') }}</a>
                                                 </h3>
                                             </div><!-- Post Style 1 -->
                                         </div>

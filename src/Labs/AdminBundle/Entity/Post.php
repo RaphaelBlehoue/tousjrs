@@ -36,6 +36,14 @@ class Post
     /**
      * @var string
      *
+     * @ORM\Column(name="legend", type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="L'article doit avoir une legend")
+     */
+    protected $legend;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="content", type="text", nullable=true)
      * @Assert\NotBlank(message="Votre article n'a aucun contenu, veuillez entrer des informations avant de continuer")
      * @Assert\Length(
@@ -324,7 +332,7 @@ class Post
      *
      * @param string $slug
      *
-     * @return Section
+     * @return Post
      */
     public function setSlug($slug)
     {
@@ -342,4 +350,30 @@ class Post
     {
         return $this->slug;
     }
+
+    /**
+     * Get legend
+     * 
+     * @return string
+     */
+    public function getLegend()
+    {
+        return $this->legend;
+    }
+
+    /**
+     * Set legend
+     *
+     * @param string $legend
+     *
+     * @return Post
+     */
+    public function setLegend($legend)
+    {
+        $this->legend = $legend;
+        
+        return $this;
+    }
+    
+    
 }

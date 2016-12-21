@@ -14,8 +14,8 @@
                             <div class="post-metas4">
                                 <div class="date">
                                     <ul>
-                                        <li><a itemprop="datePublished" content="{{ article.created|date('d, m Y') }}" href="#" title="">{{ article.created|date('d, m Y') }}</a></li>
-                                        <li><a itemprop="url" href="#" title="">Jone Kilna</a></li>
+                                        <li><a itemprop="datePublished" content="{{ article.created|date('d, m Y') }}" href="#" title="">{{ article.created|date('d, m Y') }}</a></li> -
+                                        <li><a itemprop="url" href="#" title="">{{ article.legend }}</a></li>
                                     </ul>
                                 </div>
                                 <!--<div class="total-comments">
@@ -23,7 +23,7 @@
                                 </div><!-- Total Comments -->
                                 <!--<span class="total-views"><i class="fa fa-eye"></i> 874</span>-->
                             </div>
-                            <h3 itemprop="headline"><a itemprop="url" href="single.html" title="">{{ article.name }}</a></h3>
+                            <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ article.name }}</a></h3>
                             <p itemprop="description"> {{ article.content|truncate('80', true)|raw }}</p>
                         </div><!-- Post Style 13 -->
                    {% endif %}
@@ -51,7 +51,7 @@
                                     <li><a title="" href="#" content="{{ arts.created|date('d, m Y') }}" itemprop="datePublished">{{ arts.created|date('d, m Y') }} </a></li>
                                 </ul>
                             </div>
-                            <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ arts.name }}</a></h3>
+                            <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ arts.name|truncate('60', true, '...') }}</a></h3>
                         </div><!-- Post Style 1 -->
                     {% endif %}
                 {% endfor %}
@@ -72,7 +72,7 @@
                                     <li><a title="" href="#" content="{{ post.created|date('d, m Y') }}" itemprop="datePublished">{{ post.created|date('d, m Y') }} </a></li>
                                 </ul>
                             </div>
-                            <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ post.name }}</a></h3>
+                            <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ post.name|truncate('60', true, '...') }}</a></h3>
                         </div><!-- Post Style 1 -->
                     {% endif %}
                 {% endfor %}

@@ -19,6 +19,7 @@ class FormatType extends AbstractType
     {
         $builder
             ->add('name', TextType::class,array('label' => false, 'attr' => array('placeholder'=> 'Titre du Grand Format')))
+            ->add('legend', TextType::class,array('label' => false, 'attr' => array('placeholder'=> 'legend du Grand format')))
             ->add('content', CKEditorType::class, array(
                 'label' => false
             ))

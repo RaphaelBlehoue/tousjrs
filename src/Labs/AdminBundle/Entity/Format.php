@@ -36,6 +36,14 @@ class Format
     /**
      * @var string
      *
+     * @ORM\Column(name="legend", type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="L'article doit avoir une legend")
+     */
+    protected $legend;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="content", type="text", nullable=true)
      * @Assert\NotBlank(message="Votre Grand format n'a aucun contenu, veuillez entrer des informations avant de continuer")
      * @Assert\Length(
@@ -341,5 +349,29 @@ class Format
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Get legend
+     *
+     * @return string
+     */
+    public function getLegend()
+    {
+        return $this->legend;
+    }
+
+    /**
+     * Set legend
+     *
+     * @param string $legend
+     *
+     * @return Format
+     */
+    public function setLegend($legend)
+    {
+        $this->legend = $legend;
+
+        return $this;
     }
 }
