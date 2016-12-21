@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85828300-8469-4298-9e55-7f970975b2ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Dossiers/edit_page.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Dossiers/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/MediasController.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/MediasController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/PostController.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/PostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Item.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Media.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Media.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Users.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/InfoRepository.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/InfoRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/MediaRepository.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/MediaRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/sidebar.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Includes/sidebar.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Posts/index.html.twig" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Posts/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Services/Draft.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Services/Draft.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig" />
     </list>
     <ignored path="touslesjours.dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,40 +32,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FormatController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Controller/FormatController.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="353">
+              <caret line="208" column="83" selection-start-line="208" selection-start-column="83" selection-end-line="208" selection-end-column="83" />
               <folding>
-                <element signature="e#47#82#0#PHP" expanded="true" />
-                <element signature="e#835#877#0#PHP" expanded="true" />
-                <element signature="e#2641#2656#0#PHP" expanded="true" />
-                <element signature="e#2726#2772#0#PHP" expanded="true" />
-                <element signature="e#3831#3855#1#PHP" expanded="true" />
+                <element signature="e#375#7745#0#HTML" expanded="false" />
+                <element signature="e#7766#12586#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Format.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Format.php">
+      <file leaf-file-name="articles.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="814">
-              <caret line="169" column="6" selection-start-line="169" selection-start-column="6" selection-end-line="169" selection-end-column="6" />
-              <folding>
-                <element signature="e#43#75#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dossier.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/dossier.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+            <state relative-caret-position="1702">
+              <caret line="74" column="70" selection-start-line="74" selection-start-column="70" selection-end-line="74" selection-end-column="70" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+              <folding>
+                <element signature="e#47#80#0#PHP" expanded="true" />
+                <element signature="e#651#673#1#PHP" expanded="true" />
+                <element signature="e#769#810#0#PHP" expanded="true" />
+                <element signature="e#1109#1131#1#PHP" expanded="true" />
+                <element signature="e#1182#1225#0#PHP" expanded="true" />
+                <element signature="e#1495#1517#1#PHP" expanded="true" />
+                <element signature="e#1565#1607#0#PHP" expanded="true" />
+                <element signature="e#1869#1893#1#PHP" expanded="true" />
+                <element signature="e#1943#1987#0#PHP" expanded="true" />
+                <element signature="e#2288#2333#0#PHP" expanded="true" />
+                <element signature="e#2596#2621#1#PHP" expanded="true" />
+                <element signature="e#3226#3251#1#PHP" expanded="true" />
+                <element signature="e#3854#3876#1#PHP" expanded="true" />
+                <element signature="e#4302#4327#1#PHP" expanded="true" />
+                <element signature="e#4686#4708#1#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,7 +106,6 @@
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/SectionRepository.php" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/PostRepository.php" />
-        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/header.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/responsive-header.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Form/InfoType.php" />
@@ -138,10 +135,11 @@
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/MediasController.php" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/InfoRepository.php" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Repository/FormatRepository.php" />
-        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/FormatController.php" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/dossier.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig" />
       </list>
     </option>
   </component>
@@ -842,12 +840,12 @@
       <workItem from="1481878438828" duration="2712000" />
       <workItem from="1482138926968" duration="22480000" />
       <workItem from="1482239004405" duration="2635000" />
-      <workItem from="1482249169385" duration="28636000" />
+      <workItem from="1482249169385" duration="28938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184795000" />
+    <option name="totallyTimeSpent" value="185097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -942,14 +940,6 @@
           <folding>
             <element signature="e#1389#2447#0#Twig" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="40" column="68" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1304,40 +1294,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="e#47#80#0#PHP" expanded="true" />
-            <element signature="e#651#673#1#PHP" expanded="true" />
-            <element signature="e#769#810#0#PHP" expanded="true" />
-            <element signature="e#1109#1131#1#PHP" expanded="true" />
-            <element signature="e#1182#1225#0#PHP" expanded="true" />
-            <element signature="e#1495#1517#1#PHP" expanded="true" />
-            <element signature="e#1565#1607#0#PHP" expanded="true" />
-            <element signature="e#1869#1893#1#PHP" expanded="true" />
-            <element signature="e#1943#1987#0#PHP" expanded="true" />
-            <element signature="e#2288#2333#0#PHP" expanded="true" />
-            <element signature="e#2596#2621#1#PHP" expanded="true" />
-            <element signature="e#3226#3251#1#PHP" expanded="true" />
-            <element signature="e#3854#3876#1#PHP" expanded="true" />
-            <element signature="e#4302#4327#1#PHP" expanded="true" />
-            <element signature="e#4686#4708#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="182" column="64" selection-start-line="182" selection-start-column="64" selection-end-line="182" selection-end-column="64" />
-          <folding>
-            <element signature="e#13178#13213#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/flash.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -1365,6 +1321,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/dossier.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Format.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="169" column="6" selection-start-line="169" selection-start-column="6" selection-end-line="169" selection-end-column="6" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Controller/FormatController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1379,20 +1353,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Format.php">
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="169" column="6" selection-start-line="169" selection-start-column="6" selection-end-line="169" selection-end-column="6" />
+        <state relative-caret-position="234">
+          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
           <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
+            <element signature="e#47#80#0#PHP" expanded="true" />
+            <element signature="e#651#673#1#PHP" expanded="true" />
+            <element signature="e#769#810#0#PHP" expanded="true" />
+            <element signature="e#1109#1131#1#PHP" expanded="true" />
+            <element signature="e#1182#1225#0#PHP" expanded="true" />
+            <element signature="e#1495#1517#1#PHP" expanded="true" />
+            <element signature="e#1565#1607#0#PHP" expanded="true" />
+            <element signature="e#1869#1893#1#PHP" expanded="true" />
+            <element signature="e#1943#1987#0#PHP" expanded="true" />
+            <element signature="e#2288#2333#0#PHP" expanded="true" />
+            <element signature="e#2596#2621#1#PHP" expanded="true" />
+            <element signature="e#3226#3251#1#PHP" expanded="true" />
+            <element signature="e#3854#3876#1#PHP" expanded="true" />
+            <element signature="e#4302#4327#1#PHP" expanded="true" />
+            <element signature="e#4686#4708#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/dossier.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        <state relative-caret-position="353">
+          <caret line="208" column="83" selection-start-line="208" selection-start-column="83" selection-end-line="208" selection-end-column="83" />
+          <folding>
+            <element signature="e#375#7745#0#HTML" expanded="false" />
+            <element signature="e#7766#12586#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1702">
+          <caret line="74" column="70" selection-start-line="74" selection-start-column="70" selection-end-line="74" selection-end-column="70" />
           <folding />
         </state>
       </provider>

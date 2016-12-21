@@ -61,7 +61,7 @@
                                                     </div>
                                                     <h3 itemprop="headline"><a itemprop="url" href="single.html" title="">{{ post.name }}</a></h3>
                                                     <p itemprop="description">
-                                                        {{ post.content|truncate('80', true) }}
+                                                        {{ post.content|truncate('80', true)|raw }}
                                                     </p>
                                                 </div><!-- Post Stye 4 -->
                                             </li>
