@@ -50,7 +50,18 @@ class DefaultController extends Controller
         return $this->render('LabsFrontBundle:Includes:flash.html.twig',
             ['flashs' => $flashs]
         );
+    }
 
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function getDossierInfoAction(){
+
+        $em = $this->getDoctrine()->getManager();
+        $dossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum(4);
+        return $this->render('LabsFrontBundle:Includes:dossier.html.twig',
+            ['dossiers' => $dossiers]
+        );
     }
 
     /**

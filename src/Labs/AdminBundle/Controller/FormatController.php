@@ -2,9 +2,9 @@
 
 namespace Labs\AdminBundle\Controller;
 
-use Labs\AdminBundle\Entity\Post;
+use Labs\AdminBundle\Entity\Format;
 use Labs\AdminBundle\Entity\Media;
-use Labs\AdminBundle\Form\PostType;
+use Labs\AdminBundle\Form\FormatType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -13,55 +13,55 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
- * Class PostController
+ * Class FormatController
  * @package Labs\AdminBundle\Controller
- * @Route("/articles")
+ * @Route("/dossiers")
  */
-class PostController extends Controller
+class FormatController extends Controller
 {
     /**
-     * @Route("/", name="post_index")
+     * @Route("/", name="dossier_index")
      * @Method({"GET"})
      */
     public function indexAction()
     {
-        $posts = $this->getAllPosts();
-        return $this->render('LabsAdminBundle:Posts:index.html.twig',[
-            'posts' => $posts
+        $dossiers = $this->getAllDossiers();
+        return $this->render('LabsAdminBundle:Dossiers:index.html.twig',[
+            'dossiers' => $dossiers
         ]);
     }
 
     /**
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
-     * @Route("/create", name="post_create")
+     * @Route("/create", name="dossier_create")
      * @Method({"GET","POST"})
      */
     public function createAction()
     {
         $user = $this->getUser();
-        $draft = $this->get('draft_create')->DraftCreate($user);
-        return $this->redirectToRoute('post_edit', ['id' => $draft->getId()]);
+        $draft = $this->get('draft_create')->DraftFormatCreate($user);
+        return $this->redirectToRoute('dossier_edit', ['id' => $draft->getId()]);
     }
 
     /**
      * @param Request $request
-     * @param Post $post
+     * @param Format $format
      * @return JsonResponse|\Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
-     * @Route("/{id}/edit", name="post_edit")
+     * @Route("/{id}/edit", name="dossier_edit")
      * @Method({"GET", "POST"})
      */
-    public function editAction(Request $request, Post $post)
+    public function editAction(Request $request, Format $format)
     {
         $em = $this->getDoctrine()->getManager();
-        $datas = $em->getRepository('LabsAdminBundle:Post')->getPostForUser($this->getUser(), $post);
+        $datas = $em->getRepository('LabsAdminBundle:Format')->getFormatForUser($this->getUser(), $format);
         if( null === $datas)
         {
-            throw new NotFoundHttpException('Article introuvable');
+            throw new NotFoundHttpException('Dossier introuvable');
         }
         // Upload Medias
         if($request->isXmlHttpRequest()){
             $response = [];
-            if($this->uploadMedia($request, $datas)){
+            if($this->uploadDossierMedia($request, $datas)){
                 $response = ['results' => 'true'];
             }else{
                 $response = ['results' => 'false'];
@@ -69,83 +69,84 @@ class PostController extends Controller
             return new JsonResponse($response);
         }
 
-        $form = $this->createForm(PostType::class, $datas);
+        $form = $this->createForm(FormatType::class, $datas);
         $form->handleRequest($request);
         if($form->isValid() && $form->isSubmitted()){
             $datas->setDraft(1);
             $em->persist($datas);
             $em->flush();
-            return $this->redirectToRoute('media_list', ['id' => $post->getId()]);
+            return $this->redirectToRoute('media_dossier', ['id' => $format->getId()]);
         }
-        return $this->render('LabsAdminBundle:Posts:edit_page.html.twig', [
+        return $this->render('LabsAdminBundle:Dossiers:edit_page.html.twig', [
             'form' => $form->createView(),
-            'post' => $datas
+            'format' => $datas
         ]);
 
     }
 
     /**
-     * @Route("/draft", name="post_draft")
+     * @Route("/draft", name="dossier_draft")
      * @Method({"GET"})
      */
-    public function postDraftAction()
+    public function FormatDraftAction()
     {
-        die('Post Draft');
+        die('Format Draft');
     }
 
     /**
-     * @param Post $post
+     * @param Format $format
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     * @Route("/{id}/delete", name="post_delete")
+     * @Route("/{id}/delete", name="dossier_delete")
      * @Method({"GET","DELETE"})
      */
-    public function deleteAction(Post $post)
+    public function deleteAction(Format $format)
     {
         $em = $this->getDoctrine()->getManager();
-        $posts = $em->getRepository('LabsAdminBundle:Post')->find($post);
-        if( null === $posts)
-            throw new NotFoundHttpException('element '.$posts.' n\'existe pas');
+        $formats = $em->getRepository('LabsAdminBundle:Format')->find($format);
+        if( null === $formats)
+            throw new NotFoundHttpException('element '.$formats.' n\'existe pas');
         else
-            $em->remove($posts);
+            $em->remove($formats);
         $em->flush();
-        return $this->redirectToRoute('post_index');
+        return $this->redirectToRoute('dossier_index');
     }
 
     /**
      * @return array
      */
-    private function getAllPosts()
+    private function getAllDossiers()
     {
       $em = $this->getDoctrine()->getManager();
-      $entity = $em->getRepository('LabsAdminBundle:Post')->getAll();
+      $entity = $em->getRepository('LabsAdminBundle:Format')->getAll();
       if(null === $entity){
           throw new NotFoundHttpException('Entity introuvable');
       }
       return $entity;
     }
+    
 
     /**
      * @param Request $request
-     * @param Post $post
+     * @param Format $format
      * @return bool
      */
-    private function uploadMedia(Request $request, Post $post)
+    private function uploadDossierMedia(Request $request, Format $format)
     {
-            $em = $this->getDoctrine()->getManager();
-            $media = new Media();
-            $article = $em->getRepository('LabsAdminBundle:Post')->getArticles($post);
-            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
-            $file = $request->files->get('file');
-            $fileName = $article->getSlug().'_'.md5(uniqid()).'.'.$file->guessExtension();
-            $file->move(
-                $this->container->getParameter('gallery_directory'),
-                $fileName
-            );
-            $media->setUrl($fileName);
-            $media->setPost($article);
-            $em->persist($media);
-            $em->flush($media);
-            return true;
+        $em = $this->getDoctrine()->getManager();
+        $media = new Media();
+        $formats = $em->getRepository('LabsAdminBundle:Format')->getFormats($format);
+        /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+        $file = $request->files->get('file');
+        $fileName = $formats->getSlug().'_'.md5(uniqid()).'.'.$file->guessExtension();
+        $file->move(
+            $this->container->getParameter('gallery_directory'),
+            $fileName
+        );
+        $media->setUrl($fileName);
+        $media->setFormat($formats);
+        $em->persist($media);
+        $em->flush($media);
+        return true;
     }
 
     /**

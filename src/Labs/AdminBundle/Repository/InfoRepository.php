@@ -32,4 +32,5 @@ class InfoRepository extends \Doctrine\ORM\EntityRepository
         $qb->setMaxResults($max);
         return $qb->getQuery()->getResult();
     }
+    
 }

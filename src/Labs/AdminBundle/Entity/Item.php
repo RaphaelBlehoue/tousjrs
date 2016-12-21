@@ -68,11 +68,19 @@ class Item
      */
     protected $posts;
 
+    /**
+     * @var
+     *
+     * @ORM\OneToMany(targetEntity="Labs\AdminBundle\Entity\Format", mappedBy="item")
+     */
+    protected $formats;
+
 
     public function __construct()
     {
         $this->created = new \DateTime('now');
         $this->posts = new ArrayCollection();
+        $this->formats = new ArrayCollection();
     }
 
     /**
@@ -237,5 +245,39 @@ class Item
     public function getPosts()
     {
         return $this->posts;
+    }
+
+    /**
+     * Add format
+     *
+     * @param \Labs\AdminBundle\Entity\Format $format
+     *
+     * @return Item
+     */
+    public function addFormat(\Labs\AdminBundle\Entity\Format $format)
+    {
+        $this->formats[] = $format;
+
+        return $this;
+    }
+
+    /**
+     * Remove format
+     *
+     * @param \Labs\AdminBundle\Entity\Format $format
+     */
+    public function removeFormat(\Labs\AdminBundle\Entity\Format $format)
+    {
+        $this->formats->removeElement($format);
+    }
+
+    /**
+     * Get formats
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFormats()
+    {
+        return $this->formats;
     }
 }

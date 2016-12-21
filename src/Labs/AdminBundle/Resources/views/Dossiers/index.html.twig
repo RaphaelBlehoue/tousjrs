@@ -1,5 +1,5 @@
 {% extends 'LabsAdminBundle::layout.html.twig' %}
-{% block Title %}  {{ 'Gestion des articles du site'|capitalize }} {% endblock %}
+{% block Title %}  {{ 'Gestion des Dossiers du site'|capitalize }} {% endblock %}
 {% block body %}
     <!-- Individual column searching (text inputs) -->
     <!-- START CONTAINER FLUID -->
@@ -13,16 +13,16 @@
     <!-- START PANEL -->
     <div class="panel panel-flat">
         <div class="panel-heading">
-            <h5 class="panel-title">Gestion des articles du site</h5>
+            <h5 class="panel-title">Gestion des Dossiers du site</h5>
             <div class="heading-elements">
                 <ul class="icons-list">
-                    <a href="{{ path('post_create') }}" class="btn btn-success btn-labeled"><b><i class="icon-plus3"></i></b> Créer un article</a>
+                    <a href="{{ path('dossier_create') }}" class="btn btn-success btn-labeled"><b><i class="icon-plus3"></i></b> Créer un Dossier</a>
                 </ul>
             </div>
         </div>
 
         <div class="panel-body">
-            Liste des articles
+            Liste des Dossiers
         </div>
 
         <table class="table datatable-column-search-inputs">
@@ -35,16 +35,16 @@
             </tr>
             </thead>
             <tbody>
-            {% for post in posts %}
-                {% if post|length > 0 %}
+            {% for dossier in dossiers  %}
+                {% if dossier|length > 0 %}
                     <tr>
-                        <td>{{ post.name }}</td>
+                        <td>{{ dossier.name }}</td>
                         <td>
-                            <span class="label {{ (post.online == 1) ? 'label-info' : 'label-danger' }}">
-                                 {{ (post.online == 1) ? 'En ligne' : 'Hors Ligne' }}
+                            <span class="label {{ (dossier.online == 1) ? 'label-info' : 'label-danger' }}">
+                                 {{ (dossier.online == 1) ? 'En ligne' : 'Hors Ligne' }}
                             </span>
                         </td>
-                        <td><span class="label label-info">{{ post.created|date('Y-m-d') }}</span></td>
+                        <td><span class="label label-info">{{ dossier.created|date('Y-m-d') }}</span></td>
                         <td class="text-center">
                             <ul class="icons-list">
                                 <li class="dropdown">
@@ -52,8 +52,8 @@
                                         <i class="icon-menu9"></i>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="{{ path('post_edit', { 'id' : post.id}) }}"><i class="icon-pencil5"></i>{{ 'Modifier'|capitalize }}</a></li>
-                                        <li><a href="{{ path('post_delete',{'id' : post.id} ) }}"><i class="icon-cancel-square2"></i>{{ 'Supprimer'|capitalize }}</a></li>
+                                        <li><a href="{{ path('dossier_edit', { 'id' : dossier.id}) }}"><i class="icon-pencil5"></i>{{ 'Modifier'|capitalize }}</a></li>
+                                        <li><a href="{{ path('dossier_delete',{'id' : dossier.id} ) }}"><i class="icon-cancel-square2"></i>{{ 'Supprimer'|capitalize }}</a></li>
                                     </ul>
                                 </li>
                             </ul>

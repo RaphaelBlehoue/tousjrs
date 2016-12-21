@@ -3,6 +3,7 @@
 namespace Labs\AdminBundle\Services;
 
 use Doctrine\ORM\EntityManager;
+use Labs\AdminBundle\Entity\Format;
 use Labs\AdminBundle\Entity\Post;
 
 class Draft
@@ -30,6 +31,27 @@ class Draft
             $this->em->persist($post);
             $this->em->flush();
             $draft = $post;
+            return $draft;
+        }else{
+            return $draft;
+        }
+    }
+
+    /**
+     * @param $user
+     * @return Format|mixed
+     */
+    public function DraftFormatCreate($user)
+    {
+        $draft = $this->em->getRepository('LabsAdminBundle:Format')->getDraftUser($user);
+        if(null === $draft){
+            $format = new Format();
+            $format->setDraft(0);
+            $format->setOnline(0);
+            $format->setUser($user);
+            $this->em->persist($format);
+            $this->em->flush();
+            $draft = $format;
             return $draft;
         }else{
             return $draft;

@@ -179,62 +179,8 @@
                         </div>
 
                         <div class="widget">
-                            <h3 class="heading4">{{ 'Grands Formats' }}</h3>
-                            <ul class="readable-post">
-                                <li>
-                                    <div class="post-style9" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                        <i>1.</i><a itemprop="url" href="single.html" title="">IN DIGNISSIM ORCI AT PURU </a>
-                                    </div><!-- Post Style 9 -->
-                                </li>
-                                <li>
-                                    <div class="post-style9" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                        <i>2.</i><a itemprop="url" href="single2.html" title="">SED DICTUM NISI TURPIS ENAR</a>
-                                    </div><!-- Post Style 9 -->
-                                </li>
-                                <li>
-                                    <div class="post-style9" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                        <i>3.</i><a itemprop="url" href="single3.html" title="">IN DIGNISSIM ORCI AT PURU </a>
-                                    </div><!-- Post Style 9 -->
-                                </li>
-                                <li>
-                                    <div class="post-style9" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                        <i>4.</i><a itemprop="url" href="single4.html" title="">IN DIGNISSIM ORCI AT PURU </a>
-                                    </div><!-- Post Style 9 -->
-                                </li>
-                            </ul><!-- Readable Post -->
-                        </div>
-                        <div class="widget">
-                            <h3 class="heading4">{{ 'Dossiers' }}</h3>
-                            <div class="top-margin">
-                                <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style7">
-                                    <div class="post-thumb7">
-                                        <img alt="" src="http://placehold.it/318x144" itemprop="image">
-                                    </div>
-                                    <div class="post-detail7">
-                                        <div class="date">
-                                            <ul>
-                                                <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015</a></li>
-                                            </ul>
-                                        </div>
-                                        <h3 itemprop="headline"><a title="" href="single4.html" itemprop="url">Is the New Android War
-                                                Really That Good?</a></h3>
-                                    </div>
-                                </div><!-- Post Style 7 -->
-                                <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style7">
-                                    <div class="post-thumb7">
-                                        <img alt="" src="http://placehold.it/318x144" itemprop="image">
-                                    </div>
-                                    <div class="post-detail7">
-                                        <div class="date">
-                                            <ul>
-                                                <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015</a></li>
-                                            </ul>
-                                        </div>
-                                        <h3 itemprop="headline"><a title="" href="single5.html" itemprop="url">Is the New Android War
-                                                Really That Good?</a></h3>
-                                    </div>
-                                </div><!-- Post Style 7 -->
-                            </div>
+                            <h3 class="heading4">{{ 'Grand Format' }}</h3>
+                            {{ render(controller('LabsFrontBundle:Default:getDossierInfo')) }}
                         </div>
                     </aside>
                 </div>
@@ -250,7 +196,9 @@
                     <section class="block remove-top">
                         <div class="col-md-12 column background-style" style="border-top: 3px solid {{ section.color }};">
                             <div class="heading5">
-                                <h3 class="text-center" style="color: {{ section.color }};">{{ section.name|capitalize }}</h3>
+                                <h3 class="text-center" style="color: {{ section.color }};">
+                                    {{ section.name|capitalize }}
+                                </h3>
                             </div><!-- Heading -->
                         </div>
                     </section>

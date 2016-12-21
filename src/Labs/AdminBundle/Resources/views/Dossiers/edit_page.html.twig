@@ -1,0 +1,91 @@
+{% extends 'LabsAdminBundle::layout.html.twig' %}
+{% block Title %}  {{ 'Gestion des Dossiers - Edition'|capitalize }} {% endblock %}
+{% block stylesheets %}
+
+{% endblock %}
+{% block body %}
+    <!-- Main content -->
+    <!-- Form horizontal -->
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h5 class="panel-title">{{ 'Gestion des Dossiers - Edition' }}</h5>
+            <div class="heading-elements">
+                <div class="icons-list">
+                    <a href="{{ path('dossier_index') }}" class="btn btn-primary btn-labeled"><b><i class="icon-menu7"></i></b> Afficher la liste</a>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            {{ form_start(form, { 'action': path('dossier_edit', {'id' : format.id}), attr : { 'class':'form-horizontal', 'novalidate': 'novalidate'}}) }}
+            <fieldset class="content-group col-lg-12">
+
+                <legend class="text-bold">Edition du dossiers - {% if format.name|length > 0 %}{{ format.name }}{% endif %}</legend>
+
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Rubrique Associée au dossiers</label>
+                    <div class="col-lg-4">
+                        {{ form_row(form.item) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Titre du dossier</label>
+                    <div class="col-lg-9">
+                        {{ form_row(form.name) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Status du dossier</label>
+                    <div class="col-lg-3">
+                        {{ form_row(form.online) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Contenu du dossier</label>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-12">
+                        {{ form_row(form.content) }}
+                    </div>
+                </div>
+
+                <!-- File limits -->
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Inserez des fichiers dans le gestion de Media</h5>
+                        <div class="heading-elements">
+                            <ul class="icons-list">
+                                <li><a data-action="collapse"></a></li>
+                                <li><a data-action="reload"></a></li>
+                                <li><a data-action="close"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <p class="text-semibold">Importez les images ou photos du dossier</p>
+                        <div action="{{ path('dossier_edit', {'id' : format.id }) }}" class="dropzone" id="dropzone-upload"></div>
+                    </div>
+                </div>
+                <!-- /file limits -->
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary">Enregistrer & Continuer <i class="icon-database-add position-right"></i></button>
+                </div>
+
+            </fieldset>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+{% block Core_JS_files %}
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/uploaders/dropzone.min.js') }}"></script>
+{% endblock %}
+
+{% block themes %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/pages/form_inputs.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/core/libraries/jquery_ui/interactions.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/pages/form_select2.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/dropzone/main.js') }}"></script>
+{% endblock %}

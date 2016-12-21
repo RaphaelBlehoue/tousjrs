@@ -25,6 +25,20 @@ class MediaRepository extends \Doctrine\ORM\EntityRepository
     }
 
     /**
+     * @param $format
+     * @return array
+     */
+    public function findForDossierMedia($format)
+    {
+        $qb = $this->createQueryBuilder('m');
+        $qb->where(
+            $qb->expr()->eq('m.format', ':format')
+        );
+        $qb->setParameter('format', $format);
+        return $qb->getQuery()->getResult();
+    }
+
+    /**
      * @param $media
      * @return mixed
      * @throws \Doctrine\ORM\NonUniqueResultException

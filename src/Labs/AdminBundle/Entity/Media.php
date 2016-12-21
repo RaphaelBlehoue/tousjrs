@@ -56,6 +56,13 @@ class Media
      * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      */
     protected $post;
+
+    /**
+     * @var
+     * @ORM\ManyToOne(targetEntity="Labs\AdminBundle\Entity\Format", inversedBy="medias", cascade={"persist"})
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
+     */
+    protected $format;
     
     
     public function __construct()
@@ -169,6 +176,30 @@ class Media
     public function getPost()
     {
         return $this->post;
+    }
+
+    /**
+     * Set Format
+     *
+     * @param \Labs\AdminBundle\Entity\Format $format
+     *
+     * @return Media
+     */
+    public function setFormat(\Labs\AdminBundle\Entity\Format $format)
+    {
+        $this->format = $format;
+
+        return $this;
+    }
+
+    /**
+     * Get Format
+     *
+     * @return \Labs\AdminBundle\Entity\Format
+     */
+    public function getFormat()
+    {
+        return $this->format;
     }
     
 

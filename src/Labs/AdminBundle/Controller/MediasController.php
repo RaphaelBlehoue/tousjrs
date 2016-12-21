@@ -1,6 +1,7 @@
 <?php
 
 namespace Labs\AdminBundle\Controller;
+use Labs\AdminBundle\Entity\Format;
 use Labs\AdminBundle\Entity\Media;
 use Labs\AdminBundle\Entity\Post;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -40,6 +41,28 @@ Class MediasController extends Controller
         ]);
     }
 
+
+    /**
+     * @Route("/{id}/dossier", name="media_dossier")
+     * @Method("GET")
+     * @Template()
+     * @ParamConverter("format", class="LabsAdminBundle:Format")
+     */
+    public function ChoiceMediaDossierInFrontAction(Format $format)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $dossier = $em->getRepository('LabsAdminBundle:Format')->getFormats($format);
+        if(!$dossier)
+        {
+            throw $this->createNotFoundException('le dossiers ou les medias n\'existe pas');
+        }
+        $medias = $em->getRepository('LabsAdminBundle:Media')->findForDossierMedia($dossier);
+        return $this->render('LabsAdminBundle:Medias:list_dossier.html.twig', [
+            'dossier' => $dossier,
+            'medias' => $medias
+        ]);
+    }
+
     /**
      * @param Media $media
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
@@ -56,5 +79,23 @@ Class MediasController extends Controller
         $medias->setActived(1);
         $em->flush();
         return $this->redirectToRoute('post_index');
+    }
+
+    /**
+     * @param Media $media
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Route("/in/dossier/{id}", name="add_media_dossier")
+     * @Method("GET")
+     */
+    public function AddMediaInFrontDossierAction(Media $media)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $medias = $em->getRepository('LabsAdminBundle:Media')->findOneMedia($media);
+        if(!$media){
+            throw $this->createNotFoundException('Le media photo ou image n\'existe pas');
+        }
+        $medias->setActived(1);
+        $em->flush();
+        return $this->redirectToRoute('dossier_index');
     }
 }

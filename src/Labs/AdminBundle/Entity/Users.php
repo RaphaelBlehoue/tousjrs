@@ -34,10 +34,18 @@ class Users extends BaseUser
      */
     protected $posts;
 
+    /**
+     * @var
+     *
+     * @ORM\OneToMany(targetEntity="Labs\AdminBundle\Entity\Format", mappedBy="user")
+     */
+    protected $formats;
+
     public function __construct()
     {
         parent::__construct();
         $this->posts = new ArrayCollection();
+        $this->formats = new ArrayCollection();
     }
 
 
@@ -74,4 +82,41 @@ class Users extends BaseUser
     {
         return $this->posts;
     }
+
+    /**
+     * Add format
+     *
+     * @param \Labs\AdminBundle\Entity\Format $format
+     *
+     * @return Users
+     */
+    public function addFormat(\Labs\AdminBundle\Entity\Format $format)
+    {
+        $this->formats[] = $format;
+
+        return $this;
+    }
+
+    /**
+     * Remove format
+     *
+     * @param \Labs\AdminBundle\Entity\Format $format
+     */
+    public function removeFormat(\Labs\AdminBundle\Entity\Format $format)
+    {
+        $this->formats->removeElement($format);
+    }
+
+    /**
+     * Get formats
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFormats()
+    {
+        return $this->formats;
+    }
+
+
+
 }
