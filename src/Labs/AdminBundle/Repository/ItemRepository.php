@@ -16,7 +16,7 @@ class ItemRepository extends \Doctrine\ORM\EntityRepository
     public function getAll()
     {
         $qb = $this->createQueryBuilder('i');
-        $qb->orderBy('i.name');
+        $qb->orderBy('i.name', 'Desc');
         return $qb->getQuery()->getResult();
     }
 

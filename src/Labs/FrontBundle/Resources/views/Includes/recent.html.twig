@@ -1,20 +1,31 @@
-    {% for recent in recents %}
-        {% if loop.first != loop.index %}
-            <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
-                    <div class="post-thumb1">
-                        {% for media in recent.medias %}
-                            <img alt="{{ recent.name }}" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" itemprop="image" />
-                            <a href="" title="" itemprop="url" class="img-link"></a>
-                        {% endfor %}
-                    </div>
+ <div class="widget">
+        <div class="tabs-widget">
+            <ul class="nav nav-tab">
+                <li class="active"><a href="#recent" data-toggle="tab">{{ 'EN CE MOMENT' }}</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="recent">
+                    {% for recent in recents %}
+                        {% if loop.first != loop.index %}
+                            <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
+                                <div class="post-thumb1">
+                                    {% for media in recent.medias %}
+                                        <img alt="{{ recent.name }}" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" itemprop="image" />
+                                        <a href="" title="" itemprop="url" class="img-link"></a>
+                                    {% endfor %}
+                                </div>
 
-                    <div class="date">
-                        <ul>
-                            <li><a title="" href="#" content="{{ recent.created|date('d, m Y') }}" itemprop="datePublished">{{ recent.created|date('d, m Y') }}</a></li>
-                        </ul>
-                    </div>
-                    <h3 itemprop="headline"><a title="" href="single5.html" itemprop="url">{{ recent.name|capitalize }}</a></h3>
+                                <div class="date">
+                                    <ul>
+                                        <li><a title="" href="#" content="{{ recent.created|date('d, m Y') }}" itemprop="datePublished">{{ recent.created|date('d, m Y') }}</a></li>
+                                    </ul>
+                                </div>
+                                <h3 itemprop="headline"><a title="" href="single5.html" itemprop="url">{{ recent.name|capitalize }}</a></h3>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <!-- Post Style 1 -->
+                </div>
             </div>
-        {% endif %}
-    {% endfor %}
-    <!-- Post Style 1 -->
+        </div><!-- tabs Widget -->
+ </div>

@@ -90,7 +90,7 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         $qb->addSelect('i');
         $qb->where($qb->expr()->eq('p.online', 1));
         $qb->andWhere($qb->expr()->eq('m.actived', 1));
-        $qb->orderBy('p.created', 'DESC');
+        $qb->orderBy('p.created', 'Desc');
         $qb->setMaxResults($max);
         return $qb->getQuery()->getResult();
     }
@@ -109,7 +109,7 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
             $qb->expr()->eq('m.actived', 1),
             $qb->expr()->eq('s.id', ':options')
         );
-        $qb->orderBy('p.created', 'DESC');
+        $qb->orderBy('p.created', 'Desc');
         $qb->setMaxResults($max);
         $qb->setParameter('options', $options);
         return $qb->getQuery()->getResult();

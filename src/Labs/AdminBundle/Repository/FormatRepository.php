@@ -90,7 +90,7 @@ class FormatRepository extends \Doctrine\ORM\EntityRepository
         $qb->addSelect('i');
         $qb->where($qb->expr()->eq('f.online', 1));
         $qb->andWhere($qb->expr()->eq('m.actived', 1));
-        $qb->orderBy('f.created', 'DESC');
+        $qb->orderBy('f.created', 'Desc');
         if(null !== $max){
             $qb->setMaxResults($max);
         }

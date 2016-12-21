@@ -18,7 +18,7 @@ class SectionRepository extends \Doctrine\ORM\EntityRepository
     public function getAll()
     {
         $qb = $this->createQueryBuilder('s');
-        $qb->orderBy('s.name');
+        $qb->orderBy('s.name', 'Desc');
         return $qb->getQuery()->getResult();
     }
 

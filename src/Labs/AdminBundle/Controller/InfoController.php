@@ -56,13 +56,15 @@ class InfoController extends Controller
      * @param Request $request
      * @param Info $info
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
-     * @Route("/{id}/edit/{slug}", name="info_edit")
+     * @Route("/{id}/edit", name="info_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Info $info)
     {
         $em = $this->getDoctrine()->getManager();
-        $infos = $em->getRepository('LabsAdminBundle:Info')->getOne($info);
+        $infos = $em->getRepository('LabsAdminBundle:Info')->findOneBy(array(
+           'id' => $info
+        ));
         if(null === $infos){
             throw new NotFoundHttpException ("L'element de id ".$infos." n'existe pas");
         }
@@ -75,7 +77,7 @@ class InfoController extends Controller
         }
         return $this->render('LabsAdminBundle:Infos:edit.html.twig',array(
             'form' => $form->createView(),
-            'info'   => $infos
+            'info' => $infos
         ));
     }
 

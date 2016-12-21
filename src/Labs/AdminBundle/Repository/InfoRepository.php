@@ -16,7 +16,7 @@ class InfoRepository extends \Doctrine\ORM\EntityRepository
     public function getAll()
     {
         $qb = $this->createQueryBuilder('i');
-        $qb->orderBy('i.name');
+        $qb->orderBy('i.created', 'Desc');
         return $qb->getQuery()->getResult();
     }
 
@@ -28,7 +28,7 @@ class InfoRepository extends \Doctrine\ORM\EntityRepository
     {
         $qb = $this->createQueryBuilder('i');
         $qb->where($qb->expr()->eq('i.online', 1));
-        $qb->orderBy('i.updated', 'DESC');
+        $qb->orderBy('i.updated', 'Desc');
         $qb->setMaxResults($max);
         return $qb->getQuery()->getResult();
     }

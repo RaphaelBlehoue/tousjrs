@@ -28,7 +28,7 @@
         <table class="table datatable-column-search-inputs">
             <thead>
             <tr>
-                <th>Titre</th>
+                <th>Contenu</th>
                 <th>Status</th>
                 <th>Date de Mise à jour</th>
                 <th class="text-center">Actions</th>
@@ -38,7 +38,7 @@
             {% for info in infos %}
                 {% if info|length > 0 %}
                     <tr>
-                        <td>{{ info.name }}</td>
+                        <td>{{ info.content }}</td>
                         <td>
                             <span class="label {{ (info.online == 1) ? 'label-info' : 'label-danger' }}">
                                  {{ (info.online == 1) ? 'En ligne' : 'Hors Ligne' }}
@@ -52,7 +52,7 @@
                                         <i class="icon-menu9"></i>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="{{ path('info_edit', { 'id' : info.id, 'slug' : info.slug}) }}"><i class="icon-pencil5"></i>{{ 'Modifier'|capitalize }}</a></li>
+                                        <li><a href="{{ path('info_edit', { 'id' : info.id }) }}"><i class="icon-pencil5"></i>{{ 'Modifier'|capitalize }}</a></li>
                                         <li><a href="{{ path('info_delete',{'id' : info.id} ) }}"><i class="icon-cancel-square2"></i>{{ 'Supprimer'|capitalize }}</a></li>
                                     </ul>
                                 </li>
