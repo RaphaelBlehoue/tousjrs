@@ -153,6 +153,18 @@ liip_imagine:
                 thumbnail: { size: [316, 142], mode: outbound }
                 background: { size: [318, 144], position: center, color: '#EEF1F5' }
 
+        thumb_dossier:
+            quality: 95
+            filters:
+                thumbnail: { size: [578, 449], mode: outbound }
+                background: { size: [580, 451], position: center, color: '#EEF1F5' }
+
+        thumb_dossier_small:
+            quality: 95
+            filters:
+                thumbnail: { size: [286, 222], mode: outbound }
+                background: { size: [288, 224], position: center, color: '#EEF1F5' }
+
 #vich_upload configuration
 vich_uploader:
     db_driver: orm # or mongodb or propel or phpcr

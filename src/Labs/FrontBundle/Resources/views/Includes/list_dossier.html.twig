@@ -1,0 +1,18 @@
+{% for dossier in dossiers %}
+    <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style7">
+        {% for media in dossier.medias %}
+            <div class="post-thumb7">
+                <img alt="{{ dossier.name }}" src="{{ media.assertPath|imagine_filter('thumb_flash') }}" itemprop="image" />
+                <a href="" title="" itemprop="url" class="img-link"></a>
+            </div>
+        {% endfor %}
+        <div class="post-detail7">
+            <div class="date">
+                <ul>
+                    <li><a title="" href="#" content="{{ dossier.created|ago}}" itemprop="datePublished" style="color: #fff;">{{ dossier.created|ago}} </a></li>
+                </ul>
+            </div>
+            <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ dossier.name|truncate(35, true, '...') }}</a></h3>
+        </div>
+    </div><!-- Post Style 7 -->
+{% endfor %}

@@ -59,7 +59,7 @@ class DefaultController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $dossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum(4);
-        return $this->render('LabsFrontBundle:Includes:dossier.html.twig',
+        return $this->render('LabsFrontBundle:Includes:list_dossier.html.twig',
             ['dossiers' => $dossiers]
         );
     }
@@ -74,6 +74,19 @@ class DefaultController extends Controller
         return $this->render('LabsFrontBundle:Includes:articles.html.twig',
             ['articles' => $articles]
         );
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function getDossierLimitAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $dossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum(5);
+        return $this->render('LabsFrontBundle:Includes:dossier.html.twig',[
+            'dossiers' => $dossiers
+        ]);
+        
     }
 
     /**

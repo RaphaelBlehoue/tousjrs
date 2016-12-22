@@ -1,18 +1,44 @@
 {% for dossier in dossiers %}
-    <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style7">
-        {% for media in dossier.medias %}
-        <div class="post-thumb7">
-            <img alt="{{ dossier.name }}" src="{{ media.assertPath|imagine_filter('thumb_flash') }}" itemprop="image" />
-            <a href="" title="" itemprop="url" class="img-link"></a>
-        </div>
-        {% endfor %}
-        <div class="post-detail7">
-            <div class="date">
-                <ul>
-                    <li><a title="" href="#" content="{{ dossier.created|ago}}" itemprop="datePublished" style="color: #fff;">{{ dossier.created|ago}} </a></li>
-                </ul>
+    {% if dossier|length > 0 %}
+        {% if loop.first %}
+            <div class="col-md-6">
+                <div class="post-style3" itemscope itemType="http://schema.org/BlogPosting">
+                    {% for media in dossier.medias %}
+                        <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_dossier') }}" alt="" />
+                    {% endfor %}
+                    <div class="post-detail3">
+                        <div class="cat">
+                            <a title="" href="#" itemprop="url">{{ dossier.item.name }}</a>
+                        </div>
+                        <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ dossier.name|truncate('60', true,'...') }}</a></h3>
+                        <div class="date">
+                            <ul>
+                                <li><a title="" href="#" itemprop="url"> {{ dossier.created|date('d.m.Y') }}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- Post Style 3 -->
             </div>
-            <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ dossier.name|truncate(35, true, '...') }}</a></h3>
-        </div>
-    </div><!-- Post Style 7 -->
+        {% endif %}
+        {% if loop.first != loop.index %}
+            <div class="col-md-3">
+                <div class="post-style3" itemscope itemType="http://schema.org/BlogPosting">
+                    {% for media in dossier.medias %}
+                        <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_dossier') }}" alt="" />
+                    {% endfor %}
+                    <div class="post-detail3 small-font">
+                        <div class="cat">
+                            <a title="" href="#" itemprop="url">{{ dossier.item.name }}</a>
+                        </div>
+                        <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ dossier.name|truncate('45', true, '...') }}</a></h3>
+                        <div class="date">
+                            <ul>
+                                <li><a title="" href="#" itemprop="url"> {{ dossier.created|date('d.m.Y') }}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- Post Style 3 -->
+            </div>
+        {% endif %}
+    {% endif %}
 {% endfor %}
