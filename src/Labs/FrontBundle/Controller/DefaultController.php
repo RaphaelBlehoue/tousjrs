@@ -12,7 +12,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DefaultController extends Controller
 {
-    
+
     /**
      * @Route("/", name="homepage")
      * @Method({"GET"})
@@ -29,6 +29,23 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/videos", name="videos_page")
+     * @Method({"GET"})
+     */
+    public function videoListAction()
+    {
+    }
+
+    /**
+     * @param $id
+     * @Route("/videos/watch/{id}", name="video_view")
+     */
+    public function videoWatchViewAction($id)
+    {
+        die($id);
+    }
+
+    /**
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function getRecentArticleAction(){
@@ -39,6 +56,7 @@ class DefaultController extends Controller
         );
 
     }
+    
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
@@ -58,7 +76,7 @@ class DefaultController extends Controller
     public function getDossierInfoAction(){
 
         $em = $this->getDoctrine()->getManager();
-        $dossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum(4);
+        $dossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum(3);
         return $this->render('LabsFrontBundle:Includes:list_dossier.html.twig',
             ['dossiers' => $dossiers]
         );
@@ -141,6 +159,30 @@ class DefaultController extends Controller
     }
 
     /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function getVideosReportAction()
+    {
+        $api = $this->get('youtube_api.service');
+        $youtube = $api->getSearchVideo(3);
+        return $this->render('LabsFrontBundle:Includes:youtube_video.html.twig',[
+            'youtube' => $youtube
+        ]);
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function getSideBarvideoAction()
+    {
+        $api = $this->get('youtube_api.service');
+        $youtube = $api->getSearchVideo(3);
+        return $this->render('LabsFrontBundle:Includes:recent_video.html.twig',[
+            'youtube' => $youtube
+        ]);
+    }
+
+    /**
      * @return array
      */
     protected function FindBySection()
@@ -164,4 +206,5 @@ class DefaultController extends Controller
         $posts = $em->getRepository('LabsAdminBundle:Post')->findPostItemBySection($options);
         return $posts;
     }
+
 }

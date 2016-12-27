@@ -1,0 +1,34 @@
+{% if youtube|length > 0 %}
+<section class="block remove-top">
+    <div class="container">
+        <div class="heading">
+            <i class="fa fa-video-camera"></i><span>{{ 'A la une'|upper }}</span>
+            <h2>{{ 'reportages'|upper }}</h2>
+        </div><!-- Heading -->
+        <div class="row low-space">
+            {% for video in youtube %}
+                <div class="col-md-4">
+                <div class="post-style3" itemscope itemType="http://schema.org/BlogPosting">
+                    <a href="{{ path('video_view', {'id' : video.Id}) }}" title="{{ video.Title }}">
+                        <img itemprop="image" src="{{ video.Thumb.high.url }}" alt="{{ video.Channel }}" />
+                    </a>
+                    <div class="post-detail3">
+                        <div class="cat">
+                            <a title="{{ video.Channel }}" href="https://www.youtube.com/channel/{{ video.ChannelId }}" itemprop="url" target="_blank">{{ video.Channel }}</a>
+                        </div>
+                        <h3 itemprop="headline"><a itemprop="url" href="{{ path('video_view', {'id' : video.Id}) }}" title="{{ video.Title }}">{{ video.Title }}</a></h3>
+                        <div class="date">
+                            <ul>
+                                <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">{{ video.Published|date('d, m Y') }}</a></li>
+                                <!--<li>BY <a title="" href="#" itemprop="url"> ADMIN</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <span><i class="fa fa-play"></i></span>
+                </div><!-- Post Style 3 -->
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

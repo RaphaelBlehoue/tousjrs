@@ -1,0 +1,22 @@
+{% if youtube|length > 0 %}
+<div class="widget">
+    <h3 class="heading4">{{ 'Les videos recentes' }}</h3>
+    <ul class="carousal" id="carousal-widget">
+        {% for video in youtube %}
+            <li>
+                <div class="post-style8" itemtype="http://schema.org/BlogPosting" itemscope="">
+                    <div class="post-thumb8">
+                        <a href="{{ path('video_view', {'id' : video.Id}) }}" title="{{ video.Title }}">
+                            <img itemprop="image" src="{{ video.Thumb.high.url }}" alt="{{ video.Channel }}" />
+                        </a>
+                    </div>
+                    <div class="post-detail8">
+                        <a itemprop="url" href="{{ path('video_view', {'id' : video.Id}) }}" title="{{ video.Title }}">{{ video.Published|date('d, m Y') }} </a><i class="fa fa-video-camera"></i>
+                        <h3 itemprop="headline"><a itemprop="url" href="{{ path('video_view', {'id' : video.Id}) }}" title="">{{ video.Title|truncate('20', true, '...') }}</a></h3>
+                    </div>
+                </div><!-- Post Style 8 -->
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

@@ -1,7 +1,8 @@
 # Learn more about services, parameters and containers at
 # http://symfony.com/doc/current/book/service_container.html
 parameters:
-#    parameter_name: value
+    api.youtube.key:  'AIzaSyBn7E1usBBkFhWfpoYzmnnYsin-9-G0PJk'
+    api.youtube.channel.id: 'UCfxFA4sCsppvbcRred327KQ'
 
 services:
     draft_create:
@@ -17,3 +18,7 @@ services:
         class: Twig_Extensions_Extension_Intl
         tags:
             - { name: twig.extension }
+
+    youtube_api.service:
+        class: Labs\AdminBundle\Services\YoutubeApi
+        arguments: ['@service_container']

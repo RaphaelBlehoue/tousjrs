@@ -131,49 +131,8 @@
                             </ul>
                         </div>
                         {{ render(controller('LabsFrontBundle:Default:getRecentArticle')) }}
-                        <div class="widget">
-                            <h3 class="heading4">{{ 'Les videos recentes' }}</h3>
-                            <ul class="carousal" id="carousal-widget">
-                                <li>
-                                    <div class="post-style8" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                        <div class="post-thumb8">
-                                            <img itemprop="image" src="http://placehold.it/319x353" alt="" />
-                                        </div>
-                                        <div class="post-detail8">
-                                            <a itemprop="url" href="#" title="">11 NOV 2015 </a><i class="fa fa-video-camera"></i>
-                                            <h3 itemprop="headline"><a itemprop="url" href="single6.html" title="">A New Era of Solar Energy...</a></h3>
-                                        </div>
-                                    </div><!-- Post Style 8 -->
-                                </li>
-                                <li>
-                                    <div class="post-style8" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                        <div class="post-thumb8">
-                                            <img itemprop="image" src="http://placehold.it/319x353" alt="" />
-                                        </div>
-                                        <div class="post-detail8">
-                                            <a itemprop="url" href="#" title="">11 NOV 2015 </a><i class="fa fa-video-camera"></i>
-                                            <h3 itemprop="headline"><a itemprop="url" href="single7.html" title="">A New Era of Solar Energy...</a></h3>
-                                        </div>
-                                    </div><!-- Post Style 8 -->
-                                </li>
-                                <li>
-                                    <div class="post-style8" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                        <div class="post-thumb8">
-                                            <img itemprop="image" src="http://placehold.it/319x353" alt="" />
-                                        </div>
-                                        <div class="post-detail8">
-                                            <a itemprop="url" href="#" title="">11 NOV 2015 </a><i class="fa fa-video-camera"></i>
-                                            <h3 itemprop="headline"><a itemprop="url" href="single8.html" title="">A New Era of Solar Energy...</a></h3>
-                                        </div>
-                                    </div><!-- Post Style 8 -->
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="widget">
-                            <h3 class="heading4">{{ 'Grand Format' }}</h3>
-                            {{ render(controller('LabsFrontBundle:Default:getDossierInfo')) }}
-                        </div>
+                        {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
+                        {{ render(controller('LabsFrontBundle:Default:getDossierInfo')) }}
                     </aside>
                 </div>
             </div>
@@ -206,70 +165,7 @@
             </div>
             </section>
             {% if loop.index0 >= 2 and loop.index0 < 3 %}
-                <section class="block remove-top">
-                    <div class="container">
-                        <div class="heading">
-                            <i class="fa fa-video-camera"></i><span>{{ 'A la une'|upper }}</span>
-                            <h2>{{ 'reportages'|upper }}</h2>
-                        </div><!-- Heading -->
-                        <div class="row low-space">
-                            <div class="col-md-4">
-                                <div class="post-style3" itemscope itemType="http://schema.org/BlogPosting">
-                                    <img itemprop="image" src="http://placehold.it/389x374" alt="" />
-                                    <div class="post-detail3">
-                                        <div class="cat">
-                                            <a title="" href="#" itemprop="url">Designer</a>
-                                        </div>
-                                        <h3 itemprop="headline"><a itemprop="url" href="single8.html" title="">The ‘Star Wars Awakenstr</a></h3>
-                                        <div class="date">
-                                            <ul>
-                                                <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015</a></li>
-                                                <li>BY <a title="" href="#" itemprop="url"> ADMIN</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <span><i class="fa fa-play"></i></span>
-                                </div><!-- Post Style 3 -->
-                            </div>
-                            <div class="col-md-4">
-                                <div class="post-style3" itemscope itemType="http://schema.org/BlogPosting">
-                                    <img itemprop="image" src="http://placehold.it/389x374" alt="" />
-                                    <div class="post-detail3">
-                                        <div class="cat">
-                                            <a title="" href="#" itemprop="url">Designer</a>
-                                        </div>
-                                        <h3 itemprop="headline"><a itemprop="url" href="single8.html" title="">The ‘Star Wars Awakenstr</a></h3>
-                                        <div class="date">
-                                            <ul>
-                                                <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015</a></li>
-                                                <li>BY <a title="" href="#" itemprop="url"> ADMIN</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <span><i class="fa fa-play"></i></span>
-                                </div><!-- Post Style 3 -->
-                            </div>
-                            <div class="col-md-4">
-                                <div class="post-style3" itemscope itemType="http://schema.org/BlogPosting">
-                                    <img itemprop="image" src="http://placehold.it/389x374" alt="" />
-                                    <div class="post-detail3">
-                                        <div class="cat">
-                                            <a title="" href="#" itemprop="url">Designer</a>
-                                        </div>
-                                        <h3 itemprop="headline"><a itemprop="url" href="single8.html" title="">The ‘Star Wars Awakenstr</a></h3>
-                                        <div class="date">
-                                            <ul>
-                                                <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">11 NOV 2015</a></li>
-                                                <li>BY <a title="" href="#" itemprop="url"> ADMIN</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <span><i class="fa fa-play"></i></span>
-                                </div><!-- Post Style 3 -->
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                {{ render(controller('LabsFrontBundle:Default:getVideosReport')) }}
             {% endif %}
             {% if loop.index0 >= 4 and loop.index0 < 5 %}
                 <section class="block remove-top">
@@ -291,87 +187,6 @@
 
 {% block javascripts %}
 {{ parent() }}
-    <script>
-        $(document).ready(function() {
-
-            'use strict';
-
-            $(".wide-carousal-post").owlCarousel({
-                autoplay:false,
-                autoplayTimeout:3000,
-                smartSpeed:2000,
-                loop:true,
-                dots:false,
-                nav:true,
-                margin:0,
-                items:1,
-                singleItem:true
-            });
-
-           /* $("#carousal-footer-widget").owlCarousel({
-                autoplay:true,
-                autoplayTimeout:3000,
-                smartSpeed:2000,
-                loop:false,
-                dots:true,
-                nav:false,
-                margin:0,
-                items:1,
-                singleItem:true
-            });
-
-            $("#carousal-posts").owlCarousel({
-                autoplay:true,
-                autoplayTimeout:3000,
-                smartSpeed:2000,
-                loop:true,
-                dots:false,
-                nav:true,
-                margin:4,
-                items:3,
-                singleItem:true,
-                responsiveClass:true,
-                responsive:{
-                    0:{
-                        items:1,
-                        nav:true
-                    },
-                    600:{
-                        items:2,
-                        nav:false
-                    },
-                    900:{
-                        items:3,
-                        nav:true,
-                        loop:false
-                    }
-                }
-            });
-
-            $(".big-post-carousel").owlCarousel({
-                autoplay:true,
-                autoplayTimeout:3000,
-                smartSpeed:2000,
-                loop:false,
-                dots:true,
-                nav:false,
-                margin:0,
-                items:1,
-                singleItem:true
-            });
-
-            $(".fancy-carousal").owlCarousel({
-                autoplay:false,
-                autoplayTimeout:3000,
-                smartSpeed:2000,
-                loop:true,
-                dots:false,
-                nav:true,
-                margin:0,
-                items:1,
-                singleItem:true
-            });*/
-        });
-    </script>
-
+    <script type="text/javascript" src="{{ asset('js/apis/tjr.carousel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/apis/y.script.min.js') }}"></script>
 {% endblock %}

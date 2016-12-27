@@ -1,4 +1,5 @@
- <div class="widget">
+{% if flashs|length > 0 %}
+<div class="widget">
         <div class="tabs-widget">
             <ul class="nav nav-tab">
                 <li class="active"><a href="#flash" data-toggle="tab">{{ 'en continu'|capitalize }}</a></li>
@@ -19,5 +20,5 @@
             </div>
         </div><!-- tabs Widget -->
  </div>
-
+{% endif %}
 
