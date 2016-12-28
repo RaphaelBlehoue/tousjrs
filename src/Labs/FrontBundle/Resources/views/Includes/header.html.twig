@@ -1,50 +1,9 @@
-<header class="buddy-header bg-section">
-    <div class="logo-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="current-time"><i class="fa fa-calendar"></i><span id="clock"></span></div>
-                </div>
-                <div class="col-md-4">
-                    <div class="logo centred">
-                        <a itemprop="url" href="#" title=""><img src="{{ asset('images/resource/logo.png') }}" alt="" /></a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <ul class="social-btns">
-                        <li><a itemprop="url" href="#" title=""><i class="fa fa-facebook"></i></a></li>
-                        <li><a itemprop="url" href="#" title=""><i class="fa fa-twitter"></i></a></li>
-                        <li><a itemprop="url" href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-                        <li><a itemprop="url" href="#" title=""><i class="fa fa-dribbble"></i></a></li>
-                        <li><a itemprop="url" href="#" title=""><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="buddy-menu">
-        <div class="container">
-            <nav class="centred">
-                <ul>
-                    {% for section in sections %}
-                        <li class="menu-item-has-children">
-                            <a itemprop="url" href="{{ path('front_section_page', {'slug' : section.slug}) }}" title="{{ section.name}}">{{ section.name|upper }}</a>
-                        <ul>
-                            {% set rubrique = section.slug %}
-                            {% if section.items|length > 0 %}
-                                {% for item in section.items %}
-                                    {% if item.online == 1 %}
-                                        <li>
-                                            <a itemprop="url" href="{{ path('front_item_page', {'rubrique': rubrique ,'slug' : item.slug}) }}" title="{{ item.name }}">{{ item.name|upper }}</a>
-                                        </li>
-                                    {% endif %}
-                                {% endfor %}
-                            {% endif %}
-                        </ul><!-- drop-down -->
-                    </li>
-                    {% endfor %}
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
+<nav class="centred">
+    <ul>
+        {% for section in sections %}
+            <li class="menu-item-has-children">
+                <a itemprop="url"  href="{{ path('front_section_page', {'slug' : section.slug}) }}" title="{{ section.name}}">{{ section.name|upper }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

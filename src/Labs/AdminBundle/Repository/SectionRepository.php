@@ -52,6 +52,22 @@ class SectionRepository extends \Doctrine\ORM\EntityRepository
      * @return mixed
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
+    public function getOneSectionsAndItems($entity)
+    {
+        $qb = $this->createQueryBuilder('s');
+        $qb->leftJoin('s.items', 'i')
+            ->addSelect('i');
+        $qb->where($qb->expr()->eq('s.online', 1));
+        $qb->where($qb->expr()->eq('s.id', ':entity'));
+        $qb->setParameter(':entity', $entity);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    /**
+     * @param $entity
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
     public function getSectionAllPosts($entity)
     {
             $qb = $this->createQueryBuilder('s');

@@ -132,11 +132,13 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $sections = $em->getRepository('LabsAdminBundle:Section')->getSectionAllPosts($section);
-        if(null === $sections){
+        $heading = $em->getRepository('LabsAdminBundle:Section')->getOneSectionsAndItems($section);
+        if(null === $sections || null === $heading){
             throw new NotFoundHttpException('Page introuvable');
         }
         return $this->render('LabsFrontBundle:Sections:view_section.html.twig',[
-            'sections' => $sections
+            'sections' => $sections,
+            'heading' => $heading
         ]);
     }
 

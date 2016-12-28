@@ -19,7 +19,38 @@
     {% block stylesheets %}{% endblock %}
 </head>
 <body itemscope="" onLoad="goforit()">
-    {{ render(controller('LabsFrontBundle:Default:getMenu')) }}
+    <header class="buddy-header bg-section">
+        <div class="logo-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="current-time"><i class="fa fa-calendar"></i><span id="clock"></span></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="logo centred">
+                            <a itemprop="url" href="#" title=""><img src="{{ asset('images/resource/logo.png') }}" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="social-btns">
+                            <li><a itemprop="url" href="#" title=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a itemprop="url" href="#" title=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a itemprop="url" href="#" title=""><i class="fa fa-google-plus"></i></a></li>
+                            <li><a itemprop="url" href="#" title=""><i class="fa fa-dribbble"></i></a></li>
+                            <li><a itemprop="url" href="#" title=""><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buddy-menu">
+            <div class="container">
+                {{ render(controller('LabsFrontBundle:Default:getMenu')) }}
+                {% block submenu %}{% endblock %}
+            </div>
+        </div>
+    </header>
+
     {% include 'LabsFrontBundle:Includes:responsive-header.html.twig' %}
     <div class="bg-container">
         {% block body %}{% endblock %}

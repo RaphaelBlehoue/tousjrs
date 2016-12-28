@@ -335,7 +335,7 @@ header .ad {
     transition: all .4s ease 0s;
 }
 .menu-sec {
-    background: #2a2f32 none repeat scroll 0 0;
+    background: #F1F5F8 none repeat scroll 0 0;
     float: left;
     position: relative;
     width: 100%;
@@ -353,17 +353,17 @@ header .ad {
     float: left;
 }
 .menu > ul > li > a {
-    border-right: 1px solid #42484c;
-    color: #efefef;
+    border-right: 1px solid #fff;
+    color: #1A171B;
     float: left;
     font-family: Montserrat;
     font-size: 13px;
     line-height: 12px;
-    padding: 26px 30px;
+    padding: 15px 15px;
     position: relative;
     overflow: hidden;
 }
-.menu > ul > li:hover > a::after {
+/*.menu > ul > li:hover > a::after {
     left: 0;
     
     -webkit-transition: all 0.4s ease 0.3s;
@@ -392,7 +392,7 @@ header .ad {
 }
 .menu > ul > li:hover > a::before {
     top: 0;
-}
+}*/
 .menu > ul > li > a::before {
     content: "";
     height: 100%;
@@ -412,7 +412,6 @@ header .ad {
 }
 .menu > ul > li:first-child > a {
     font-size: 20px;
-    padding: 22px 30px;
 }
 .menu > ul > li:last-child > a {
     border: medium none;
@@ -8477,3 +8476,66 @@ nav.menu .container > ul > li:hover .mega-menu2 {
 .pb-3{padding-bottom: 3%;}
 .pb-4{padding-bottom: 4%;}
 .pb-5{padding-bottom: 5%;}
+
+/** The Magic **/
+btn-breadcrumb>.btn.disabled {
+    opacity: 1 !important;
+    color: #999;
+}
+
+.btn-breadcrumb .btn:not(:last-child):after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 10px solid white;
+    position: absolute;
+    top: 50%;
+    margin-top: -17px;
+    left: 100%;
+    z-index: 3;
+}
+.btn-breadcrumb .btn:not(:last-child):before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 10px solid rgb(173, 173, 173);
+    position: absolute;
+    top: 50%;
+    margin-top: -17px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 3;
+}
+
+/** The Spacing **/
+.btn-breadcrumb .btn {
+    padding:6px 12px 6px 24px;
+}
+.btn-breadcrumb .btn:first-child {
+    padding:6px 6px 6px 10px;
+}
+.btn-breadcrumb .btn:last-child {
+    padding:6px 18px 6px 24px;
+}
+
+
+
+/** Primary button **/
+.btn-breadcrumb:first-child:after .btn.btn-primary {
+    border-left: 10px solid #428bca;
+}
+.btn-breadcrumb:first-child .btn.btn-primary{
+    border-left: 10px solid #357ebd;
+}
+.btn-breadcrumb .btn.btn-primary:hover:first-child:after {
+    border-left: 10px solid #3276b1;
+}
+.btn-breadcrumb .btn.btn-primary:hover:first-child:before {
+    border-left: 10px solid #285e8e;
+}
