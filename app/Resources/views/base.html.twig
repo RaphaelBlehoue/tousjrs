@@ -21,9 +21,9 @@
 <body itemscope="" onLoad="goforit()">
     {{ render(controller('LabsFrontBundle:Default:getMenu')) }}
     {% include 'LabsFrontBundle:Includes:responsive-header.html.twig' %}
-
-    {% block body %}{% endblock %}
-
+    <div class="bg-container">
+        {% block body %}{% endblock %}
+    </div>
     {% include 'LabsFrontBundle:Includes:footer.html.twig' %}
 
 <!-- Script -->
@@ -40,8 +40,9 @@
 <script type="text/javascript"  src="{{ asset('js/jPages.min.js') }}"></script><!-- JPages -->
 <script type="text/javascript" src="{{ asset('js/perfect-scrollbar.js') }}"></script><!-- Scroll Bar -->
 <script type="text/javascript" src="{{ asset('js/perfect-scrollbar.jquery.js') }}"></script><!-- Scroll Bar -->
-<script src="{{ asset('js/script.js') }}"></script>
-<script src="{{ asset('js/clock.js') }}"></script>
-{% block javascripts %}{% endblock %}
+<script src="{{ asset('js/script.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/clock.js') }}" type="text/javascript"></script>
+<script type="text/javascript" src="{{ asset('js/apis/y.script.min.js') }}"></script>
+    {% block javascripts %}{% endblock %}
 </body>
 </html>

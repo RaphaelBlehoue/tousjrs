@@ -2,10 +2,10 @@
 {% block title %}{{ 'TousLesJours.ci - Actualités et Infos en Côte d\'ivoire et dans le monde' }}{% endblock %}
 {% block stylesheets %}{% endblock %}
 {% block body %}
-    <div class="container">
-        <section class="block remove-top remove-bottom">
-            <div class="container">
-                <div class="row">
+    <div class="container bg-section">
+        <section class="block remove-top">
+            <div class="first-container">
+                <div class="first-row">
                     <div class="col-md-8 column">
                         {% for article in recent %}
                             {% if loop.first %}
@@ -112,7 +112,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="centred">
-                                        <img src="http://placehold.it/770x99" alt="" />
+                                        <img src="http://placehold.it/740x216" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -141,45 +141,43 @@
     <div class="container">
         {%  for section in sections %}
             {% if section|length > 0 %}
-            <section class="block remove-top remove-bottom">
-            <div class="container">
-                <div class="row">
-                    <section class="block remove-top">
-                        <div class="col-md-12 column background-style" style="border-top: 3px solid {{ section.color }};">
-                            <div class="heading5">
-                                <h3 class="text-center" style="color: {{ section.color }};">
-                                    {{ section.name|capitalize }}
-                                </h3>
-                            </div><!-- Heading -->
-                        </div>
-                    </section>
-                    <div class="clear"></div>
-                    <section class="block remove-top">
-                        <div class="col-md-12 column">
-                            <div class="row">
-                                {{ render(controller('LabsFrontBundle:Default:getArticleBySections', {'section' : section.id })) }}
+                <section class="block remove-top remove-bottom bg-section m-2">
+                    <div>
+                            <section class="block remove-top">
+                                <div class="col-md-12 column background-style" style="border-top: 3px solid {{ section.color }};">
+                                    <a href="">
+                                        <div class="heading5">
+                                            <h3 class="text-center titlecolor" style="color: {{ section.color }};">
+                                                {{ section.name|capitalize }}
+                                            </h3>
+                                        </div><!-- Heading -->
+                                    </a>
+                                </div>
+                            </section>
+                            <div class="clear"></div>
+                            <section class="block remove-top">
+                                <div class="col-md-12 column">
+                                    <div class="row">
+                                        {{ render(controller('LabsFrontBundle:Default:getArticleBySections', {'section' : section.id })) }}
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="clear"></div>
+                            <div class="col-md-12 column background-style" style="border-top: 3px solid {{ section.color }};">
+                                <a href="">
+                                    <h5 class="text-center" style="color:{{ section.color }}; font-weight: 700;">
+                                        {{ 'Consultez la rubriques '~ section.name }}
+                                    </h5>
+                                </a>
                             </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            </section>
-            {% if loop.index0 >= 2 and loop.index0 < 3 %}
-                {{ render(controller('LabsFrontBundle:Default:getVideosReport')) }}
-            {% endif %}
-            {% if loop.index0 >= 4 and loop.index0 < 5 %}
-                <section class="block remove-top">
-                    <div class="container">
-                        <div class="heading">
-                            <i class="fa fa-bookmark"></i><span>{{ 'A la une'|upper }}</span>
-                            <h2>{{ 'Dossiers'|upper }}</h2>
-                        </div><!-- Heading -->
-                        <div class="new-sec">
-                            {{ render(controller('LabsFrontBundle:Default:getDossierLimit')) }}
-                        </div>
                     </div>
                 </section>
-            {% endif %}
+                {% if loop.index0 >= 2 and loop.index0 < 3 %}
+                    {{ render(controller('LabsFrontBundle:Default:getVideosReport')) }}
+                {% endif %}
+                {% if loop.index0 >= 4 and loop.index0 < 5 %}
+                    {{ render(controller('LabsFrontBundle:Default:getDossierLimit')) }}
+                {% endif %}
             {% endif %}
         {% endfor %}
     </div>
@@ -188,5 +186,4 @@
 {% block javascripts %}
 {{ parent() }}
     <script type="text/javascript" src="{{ asset('js/apis/tjr.carousel.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/apis/y.script.min.js') }}"></script>
 {% endblock %}

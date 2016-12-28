@@ -147,7 +147,7 @@ $(document).ready(function(){
 	// Scroll Bar //
 	$(function() {
 	    $('.responsive-menu').perfectScrollbar();
-	});		
-
+	});	
+	
 });
 

@@ -1,11 +1,11 @@
 {% if youtube|length > 0 %}
-<section class="block remove-top">
+<section class="block remove-top bg-section m-2">
     <div class="container">
-        <div class="heading">
+        <div class="heading pt-2">
             <i class="fa fa-video-camera"></i><span>{{ 'A la une'|upper }}</span>
-            <h2>{{ 'reportages'|upper }}</h2>
+            <h2>{{ 'Touslesjours Tv'|upper }}</h2>
         </div><!-- Heading -->
-        <div class="row low-space">
+        <div class="new-sec pl-2">
             {% for video in youtube %}
                 <div class="col-md-4">
                 <div class="post-style3" itemscope itemType="http://schema.org/BlogPosting">
@@ -16,7 +16,7 @@
                         <div class="cat">
                             <a title="{{ video.Channel }}" href="https://www.youtube.com/channel/{{ video.ChannelId }}" itemprop="url" target="_blank">{{ video.Channel }}</a>
                         </div>
-                        <h3 itemprop="headline"><a itemprop="url" href="{{ path('video_view', {'id' : video.Id}) }}" title="{{ video.Title }}">{{ video.Title }}</a></h3>
+                        <h3 itemprop="headline"><a itemprop="url" href="{{ path('video_view', {'id' : video.Id}) }}" title="{{ video.Title }}">{{ video.Title|truncate('30',true,'...') }}</a></h3>
                         <div class="date">
                             <ul>
                                 <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">{{ video.Published|date('d, m Y') }}</a></li>
