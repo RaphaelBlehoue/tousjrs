@@ -54,6 +54,24 @@ class DefaultController extends Controller
     }
 
     /**
+     * @param Item $item
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/{rubrique}/p/{slug}", name="front_item_page")
+     * @Method({"GET"})
+     */
+    public function getPageItemAction(Item $item)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $items = $em->getRepository('LabsAdminBundle:Item')->getItemAllPosts($item);
+        if(null === $items){
+            throw new NotFoundHttpException('Page introuvable');
+        }
+        return $this->render('LabsFrontBundle:Items:page_item.html.twig',[
+            'items' => $items
+        ]);
+    }
+
+    /**
      * @Route("/videos", name="videos_page")
      * @Method({"GET"})
      */
@@ -158,25 +176,7 @@ class DefaultController extends Controller
             'sections' => $sections
         ]);
     }
-
-
-    /**
-     * @param Item $item
-     * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/{rubrique}/p/{slug}", name="front_item_page")
-     * @Method({"GET"})
-     */
-    public function getPageItemAction(Item $item)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $items = $em->getRepository('LabsAdminBundle:Item')->getItemAllPosts($item);
-        if(null === $items){
-            throw new NotFoundHttpException('Page introuvable');
-        }
-        return $this->render('LabsFrontBundle:Items:view_item.html.twig',[
-            'items' => $items
-        ]);
-    }
+    
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response

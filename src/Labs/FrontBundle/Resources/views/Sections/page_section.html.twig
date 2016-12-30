@@ -15,9 +15,9 @@
             <div class="container">
                 <div class="menu">
                     <ul>
-                        <li class="menu-item-has-children"><a itemprop="url" href="#" title="{{ heading.name }}" style="background-color: {{ heading.color }} !important; color:#fff;">{{ heading.name|capitalize }}</a></li>
+                        <li class="menu-item-has-children"><a itemprop="url" href="{{ path('front_section_page', {'slug': heading.slug }) }}" title="{{ heading.name }}" style="background-color: {{ heading.color }} !important; color:#fff;">{{ heading.name|capitalize }}</a></li>
                         {% for item  in heading.items %}
-                            <li class="menu-item-has-children"><a itemprop="url" href="#" title="{{ item.name }}">{{ item.name }}</a></li>
+                            <li class="menu-item-has-children"><a itemprop="url" href="{{ path('front_item_page', {'rubrique':heading.slug, 'slug':item.slug}) }}" title="{{ item.name }}">{{ item.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
