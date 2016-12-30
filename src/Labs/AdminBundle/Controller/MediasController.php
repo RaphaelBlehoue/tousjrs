@@ -76,6 +76,13 @@ Class MediasController extends Controller
         if(!$media){
             throw $this->createNotFoundException('Le media photo ou image n\'existe pas');
         }
+        //Rechercher tous les medias qui ont la même clé etrangère sauf celle de l'id
+        $oldMedia = $em->getRepository('LabsAdminBundle:Media')->findMediaIsNotMedia($medias->getId(), $medias->getPost());
+        //Mettre la valeur de toute les valeurs trouvée a active = 0
+        foreach ($oldMedia as $m){
+            $m->setActived(0);
+        }
+        //Ensuite mettre le medias trouve en question a active = 1
         $medias->setActived(1);
         $em->flush();
         return $this->redirectToRoute('post_index');

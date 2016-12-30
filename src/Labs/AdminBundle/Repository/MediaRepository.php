@@ -52,4 +52,21 @@ class MediaRepository extends \Doctrine\ORM\EntityRepository
         $qb->setParameter('media', $media);
         return $qb->getQuery()->getOneOrNullResult();
     }
+
+    /**
+     * @param $id
+     * @param $foreignKey
+     * @return array
+     */
+    public function findMediaIsNotMedia($id, $foreignKey)
+    {
+        $qb = $this->createQueryBuilder('m');
+        $qb->where(
+            $qb->expr()->eq('m.post', ':foreignKey'),
+            $qb->expr()->neq('m.id', ':id')
+        );
+        $qb->setParameter('foreignKey', $foreignKey);
+        $qb->setParameter('id', $id);
+        return $qb->getQuery()->getResult();
+    }
 }
