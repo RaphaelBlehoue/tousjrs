@@ -1,0 +1,176 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets %}
+    <style type="text/css">
+        .menu > ul > li > a:hover{
+            color: {{ heading.color }}
+        }
+    </style>
+{% endblock %}
+{% block submenu %}
+    <div class="heading">
+        <i class="fa fa-globe"></i><span>Rubrique</span>
+        <h1 class="" style="color: {{ heading.color }}">{{ heading.name|upper }}</h1>
+    </div>
+        <div class="menu-sec">
+            <div class="container">
+                <div class="menu">
+                    <ul>
+                        <li class="menu-item-has-children"><a itemprop="url" href="#" title="{{ heading.name }}" style="background-color: {{ heading.color }} !important; color:#fff;">{{ heading.name|capitalize }}</a></li>
+                        {% for item  in heading.items %}
+                            <li class="menu-item-has-children"><a itemprop="url" href="#" title="{{ item.name }}">{{ item.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+{% block body %}
+    <div class="container bg-section">
+        <section class="block remove-top">
+            <div class="first-container">
+                <div class="first-row">
+                    <div class="col-md-8 column">
+                        {% for article in lastpost %}
+                            {% if loop.first %}
+                                <div class="blog-single" itemscope itemType="http://schema.org/BlogPosting">
+                                    <div class="post-single-info">
+                                        <h1 itemprop="headline">{{ article.name }}</h1>
+                                        <ul>
+                                            <li><span>{{ 'mise à jour le '|upper }} :</span><a itemprop="url" href="#" title="">{{ article.created|date('d, m Y') }}</a></li>
+                                            <li><a itemprop="url" href="#" title="">{{ article.item.name }}</a></li>
+                                            <li><a itemprop="url" href="#" title="">{{ 'touslesjours' }}</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="single-post-thumb">
+                                        {% for media in article.medias %}
+                                            <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="" />
+                                        {% endfor %}
+                                        <div class="post-metas4">
+                                            <div class="date">
+                                                <ul>
+                                                    <li><a itemprop="url" href="#" title=""> {% if article.legend|length > 0 %}{{article.legend }} {% endif %}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="blog-single-details">
+                                        <p itemprop="description">
+                                            {{ article.content|truncate(350, true)|raw }}
+                                        </p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                        <section class="block top-margin">
+                            <div class="heading">
+                                <span>{{ sections.name |upper }}</span>
+                                <h2>{{ 'A la une'|capitalize }}</h2>
+                            </div><!-- Heading -->
+                            <div class="top-margin">
+                                <div class="row">
+                                    <ul id="itemContainer" class="loader-data">
+                                        {% for post in lastpost %}
+                                            {% if not loop.first %}
+                                                <li class="col-md-6">
+                                                    <div class="post-style4" itemscope itemType="http://schema.org/BlogPosting">
+                                                        {% for media in post.medias %}
+                                                            <div class="post-thumb4"><img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" alt="" />
+                                                                <a href="" title="" itemprop="url" class="img-link"></a>
+                                                            </div>
+                                                        {% endfor %}
+                                                        <div class="post-metas4">
+                                                            <div class="date">
+                                                                <ul>
+                                                                    <li><a itemprop="datePublished" content="December-29-2014" href="#" title="">{{ post.created|date('d, m Y') }}</a></li><br/>
+                                                                    <li><a itemprop="url" href="#" title="">{% if post.legend|length > 0 %}{{post.legend }} {% endif %}</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="total-comments">
+                                                                <a itemprop="url" href="#" title="">{{ post.item.name }}</a>
+                                                            </div><!-- Total Comments -->
+                                                        </div>
+                                                        <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ post.name|truncate('60', true, '...') }}</a></h3>
+                                                        <p itemprop="description">
+                                                            {{ post.content|truncate('200', true)|raw }}
+                                                        </p>
+                                                    </div><!-- Post Stye 4 -->
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- publicité -->
+                        <section class="block remove-top">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="centred">
+                                        <img src="http://placehold.it/770x99" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- end publicité -->
+                    </div>
+                    <aside class="col-md-4 column">
+                        {{ render(controller('LabsFrontBundle:Default:getflashInfos')) }}
+                        <div class="widget">
+                            <ul class="review-widget">
+                                <div class="post-style6" itemtype="http://schema.org/BlogPosting" itemscope="">
+                                    <div class="post-thumb6">
+                                        <a href=""><img itemprop="image" src="{{ asset('images/resource/pub.jpg') }}" alt="" /></a>
+                                    </div>
+                                </div><!-- Post Style 8 -->
+                            </ul>
+                        </div>
+                        {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        {%  for rubrique in heading.items %}
+            {% if rubrique|length > 0 %}
+                <section class="block remove-top remove-bottom bg-section m-2">
+                    <div>
+                        <section class="block remove-top">
+                            <div class="col-md-12 column background-style" style="border-top: 3px solid {{ heading.color }};">
+                                <a href="">
+                                    <div class="heading5">
+                                        <h3 class="text-center titlecolor" style="color: {{ heading.color }};">
+                                            {{ rubrique.name|capitalize }}
+                                        </h3>
+                                    </div><!-- Heading -->
+                                </a>
+                            </div>
+                        </section>
+                        <div class="clear"></div>
+                        <section class="block remove-top">
+                            <div class="col-md-12 column">
+                                <div class="row">
+                                    {{ render(controller('LabsFrontBundle:Default:getArticleByItems', {'item' : rubrique.id })) }}
+                                </div>
+                            </div>
+                        </section>
+                        <div class="clear"></div>
+                        <div class="col-md-12 column background-style" style="border-top: 3px solid #EEF1F5;">
+                            <a href="">
+                                <h5 class="text-center" style="color:{{ heading.color }}; font-weight: 700;">
+                                    {{ 'Consultez la rubriques '~ rubrique.name }}
+                                </h5>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('js/apis/tjr.carousel.min.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,81 @@
+<div class="col-md-5 column">
+    <div class="top-margin">
+        <div class="col-md-12">
+            {% for article in articles %}
+                {% if article|length > 0 %}
+                   {% if loop.first %}
+                        <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style13">
+                            {% for media in article.medias %}
+                                <div class="post-detail13">
+                                    <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_block_article') }}" alt="">
+                                </div>
+                            {% endfor %}
+                            <div class="post-metas4">
+                                <div class="date">
+                                    <ul>
+                                        <li><a itemprop="datePublished" content="{{ article.created|date('d, m Y') }}" href="#" title="">{{ article.created|date('d, m Y') }}</a></li> -
+                                        <li><a itemprop="url" href="#" title="">{{ article.legend }}</a></li>
+                                    </ul>
+                                </div>
+                                <!--<div class="total-comments">
+                                    <a itemprop="url" href="#" title=""><i class="fa fa-comments-o"></i> 1</a>
+                                </div><!-- Total Comments -->
+                                <!--<span class="total-views"><i class="fa fa-eye"></i> 874</span>-->
+                            </div>
+                            <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ article.name }}</a></h3>
+                            <p itemprop="description"> {{ article.content|truncate('250', true)|raw }}</p>
+                        </div><!-- Post Style 13 -->
+                   {% endif %}
+               {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="col-md-7 column">
+    <div class="top-margin">
+        <div class="row">
+            <div class="col-md-6">
+                {% for arts in articles %}
+                    {% if loop.first != loop.index and loop.index <= 5 %}
+                        <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
+                            {% for media in arts.medias %}
+                                <div class="post-thumb1">
+                                    <img alt="{{ arts.name }}" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" itemprop="image">
+                                    <a href="" title="" itemprop="url" class="img-link"></a>
+                                </div>
+                            {% endfor %}
+                            <div class="date">
+                                <ul>
+                                    <li><a title="" href="#" content="{{ arts.created|date('d, m Y') }}" itemprop="datePublished">{{ arts.created|date('d, m Y') }} </a></li>
+                                </ul>
+                            </div>
+                            <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ arts.name|truncate('50', true, '...') }}</a></h3>
+                        </div><!-- Post Style 1 -->
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6">
+                {% for post in articles %}
+                    {% if loop.index > 5 %}
+                        <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
+                            {% for media in post.medias %}
+                                <div class="post-thumb1">
+                                    <img alt="{{ post.name }}" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" itemprop="image">
+                                    <a href="" title="" itemprop="url" class="img-link"></a>
+                                </div>
+                            {% endfor %}
+                            <div class="date">
+                                <ul>
+                                    <li><a title="" href="#" content="{{ post.created|date('d, m Y') }}" itemprop="datePublished">{{ post.created|date('d, m Y') }} </a></li>
+                                </ul>
+                            </div>
+                            <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ post.name|truncate('50', true, '...') }}</a></h3>
+                        </div><!-- Post Style 1 -->
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

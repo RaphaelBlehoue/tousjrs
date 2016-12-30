@@ -16,6 +16,9 @@ class DefaultController extends Controller
     /**
      * @Route("/", name="homepage")
      * @Method({"GET"})
+     * Page Home
+     * Recupère les derniers arcticles dans la base de données et les inclus dans recents
+     * Récupère toutes les Rubriques du Site et les met dans un tableau
      */
     public function indexAction()
     {
@@ -25,6 +28,28 @@ class DefaultController extends Controller
         return $this->render('LabsFrontBundle:Default:index.html.twig',[
             'recent' => $recent,
             'sections' => $sections
+        ]);
+    }
+
+    /**
+     * @param Section $section
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/tj/{slug}", name="front_section_page")
+     * @Method({"GET"})
+     */
+    public function getPageSectionAction(Section $section)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $sections = $em->getRepository('LabsAdminBundle:Section')->getSectionAllPosts($section);
+        $heading = $em->getRepository('LabsAdminBundle:Section')->getOneSectionsAndItems($section);
+        if(null === $sections || null === $heading){
+            throw new NotFoundHttpException('Page introuvable');
+        }
+        $lastpost = $this->getPostByItemsInSection($section);
+        return $this->render('LabsFrontBundle:Sections:page_section.html.twig',[
+            'sections' => $sections,
+            'heading' => $heading,
+            'lastpost' => $lastpost
         ]);
     }
 
@@ -47,6 +72,7 @@ class DefaultController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
+     * Recupere les recents articles du site
      */
     public function getRecentArticleAction(){
         $em = $this->getDoctrine()->getManager();
@@ -81,7 +107,18 @@ class DefaultController extends Controller
             ['dossiers' => $dossiers]
         );
     }
-
+    /**
+     * @param $item
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function getArticleByItemsAction($item)
+    {
+        $articles = $this->findPostItem($item);
+        return $this->render('LabsFrontBundle:Includes:posts_items.html.twig',
+            ['articles' => $articles]
+        );
+    }
+    
     /**
      * @param $section
      * @return \Symfony\Component\HttpFoundation\Response
@@ -122,25 +159,6 @@ class DefaultController extends Controller
         ]);
     }
 
-    /**
-     * @param Section $section
-     * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/tj/{slug}", name="front_section_page")
-     * @Method({"GET"})
-     */
-    public function getPageSectionAction(Section $section)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $sections = $em->getRepository('LabsAdminBundle:Section')->getSectionAllPosts($section);
-        $heading = $em->getRepository('LabsAdminBundle:Section')->getOneSectionsAndItems($section);
-        if(null === $sections || null === $heading){
-            throw new NotFoundHttpException('Page introuvable');
-        }
-        return $this->render('LabsFrontBundle:Sections:view_section.html.twig',[
-            'sections' => $sections,
-            'heading' => $heading
-        ]);
-    }
 
     /**
      * @param Item $item
@@ -207,6 +225,38 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $posts = $em->getRepository('LabsAdminBundle:Post')->findPostItemBySection($options);
         return $posts;
+    }
+
+    /**
+     * @param $options
+     * @return array
+     */
+    private function findPostItem($options)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $posts = $em->getRepository('LabsAdminBundle:Post')->getCountPostByItems($options);
+        return $posts;
+    }
+
+    /**
+     * @param $section
+     * @return array
+     */
+
+    private function getPostByItemsInSection($section)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $items = $em->getRepository('LabsAdminBundle:Item')->getItemsBySection($section);
+        $items_array = [];
+        $posts = [];
+        foreach ($items as $i){
+            $items_array[] = $i;
+        }
+        $itemsTab = $items_array;
+        foreach ($itemsTab as $item){
+            $posts[] = $em->getRepository('LabsAdminBundle:Post')->getOnePostByItems($item);
+        }
+        return array_reverse($posts);
     }
 
 }

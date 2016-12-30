@@ -80,6 +80,7 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
     /**
      * @param $max
      * @return array
+     * Recupère tout les articles avec un param $max
      */
     public function findArticleNum($max)
     {
@@ -94,7 +95,14 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         $qb->setMaxResults($max);
         return $qb->getQuery()->getResult();
     }
-    
+
+    /**
+     * @param array $options
+     * @param int $max
+     * @return array
+     * Recupère les derniers articles par date de création et en fonction d'un param $max des
+     * Sous rubrique associés en par Rubrique courante
+     */
     public function findPostItemBySection($options = array(), $max = 9)
     {
         $qb = $this->createQueryBuilder('p');
@@ -114,6 +122,45 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         $qb->setParameter('options', $options);
         return $qb->getQuery()->getResult();
     }
+
+    /**
+     * @param $options
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getOnePostByItems($options)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->leftJoin('p.item', 'i');
+        $qb->leftJoin('p.medias', 'm');
+        $qb->where(
+            $qb->expr()->eq('p.online', 1),
+            $qb->expr()->eq('m.actived', 1),
+            $qb->expr()->eq('p.item', ':options')
+        );
+        $qb->orderBy('p.created', 'Desc');
+        $qb->setMaxResults(1);
+        $qb->setParameter('options', $options);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    public function getCountPostByItems($options, $max = 9)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->leftJoin('p.item', 'i');
+        $qb->leftJoin('p.medias', 'm');
+        $qb->where(
+            $qb->expr()->eq('p.online', 1),
+            $qb->expr()->eq('m.actived', 1),
+            $qb->expr()->eq('p.item', ':options')
+        );
+        $qb->orderBy('p.created', 'Desc');
+        $qb->setMaxResults($max);
+        $qb->setParameter('options', $options);
+        return $qb->getQuery()->getResult();
+    }
+    
+    
     
     
 }

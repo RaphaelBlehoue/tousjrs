@@ -21,6 +21,22 @@ class ItemRepository extends \Doctrine\ORM\EntityRepository
     }
 
     /**
+     * @param $id_entity
+     * @return array
+     */
+    public function getItemsBySection($id_entity)
+    {
+        $qb = $this->createQueryBuilder('i');
+        $qb->leftJoin('i.section', 'sec');
+        $qb->where(
+            $qb->expr()->eq('i.section', ':id_entity'),
+            $qb->expr()->eq('i.online', 1)
+        );
+        $qb->setParameter(':id_entity', $id_entity);
+        return $qb->getQuery()->getResult();
+    }
+
+    /**
      * @param $id
      * @return mixed
      * @throws \Doctrine\ORM\NonUniqueResultException
