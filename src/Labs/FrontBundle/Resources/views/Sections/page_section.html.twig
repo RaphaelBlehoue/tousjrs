@@ -30,32 +30,34 @@
             <div class="first-container">
                 <div class="first-row">
                     <div class="col-md-8 column">
-                        {% for article in lastpost %}
+                        {% for publication in lastpost %}
                             {% if loop.first %}
                                 <div class="blog-single" itemscope itemType="http://schema.org/BlogPosting">
                                     <div class="post-single-info">
-                                        <h1 itemprop="headline">{{ article.name }}</h1>
+                                        <h1 itemprop="headline">{% if publication.name|length > 0 %}{{ publication.name }}{% endif %}</h1>
                                         <ul>
-                                            <li><span>{{ 'mise à jour le '|upper }} :</span><a itemprop="url" href="#" title="">{{ article.created|date('d, m Y') }}</a></li>
-                                            <li><a itemprop="url" href="#" title="">{{ article.item.name }}</a></li>
+                                            <li><span>{{ 'mise à jour le '|upper }} :</span><a itemprop="url" href="#" title="">{% if publication.created|length > 0 %}{{ publication.created|date('d, m Y') }}{% endif %}</a></li>
+                                            <li><a itemprop="url" href="#" title="">{% if publication.item|length > 0 %}{{ publication.item.name }}{% endif %}</a></li>
                                             <li><a itemprop="url" href="#" title="">{{ 'touslesjours' }}</a></li>
                                         </ul>
                                     </div>
                                     <div class="single-post-thumb">
-                                        {% for media in article.medias %}
+                                        {% if publication.medias|length > 0 %}
+                                        {% for media in publication.medias %}
                                             <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="" />
                                         {% endfor %}
+                                        {% endif %}
                                         <div class="post-metas4">
                                             <div class="date">
                                                 <ul>
-                                                    <li><a itemprop="url" href="#" title=""> {% if article.legend|length > 0 %}{{article.legend }} {% endif %}</a></li>
+                                                    <li><a itemprop="url" href="#" title=""> {% if publication.legend|length > 0 %}{{publication.legend }} {% endif %}</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="blog-single-details">
                                         <p itemprop="description">
-                                            {{ article.content|truncate(350, true)|raw }}
+                                            {% if publication.content|length > 0 %}{{ publication.content|truncate(350, true)|raw }}{% endif %}
                                         </p>
                                     </div>
                                 </div>
@@ -74,25 +76,27 @@
                                             {% if not loop.first %}
                                                 <li class="col-md-6">
                                                     <div class="post-style4" itemscope itemType="http://schema.org/BlogPosting">
+                                                        {% if post.medias|length > 0 %}
                                                         {% for media in post.medias %}
                                                             <div class="post-thumb4"><img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" alt="" />
                                                                 <a href="" title="" itemprop="url" class="img-link"></a>
                                                             </div>
                                                         {% endfor %}
+                                                        {% endif %}
                                                         <div class="post-metas4">
                                                             <div class="date">
                                                                 <ul>
-                                                                    <li><a itemprop="datePublished" content="December-29-2014" href="#" title="">{{ post.created|date('d, m Y') }}</a></li><br/>
+                                                                    <li><a itemprop="datePublished" content="December-29-2014" href="#" title="">{% if post.created|length > 0 %}{{ post.created|date('d, m Y') }}{% endif %}</a></li><br/>
                                                                     <li><a itemprop="url" href="#" title="">{% if post.legend|length > 0 %}{{post.legend }} {% endif %}</a></li>
                                                                 </ul>
                                                             </div>
                                                             <div class="total-comments">
-                                                                <a itemprop="url" href="#" title="">{{ post.item.name }}</a>
+                                                                <a itemprop="url" href="#" title="">{% if post.item|length > 0 %}{{ post.item.name }}{% endif %}</a>
                                                             </div><!-- Total Comments -->
                                                         </div>
-                                                        <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ post.name|truncate('60', true, '...') }}</a></h3>
+                                                        <h3 itemprop="headline"><a itemprop="url" href="" title="">{% if post.item|length > 0 %}{{ post.name|truncate('60', true, '...') }}{% endif %}</a></h3>
                                                         <p itemprop="description">
-                                                            {{ post.content|truncate('200', true)|raw }}
+                                                            {% if post.content|length > 0 %}{{ post.content|truncate('200', true)|raw }}{% endif %}
                                                         </p>
                                                     </div><!-- Post Stye 4 -->
                                                 </li>
