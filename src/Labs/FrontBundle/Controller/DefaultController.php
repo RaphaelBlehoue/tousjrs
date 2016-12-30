@@ -45,7 +45,7 @@ class DefaultController extends Controller
         if(null === $sections || null === $heading){
             throw new NotFoundHttpException('Page introuvable');
         }
-        $lastpost = $this->getPostByItemsInSection($section);
+        $lastpost = $this->getPostByItemsInSection($sections);
         return $this->render('LabsFrontBundle:Sections:page_section.html.twig',[
             'sections' => $sections,
             'heading' => $heading,
@@ -254,7 +254,10 @@ class DefaultController extends Controller
         }
         $itemsTab = $items_array;
         foreach ($itemsTab as $item){
-            $posts[] = $em->getRepository('LabsAdminBundle:Post')->getOnePostByItems($item);
+            $p = $em->getRepository('LabsAdminBundle:Post')->getOnePostByItems($item);
+            if(null !== $p){
+                $posts[] = $p;
+            }
         }
         return array_reverse($posts);
     }
