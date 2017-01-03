@@ -125,37 +125,49 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
 
     /**
      * @param $options
-     * @return mixed
-     * @throws \Doctrine\ORM\NonUniqueResultException
+     * @param int $max
+     * @return array
+     * Recupère Un Articles par Items
      */
-    public function getOnePostByItems($options)
+    public function getPostByItems($options, $max = 7)
     {
         $qb = $this->createQueryBuilder('p');
         $qb->leftJoin('p.item', 'i');
+        $qb->addSelect('i');
         $qb->leftJoin('p.medias', 'm');
+        $qb->addSelect('m');
         $qb->where(
             $qb->expr()->eq('p.online', 1),
             $qb->expr()->eq('m.actived', 1),
-            $qb->expr()->eq('p.item', ':options')
-        );
-        $qb->orderBy('p.created', 'Desc');
-        $qb->setMaxResults(1);
-        $qb->setParameter('options', $options);
-        return $qb->getQuery()->getOneOrNullResult();
-    }
-
-    public function getCountPostByItems($options, $max = 9)
-    {
-        $qb = $this->createQueryBuilder('p');
-        $qb->leftJoin('p.item', 'i');
-        $qb->leftJoin('p.medias', 'm');
-        $qb->where(
-            $qb->expr()->eq('p.online', 1),
-            $qb->expr()->eq('m.actived', 1),
-            $qb->expr()->eq('p.item', ':options')
+            $qb->expr()->eq('i.section', ':options')
         );
         $qb->orderBy('p.created', 'Desc');
         $qb->setMaxResults($max);
+        $qb->setParameter('options', $options);
+        return $qb->getQuery()->getResult();
+    }
+
+    /**
+     * @param $options
+     * @param int $max
+     * @return array
+     */
+    public function getCountPostByItems($options, $max = null)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->leftJoin('p.item', 'i');
+        $qb->addSelect('i');
+        $qb->leftJoin('p.medias', 'm');
+        $qb->addSelect('m');
+        $qb->where(
+            $qb->expr()->eq('p.online', 1),
+            $qb->expr()->eq('m.actived', 1),
+            $qb->expr()->eq('p.item', ':options')
+        );
+        $qb->orderBy('p.created', 'Desc');
+        if($max){
+            $qb->setMaxResults($max);
+        }
         $qb->setParameter('options', $options);
         return $qb->getQuery()->getResult();
     }

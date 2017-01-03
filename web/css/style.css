@@ -8438,6 +8438,8 @@ nav.menu .container > ul > li:hover .mega-menu2 {
     margin-top: -8px;
 }
 
+/** raphael styles **/
+
 .bg-container{
     background-color: #ECECEC !important;
 }
@@ -8477,67 +8479,24 @@ nav.menu .container > ul > li:hover .mega-menu2 {
 .pb-4{padding-bottom: 4%;}
 .pb-5{padding-bottom: 5%;}
 
-/** The Magic **/
-btn-breadcrumb>.btn.disabled {
-    opacity: 1 !important;
-    color: #999;
+.border-bottom-post{
+    border-bottom: 1px solid #EEF1F5 !important;
+    padding-bottom: 3%;
 }
 
-.btn-breadcrumb .btn:not(:last-child):after {
-    content: " ";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 17px solid transparent;
-    border-bottom: 17px solid transparent;
-    border-left: 10px solid white;
-    position: absolute;
-    top: 50%;
-    margin-top: -17px;
-    left: 100%;
-    z-index: 3;
-}
-.btn-breadcrumb .btn:not(:last-child):before {
-    content: " ";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 17px solid transparent;
-    border-bottom: 17px solid transparent;
-    border-left: 10px solid rgb(173, 173, 173);
-    position: absolute;
-    top: 50%;
-    margin-top: -17px;
-    margin-left: 1px;
-    left: 100%;
-    z-index: 3;
+.border-top-post{
+    border-top: 1px solid #EEF1F5 !important;
+    padding-top: 3%;
 }
 
-/** The Spacing **/
-.btn-breadcrumb .btn {
-    padding:6px 12px 6px 24px;
-}
-.btn-breadcrumb .btn:first-child {
-    padding:6px 6px 6px 10px;
-}
-.btn-breadcrumb .btn:last-child {
-    padding:6px 18px 6px 24px;
+.border-bottom-container{
+    border-bottom: 5px solid #EEF1F5 !important;
+    padding-bottom: 5%;
 }
 
-
-
-/** Primary button **/
-.btn-breadcrumb:first-child:after .btn.btn-primary {
-    border-left: 10px solid #428bca;
-}
-.btn-breadcrumb:first-child .btn.btn-primary{
-    border-left: 10px solid #357ebd;
-}
-.btn-breadcrumb .btn.btn-primary:hover:first-child:after {
-    border-left: 10px solid #3276b1;
-}
-.btn-breadcrumb .btn.btn-primary:hover:first-child:before {
-    border-left: 10px solid #285e8e;
+.border-top-container{
+    border-top: 5px solid #EEF1F5 !important;
+    padding-top: 5%;
 }
 
 @media (min-width: 1200px){
