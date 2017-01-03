@@ -156,7 +156,17 @@
 
                     </div>
                     <aside class="col-md-4 column">
-                        {{ 'sidebar' }}
+                        {{ render(controller('LabsFrontBundle:Default:getflashInfos')) }}
+                        <div class="widget">
+                            <ul class="review-widget">
+                                <div class="post-style6" itemtype="http://schema.org/BlogPosting" itemscope="">
+                                    <div class="post-thumb6">
+                                        <a href=""><img itemprop="image" src="{{ asset('images/resource/pub.jpg') }}" alt="" /></a>
+                                    </div>
+                                </div><!-- Post Style 8 -->
+                            </ul>
+                        </div>
+                        {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
                     </aside>
                 </div>
             </div>

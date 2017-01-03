@@ -76,10 +76,10 @@ class DefaultController extends Controller
         if( null === $heading || null === $Items){
             throw new NotFoundHttpException('Page introuvable');
         }
-        $findPost = $em->getRepository('LabsAdminBundle:Post')->getCountPostByItems($Items, 9);
+        $findPost = $em->getRepository('LabsAdminBundle:Post')->getCountPostByItems($Items, 150);
         $posts = $this->get('knp_paginator')->paginate(
             $findPost,
-            $request->request->getInt('page', $page), 7);
+            $request->request->getInt('page', $page), 20);
         $currentItem = $Items->getId();
         return $this->render('LabsFrontBundle:Items:page_item.html.twig',[
             'heading' => $heading,
