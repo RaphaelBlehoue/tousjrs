@@ -11,16 +11,16 @@
                             {% if loop.first %}
                                 <div class="blog-single" itemscope itemType="http://schema.org/BlogPosting">
                                     <div class="post-single-info">
-                                        <h1 itemprop="headline">{{ article.name }}</h1>
+                                        <a href="{{ path('page_view', { 'slug': article.slug }) }}"><h1 itemprop="headline">{{ article.name }}</h1></a>
                                         <ul>
                                             <li><span>{{ 'Publié le'|upper }} :</span><a itemprop="url" href="#" title="">{{ article.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</a></li>
-                                            <li><a itemprop="url" href="#" title="">{{ article.item.name }}</a></li>
+                                            <li><a itemprop="url" href="" title="">{{ article.item.name }}</a></li>
                                             <li><a itemprop="url" href="{{ path('homepage') }}" title="">{{ 'touslesjours' }}</a></li>
                                         </ul>
                                     </div>
                                     <div class="single-post-thumb">
                                         {% for media in article.medias %}
-                                            <a href="">
+                                            <a href="{{ path('page_view', { 'slug': article.slug }) }}">
                                                 <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="" />
                                             </a>
                                         {% endfor %}

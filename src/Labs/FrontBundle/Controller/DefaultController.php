@@ -90,6 +90,26 @@ class DefaultController extends Controller
 
     }
 
+
+    /**
+     * @param Post $post
+     * @param $slug
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/{slug}", name="page_view")
+     * @Method({"GET"})
+     */
+    public function getPageArticleAction(Post $post, $slug)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $article = $em->getRepository('LabsAdminBundle:Post')->getPostSlug($post, $slug);
+        $old = $em->getRepository('LabsAdminBundle:Post')->OldPost($article->getId(), 8);
+        return $this->render('LabsFrontBundle:Default:page_view.html.twig',[
+            'article' => $article,
+            'old'     => $old
+        ]);
+    }
+    
+
     /**
      * @Route("/videos", name="videos_page")
      * @Method({"GET"})
