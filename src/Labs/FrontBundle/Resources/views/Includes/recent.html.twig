@@ -12,7 +12,7 @@
                                 <div class="post-thumb1">
                                     {% for media in recent.medias %}
                                         <img alt="{{ recent.name }}" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" itemprop="image" />
-                                        <a href="" title="" itemprop="url" class="img-link"></a>
+                                        <a href="{{ path('page_view', {'slug': recent.slug}) }}" title="{{ recent.name }}" itemprop="url" class="img-link"></a>
                                     {% endfor %}
                                 </div>
 
@@ -21,7 +21,7 @@
                                         <li><a title="" href="#" content="{{ recent.created|date('d, m Y') }}" itemprop="datePublished">{{ recent.created|date('d, m Y') }}</a></li>
                                     </ul>
                                 </div>
-                                <h3 itemprop="headline"><a title="" href="single5.html" itemprop="url">{{ recent.name|capitalize }}</a></h3>
+                                <h3 itemprop="headline"><a title="{{ recent.name }}" href="{{ path('page_view', {'slug': recent.slug}) }}" itemprop="url">{{ recent.name|truncate('50',true,'...')|capitalize }}</a></h3>
                             </div>
                         {% endif %}
                     {% endfor %}

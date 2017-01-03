@@ -76,7 +76,7 @@
                                                 <li><a itemprop="datePublished" content="{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" href="#" title="">{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }} |</a></li>
                                             </ul>
                                         </div>
-                                        <h3 itemprop="headline"><a title="" href="" itemprop="url">{{ post.name|truncate('50', true, '...') }}</a></h3>
+                                        <h3 itemprop="headline"><a title="{{ post.name }}" href="{{ path('page_view', {'slug': post.slug}) }}" itemprop="url">{{ post.name|truncate('50', true, '...') }}</a></h3>
                                     </div><!-- Post Style 1 -->
                                 </div>
                                 {% endfor %}

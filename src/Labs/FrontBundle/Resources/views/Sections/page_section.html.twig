@@ -34,16 +34,18 @@
                             {% if loop.first %}
                                 <div class="blog-single" itemscope itemType="http://schema.org/BlogPosting">
                                     <div class="post-single-info">
-                                        <h1 itemprop="headline">{{ publication.name }}</h1>
+                                        <a href="{{ path('page_view', {'slug': publication.slug }) }}" title="{{ publication.name }}">
+                                            <h1 itemprop="headline">{{ publication.name }}</h1>
+                                        </a>
                                         <ul>
                                             <li><span>{{ 'Publié le '|upper }} :</span><a itemprop="url" href="#" title="">{{ publication.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</a></li>
-                                            <li><a itemprop="url" href="#" title="">{{ publication.item.name }}</a></li>
-                                            <li><a itemprop="url" href="#" title="">{{ 'touslesjours' }}</a></li>
+                                            <li><a itemprop="url" href="{{ path('front_item_page', {'rubrique':publication.item.section.slug , 'slug': publication.item.slug }) }}" title="{{ publication.item.name }}">{{ publication.item.name }}</a></li>
+                                            <li><a itemprop="url" href="" title="">{{ 'touslesjours' }}</a></li>
                                         </ul>
                                     </div>
                                     <div class="single-post-thumb">
                                         {% for media in publication.medias %}
-                                            <a href="">
+                                            <a href="{{ path('page_view', {'slug': publication.slug }) }}">
                                                 <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="" />
                                             </a>
                                         {% endfor %}
@@ -78,19 +80,19 @@
                                                     <div class="post-style4" itemscope itemType="http://schema.org/BlogPosting">
                                                         {% for media in post.medias %}
                                                             <div class="post-thumb4"><img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" alt=""/>
-                                                                <a href="" title="" itemprop="url" class="img-link"></a>
+                                                                <a href="{{ path('page_view', {'slug': post.slug }) }}" title="{{ post.name }}" itemprop="url" class="img-link"></a>
                                                             </div>
                                                         {% endfor %}
                                                         <div class="post-metas4">
                                                             <div class="date">
                                                                 <ul>
                                                                     <li><a itemprop="datePublished" content="{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" href="#" title="">{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }} |</a></li>
-                                                                    <li><a itemprop="url" href="#" title="">{{ post.item.name }}</a></li>
+                                                                    <li><a itemprop="url" href="{{ path('front_item_page', {'rubrique':post.item.section.slug, 'slug':post.item.slug}) }}" title="">{{ post.item.name }}</a></li>
                                                                     <br/>
                                                                 </ul>
                                                             </div>
                                                         </div>
-                                                        <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ post.name|truncate('40', true, '...') }}</a></h3>
+                                                        <h3 itemprop="headline"><a itemprop="url" href="{{ path('page_view', {'slug' : post.slug}) }}" title="{{ post.name }}">{{ post.name|truncate('40', true, '...') }}</a></h3>
                                                         <p itemprop="description">
                                                             {{ post.content|truncate('200', true)|raw }}
                                                         </p>
@@ -139,7 +141,7 @@
                     <div>
                         <section class="block remove-top">
                             <div class="col-md-12 column background-style" style="border-top: 3px solid {{ heading.color }};">
-                                <a href="">
+                                <a href="{{ path('front_item_page', {'rubrique': heading.slug ,'slug': rubrique.slug}) }}">
                                     <div class="heading5">
                                         <h3 class="text-center titlecolor" style="color: {{ heading.color }};">
                                             {{ rubrique.name|capitalize }}
@@ -158,7 +160,7 @@
                         </section>
                         <div class="clear"></div>
                         <div class="col-md-12 column background-style" style="border-top: 3px solid #EEF1F5;">
-                            <a href="">
+                            <a href="{{ path('front_item_page', {'rubrique': heading.slug ,'slug': rubrique.slug}) }}">
                                 <h5 class="text-center" style="color:{{ heading.color }}; font-weight: 700;">
                                     {{ 'Consultez la rubriques '~ rubrique.name }}
                                 </h5>
