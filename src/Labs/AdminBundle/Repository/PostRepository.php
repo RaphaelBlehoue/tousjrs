@@ -77,6 +77,44 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         return $qb->getQuery()->getOneOrNullResult();
     }
 
+    public function getPostSlug(Post $post, $slug)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->leftJoin('p.medias','m');
+        $qb->addSelect('m');
+        $qb->leftJoin('p.item','i');
+        $qb->addSelect('i');
+        $qb->leftJoin('i.section','s');
+        $qb->addSelect('s');
+        $qb->where(
+            $qb->expr()->eq('p.id', ':post'),
+            $qb->expr()->eq('p.slug', ':slug'),
+            $qb->expr()->eq('m.actived', 1)
+        );
+        $qb->setParameter('post', $post);
+        $qb->setParameter('slug', $slug);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    /**
+     * @param $min
+     * @param null $max
+     * @return array
+     */
+    public function OldPost($min ,$max)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->leftJoin('p.medias','m');
+        $qb->addSelect('m');
+        $qb->where(
+            $qb->expr()->neq('p.id', ':min')
+        );
+        $qb->orderBy('p.created', 'DESC');
+        $qb->setMaxResults($max);
+        $qb->setParameter('min', $min);
+        return $qb->getQuery()->getResult();
+    }
+
     /**
      * @param $max
      * @return array
