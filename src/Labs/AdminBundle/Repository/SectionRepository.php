@@ -48,6 +48,22 @@ class SectionRepository extends \Doctrine\ORM\EntityRepository
     }
 
     /**
+     * @param $slug
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getOneSectionsAndItemsBySlug($slug)
+    {
+        $qb = $this->createQueryBuilder('s');
+        $qb->leftJoin('s.items', 'i')
+            ->addSelect('i');
+        $qb->where($qb->expr()->eq('s.online', 1));
+        $qb->where($qb->expr()->eq('s.slug', ':slug'));
+        $qb->setParameter(':slug', $slug);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    /**
      * @param $entity
      * @return mixed
      * @throws \Doctrine\ORM\NonUniqueResultException

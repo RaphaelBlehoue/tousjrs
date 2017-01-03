@@ -23,6 +23,7 @@ class ItemRepository extends \Doctrine\ORM\EntityRepository
     /**
      * @param $id_entity
      * @return array
+     * Recupère les Items par section
      */
     public function getItemsBySection($id_entity)
     {
@@ -54,10 +55,9 @@ class ItemRepository extends \Doctrine\ORM\EntityRepository
      * @return mixed
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
-    public function getItemAllPosts($entity)
+    public function getCurrentItem($entity)
     {
             $qb = $this->createQueryBuilder('i');
-            $qb->where('i.online = 1');
             $qb->andWhere($qb->expr()->eq('i.id', ':entity'));
             $qb->setParameter(':entity', $entity);
             return $qb->getQuery()->getOneOrNullResult();

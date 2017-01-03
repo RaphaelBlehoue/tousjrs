@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="logo centred">
-                            <a itemprop="url" href="#" title=""><img src="{{ asset('images/resource/logo.png') }}" alt="" /></a>
+                            <a itemprop="url" href="{{ path('homepage') }}" title=""><img src="{{ asset('images/resource/logo.png') }}" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -51,11 +51,12 @@
         </div>
     </header>
 
-    {% include 'LabsFrontBundle:Includes:responsive-header.html.twig' %}
+    {{ render(controller('LabsFrontBundle:Default:getMenuResponsive')) }}
     <div class="bg-container">
         {% block body %}{% endblock %}
     </div>
     {% include 'LabsFrontBundle:Includes:footer.html.twig' %}
+
 
 <!-- Script -->
 <script type="text/javascript"  src="{{ asset('js/modernizr.js') }}"></script><!-- modernizr -->

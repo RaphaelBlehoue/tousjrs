@@ -1,0 +1,166 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets %}
+    <style type="text/css">
+        .menu > ul > li > a:hover{
+            color: {{ heading.color }}
+        }
+        .menuColor > a{
+            border-bottom: 3px solid {{ heading.color }};
+            color: {{ heading.color }} !important;
+        }
+        .title-bg
+        {
+            background-color: {{ heading.color }} !important;
+        }
+
+    </style>
+{% endblock %}
+{% block submenu %}
+    <div class="heading">
+        <i class="fa fa-globe"></i><span>{{ heading.name }}</span>
+        <h1 class="" style="color: {{ heading.color }}">{{ item.name|upper }}</h1>
+    </div>
+    <div class="menu-sec">
+        <div class="container">
+            <div class="menu">
+                <ul>
+                    <li class="menu-item-has-children"><a itemprop="url" href="{{ path('front_section_page', {'slug': heading.slug }) }}" title="{{ heading.name }}" style="background-color: {{ heading.color }} !important; color:#fff;">{{ heading.name|capitalize }}</a></li>
+                    {% for rub  in heading.items %}
+                        <li class="menu-item-has-children {% if rub.id == currentId %} menuColor {% endif %}"><a itemprop="url" href="{{ path('front_item_page', {'rubrique':heading.slug, 'slug':rub.slug}) }}" title="{{ rub.name }}">{{ rub.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block body %}
+    <div class="container bg-section">
+        <section class="block remove-top">
+            <div class="first-container">
+                <div class="first-row">
+                    <div class="col-md-8 column">
+                        {% for post in posts %}
+                            {% if loop.index0 == 0 %}
+                                <div class="blog-single" itemscope itemType="http://schema.org/BlogPosting">
+                                    <div class="post-single-info">
+                                        <h1 itemprop="headline">{{ post.name }}</h1>
+                                        <ul>
+                                            <li><span>{{ 'Publié le'|upper }} :</span><a itemprop="url" href="#" title="">{{ post.created|localizeddate('none', 'none', null, null, 'd MMMM Y') }}</a></li>
+                                            <li><a itemprop="url" href="{{ path('front_item_page', { 'rubrique': post.item.section.slug, 'slug': post.item.slug }) }}" title="">{{ post.item.name }}</a></li>
+                                            <li><a itemprop="url" href="{{ path('homepage') }}" title="">{{ 'touslesjours' }}</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="single-post-thumb">
+                                        {% for media in post.medias %}
+                                            <a href="">
+                                                <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="" />
+                                            </a>
+                                        {% endfor %}
+                                        <div class="post-metas4">
+                                            <div class="date">
+                                                <ul>
+                                                    <li><a itemprop="url" href="#" title=""> {% if post.legend|length > 0 %}{{ post.legend }} {% endif %}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="blog-single-details">
+                                        <p itemprop="description">
+                                            {{ post.content|truncate(350, true)|raw }}
+                                        </p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                        <section class="block top-margin">
+                            <div class="heading2 title-bg">
+                                {{ item.name|upper }}
+                            </div><!-- Heading -->
+                        </section>
+                        <div class="top-margin">
+                            <div class="row">
+                                <ul id="itemContainer" class="loader-data">
+                                    {% for next in posts %}
+                                        {% if loop.index0 >= 2 and loop.index0 < 4 %}
+                                            <li class="col-md-6">
+                                                <div class="post-style4" itemscope itemType="http://schema.org/BlogPosting">
+                                                    {% for media in next.medias %}
+                                                        <div class="post-thumb4"><img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" alt="" />
+                                                            <a href="" title="" itemprop="url" class="img-link"></a>
+                                                        </div>
+                                                    {% endfor %}
+                                                    <div class="post-metas4">
+                                                        <div class="date">
+                                                            <ul>
+                                                                <li><a itemprop="datePublished" content="{{ next.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" href="#" title="">{{ next.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }} |</a></li>
+                                                                <li><a itemprop="url" href="#" title="">{{ next.item.name }}</a></li>
+                                                                <br/>
+                                                                <li><a itemprop="url" href="#" title="">{% if next.legend|length > 0 %}{{next.legend }} {% endif %}</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ next.name|truncate('60', true, '...') }}</a></h3>
+                                                    <p itemprop="description">
+                                                        {{ next.content|truncate('200', true)|raw }}
+                                                    </p>
+                                                </div><!-- Post Stye 4 -->
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="border-bottom-container"></div>
+                                <div class="top-margin">
+                                    {% for old in posts %}
+                                        {% if loop.index0 > 3 %}
+                                            <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style4 border-top-post">
+                                                <div class="row">
+                                                <div class="col-md-2">
+                                                    <div class="date">
+                                                        <ul>
+                                                            <li><a itemprop="datePublished" content="{{ old.created|localizeddate('none', 'none', null, null, 'HH:mm a') }}" href="#" title="">{{ old.created|localizeddate('none', 'none', null, null, 'HH:mm a') }}</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                {% for media in old.medias %}
+                                                    <div class="col-md-4">
+                                                        <div class="post-thumb4">
+                                                            <img alt="{{ old.name }}" src="{{ media.assertPath|imagine_filter('thumb_item_page') }}" itemprop="image" />
+                                                            <a href="" title="" itemprop="url" class="img-link"></a>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                                <div class="col-md-6">
+                                                    <div class="post-metas4">
+                                                        <div class="date">
+                                                            <ul>
+                                                                <li><a itemprop="datePublished" content="{{ old.created|date('d, m Y') }}" href="#" title="">{{ old.created|localizeddate('none', 'none', null, null, 'EEEE d MMMM Y') }}</a></li> -
+                                                                <li><a itemprop="url" href="#" title="">{{ old.item.name }}</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ old.name|truncate('60', true, '...') }}</a></h3>
+                                                    <p itemprop="description">
+                                                        {{ old.content|truncate('200', true)|raw }}
+                                                    </p>
+                                                    <a class="read-more" itemprop="url" href="#" title="">Voir l'article<i class="fa fa-arrows-h"></i></a>
+                                                </div>
+                                            </div>
+                                            </div><!-- Posts -->
+                                        {% endif %}
+                                    {% endfor %}
+                                    {{ knp_pagination_render(posts) }}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <aside class="col-md-4 column">
+                        {{ 'sidebar' }}
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

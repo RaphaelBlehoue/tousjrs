@@ -8,6 +8,7 @@ use Labs\AdminBundle\Entity\Section;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DefaultController extends Controller
@@ -36,6 +37,10 @@ class DefaultController extends Controller
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/tj/{slug}", name="front_section_page")
      * @Method({"GET"})
+     * Page Rubrique
+     * Recupère toute les sous-rubriques de la rubrique
+     * Pour chaque sous-rubrique de la Rubrique on recupère 9 sous articles
+     * Requete longue et lourd a Optimiser (*)
      */
     public function getPageSectionAction(Section $section)
     {
@@ -54,8 +59,42 @@ class DefaultController extends Controller
     }
 
     /**
+     * @param Request $request
+     * @param Item $item
+     * @param $rubrique
+     * @param $page
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/{rubrique}/p/{slug}/page-{page}", name="front_item_page", requirements={"id" = "\d+"}, defaults={"page" = 1})
+     * @Method({"GET"})
+     * Page Sous-Rubrique
+     */
+    public function getPageItemAction(Request $request,Item $item, $rubrique, $page)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $heading = $em->getRepository('LabsAdminBundle:Section')->getOneSectionsAndItemsBySlug($rubrique);
+        $Items = $em->getRepository('LabsAdminBundle:Item')->getCurrentItem($item);
+        if( null === $heading || null === $Items){
+            throw new NotFoundHttpException('Page introuvable');
+        }
+        $findPost = $em->getRepository('LabsAdminBundle:Post')->getCountPostByItems($Items, 9);
+        $posts = $this->get('knp_paginator')->paginate(
+            $findPost,
+            $request->request->getInt('page', $page), 7);
+        $currentItem = $Items->getId();
+        return $this->render('LabsFrontBundle:Items:page_item.html.twig',[
+            'heading' => $heading,
+            'currentId' => $currentItem,
+            'item'    => $Items,
+            'posts'   => $posts
+        ]);
+
+    }
+
+    /**
      * @Route("/videos", name="videos_page")
      * @Method({"GET"})
+     * Page Video
+     * Page qui liste toute les videos du site
      */
     public function videoListAction()
     {
@@ -64,10 +103,44 @@ class DefaultController extends Controller
     /**
      * @param $id
      * @Route("/videos/watch/{id}", name="video_view")
+     * Page Pour visionner une video et afficher d'autre video
      */
     public function videoWatchViewAction($id)
     {
         die($id);
+    }
+
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * Recupere les Rubriques et les sous-rubriques associées
+     */
+    public function getMenuAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $sections = $em->getRepository('LabsAdminBundle:Section')->getSectionsAndItems();
+        if(null === $sections){
+            throw  new NotFoundHttpException('Element introuvable');
+        }
+        return $this->render('LabsFrontBundle:Includes:header.html.twig',[
+            'sections' => $sections
+        ]);
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * Recupere les Rubriques et les sous-rubriques associées pour le menu responsive
+     */
+    public function getMenuResponsiveAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $sections = $em->getRepository('LabsAdminBundle:Section')->getSectionsAndItems();
+        if(null === $sections){
+            throw  new NotFoundHttpException('Element introuvable');
+        }
+        return $this->render('LabsFrontBundle:Includes:responsive-header.html.twig',[
+            'sections' => $sections
+        ]);
     }
 
     /**
@@ -86,6 +159,7 @@ class DefaultController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
+     * Recupere tout les flash informations (6) dernières et les envoi à un include flash.html.twig
      */
     public function getflashInfosAction(){
         
@@ -98,6 +172,7 @@ class DefaultController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
+     * Recupere les 3 dossiers ou grand Format et les envois à un include list_dossier pour la sideBar
      */
     public function getDossierInfoAction(){
 
@@ -110,6 +185,7 @@ class DefaultController extends Controller
     /**
      * @param $item
      * @return \Symfony\Component\HttpFoundation\Response
+     * Recupère les 9 derniers articles organiser par date de creation pour chaque Items
      */
     public function getArticleByItemsAction($item)
     {
@@ -122,6 +198,7 @@ class DefaultController extends Controller
     /**
      * @param $section
      * @return \Symfony\Component\HttpFoundation\Response
+     * Recupere les 9 derniere publication des items appartenant à la section
      */
     public function getArticleBySectionsAction($section)
     {
@@ -133,6 +210,7 @@ class DefaultController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
+     * Recupère les dossiers avec une limit
      */
     public function getDossierLimitAction()
     {
@@ -143,43 +221,12 @@ class DefaultController extends Controller
         ]);
         
     }
+    
+    
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function getMenuAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-        $sections = $em->getRepository('LabsAdminBundle:Section')->getSectionsAndItems();
-        if(null === $sections){
-            throw  new NotFoundHttpException('Element introuvable');
-        }
-        return $this->render('LabsFrontBundle:Includes:header.html.twig',[
-            'sections' => $sections
-        ]);
-    }
-
-
-    /**
-     * @param Item $item
-     * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/{rubrique}/p/{slug}", name="front_item_page")
-     * @Method({"GET"})
-     */
-    public function getPageItemAction(Item $item)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $items = $em->getRepository('LabsAdminBundle:Item')->getItemAllPosts($item);
-        if(null === $items){
-            throw new NotFoundHttpException('Page introuvable');
-        }
-        return $this->render('LabsFrontBundle:Items:view_item.html.twig',[
-            'items' => $items
-        ]);
-    }
-
-    /**
-     * @return \Symfony\Component\HttpFoundation\Response
+     * Recupère les 3 dernières videos de la chaines youtube
      */
     public function getVideosReportAction()
     {
@@ -192,6 +239,7 @@ class DefaultController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
+     * Recupère les 3 dernnières videos de la chaine youtube pour la sidebar
      */
     public function getSideBarvideoAction()
     {
@@ -204,6 +252,7 @@ class DefaultController extends Controller
 
     /**
      * @return array
+     * Recupère toute les Rubriques du site
      */
     protected function FindBySection()
     {
@@ -219,6 +268,7 @@ class DefaultController extends Controller
     /**
      * @param $options
      * @return array
+     * Recupère les publications de chaque sous-rubrique de la rubrique en param
      */
     private function findPostSection($options)
     {
@@ -230,11 +280,12 @@ class DefaultController extends Controller
     /**
      * @param $options
      * @return array
+     * Recupère les rubriques les derniers posts par date des differents Items
      */
     private function findPostItem($options)
     {
         $em = $this->getDoctrine()->getManager();
-        $posts = $em->getRepository('LabsAdminBundle:Post')->getCountPostByItems($options);
+        $posts = $em->getRepository('LabsAdminBundle:Post')->getCountPostByItems($options, 9);
         return $posts;
     }
 
@@ -242,24 +293,11 @@ class DefaultController extends Controller
      * @param $section
      * @return array
      */
-
     private function getPostByItemsInSection($section)
     {
         $em = $this->getDoctrine()->getManager();
-        $items = $em->getRepository('LabsAdminBundle:Item')->getItemsBySection($section);
-        $items_array = [];
-        $posts = [];
-        foreach ($items as $i){
-            $items_array[] = $i;
-        }
-        $itemsTab = $items_array;
-        foreach ($itemsTab as $item){
-            $p = $em->getRepository('LabsAdminBundle:Post')->getOnePostByItems($item);
-            if(null !== $p){
-                $posts[] = $p;
-            }
-        }
-        return array_reverse($posts);
+        $posts = $em->getRepository('LabsAdminBundle:Post')->getPostByItems($section);
+        return $posts;
     }
 
 }

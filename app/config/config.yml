@@ -135,6 +135,12 @@ liip_imagine:
                 thumbnail: { size: [368, 338], mode: outbound }
                 background: { size: [370, 340], position: center, color: '#EEF1F5' }
 
+        thumb_item_page:
+            quality: 95
+            filters:
+                thumbnail: { size: [183, 133], mode: outbound }
+                background: { size: [185, 135], position: center, color: '#EEF1F5' }
+
         thumb_top_small:
             quality: 95
             filters:
@@ -178,3 +184,14 @@ vich_uploader:
             delete_on_update:   true
             delete_on_remove:   true
             namer:              vich_uploader.namer_uniqid
+
+knp_paginator:
+    page_range: 5                      # default page range used in pagination control
+    default_options:
+        page_name: page                # page query parameter name
+        sort_field_name: sort          # sort field query parameter name
+        sort_direction_name: direction # sort direction query parameter name
+        distinct: true                 # ensure distinct results, useful when ORM queries are using GROUP BY statements
+    template:
+        pagination: LabsFrontBundle:Pagination:paginate.html.twig     # sliding pagination controls template
+        sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template

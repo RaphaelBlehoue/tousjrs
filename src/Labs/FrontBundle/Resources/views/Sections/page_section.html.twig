@@ -15,9 +15,9 @@
             <div class="container">
                 <div class="menu">
                     <ul>
-                        <li class="menu-item-has-children"><a itemprop="url" href="#" title="{{ heading.name }}" style="background-color: {{ heading.color }} !important; color:#fff;">{{ heading.name|capitalize }}</a></li>
+                        <li class="menu-item-has-children"><a itemprop="url" href="{{ path('front_section_page', {'slug': heading.slug }) }}" title="{{ heading.name }}" style="background-color: {{ heading.color }} !important; color:#fff;">{{ heading.name|capitalize }}</a></li>
                         {% for item  in heading.items %}
-                            <li class="menu-item-has-children"><a itemprop="url" href="#" title="{{ item.name }}">{{ item.name }}</a></li>
+                            <li class="menu-item-has-children"><a itemprop="url" href="{{ path('front_item_page', {'rubrique':heading.slug, 'slug':item.slug}) }}" title="{{ item.name }}">{{ item.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -36,14 +36,16 @@
                                     <div class="post-single-info">
                                         <h1 itemprop="headline">{{ publication.name }}</h1>
                                         <ul>
-                                            <li><span>{{ 'mise à jour le '|upper }} :</span><a itemprop="url" href="#" title="">{{ publication.created|date('d, m Y') }}</a></li>
+                                            <li><span>{{ 'Publié le '|upper }} :</span><a itemprop="url" href="#" title="">{{ publication.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</a></li>
                                             <li><a itemprop="url" href="#" title="">{{ publication.item.name }}</a></li>
                                             <li><a itemprop="url" href="#" title="">{{ 'touslesjours' }}</a></li>
                                         </ul>
                                     </div>
                                     <div class="single-post-thumb">
                                         {% for media in publication.medias %}
-                                            <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="" />
+                                            <a href="">
+                                                <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="" />
+                                            </a>
                                         {% endfor %}
                                         <div class="post-metas4">
                                             <div class="date">
@@ -75,20 +77,19 @@
                                                 <li class="col-md-6">
                                                     <div class="post-style4" itemscope itemType="http://schema.org/BlogPosting">
                                                         {% for media in post.medias %}
-                                                            <div class="post-thumb4"><img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" alt="" />
+                                                            <div class="post-thumb4"><img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" alt=""/>
                                                                 <a href="" title="" itemprop="url" class="img-link"></a>
                                                             </div>
                                                         {% endfor %}
                                                         <div class="post-metas4">
                                                             <div class="date">
                                                                 <ul>
-                                                                    <li><a itemprop="datePublished" content="December-29-2014" href="#" title="">{{ post.created|date('d, m Y') }}</a></li><br/>
+                                                                    <li><a itemprop="datePublished" content="{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" href="#" title="">{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }} |</a></li>
+                                                                    <li><a itemprop="url" href="#" title="">{{ post.item.name }}</a></li>
+                                                                    <br/>
                                                                     <li><a itemprop="url" href="#" title="">{% if post.legend|length > 0 %}{{post.legend }} {% endif %}</a></li>
                                                                 </ul>
                                                             </div>
-                                                            <div class="total-comments">
-                                                                <a itemprop="url" href="#" title="">{{ post.item.name }}</a>
-                                                            </div><!-- Total Comments -->
                                                         </div>
                                                         <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ post.name|truncate('60', true, '...') }}</a></h3>
                                                         <p itemprop="description">

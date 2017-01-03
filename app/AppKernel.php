@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new Vich\UploaderBundle\VichUploaderBundle(),
             new Knp\Bundle\TimeBundle\KnpTimeBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Labs\LimitlessTplBundle\LabsLimitlessTplBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Labs\AdminBundle\LabsAdminBundle(),
