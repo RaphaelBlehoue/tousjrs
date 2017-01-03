@@ -43,7 +43,9 @@
                             {% if loop.index0 == 0 %}
                                 <div class="blog-single" itemscope itemType="http://schema.org/BlogPosting">
                                     <div class="post-single-info">
-                                        <h1 itemprop="headline">{{ post.name }}</h1>
+                                        <a href="{{ path('page_view', {'slug': post.slug}) }}">
+                                            <h1 itemprop="headline">{{ post.name }}</h1>
+                                        </a>
                                         <ul>
                                             <li><span>{{ 'Publié le'|upper }} :</span><a itemprop="url" href="#" title="">{{ post.created|localizeddate('none', 'none', null, null, 'd MMMM Y') }}</a></li>
                                             <li><a itemprop="url" href="{{ path('front_item_page', { 'rubrique': post.item.section.slug, 'slug': post.item.slug }) }}" title="">{{ post.item.name }}</a></li>
@@ -52,8 +54,8 @@
                                     </div>
                                     <div class="single-post-thumb">
                                         {% for media in post.medias %}
-                                            <a href="">
-                                                <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="" />
+                                            <a href="{{ path('page_view', {'slug': post.slug }) }}">
+                                                <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="{{ post.name }}" />
                                             </a>
                                         {% endfor %}
                                         <div class="post-metas4">
@@ -86,8 +88,8 @@
                                             <li class="col-md-6">
                                                 <div class="post-style4" itemscope itemType="http://schema.org/BlogPosting">
                                                     {% for media in next.medias %}
-                                                        <div class="post-thumb4"><img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" alt="" />
-                                                            <a href="" title="" itemprop="url" class="img-link"></a>
+                                                        <div class="post-thumb4"><img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" alt="{{ next.name }}" />
+                                                            <a href="{{ path('page_view', {'slug': next.slug}) }}" title="{{ next.name }}" itemprop="url" class="img-link"></a>
                                                         </div>
                                                     {% endfor %}
                                                     <div class="post-metas4">
@@ -99,7 +101,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ next.name|truncate('40', true, '...') }}</a></h3>
+                                                    <h3 itemprop="headline"><a itemprop="url" href="{{ path('page_view', {'slug': next.slug}) }}" title="{{ next.name }}">{{ next.name|truncate('40', true, '...') }}</a></h3>
                                                     <p itemprop="description">
                                                         {{ next.content|truncate('200', true)|raw }}
                                                     </p>
@@ -126,7 +128,7 @@
                                                     <div class="col-md-4">
                                                         <div class="post-thumb4">
                                                             <img alt="{{ old.name }}" src="{{ media.assertPath|imagine_filter('thumb_item_page') }}" itemprop="image" />
-                                                            <a href="" title="" itemprop="url" class="img-link"></a>
+                                                            <a href="{{ path('page_view', {'slug': old.slug}) }}" title="{{ old.name }}" itemprop="url" class="img-link"></a>
                                                         </div>
                                                     </div>
                                                 {% endfor %}
@@ -139,11 +141,11 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ old.name|truncate('40', true, '...') }}</a></h3>
+                                                    <h3 itemprop="headline"><a itemprop="url" href="{{ path('page_view', {'slug':old.slug}) }}" title="{{ old.name }}">{{ old.name|truncate('40', true, '...') }}</a></h3>
                                                     <p itemprop="description">
-                                                        {{ old.content|truncate('200', true)|raw }}
+                                                        {{ old.content|truncate('140', true)|raw }}
                                                     </p>
-                                                    <a class="read-more" itemprop="url" href="#" title="">Voir l'article<i class="fa fa-arrows-h"></i></a>
+                                                    <a class="read-more" itemprop="url" href="{{ path('page_view', {'slug': old.slug}) }}" title="{{ old.name }}">Voir l'article<i class="fa fa-arrows-h"></i></a>
                                                 </div>
                                             </div>
                                             </div><!-- Posts -->

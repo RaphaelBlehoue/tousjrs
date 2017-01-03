@@ -14,7 +14,7 @@
                                         <a href="{{ path('page_view', { 'slug': article.slug }) }}"><h1 itemprop="headline">{{ article.name }}</h1></a>
                                         <ul>
                                             <li><span>{{ 'Publié le'|upper }} :</span><a itemprop="url" href="#" title="">{{ article.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</a></li>
-                                            <li><a itemprop="url" href="" title="">{{ article.item.name }}</a></li>
+                                            <li><a itemprop="url" href="{{ path('front_item_page', {'rubrique':article.item.section.slug , 'slug':article.item.slug}) }}" title="">{{ article.item.name }}</a></li>
                                             <li><a itemprop="url" href="{{ path('homepage') }}" title="">{{ 'touslesjours' }}</a></li>
                                         </ul>
                                     </div>
@@ -55,19 +55,19 @@
                                                     {% for media in post.medias %}
                                                         <div class="post-thumb4">
                                                             <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" alt="" />
-                                                            <a href="" title="" itemprop="url" class="img-link"></a>
+                                                            <a href="{{ path('page_view', {'slug' : post.slug}) }}" title="{{ post.name }}" itemprop="url" class="img-link"></a>
                                                         </div>
                                                     {% endfor %}
                                                     <div class="post-metas4">
                                                         <div class="date">
                                                             <ul>
                                                                 <li><a itemprop="datePublished" content="{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" href="#" title="">{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }} |</a></li>
-                                                                <li><a itemprop="url" href="#" title="">{{ post.item.name }}</a></li>
+                                                                <li><a itemprop="url" href="{{ path('front_item_page', {'rubrique':post.item.section.slug, 'slug':post.item.slug }) }}" title="">{{ post.item.name }}</a></li>
                                                                 <br/>
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h3 itemprop="headline"><a itemprop="url" href="" title="">{{ post.name|truncate('40', true, '...') }}</a></h3>
+                                                    <h3 itemprop="headline"><a itemprop="url" href="{{ path('page_view', {'slug' : post.slug}) }}" title="{{ post.name }}">{{ post.name|truncate('40', true, '...') }}</a></h3>
                                                     <p itemprop="description">
                                                         {{ post.content|truncate('200', true)|raw }}
                                                     </p>
@@ -90,7 +90,7 @@
                                                 {% for media in arts.medias %}
                                                     <div class="post-thumb1">
                                                         <img alt="{{ arts.name }}" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" itemprop="image">
-                                                        <a href="" title="" itemprop="url" class="img-link"></a>
+                                                        <a href="{{ path('page_view', {'slug' : arts.slug}) }}" title="{{ arts.name }}" itemprop="url" class="img-link"></a>
                                                     </div>
                                                 {% endfor %}
                                                 <div class="date">
@@ -101,8 +101,7 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h3 itemprop="headline"><a title="{{ arts.name }}" href="" itemprop="url">{{ arts.name|truncate('40', true,'...') }}</a>
-                                                </h3>
+                                                <h3 itemprop="headline"><a title="{{ arts.name }}" href="{{ path('page_view', {'slug' : arts.slug}) }}" itemprop="url">{{ arts.name|truncate('40', true,'...') }}</a></h3>
                                             </div><!-- Post Style 1 -->
                                         </div>
                                         {% endif %}
@@ -149,7 +148,7 @@
                     <div>
                             <section class="block remove-top">
                                 <div class="col-md-12 column background-style" style="border-top: 3px solid {{ section.color }};">
-                                    <a href="">
+                                    <a href="{{ path('front_section_page',{'slug': section.slug}) }}">
                                         <div class="heading5">
                                             <h3 class="text-center titlecolor" style="color: {{ section.color }};">
                                                 {{ section.name|capitalize }}
@@ -168,7 +167,7 @@
                             </section>
                             <div class="clear"></div>
                             <div class="col-md-12 column background-style" style="border-top: 3px solid #EEF1F5;">
-                                <a href="">
+                                <a href="{{ path('front_section_page',{'slug': section.slug}) }}">
                                     <h5 class="text-center" style="color:{{ section.color }}; font-weight: 700;">
                                         {{ 'Consultez la rubriques '~ section.name }}
                                     </h5>

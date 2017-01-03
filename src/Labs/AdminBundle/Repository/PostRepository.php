@@ -127,6 +127,8 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         $qb->addSelect('m');
         $qb->leftJoin('p.item', 'i');
         $qb->addSelect('i');
+        $qb->leftJoin('i.section', 's');
+        $qb->addSelect('s');
         $qb->where($qb->expr()->eq('p.online', 1));
         $qb->andWhere($qb->expr()->eq('m.actived', 1));
         $qb->orderBy('p.created', 'Desc');
