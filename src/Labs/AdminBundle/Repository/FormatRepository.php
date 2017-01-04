@@ -90,7 +90,8 @@ class FormatRepository extends \Doctrine\ORM\EntityRepository
         $qb->addSelect('i');
         $qb->where(
             $qb->expr()->eq('f.online', 1),
-            $qb->expr()->eq('f.draft', 1)
+            $qb->expr()->eq('f.draft', 1),
+            $qb->expr()->eq('m.actived', 1)
         );
         $qb->andWhere($qb->expr()->eq('m.actived', 1));
         $qb->orderBy('f.created', 'Desc');
@@ -142,7 +143,8 @@ class FormatRepository extends \Doctrine\ORM\EntityRepository
         $qb->where(
             $qb->expr()->neq('d.id', ':min'),
             $qb->expr()->eq('d.draft', 1),
-            $qb->expr()->eq('d.online', 1)
+            $qb->expr()->eq('d.online', 1),
+            $qb->expr()->eq('m.actived',1)
         );
         $qb->orderBy('d.created', 'DESC');
         $qb->setMaxResults($max);

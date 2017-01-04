@@ -119,7 +119,8 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         $qb->where(
             $qb->expr()->neq('p.id', ':min'),
             $qb->expr()->eq('p.draft', 1),
-            $qb->expr()->eq('p.online', 1)
+            $qb->expr()->eq('p.online', 1),
+            $qb->expr()->eq('m.actived', 1)
         );
         $qb->orderBy('p.created', 'DESC');
         $qb->setMaxResults($max);
@@ -141,8 +142,11 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         $qb->addSelect('i');
         $qb->leftJoin('i.section', 's');
         $qb->addSelect('s');
-        $qb->where($qb->expr()->eq('p.online', 1));
-        $qb->andWhere($qb->expr()->eq('m.actived', 1));
+        $qb->where(
+            $qb->expr()->eq('p.online', 1),
+            $qb->expr()->eq('m.actived', 1),
+            $qb->expr()->eq('p.draft', 1)
+        );
         $qb->orderBy('p.created', 'Desc');
         $qb->setMaxResults($max);
         return $qb->getQuery()->getResult();
