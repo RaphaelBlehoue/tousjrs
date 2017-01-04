@@ -162,8 +162,6 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $dossier = $em->getRepository('LabsAdminBundle:Format')->getDossierSlug($format, $slug);
         $old = $em->getRepository('LabsAdminBundle:Format')->OldDossier($dossier->getId(), 8);
-        dump($dossier);
-        dump($old);
         return $this->render('LabsFrontBundle:Dossiers:dossier_view_page.html.twig',[
             'article' => $dossier,
             'old'     => $old
