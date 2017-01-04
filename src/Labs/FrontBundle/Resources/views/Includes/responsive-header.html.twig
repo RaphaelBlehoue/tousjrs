@@ -26,7 +26,7 @@
         </div><!-- Close Btn -->
         <ul>
             {% for section in sections %}
-                <li class="menu-item-has-children">
+                <li>
                     <a itemprop="url" href="{{ path('front_section_page', {'slug' : section.slug}) }}" title="{{ section.name}}">{{ section.name|upper }}</a>
                     <ul>
                         {% set rubrique = section.slug %}
@@ -42,6 +42,12 @@
                     </ul><!-- drop-down -->
                 </li>
             {% endfor %}
+            <li>
+                <a itemprop="url"  href="{{ path('dossier_page') }}" title="Page dossiers">{{ 'Dossiers'|upper }}</a>
+            </li>
+            <li>
+                <a itemprop="url"  href="" title="">{{ 'Videos'|upper }}</a>
+            </li>
         </ul>
     </div><!-- Responsive Menu -->
 </div><!-- Responsive Header -->

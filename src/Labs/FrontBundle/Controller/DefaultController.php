@@ -2,6 +2,7 @@
 
 namespace Labs\FrontBundle\Controller;
 
+use Labs\AdminBundle\Entity\Format;
 use Labs\AdminBundle\Entity\Item;
 use Labs\AdminBundle\Entity\Post;
 use Labs\AdminBundle\Entity\Section;
@@ -21,7 +22,7 @@ class DefaultController extends Controller
      * Recupère les derniers arcticles dans la base de données et les inclus dans recents
      * Récupère toutes les Rubriques du Site et les met dans un tableau
      */
-    public function indexAction()
+    public function getPageHomeAction()
     {
         $em = $this->getDoctrine()->getManager();
         $recent = $em->getRepository('LabsAdminBundle:Post')->findArticleNum(15);
@@ -128,6 +129,45 @@ class DefaultController extends Controller
     public function videoWatchViewAction($id)
     {
         die($id);
+    }
+
+    /**
+     * @param Request $request
+     * @param $page
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/dossiers/index_page_{page}", name="dossier_page", defaults={"page" = 1})
+     * @Method({"GET"})
+     */
+    public function getPageDossierAction(Request $request , $page)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $findossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum(100);
+        $dossiers = $this->get('knp_paginator')->paginate(
+            $findossiers,
+            $request->request->getInt('page', $page), 6);
+        return $this->render('LabsFrontBundle:Dossiers:index.html.twig',[
+            'dossiers' => $dossiers
+        ]);
+    }
+
+    /**
+     * @param Format $format
+     * @param $slug
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("format/page/{rubrique}/{slug}", name="page_dossier_view")
+     * @Method({"GET"})
+     */
+    public function getPageDossierView(Format $format, $slug)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $dossier = $em->getRepository('LabsAdminBundle:Format')->getDossierSlug($format, $slug);
+        $old = $em->getRepository('LabsAdminBundle:Format')->OldDossier($dossier->getId(), 8);
+        dump($dossier);
+        dump($old);
+        return $this->render('LabsFrontBundle:Dossiers:dossier_view_page.html.twig',[
+            'article' => $dossier,
+            'old'     => $old
+        ]);
     }
 
 

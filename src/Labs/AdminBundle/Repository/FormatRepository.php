@@ -88,7 +88,10 @@ class FormatRepository extends \Doctrine\ORM\EntityRepository
         $qb->addSelect('m');
         $qb->leftJoin('f.item', 'i');
         $qb->addSelect('i');
-        $qb->where($qb->expr()->eq('f.online', 1));
+        $qb->where(
+            $qb->expr()->eq('f.online', 1),
+            $qb->expr()->eq('f.draft', 1)
+        );
         $qb->andWhere($qb->expr()->eq('m.actived', 1));
         $qb->orderBy('f.created', 'Desc');
         if(null !== $max){
@@ -96,8 +99,54 @@ class FormatRepository extends \Doctrine\ORM\EntityRepository
         }
         return $qb->getQuery()->getResult();
     }
-    
-    
-    
-    
+
+    /**
+     * @param Format $format
+     * @param $slug
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getDossierSlug(Format $format, $slug)
+    {
+        $qb = $this->createQueryBuilder('d');
+        $qb->leftJoin('d.medias','m');
+        $qb->addSelect('m');
+        $qb->leftJoin('d.item','i');
+        $qb->addSelect('i');
+        $qb->leftJoin('i.section','s');
+        $qb->addSelect('s');
+        $qb->where(
+            $qb->expr()->eq('d.id', ':format'),
+            $qb->expr()->eq('d.slug', ':slug'),
+            $qb->expr()->eq('m.actived', 1),
+            $qb->expr()->eq('d.draft', 1),
+            $qb->expr()->eq('d.online', 1)
+        );
+        $qb->setParameter('format', $format);
+        $qb->setParameter('slug', $slug);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    /**
+     * @param $min
+     * @param null $max
+     * @return array
+     */
+    public function OldDossier($min ,$max)
+    {
+        $qb = $this->createQueryBuilder('d');
+        $qb->leftJoin('d.medias','m');
+        $qb->addSelect('m');
+        $qb->leftJoin('d.item','i');
+        $qb->addSelect('i');
+        $qb->where(
+            $qb->expr()->neq('d.id', ':min'),
+            $qb->expr()->eq('d.draft', 1),
+            $qb->expr()->eq('d.online', 1)
+        );
+        $qb->orderBy('d.created', 'DESC');
+        $qb->setMaxResults($max);
+        $qb->setParameter('min', $min);
+        return $qb->getQuery()->getResult();
+    }
 }
