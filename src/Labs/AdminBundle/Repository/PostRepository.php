@@ -77,6 +77,12 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         return $qb->getQuery()->getOneOrNullResult();
     }
 
+    /**
+     * @param Post $post
+     * @param $slug
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
     public function getPostSlug(Post $post, $slug)
     {
         $qb = $this->createQueryBuilder('p');
@@ -89,7 +95,9 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         $qb->where(
             $qb->expr()->eq('p.id', ':post'),
             $qb->expr()->eq('p.slug', ':slug'),
-            $qb->expr()->eq('m.actived', 1)
+            $qb->expr()->eq('m.actived', 1),
+            $qb->expr()->eq('p.draft', 1),
+            $qb->expr()->eq('p.online', 1)
         );
         $qb->setParameter('post', $post);
         $qb->setParameter('slug', $slug);
@@ -106,8 +114,12 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         $qb = $this->createQueryBuilder('p');
         $qb->leftJoin('p.medias','m');
         $qb->addSelect('m');
+        $qb->leftJoin('p.item','i');
+        $qb->addSelect('i');
         $qb->where(
-            $qb->expr()->neq('p.id', ':min')
+            $qb->expr()->neq('p.id', ':min'),
+            $qb->expr()->eq('p.draft', 1),
+            $qb->expr()->eq('p.online', 1)
         );
         $qb->orderBy('p.created', 'DESC');
         $qb->setMaxResults($max);

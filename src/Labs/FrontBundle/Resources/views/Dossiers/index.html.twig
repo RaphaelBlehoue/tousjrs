@@ -1,0 +1,70 @@
+{% extends '::base.html.twig' %}
+{% block title %}{{ 'TousLesJours.ci - Actualités et Infos en Côte d\'ivoire et dans le monde' }}{% endblock %}
+{% block stylesheets %}{% endblock %}
+{% block submenu %}
+    <div class="heading">
+        <i class="fa fa-home"></i><span>{{ 'Accueil'|upper }}</span>
+        <h2 class="">{{ 'Dossiers'|upper }}</h2>
+    </div>
+{% endblock %}
+{% block body %}
+    <div class="container bg-section">
+        <section class="block remove-top">
+            <div class="first-container">
+                <div class="first-row">
+                    <div class="col-md-8 column">
+                        <div class="top-margin">
+                            {% for dossier in dossiers %}
+                                <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 itemprop="headline">
+                                            <a title="{{ dossier.name }}" href="{{ path('page_dossier_view', {'rubrique':dossier.item.slug, 'slug':dossier.slug }) }}" itemprop="url">{{ dossier.name }}</a>
+                                        </h1>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="post-thumb4">
+                                            {% for media in dossier.medias %}
+                                                <img alt="{{ dossier.name }}" src="{{ media.assertPath|imagine_filter('thumb_dossier_small') }}" itemprop="image" />
+                                                <a href="{{ path('page_dossier_view', {'rubrique':dossier.item.slug, 'slug':dossier.slug }) }}" title="{{ dossier.name }}" itemprop="url" class="img-link"></a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="post-metas4">
+                                            <div class="date">
+                                                <ul>
+                                                    <li><a title="" href="#" content="December-29-2014" itemprop="datePublished">{{ dossier.created|localizeddate('none', 'none', null, null, 'd MMMM Y') }}</a></li>
+                                                    <li><a title="" href="#" itemprop="url">{{ dossier.item.name }}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p itemprop="description">{{ dossier.content|truncate('200', true, '...')|raw }}</p>
+                                        <a class="read-more" itemprop="url" href="{{ path('page_dossier_view', {'rubrique':dossier.item.slug, 'slug':dossier.slug }) }}" title="{{ dossier.name }}">{{ 'Lire le dossier'|upper }} <i class="fa fa-arrows-h"></i></a>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="border-bottom-container"></div>
+                                </div><!-- Posts -->
+                            {% endfor %}
+                             {{ knp_pagination_render(dossiers) }}
+                        </div>
+                    </div>
+                    <aside class="col-md-4 column">
+                        {{ render(controller('LabsFrontBundle:Default:getflashInfos')) }}
+                        <div class="widget">
+                            <ul class="review-widget">
+                                <div class="post-style6" itemtype="http://schema.org/BlogPosting" itemscope="">
+                                    <div class="post-thumb6">
+                                        <a href=""><img itemprop="image" src="{{ asset('images/resource/pub.jpg') }}" alt="" /></a>
+                                    </div>
+                                </div><!-- Post Style 8 -->
+                            </ul>
+                        </div>
+                        {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

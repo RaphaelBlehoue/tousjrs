@@ -5,5 +5,11 @@
                 <a itemprop="url"  href="{{ path('front_section_page', {'slug' : section.slug}) }}" title="{{ section.name}}">{{ section.name|upper }}</a>
             </li>
         {% endfor %}
+        <li class="menu-item-has-children">
+            <a itemprop="url"  href="{{ path('dossier_page') }}" title="pages dossiers">{{ 'Dossiers'|upper }}</a>
+        </li>
+        <li class="menu-item-has-children">
+            <a itemprop="url"  href="" title="">{{ 'Videos'|upper }}</a>
+        </li>
     </ul>
 </nav>
