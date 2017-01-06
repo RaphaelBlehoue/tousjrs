@@ -10,8 +10,8 @@
                         {% for flash in flashs %}
                         <li>
                             <div class="post-style9" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                <strong>{{ flash.updated|ago}}</strong> -
-                                <span style="font-size: 1.3em; text-align: justify;">{{ flash.content }} </span>
+                                <strong style="color: #d70204; font-size: 1.5rem;">{{ flash.updated|ago}}</strong> -
+                                <span style="font-size: 1.35rem; text-align: justify;" class="post-metas4">{{ flash.content }} </span>
                             </div><!-- Post Style 9 -->
                         </li>
                         {% endfor %}
