@@ -109,26 +109,43 @@ class DefaultController extends Controller
             'old'     => $old
         ]);
     }
-    
+
 
     /**
-     * @Route("/videos", name="videos_page")
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("pages/videos", name="videos_page")
      * @Method({"GET"})
      * Page Video
      * Page qui liste toute les videos du site
      */
     public function videoListAction()
     {
+        $api = $this->get('youtube_api.service');
+        $youtube = $api->getSearchVideo(20);
+        return $this->render('LabsFrontBundle:Videos:index.html.twig',[
+            'youtube' => $youtube
+        ]);
     }
 
     /**
      * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/videos/watch/{id}", name="video_view")
      * Page Pour visionner une video et afficher d'autre video
      */
     public function videoWatchViewAction($id)
     {
-        die($id);
+        $api = $this->get('youtube_api.service');
+        $video = [];
+        $video_array = $api->getVideoById($id);
+        foreach ($video_array as $k => $v){
+            $video[$k] = $v;
+        }
+        $youtube= $api->getSearchVideo(6);
+        return $this->render('LabsFrontBundle:Videos:view.html.twig',[
+            'video' => $video,
+            'medias' => $youtube
+        ]);
     }
 
     /**

@@ -1293,7 +1293,7 @@ nav.menu .container > ul > li a > i {
     width: 100%;
 }
 .cat > a {
-    background: #1f1f1f;
+    background: #D70204;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -3362,7 +3362,7 @@ nav.menu .container > ul > li a > i {
 }
 
 .our-video-box::before {
-    background: #ffffff none repeat scroll 0 0;
+    /*background: #ffffff none repeat scroll 0 0;*/
     content: "";
     height: 100%;
     left: 0;

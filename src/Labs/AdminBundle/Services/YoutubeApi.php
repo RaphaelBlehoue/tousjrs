@@ -84,7 +84,32 @@ class YoutubeApi {
         return $videos;
     }
 
+    /**
+     * @param $id
+     * @return array
+     */
+    public function getVideoById($id)
+    {
+        $res = $this->service->videos->listVideos('id,snippet,contentDetails,player',[
+            'id' => $id
+        ]);
+        $item = $res['items'];
+        $video = [
+            'id' => $item[0]['id'],
+            'published' => $item[0]['snippet']['publishedAt'],
+            'channel' => $item[0]['snippet']['channelTitle'],
+            'channelId' => $item[0]['snippet']['channelId'],
+            'title'     => $item[0]['snippet']['title'],
+            'descript'  => $item[0]['snippet']['description'],
+            'duration'  => $item[0]['contentDetails']['duration'],
+            'player'    => [
+                'embedHtml'  => $item[0]['player']['embedHtml']
+            ]
+        ];
+        return $video;
+    }
+
     public function setUploadVideo(){}
-    public function getVideoById(){}
+
 
 }

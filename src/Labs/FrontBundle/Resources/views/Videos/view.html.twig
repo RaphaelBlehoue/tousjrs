@@ -1,0 +1,95 @@
+{% extends '::base.html.twig' %}
+{% block title %}{{ 'TousLesJours.ci - Actualités et Infos en Côte d\'ivoire et dans le monde' }}{% endblock %}
+{% block stylesheets %}{% endblock %}
+{% block submenu %}
+    <div class="heading">
+        <i class="fa fa-video-camera"></i><span>{{ 'Touslesjours tv'|upper }}</span>
+        <h2 class="">{{ 'Videos'|upper }}</h2>
+    </div>
+{% endblock %}
+{% block body %}
+    <div class="container bg-section">
+        <section class="block remove-top">
+            <div class="first-container">
+                <div class="first-row">
+                    <div class="col-md-8 column">
+                        <div class="blog-single" itemscope itemType="http://schema.org/BlogPosting">
+                            <div class="post-single-info">
+                                <h1 itemprop="headline">{{ video.title|capitalize }}</h1>
+                                <ul>
+                                    <li><span>{{ 'Publié le'|upper }} :</span><a itemprop="url" href="#" title="">{{ video.published|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</a></li>
+                                    <li><a itemprop="url" href="https://www.youtube.com/channel/{{ video.channelId }}" title="{{ video.channel }}" target="_blank">{{ video.channel }}</a></li>
+                                </ul>
+                            </div>
+                            <div class="post-metas4 m-5">
+                                <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ video.id }}" frameborder="0" allowfullscreen></iframe>
+                                <div class="date">
+                                    <div class="cat">
+                                        <a title="" href="#" itemprop="url">{{ video.duration|dateInterval }} | {{ video.channel }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="blog-single-details">
+                                <p itemprop="description">
+                                    {% if video.descript|length > 0 %}{{ video.descript|raw }}{% endif %}
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="border-bottom-container"></div>
+                            <div class="rel-post-sec">
+                                <h3 class="heading4">Videos sur le même sujet</h3>
+                                <div class="top-margin">
+                                    {% for media in medias %}
+                                        <div class="col-md-6">
+                                            <div class="active post-style4" itemprop="video" itemscope itemType="http://schema.org/BlogPosting">
+                                                <div class="our-video-box">
+                                                    <img itemprop="image" src="{{ media.Thumb.high.url }}" alt="{{ media.Channel }}">
+                                                    <div class="video-box-title">
+                                                        <a itemprop="url" title="{{ media.Title }}" href="{{ path('video_view', {'id' : media.Id}) }}">
+                                                            <i class="fa fa-play"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="post-metas4">
+                                                        <div class="date">
+                                                            <div class="cat">
+                                                                <a title="" href="#" itemprop="url">{{ media.Published|localizeddate('none', 'none', null, null, 'd MMMM Y') }} | {{ media.Channel }}</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h4 itemprop="name">{{ media.Title|capitalize|truncate(50, true, '...') }}</h4>
+                                                </div><!-- Our Video Sec -->
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div><!-- Related Post Sec -->
+
+                            <a href="https://www.youtube.com/channel/{{ video.channelId }}" target="_blank">
+                                <div class="heading2">
+                                    {{ '+ de videos sur'|upper }}<br/>
+                                    {{ 'TouslesjoursTV'|upper }}
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <aside class="col-md-4 column">
+                        {{ render(controller('LabsFrontBundle:Default:getflashInfos')) }}
+                        <div class="widget">
+                            <ul class="review-widget">
+                                <div class="post-style6" itemtype="http://schema.org/BlogPosting" itemscope="">
+                                    <div class="post-thumb6">
+                                        <a href=""><img itemprop="image" src="{{ asset('images/resource/pub.jpg') }}" alt="" /></a>
+                                    </div>
+                                </div><!-- Post Style 8 -->
+                            </ul>
+                        </div>
+                        {{ render(controller('LabsFrontBundle:Default:getRecentArticle')) }}
+                        {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
+                        {{ render(controller('LabsFrontBundle:Default:getDossierInfo')) }}
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
