@@ -21,6 +21,8 @@ Class MediasController extends Controller
 {
 
     /**
+     * @param Post $post
+     * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/{id}/list", name="media_list")
      * @Method("GET")
      * @Template()
@@ -32,7 +34,7 @@ Class MediasController extends Controller
         $article = $em->getRepository('LabsAdminBundle:Post')->getArticles($post);
         if(!$article)
         {
-            throw $this->createNotFoundException('l\'article ou les medias n\'existe pas');
+            throw new NotFoundHttpException('l\'article ou les medias n\'existe pas');
         }
         $medias = $em->getRepository('LabsAdminBundle:Media')->findForPostMedia($article);
         return $this->render('LabsAdminBundle:Medias:list.html.twig', [
