@@ -96,7 +96,7 @@ class DefaultController extends Controller
      * @param Post $post
      * @param $slug
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/{slug}", name="page_view")
+     * @Route("/articles/{slug}", name="page_view")
      * @Method({"GET"})
      */
     public function getPageArticleAction(Post $post, $slug)
