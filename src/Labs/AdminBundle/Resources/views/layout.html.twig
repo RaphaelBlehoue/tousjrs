@@ -1,25 +1,7 @@
-{% extends "LabsLimitlessTplBundle::loyout_limitless.html.twig" %}
-{% block navbar %}
-    <!-- Main navbar -->
-    <div class="navbar navbar-inverse bg-primary">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="index.html"><img src="{{ asset('images/logo_light.png') }}" alt=""></a>
-
-            <ul class="nav navbar-nav pull-right visible-xs-block">
-                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
-            </ul>
-        </div>
-
-        <div class="navbar-collapse collapse" id="navbar-mobile">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#">
-                        <i class="icon-display4"></i> <span class="visible-xs-inline-block position-right"> {{ 'retourner sur le site' }}</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+{% extends "LabsLimitlessTplBundle::layout_login_limitless.html.twig" %}
+{% block body %}
+    <div>
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
     </div>
-    <!-- /main navbar -->
 {% endblock %}
-{% block body %}{% endblock %}
