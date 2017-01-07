@@ -95,7 +95,7 @@ body {
 }
 p{
 	font-family:Open Sans;
-	font-size:1.3rem;
+	font-size:1.35rem;
 	color:#515151;
 	float:left;
 	width:100%;
@@ -1974,6 +1974,12 @@ nav.menu .container > ul > li a > i {
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
+}
+.post-style9 > span {
+    color: #262626;
+    font-family: Lato;
+    font-size: 10px;
+    line-height: 14px;
 }
 
 /* Post Style 10 */
