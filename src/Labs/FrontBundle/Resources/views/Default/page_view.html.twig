@@ -7,14 +7,14 @@
     <meta property="og:description" content="{{ article.content|truncate(200, true, '...')|striptags }}" />
     <meta property="og:image"  content="{{ absolute_url(article.medias.0.assertPath|imagine_filter('thumb_block_article') ) }}" />
     <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:site_name"  content="{{ 'touslesjoursci.com' }}" />
+    <meta property="og:site_name"  content="{{ 'touslesjours CI' }}" />
     <meta property="og:locale"  content="fr_FR"/>
     <meta property="og:updated_time" content="{{ article.created|date('d, m Y') }}" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:rich_attachment" content="true" />
     <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="600">
-    <meta property="og:image:height" content="600">
+    <meta property="og:image:width" content="652">
+    <meta property="og:image:height" content="365">
 {% endblock %}
 
 {% block stylesheets %}
