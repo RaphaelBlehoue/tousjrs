@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85828300-8469-4298-9e55-7f970975b2ac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" />
-    </list>
+    <list default="true" id="85828300-8469-4298-9e55-7f970975b2ac" name="Default" comment="" />
     <ignored path="touslesjours.dev.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -34,8 +32,8 @@
       <file leaf-file-name="page_view.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="60" column="82" selection-start-line="60" selection-start-column="82" selection-end-line="60" selection-end-column="82" />
+            <state relative-caret-position="253">
+              <caret line="60" column="132" selection-start-line="60" selection-start-column="132" selection-end-line="60" selection-end-column="132" />
               <folding>
                 <element signature="e#202#211#0#Twig" expanded="true" />
                 <element signature="e#330#339#0#Twig" expanded="true" />
@@ -735,12 +733,12 @@
       <workItem from="1483972929871" duration="170000" />
       <workItem from="1484242463068" duration="586000" />
       <workItem from="1484479771340" duration="566000" />
-      <workItem from="1485172311907" duration="8948000" />
+      <workItem from="1485172311907" duration="9133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="331647000" />
+    <option name="totallyTimeSpent" value="331832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1171,8 +1169,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="60" column="82" selection-start-line="60" selection-start-column="82" selection-end-line="60" selection-end-column="82" />
+        <state relative-caret-position="253">
+          <caret line="60" column="132" selection-start-line="60" selection-start-column="132" selection-end-line="60" selection-end-column="132" />
           <folding>
             <element signature="e#202#211#0#Twig" expanded="true" />
             <element signature="e#330#339#0#Twig" expanded="true" />
