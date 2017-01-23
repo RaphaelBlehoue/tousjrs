@@ -65,7 +65,7 @@
                             </div>
                             <div class="single-post-thumb">
                                 {% for media in article.medias  %}
-                                    <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_facebook') }}" alt="" />
+                                    <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_block_article') }}" alt="" />
                                 {% endfor %}
                             </div>
                             <div class="post-metas4">

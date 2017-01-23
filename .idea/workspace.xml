@@ -2,75 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85828300-8469-4298-9e55-7f970975b2ac" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_2d8bff7e62c107709ca0e12ff8dcb4e8.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_558fd383d6e41cdc91d73bc81b02d447.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_8e7df6489cfc2ecab99c234f99ac1706.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_98537c5004ea5e3223a7f94af6028cda.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_b0b3d4d575dfb2282211f31c0ea8de9d.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_c7bac225026e47ecd4aa0be37cfd819b.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_d80dcaeb09487ebca4b04aef445827df.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_d8bcb51229ae0c67704f5725d51af6a5.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_dae87dba8cb1973327931f4dc826eab8.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_e59c27bc1c712aea75bcac5ced7d72e3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_fc4fb72845344c9349cd641c35e857c9.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/_fe3080c4f4509cad19c0130e5cf299f3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/dossiers-1-format-test-1_662a437a30c00d3a67467a38bca54e29.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/journal-tout-les-jours-article-titre-10_07d60caf06e17785b641956f354f2049.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/journal-tout-les-jours-article-titre-10_8d8771462b12c22556b5773ee7eab5eb.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/journal-tout-les-jours-article-titre-914_522982d10025bf4d244ba93db9522015.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_back/uploads/posts/journal-tout-les-jours-article-titre-914_b39cf938aa3200ee523ed36e83c03702.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_block_article/uploads/posts/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_block_article/uploads/posts/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_block_article/uploads/posts/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_block_article/uploads/posts/_fe3080c4f4509cad19c0130e5cf299f3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_block_article/uploads/posts/journal-tout-les-jours-article-titre-914_522982d10025bf4d244ba93db9522015.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_block_article/uploads/posts/journal-tout-les-jours-article-titre-914_b39cf938aa3200ee523ed36e83c03702.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_dossier/uploads/posts/_98537c5004ea5e3223a7f94af6028cda.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_dossier/uploads/posts/_b0b3d4d575dfb2282211f31c0ea8de9d.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_dossier/uploads/posts/_dae87dba8cb1973327931f4dc826eab8.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_dossier/uploads/posts/_fe3080c4f4509cad19c0130e5cf299f3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_dossier/uploads/posts/dossiers-1-format-test-1_662a437a30c00d3a67467a38bca54e29.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_dossier_small/uploads/posts/_98537c5004ea5e3223a7f94af6028cda.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_dossier_small/uploads/posts/_b0b3d4d575dfb2282211f31c0ea8de9d.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_dossier_small/uploads/posts/_dae87dba8cb1973327931f4dc826eab8.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_dossier_small/uploads/posts/_fe3080c4f4509cad19c0130e5cf299f3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_dossier_small/uploads/posts/dossiers-1-format-test-1_662a437a30c00d3a67467a38bca54e29.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_flash/uploads/flashInfo/5859c62b82ecf.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_flash/uploads/posts/_98537c5004ea5e3223a7f94af6028cda.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_flash/uploads/posts/_b0b3d4d575dfb2282211f31c0ea8de9d.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_flash/uploads/posts/_dae87dba8cb1973327931f4dc826eab8.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_flash/uploads/posts/_fe3080c4f4509cad19c0130e5cf299f3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_flash/uploads/posts/dossiers-1-format-test-1_662a437a30c00d3a67467a38bca54e29.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_item_page/uploads/posts/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_item_page/uploads/posts/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_item_page/uploads/posts/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top/uploads/posts/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top/uploads/posts/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top/uploads/posts/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top/uploads/posts/journal-tout-les-jours-article-titre-914_522982d10025bf4d244ba93db9522015.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top/uploads/posts/journal-tout-les-jours-article-titre-914_b39cf938aa3200ee523ed36e83c03702.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_bottom/uploads/posts/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_bottom/uploads/posts/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_bottom/uploads/posts/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_small/uploads/posts/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_small/uploads/posts/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_small/uploads/posts/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_small/uploads/posts/_98537c5004ea5e3223a7f94af6028cda.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_small/uploads/posts/_b0b3d4d575dfb2282211f31c0ea8de9d.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_small/uploads/posts/_dae87dba8cb1973327931f4dc826eab8.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_small/uploads/posts/dossiers-1-format-test-1_662a437a30c00d3a67467a38bca54e29.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_small/uploads/posts/journal-tout-les-jours-article-titre-10_07d60caf06e17785b641956f354f2049.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_small/uploads/posts/journal-tout-les-jours-article-titre-10_8d8771462b12c22556b5773ee7eab5eb.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_small/uploads/posts/journal-tout-les-jours-article-titre-914_522982d10025bf4d244ba93db9522015.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_top_small/uploads/posts/journal-tout-les-jours-article-titre-914_b39cf938aa3200ee523ed36e83c03702.jpeg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/touslesjours.dev.iml" afterPath="$PROJECT_DIR$/.idea/touslesjours.dev.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
     </list>
     <ignored path="touslesjours.dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="page_view.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="page_view.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-782">
+            <state relative-caret-position="1564">
               <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="e#241#250#0#Twig" expanded="true" />
@@ -122,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Media.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Media.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Media.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -251,8 +184,8 @@
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" />
         <option value="$PROJECT_DIR$/app/config/liipimage.yml" />
+        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" />
       </list>
     </option>
   </component>
@@ -831,18 +764,18 @@
       <workItem from="1483972929871" duration="170000" />
       <workItem from="1484242463068" duration="586000" />
       <workItem from="1484479771340" duration="566000" />
-      <workItem from="1485172311907" duration="5246000" />
+      <workItem from="1485172311907" duration="5468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="327945000" />
+    <option name="totallyTimeSpent" value="328167000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28675282" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28675282" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="The R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1248,14 +1181,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Media.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-782">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#241#250#0#Twig" expanded="true" />
-            <element signature="e#2868#2877#0#Twig" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1267,11 +1197,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Media.php">
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1564">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#241#250#0#Twig" expanded="true" />
+            <element signature="e#2868#2877#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
