@@ -1,0 +1,70 @@
+
+#liip_imagine upload crop image
+
+liip_imagine:
+    resolvers:
+       default:
+          web_path: ~
+
+    filter_sets:
+        cache: ~
+        thumb_back:
+            quality: 95
+            filters:
+                thumbnail: { size: [218, 218], mode: outbound }
+                background: { size: [220, 220], position: center, color: '#EEF1F5' }
+
+        thumb_top:
+            quality: 95
+            filters:
+                thumbnail: { size: [618, 352], mode: outbound }
+                background: { size: [620, 354], position: center, color: '#EEF1F5' }
+
+        thumb_top_bottom:
+            quality: 95
+            filters:
+                thumbnail: { size: [368, 338], mode: outbound }
+                background: { size: [370, 340], position: center, color: '#EEF1F5' }
+
+        thumb_item_page:
+            quality: 95
+            filters:
+                thumbnail: { size: [183, 133], mode: outbound }
+                background: { size: [185, 135], position: center, color: '#EEF1F5' }
+
+        thumb_top_small:
+            quality: 95
+            filters:
+                thumbnail: { size: [106, 100], mode: outbound }
+                background: { size: [108, 102], position: center, color: '#EEF1F5' }
+
+        thumb_block_article:
+            quality: 95
+            filters:
+                thumbnail: { size: [468, 316], mode: outbound }
+                background: { size: [470, 319], position: center, color: '#EEF1F5' }
+
+        thumb_flash:
+            quality: 95
+            filters:
+                thumbnail: { size: [316, 142], mode: outbound }
+                background: { size: [318, 144], position: center, color: '#EEF1F5' }
+
+        thumb_dossier:
+            quality: 95
+            filters:
+                thumbnail: { size: [578, 449], mode: outbound }
+                background: { size: [580, 451], position: center, color: '#EEF1F5' }
+
+        thumb_dossier_small:
+            quality: 95
+            filters:
+                thumbnail: { size: [286, 222], mode: outbound }
+                background: { size: [288, 224], position: center, color: '#EEF1F5' }
+
+        thumb_facebook:
+            quality: 100
+            filters:
+                thumbnail: { size: [1200, 630], mode: outbound }
+                background: { size: [1200, 630], position: center, color: '#EEF1F5' }
+
