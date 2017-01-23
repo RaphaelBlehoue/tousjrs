@@ -4,7 +4,7 @@
 <!-- sample facbook meta tags -->
     <meta property="og:url" content="{{ url('page_view', { 'slug': article.slug }) }}" />
     <meta property="og:title" content="{{ article.name }}" />
-    <meta property="og:description" content="{{ article.content|raw|truncate('100', true, 'lire la suite') }}" />
+    <meta property="og:description" content="{{ article.content|truncate('100', true, '...')|raw }}" />
     <meta property="og:image"  content="{{ absolute_url(article.medias.0.assertPath|imagine_filter('thumb_facebook') ) }}" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:site_name"  content="{{ 'touslesjoursci.com' }}" />
