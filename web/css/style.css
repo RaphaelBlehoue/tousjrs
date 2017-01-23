@@ -1164,7 +1164,6 @@ nav.menu .container > ul > li a > i {
     font-family: Lato;
     font-size: 10px;
     letter-spacing: 1px;
-    text-transform: uppercase;
     letter-spacing: .7px;
 
     -webkit-transition: all 0.4s ease 0s;
@@ -5211,7 +5210,7 @@ aside .widget {
 .post-rate {
     background: #f4f4f4 none repeat scroll 0 0;
     float: left;
-    padding: 40px;
+    padding: 15px;
     width: 100%;
 }
 .rating-detailed {
