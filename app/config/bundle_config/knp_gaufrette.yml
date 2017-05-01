@@ -1,0 +1,9 @@
+knp_gaufrette:
+    adapters:
+        foo:
+            local:
+                directory: /var/www/wp/images
+    filesystems:
+        bar:
+            adapter:    foo
+            alias:      foo_filesystem

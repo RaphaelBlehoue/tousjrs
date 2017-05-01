@@ -54,20 +54,26 @@ class Post
     protected $content;
 
     /**
+     * @var  boolean
+     * @ORM\Column(name="types", type="boolean", nullable=true)
+     */
+    protected $types;
+
+    /**
      * @var bool
      * @ORM\Column(name="online", type="boolean", nullable=true)
      */
     protected $online;
 
     /**
-     * @var bool
+     * @var int
      *
-     * @ORM\Column(name="draft", type="boolean", nullable=true)
+     * @ORM\Column(name="draft", type="integer", nullable=true)
      */
     protected $draft;
 
     /**
-     * @Gedmo\Slug(fields={"name", "id"})
+     * @Gedmo\Slug(fields={"name", "id"}, updatable=true)
      * @ORM\Column(length=128, unique=true)
      */
     protected $slug;
@@ -376,4 +382,28 @@ class Post
     }
     
     
+
+    /**
+     * Set types
+     *
+     * @param boolean $types
+     *
+     * @return Post
+     */
+    public function setTypes($types)
+    {
+        $this->types = $types;
+
+        return $this;
+    }
+
+    /**
+     * Get types
+     *
+     * @return boolean
+     */
+    public function getTypes()
+    {
+        return $this->types;
+    }
 }

@@ -9,6 +9,7 @@ use Labs\AdminBundle\Entity\Section;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -25,13 +26,14 @@ class DefaultController extends Controller
     public function getPageHomeAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $recent = $em->getRepository('LabsAdminBundle:Post')->findArticleNum(15);
+        $recent = $em->getRepository('LabsAdminBundle:Post')->getLastAricles(15);
         $sections = $this->FindBySection();
         return $this->render('LabsFrontBundle:Default:index.html.twig',[
             'recent' => $recent,
             'sections' => $sections
         ]);
     }
+    
 
     /**
      * @param Section $section
@@ -187,15 +189,36 @@ class DefaultController extends Controller
 
 
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response Recupere les Rubriques et les sous-rubriques associées
      * Recupere les Rubriques et les sous-rubriques associées
+     * @Route("/ajax_menu_get", options={"expose"=true}, name="ajax_menu_get")
+     * @Method("GET")
      */
-    public function getMenuAction()
+    public function getMenuAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $sections = $em->getRepository('LabsAdminBundle:Section')->getSectionsAndItems();
         if(null === $sections){
             throw  new NotFoundHttpException('Element introuvable');
+        }
+        if($request->isXmlHttpRequest())
+        {
+            $section = [];
+            foreach ($sections as $s){
+                $section[] = [
+                    'id'    => $s->getId(),
+                    'name'  => $s->getName(),
+                    'color' => $s->getColor(),
+                    'slug'  => $s->getSlug(),
+                    'url'   => $this->generateUrl('front_section_page', ['slug' => $s->getSlug()])
+                ];
+            }
+            return new JsonResponse(
+                ['sections' => $section],
+                200,
+                ['Access-Control-Allow-Origin','*']
+            );
         }
         return $this->render('LabsFrontBundle:Includes:header.html.twig',[
             'sections' => $sections
@@ -224,24 +247,27 @@ class DefaultController extends Controller
      */
     public function getRecentArticleAction(){
         $em = $this->getDoctrine()->getManager();
-        $recents = $em->getRepository('LabsAdminBundle:Post')->findArticleNum(4);
+        $recents = $em->getRepository('LabsAdminBundle:Post')->getLastAricles(4);
         return $this->render('LabsFrontBundle:Includes:recent.html.twig',
             ['recents' => $recents]
         );
 
     }
-    
+
 
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return \Symfony\Component\HttpFoundation\Response Recupere tout les flash informations (6) dernières et les envoi à un include flash.html.twig
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      * Recupere tout les flash informations (6) dernières et les envoi à un include flash.html.twig
      */
     public function getflashInfosAction(){
-        
         $em = $this->getDoctrine()->getManager();
-        $flashs = $em->getRepository('LabsAdminBundle:Info')->findInfoNum(6);
-        return $this->render('LabsFrontBundle:Includes:flash.html.twig',
-            ['flashs' => $flashs]
+        $news = $em->getRepository('LabsAdminBundle:Info')->findInfoNum(6);
+        if(null === $news){
+            throw new NotFoundHttpException('Element introuvable');
+        }
+        return $this->render('LabsFrontBundle:Includes/v1:flash_info.html.twig',
+            ['news' => $news]
         );
     }
 
@@ -374,5 +400,4 @@ class DefaultController extends Controller
         $posts = $em->getRepository('LabsAdminBundle:Post')->getPostByItems($section);
         return $posts;
     }
-
 }

@@ -69,4 +69,8 @@ class MediaRepository extends \Doctrine\ORM\EntityRepository
         $qb->setParameter('id', $id);
         return $qb->getQuery()->getResult();
     }
+    
+    /********* version 2 ***********/
+    
+
 }

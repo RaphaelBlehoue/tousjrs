@@ -1,192 +1,201 @@
 {% extends '::base.html.twig' %}
 {% block title %}{{ 'TousLesJours.ci - Actualités et Infos en Côte d\'ivoire et dans le monde' }}{% endblock %}
+{% block meta_refresh %}
+    <meta http-equiv="refresh" content="120">
+{% endblock %}
 {% block stylesheets %}{% endblock %}
 {% block body %}
-    <div class="container">
-        <section class="block remove-top bg-section">
-            <div class="first-container">
-                <div class="first-row">
-                    <div class="col-md-8 column">
-                        {% for article in recent %}
-                            {% if loop.first %}
-                                <div class="blog-single" itemscope itemType="http://schema.org/BlogPosting">
-                                    <div class="post-single-info">
-                                        <a href="{{ path('page_view', { 'slug': article.slug }) }}"><h1 itemprop="headline">{{ article.name }}</h1></a>
-                                        <ul>
-                                            <li><span>{{ 'Publié le'|upper }} :</span><a itemprop="url" href="#" title="">{{ article.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</a></li>
-                                            <li><a itemprop="url" href="{{ path('front_item_page', {'rubrique':article.item.section.slug , 'slug':article.item.slug}) }}" title="">{{ article.item.name }}</a></li>
-                                            <li><a itemprop="url" href="{{ path('homepage') }}" title="">{{ 'touslesjours' }}</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="single-post-thumb">
-                                        {% for media in article.medias %}
-                                            <a href="{{ path('page_view', { 'slug': article.slug }) }}">
-                                                <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="" />
-                                            </a>
-                                        {% endfor %}
-                                        <div class="post-metas4">
-                                            <div class="date">
-                                                <ul>
-                                                    <li><a itemprop="url" href="#" title=""> {% if article.legend|length > 0 %}{{article.legend }} {% endif %}</a></li>
-                                                </ul>
+    <div class="td-main-content-wrap td-main-page-wrap">
+        <div class="td-container tdc-content-wrap">
+            <!-- flash information section -->
+            {{ render(controller('LabsFrontBundle:Default:getflashInfos')) }}
+            <div class="vc_row wpb_row td-pb-row">
+                <div class="wpb_column vc_column_container td-pb-span8">
+                    <div class="vc_column-inner">
+                        <div class="wpb_wrapper">
+                            {% for post in recent %}
+                                {% if loop.first %}
+                                    <div class="td_block_wrap td_block_18 td_uid_31_58eb574db0676_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_31_58eb574db0676" >
+
+                                        <div class="td-block-title-wrap">
+                                            <h2 class="title">
+                                                <a href="{{ path('page_view', { 'slug': post.slug }) }}" title="{{ post.name }}" rel="{{ post.item.name }}">{{ post.name }}</a>
+                                            </h2>
+                                        </div>
+
+                                        <div id="{{ post.slug }}" class="td_block_inner td-column-2">
+                                            <div class="td_module_mx8 td_module_wrap td-animation-stack">
+                                                <div class="meta-info-container">
+                                                    <div class="td-module-thumb">
+                                                        <a href="{{ path('page_view', { 'slug': post.slug }) }}" rel="bookmark" title="{{ post.name }}">
+                                                            {% for media in post.medias %}
+                                                                <img width="696" height="385" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="{{ post.name }}" title="{{ post.name }}"
+                                                                     srcset="{{ media.assertPath|imagine_filter('thumb_top') }} 100w, {{ media.assertPath|imagine_filter('thumb_top') }} 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="{{ post.name }}"/>
+                                                            {% endfor %}
+                                                            {% if  post.types is not empty %}
+                                                                {% if  post.types == 0 %}
+                                                                    <span class="td-video-play-ico">
+                                                                        <img width="40" height="40" class="td-retina" src="{{ asset('images/icons/ico-video-large.png') }}" alt="video - {{ post.name }}"/>
+                                                                    </span>
+                                                                {% endif %}
+                                                            {% endif %}
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="td-module-meta-info">
+                                                        <h6 class="entry-title td-module-title">
+                                                            <img src="{{ asset('favicon/favicon-16x16.png') }}" alt="{{ post.name }}" style="vertical-align: middle">
+                                                            <a class="ft14" title="{{ post.legend }}"> {{ post.legend }}</a>
+                                                        </h6>
+                                                        <span class="td-author-date">
+                                                            <span class="td-post-author-name"><a href="">Par TLJ</a> <span>-</span> </span>
+                                                            <span class="td-post-date"><time class="entry-date timeago updated td-module-date" datetime="{{ post.created.date }}" title="{{ post.created.date }}">{{ post.created|date('m d, Y') }}</time></span>
+                                                            <!--<div class="td-module-comments"><a href="../2017/04/09/moogle-corp-company-you-might-be-working-for/index.html#respond">0</a></div>-->
+                                                        </span>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="blog-single-details">
-                                        <p itemprop="description">
-                                            {{ article.content|truncate(350, true)|raw }}
-                                        </p>
+                                {% endif %}
+                            {% endfor %}
+                            <!-- block-top-in-moment -->
+                            <div class="td-block-title-wrap">
+                                <h4 class="block-title">
+                                    <span class="td-pulldown-size">{{ 'en ce moment'|upper }}</span>
+                                </h4>
+                                <div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_uid_34_58eb574baae6f">
+                                    <ul class="td-subcat-list" id="td_pulldown_td_uid_34_58eb574baae6f_list">
+                                        <li class="td-subcat-item">
+                                            <a class="td-subcat-link" id="l_uid_35_58eb574bac572" href="#">{{ 'voir toutes l\'actualité du jour'|capitalize }}</a>
+                                        </li>
+                                    </ul>
+                                    <div class="td-subcat-dropdown">
+                                        <div class="td-subcat-more" aria-haspopup="true">
+                                            <span>Live du moment</span><i class="td-icon-read-down"></i>
+                                        </div>
+                                        <ul class="td-pulldown-filter-list"></ul>
                                     </div>
                                 </div>
-                            {% endif %}
-                        {% endfor %}
-                        <section class="block top-margin">
-                            <div class="heading">
-                                <span>{{ 'en ce moment'|upper }}</span>
-                                <h2>{{ 'A la une'|capitalize }}</h2>
-                            </div><!-- Heading -->
-                            <div class="top-margin">
-                                <div class="row">
-                                    <ul id="itemContainer" class="loader-data">
-                                        {% for post in recent %}
-                                            {% if loop.index > 1 and loop.index <= 5 %}
-                                                <li class="col-md-6">
-                                                <div class="post-style4" itemscope itemType="http://schema.org/BlogPosting">
-                                                    {% for media in post.medias %}
-                                                        <div class="post-thumb4">
-                                                            <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" alt="" />
-                                                            <a href="{{ path('page_view', {'slug' : post.slug}) }}" title="{{ post.name }}" itemprop="url" class="img-link"></a>
-                                                        </div>
-                                                    {% endfor %}
-                                                    <div class="post-metas4">
-                                                        <div class="date">
-                                                            <ul>
-                                                                <li><a itemprop="datePublished" content="{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" href="#" title="">{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }} |</a></li>
-                                                                <li><a itemprop="url" href="{{ path('front_item_page', {'rubrique':post.item.section.slug, 'slug':post.item.slug }) }}" title="">{{ post.item.name }}</a></li>
-                                                                <br/>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h3 itemprop="headline"><a itemprop="url" href="{{ path('page_view', {'slug' : post.slug}) }}" title="{{ post.name }}">{{ post.name|truncate('40', true, '...') }}</a></h3>
-                                                    <p itemprop="description">
-                                                        {{ post.content|truncate('200', true)|raw }}
-                                                    </p>
-                                                </div><!-- Post Stye 4 -->
-                                            </li>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </ul>
-                                </div>
                             </div>
-                        </section>
 
-                        <section class="block remove-top">
-                            <div class="top-margin">
-                                <div class="row">
-                                    {% for arts in recent %}
-                                        {% if loop.index > 5 %}
-                                        <div class="col-md-6">
-                                            <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
-                                                {% for media in arts.medias %}
-                                                    <div class="post-thumb1">
-                                                        <img alt="{{ arts.name }}" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" itemprop="image">
-                                                        <a href="{{ path('page_view', {'slug' : arts.slug}) }}" title="{{ arts.name }}" itemprop="url" class="img-link"></a>
+                            <!-- top-block -->
+                            <div id='block-moment' class="td_block_inner">
+                                <div class="td-block-row">
+                                    {% for articles in recent %}
+                                        {% if loop.index > 1 and loop.index <= 5 %}
+                                            <div class="td-block-span6 td-min-height">
+                                                <div class="td_module_2 td_module_wrap td-animation-stack">
+                                                    <div class="td-module-image">
+                                                        <div class="td-module-thumb">
+                                                            <a href="{{ path('page_view', {'slug' : articles.slug}) }}" rel="{{ articles.item.name }}" title="{{ articles.name }}">
+                                                                {% for media in articles.medias %}
+                                                                    <img width="324" height="160" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" srcset="{{ media.assertPath|imagine_filter('thumb_top_bottom') }} 324w, {{ media.assertPath|imagine_filter('thumb_top_bottom') }} 533w" sizes="(max-width: 324px) 100vw, 324px" alt="{{ articles.name }}" title="{{ articles.name }}"/>
+                                                                {% endfor %}
+                                                                {% if  articles.types is not empty %}
+                                                                    {% if  articles.types == 0 %}
+                                                                        <span class="td-video-play-ico">
+                                                                            <img width="40" height="40" class="td-retina" src="{{ asset('images/icons/ico-video-large.png') }}" alt="video - {{ articles.name }}"/>
+                                                                        </span>
+                                                                    {% endif %}
+                                                                {% endif %}
+                                                            </a>
+                                                        </div>
+                                                        <a href="{{ path('front_item_page', { 'rubrique': articles.item.section.slug, 'slug':articles.item.slug }) }}" class="td-post-category">{{ articles.item.name }}</a>
                                                     </div>
-                                                {% endfor %}
-                                                <div class="date">
-                                                    <ul>
-                                                        <li>
-                                                            <a title="" href="#" content="{{ arts.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" itemprop="datePublished">{{ arts.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</a>
-                                                            <a title="" href="#" content="{{ arts.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" itemprop="datePublished">{{ arts.created|localizeddate('none', 'none', null, null, 'HH:mm a') }} |</a>
-                                                        </li>
-                                                    </ul>
+                                                    <h3 class="entry-title td-module-title"><a href="../2017/04/09/i-built-an-app-that-does-triangulation-of-points-on-the-earth/index.html" rel="{{ articles.item.name }}" title="{{ articles.name }}"> {{ articles.name|truncate('50', true, '...') }}</a></h3>
+                                                    <div class="td-module-meta-info">
+                                                        <span class="td-post-author-name">
+                                                            <img src="{{ asset('favicon/favicon-16x16.png') }}" alt="{{ articles.name }}" style="vertical-align: middle">
+                                                            <a href="">{{ 'par tlj'|upper }}</a> <span>-</span>
+                                                        </span>
+                                                        <span class="td-post-date"><time class="entry-date timeago updated td-module-date" datetime="{{ articles.created.date }}" title="{{ articles.created.date }}">{{ articles.created|date('m d, Y') }}</time></span>
+                                                        <!--<div class="td-module-comments"><a href=link#respond">0</a></div>-->
+                                                    </div>
+                                                    <div class="td-excerpt">
+                                                        {{ articles.content|truncate('150', false, '...')|striptags }}
+                                                    </div>
                                                 </div>
-                                                <h3 itemprop="headline"><a title="{{ arts.name }}" href="{{ path('page_view', {'slug' : arts.slug}) }}" itemprop="url">{{ arts.name|truncate('40', true,'...') }}</a></h3>
-                                            </div><!-- Post Style 1 -->
-                                        </div>
+                                            </div> <!-- ./td-block-span6 -->
                                         {% endif %}
                                     {% endfor %}
-                                </div>
-                            </div>
-                        </section>
+                                </div> <!-- ./td-block-row -->
 
-                        <!-- publicité -->
-                        <section class="block remove-top">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="centred">
-                                        <img src="http://placehold.it/600x216" alt="" />
+                                <div class="td-block-row">
+
+                                {% for arts in recent %}
+                                    {% if loop.index > 5 %}
+                                    <div class="td-block-span6">
+                                        <div class="td_module_6 td_module_wrap td-animation-stack">
+                                            <div class="td-module-thumb">
+                                                <a href="{{ path('page_view', {'slug' : arts.slug}) }}" rel="{{ arts.item.name }}" title="{{ arts.name }}">
+                                                    {% for media in arts.medias %}
+                                                        <img width="100" height="70" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" srcset="{{ media.assertPath|imagine_filter('thumb_top_small') }} 100w, {{ media.assertPath|imagine_filter('thumb_top_small') }} 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="{{ arts.name }}"/>
+                                                    {% endfor %}
+                                                </a>
+                                            </div>
+                                            <div class="item-details">
+                                                <h3 class="entry-title td-module-title">
+                                                    <a href="{{ path('page_view', {'slug' : arts.slug}) }}" rel="{{ arts.item.name }}" title="{{ arts.name }}">{{ arts.name|truncate('50', false,'...') }}</a>
+                                                </h3>
+                                                <div class="td-module-meta-info">
+                                                    <span class="td-post-date"><time class="entry-date timeago updated td-module-date" datetime="{{ arts.created.date }}" title="{{ arts.created.date }}">{{ arts.created|date('m d, Y') }}</time></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- ./td-block-span6 -->
+                                    {% endif %}
+                                {% endfor %}
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wpb_column vc_column_container td-pb-span4">
+                    <div class="vc_column-inner ">
+                        <div class="wpb_wrapper">
+                            <div class="td-block-title-wrap"><h4 class="block-title"><span class="td-pulldown-size">LATEST REVIEWS</span></h4></div>
+                            <div class="td_block_wrap td_block_social_counter td_uid_34_58eb574dc5c33_rand td-pb-border-top td_block_template_1">
+                                <div class="td-social-list">
+                                    <div class="td_social_type td-pb-margin-side td_social_facebook">
+                                        <div class="td-social-box">
+                                            <div class="td-sp td-sp-facebook"></div>
+                                            <span class="td_social_info">0</span>
+                                            <span class="td_social_info td_social_info_name">Fans</span>
+                                                <span class="td_social_button">
+                                                    <a href="https://www.facebook.com/envato">Like</a>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    <div class="td_social_type td-pb-margin-side td_social_twitter">
+                                        <div class="td-social-box">
+                                            <div class="td-sp td-sp-twitter"></div>
+                                            <span class="td_social_info">63,225</span>
+                                            <span class="td_social_info td_social_info_name">Followers</span>
+                                                <span class="td_social_button"><a href="https://twitter.com/envato">Follow</a>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    <div class="td_social_type td-pb-margin-side td_social_youtube">
+                                        <div class="td-social-box">
+                                            <div class="td-sp td-sp-youtube"></div>
+                                            <span class="td_social_info">13,423</span>
+                                            <span class="td_social_info td_social_info_name">Subscribers</span>
+                                            <span class="td_social_button"><a href="http://www.youtube.com/envato">Subscribe</a></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                        <!-- end publicité -->
-                    </div>
-                    <aside class="col-md-4 column">
-                        {{ render(controller('LabsFrontBundle:Default:getflashInfos')) }}
-                        <div class="widget">
-                            <ul class="review-widget">
-                                <div class="post-style6" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                    <div class="post-thumb6">
-                                        <a href="http://www.agrsici.com" target="_blank"><img itemprop="image" src="{{ asset('images/resource/pub.jpg') }}" alt="" /></a>
-                                    </div>
-                                </div><!-- Post Style 8 -->
-                            </ul>
                         </div>
-                        {{ render(controller('LabsFrontBundle:Default:getRecentArticle')) }}
-                        {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
-                        {{ render(controller('LabsFrontBundle:Default:getDossierInfo')) }}
-                    </aside>
+                    </div>
+
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-    <div class="container">
-        {%  for section in sections %}
-            {% if section|length > 0 %}
-                <section class="block remove-top remove-bottom bg-section m-2">
-                    <div>
-                            <section class="block remove-top">
-                                <div class="col-md-12 column background-style" style="border-top: 3px solid {{ section.color }};">
-                                    <a href="{{ path('front_section_page',{'slug': section.slug}) }}">
-                                        <div class="heading5">
-                                            <h3 class="text-center titlecolor" style="color: {{ section.color }};">
-                                                {{ section.name|capitalize }}
-                                            </h3>
-                                        </div><!-- Heading -->
-                                    </a>
-                                </div>
-                            </section>
-                            <div class="clear"></div>
-                            <section class="block remove-top">
-                                <div class="col-md-12 column">
-                                    <div class="row">
-                                        {{ render(controller('LabsFrontBundle:Default:getArticleBySections', {'section' : section.id })) }}
-                                    </div>
-                                </div>
-                            </section>
-                            <div class="clear"></div>
-                            <div class="col-md-12 column background-style" style="border-top: 3px solid #EEF1F5;">
-                                <a href="{{ path('front_section_page',{'slug': section.slug}) }}">
-                                    <h5 class="text-center" style="color:{{ section.color }}; font-weight: 700;">
-                                        {{ 'Consultez la rubriques '~ section.name }}
-                                    </h5>
-                                </a>
-                            </div>
-                    </div>
-                </section>
-                {% if loop.index0 >= 2 and loop.index0 < 3 %}
-                    {{ render(controller('LabsFrontBundle:Default:getVideosReport')) }}
-                {% endif %}
-                {% if loop.index0 >= 4 and loop.index0 < 5 %}
-                    {{ render(controller('LabsFrontBundle:Default:getDossierLimit')) }}
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-    </div>
+    <!-- /.td-main-content-wrap -->
 {% endblock %}
+{% block javascripts %}{% endblock %}
 
-{% block javascripts %}
-{{ parent() }}
-    <script type="text/javascript" src="{{ asset('js/apis/tjr.carousel.min.js') }}"></script>
-{% endblock %}

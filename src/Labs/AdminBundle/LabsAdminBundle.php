@@ -10,4 +10,5 @@ class LabsAdminBundle extends Bundle
     {
         return 'FOSUserBundle';
     }
+    
 }

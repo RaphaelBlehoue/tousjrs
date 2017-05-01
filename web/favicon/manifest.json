@@ -1,4 +1,5 @@
 {
+ "permissions": [ "http://*.touslesjours.dev"],
  "name": "App",
  "icons": [
   {

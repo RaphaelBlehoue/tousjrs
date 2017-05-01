@@ -9,9 +9,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-
 /**
  * Class MediasController
  * @package Labs\AdminBundle\Controller
@@ -19,7 +19,55 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  */
 Class MediasController extends Controller
 {
+    /**
+     * @param Request $request
+     * @param $id
+     * @return JsonResponse
+     * @Route("/set/{id}/status", options={"expose"=true},  name="set_media_status")
+     * @Method("GET")
+     * @throws \Exception
+     */
+    public function addStatusMediaActivedOrNotActived(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        if($request->isXmlHttpRequest() && $request->isMethod('GET'))
+        {
+            $media = $em->getRepository('LabsAdminBundle:Media')->findOneMedia($id);
+            $post = $media->getPost()->getId();
+            if($this->clearActivedMedia($post)){
+                $media->setActived(1);
+                $em->flush();
+                $data = [
+                    'response_post'  => $media->getPost()->getId(),
+                    'response_media' => $media->getId(),
+                    'status'         => 200,
+                    'text_href'      => 'Détacher de la une',
+                    'message'        => 'Le media a été mis en avant',
+                    'className'      => 'btn-primary actived'
+                ];
+            }
+        }
+       return new JsonResponse($data, 200);
+    }
 
+    /**
+     * @param $post
+     * @return mixed
+     * @throws \Exception
+     * Clear Toutes les valeurs actived de l'entity media à 0
+     */
+    private function clearActivedMedia($post)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $media_post = $em->getRepository('LabsAdminBundle:Post')->getMediaByPostId($post);
+        foreach ($media_post->getMedias() as $media){
+            $media->setActived(0);
+        }
+        $em->flush();
+        return true;
+    }
+    
+    
     /**
      * @param Post $post
      * @return \Symfony\Component\HttpFoundation\Response

@@ -23,6 +23,14 @@ class PostType extends AbstractType
             ->add('content', CKEditorType::class, array(
                 'label' => false
             ))
+            ->add('types',ChoiceType::class, array(
+                'label' => false,
+                'choices' => array(
+                    'Articles' => true,
+                    'Videos' => false
+                ),
+                'required' => true
+            ))
             ->add('online',ChoiceType::class, array(
                 'label' => false,
                 'choices' => array(

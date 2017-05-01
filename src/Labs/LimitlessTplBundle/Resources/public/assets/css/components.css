@@ -11240,7 +11240,7 @@ a.plupload_disabled:focus {
 }
 .dropzone .dz-preview .dz-details,
 .dropzone-previews .dz-preview .dz-details {
-  width: 120px;
+  width: 150px;
   height: 120px;
   position: relative;
   background-color: #f5f5f5;
@@ -11257,8 +11257,8 @@ a.plupload_disabled:focus {
   position: absolute;
   top: 0;
   left: 0;
-  width: 120px;
-  height: 120px;
+  width: 135px;
+  height: 125px;
 }
 .dropzone .dz-preview .dz-details .dz-size,
 .dropzone-previews .dz-preview .dz-details .dz-size {

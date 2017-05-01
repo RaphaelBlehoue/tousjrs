@@ -79,7 +79,8 @@
 <script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/selects/bootstrap_multiselect.js') }}" type="text/javascript"></script>
 <script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/ui/moment/moment.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/pickers/daterangepicker.js') }}" type="text/javascript"></script>
-
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 <script src="{{ asset('bundles/labslimitlesstpl/assets/js/core/app.js') }}" type="text/javascript"></script>
 {% block themes %} {% endblock %}
 

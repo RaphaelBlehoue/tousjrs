@@ -1,0 +1,69 @@
+<div id="td-mobile-nav">
+    <div class="td-mobile-container">
+        <!-- mobile menu top section -->
+        <div class="td-menu-socials-wrap">
+            <!-- socials -->
+            <div class="td-menu-socials">
+                <span class="td-social-icon-wrap">
+                    <a target="_blank" href="#" title="Facebook">
+                        <i class="td-icon-font td-icon-facebook"></i>
+                    </a>
+                </span>
+                <span class="td-social-icon-wrap">
+                    <a target="_blank" href="#" title="Twitter">
+                        <i class="td-icon-font td-icon-twitter"></i>
+                    </a>
+                </span>
+                <span class="td-social-icon-wrap">
+                    <a target="_blank" href="#" title="Vimeo">
+                        <i class="td-icon-font td-icon-vimeo"></i>
+                    </a>
+                </span>
+                <span class="td-social-icon-wrap">
+                    <a target="_blank" href="#" title="VKontakte">
+                        <i class="td-icon-font td-icon-vk"></i>
+                    </a>
+                </span>
+                <span class="td-social-icon-wrap">
+                    <a target="_blank" href="#" title="Youtube">
+                        <i class="td-icon-font td-icon-youtube"></i>
+                    </a>
+                </span>
+            </div>
+            <!-- close button -->
+            <div class="td-mobile-close">
+                <a href="#"><i class="td-icon-close-mobile"></i></a>
+            </div>
+        </div>
+
+        <!-- login section -->
+        <div class="td-menu-login-section">
+
+            <div class="td-guest-wrap">
+                <div class="td-menu-avatar"><div class="td-avatar-container"><img alt='' src='http://1.gravatar.com/avatar/?s=80&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/?s=160&amp;d=mm&amp;r=g 2x' class='avatar avatar-80 photo avatar-default' height='80' width='80' /></div></div>
+                <div class="td-menu-login"><a id="login-link-mob">Se connecter</a></div>
+            </div>
+        </div>
+
+        <!-- menu section -->
+        <div class="td-mobile-content">
+            <div class="menu-td-demo-header-menu-container">
+                <ul id="menu-td-demo-header-menu" class="td-mobile-main-menu">
+                    <li id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-38 menu-item-first menu-item-52">
+                        <a href="{{ path('dossier_page') }}">{{ 'Dossiers'|upper }}</a>
+                    </li>
+                    <li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-38 menu-item-first menu-item-52">
+                        <a href="{{ path('videos_page') }}">{{ 'Videos'|upper }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="template-menu-mobile" type="x-tmpl-mustache">
+    [[#sections]]
+        <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-38  menu-item-first menu-item-52">
+            <a href="[[url]]">[[name]]</a>
+        </li>
+    [[/sections]]
+</script>

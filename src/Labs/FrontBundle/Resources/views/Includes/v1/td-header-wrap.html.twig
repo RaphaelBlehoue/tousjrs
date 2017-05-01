@@ -1,0 +1,123 @@
+<div class="td-header-wrap td-header-style-1">
+    <!-- top menu -->
+    <div class="td-header-top-menu-full">
+        <div class="td-container td-header-row td-header-top-menu">
+            <div class="top-bar-style-1">
+                <div class="td-header-sp-top-menu">
+                    <!-- td weather source: cache -->
+                    <div class="td-weather-top-widget" id="td_top_weather_uid">
+                        <i class="td-icons clear-sky-n"></i>
+                        <div class="td-weather-now" data-block-uid="td_top_weather_uid">
+                            <span class="td-big-degrees">{{ '8.8' }}</span>
+                            <span class="td-weather-unit">{{ 'C' }}</span>
+                        </div>
+                        <div class="td-weather-header">
+                            <div class="td-weather-city">{{ 'local' }}</div>
+                        </div>
+                    </div>
+                    <div class="td_data_time">
+                        <div >
+                            {{ 'now'|date('d, M Y') }}
+                        </div>
+                    </div>
+                    <ul class="top-header-menu td_ul_login">
+                        <li class="menu-item"><a class="tmenu-item" href="{{ path('dashboard') }}">Se Connecter</a>
+                            <span class="td-sp-ico-login td_sp_login_ico_style"></span>
+                        </li>
+                    </ul>
+                    <div class="menu-top-container">
+                        <ul id="menu-td-demo-header-menu-1" class="top-header-menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-38 current_page_item menu-item-first td-menu-item td-normal-menu menu-item-52"><a href="#">NewsLetters</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-57"><a href="http://www.agrsici.com" target="_blank" title="Abidjan Glolf resort">AGR</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-57"><a href="#">Services touslesjours</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-57"><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="td-header-sp-top-widget">
+                    <span class="td-social-icon-wrap">
+                        <a target="_blank" href="#" title="Facebook">
+                            <i class="td-icon-font td-icon-facebook"></i>
+                        </a>
+                    </span>
+                    <span class="td-social-icon-wrap">
+                        <a target="_blank" href="#" title="Twitter">
+                            <i class="td-icon-font td-icon-twitter"></i>
+                        </a>
+                    </span>
+                    <span class="td-social-icon-wrap">
+                        <a target="_blank" href="#" title="Youtube">
+                            <i class="td-icon-font td-icon-youtube"></i>
+                        </a>
+                    </span>
+                    <span class="td-social-icon-wrap">
+                        <a target="_blank" href="#" title="Google plus">
+                            <i class="td-icon-font td-icon-googleplus"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- logo & advertissement -->
+    <div class="td-banner-wrap-full td-logo-wrap-full">
+        <div class="td-container td-header-row td-header-header">
+            <div class="td-header-sp-logo">
+                <h1 class="td-logo">
+                    <a class="td-main-logo" href="{{ path('homepage') }}" title="touslesjours.ci - 1er site d'information national & international. Les articles du journal , actualité en continu, Abidjan, Côte d'ivoire">
+                        <img class="td-retina-data" data-retina="{{ asset('logo_principal.png', 'images') }}" src="{{ asset('logo_principal.png', 'images') }}" alt="Touslesjours.ci logo - Abidjan Côte d'ivoire"/>
+                        <span class="td-visual-hidden">{{ 'Accueil' }}</span>
+                    </a>
+                </h1>
+            </div>
+            <div class="td-header-sp-recs">
+                <div class="td-header-rec-wrap">
+                    <div class="td-a-rec td-a-rec-id-header">
+                        <div class="td-all-devices">
+                            <a href="http://agrsici.com" target="_blank" title="Agrsici.com - immobilier, construction , plan"><img src="{{ asset('ads.jpg', 'images') }}" alt="Agrsici.com - immobilier, construction , plan de maison, hotel"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- menu page -->
+    <div class="td-header-menu-wrap-full">
+        <div class="td-header-menu-wrap td-header-gradient">
+            <div class="td-container td-header-row td-header-main-menu">
+                <div id="td-header-menu" role="navigation">
+                    <div id="td-top-mobile-toggle"><a href="#"><i class="td-icon-font td-icon-mobile"></i></a></div>
+                    <div class="td-main-menu-logo td-logo-in-header">
+                        <a class="td-mobile-logo td-sticky-header" href="{{ path('homepage') }}" title="touslesjours.ci - 1er site d'information national & international. Les articles du journal , actualité en continu, Abidjan, Côte d'ivoire">
+                            <img src="{{ asset('logo_white.png', 'images') }}" alt="Touslesjours.ci logo - Abidjan Côte d'ivoire"/>
+                        </a>
+                        <a class="td-header-logo td-sticky-header" href="{{ path('homepage') }}" title="touslesjours.ci logo - 1er site d'information national & international. Les articles du journal , actualité en continu, Abidjan, Côte d'ivoire">
+                            <img class="td-retina-data" data-retina="{{ asset('logo_principal.png', 'images') }}" src="{{ asset('logo_principal.png', 'images') }}" alt="Touslesjours.ci - Abidjan Côte d'ivoire"/>
+                        </a>
+                    </div>
+                    <div class="menu-td-demo-header-menu-container">
+                        <!-- menu -->
+                        <ul id="menu-td-demo-header-menu-2" class="sf-menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-38 current_page_item menu-item-first td-menu-item td-normal-menu menu-item-52">
+                                <a href="{{ path('dossier_page') }}">{{ 'Dossiers'|upper }}</a>
+                            </li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-38 current_page_item menu-item-first td-menu-item td-normal-menu menu-item-52">
+                                <a href="{{ path('videos_page') }}">{{ 'Videos'|upper }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="template-menu" type="x-tmpl-mustache">
+   [[#sections ]]
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-38 current_page_item menu-item-first td-menu-item td-normal-menu menu-item-52">
+            <a href="[[url]]">[[name]]</a>
+       </li>
+   [[/sections]]
+</script>

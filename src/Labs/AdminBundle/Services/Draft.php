@@ -3,8 +3,6 @@
 namespace Labs\AdminBundle\Services;
 
 use Doctrine\ORM\EntityManager;
-use Labs\AdminBundle\Entity\Format;
-use Labs\AdminBundle\Entity\Post;
 
 class Draft
 {
@@ -18,44 +16,45 @@ class Draft
 
     /**
      * @param $user
-     * @return Post|mixed
+     * @param $entity
+     * @return mixed
+     * @throws \Exception
      */
-    public function DraftCreate($user)
+    public function DraftCreate($user, $entity)
     {
-        $draft = $this->em->getRepository('LabsAdminBundle:Post')->getDraftUser($user);
-        if(null === $draft){
-            $post = new Post();
-            $post->setDraft(0);
-            $post->setOnline(0);
-            $post->setUser($user);
-            $this->em->persist($post);
-            $this->em->flush();
-            $draft = $post;
+        $entityName = $this->getEntityClassName($entity);
+        $draft = $this->em->getRepository($entityName)->getDraftUser($user);
+        if(null !== $draft){
             return $draft;
         }else{
-            return $draft;
+            return $this->persistDraft($user, $entityName);
         }
     }
 
     /**
      * @param $user
-     * @return Format|mixed
+     * @param $entityName
+     * @return mixed
+     * @throws \Exception
      */
-    public function DraftFormatCreate($user)
+    private function persistDraft($user, $entityName)
     {
-        $draft = $this->em->getRepository('LabsAdminBundle:Format')->getDraftUser($user);
-        if(null === $draft){
-            $format = new Format();
-            $format->setDraft(0);
-            $format->setOnline(0);
-            $format->setUser($user);
-            $this->em->persist($format);
-            $this->em->flush();
-            $draft = $format;
-            return $draft;
-        }else{
-            return $draft;
-        }
+        $draft = new $entityName;
+        $draft->setDraft(-1);
+        $draft->setOnline(0);
+        $draft->setUser($user);
+        $this->em->persist($draft);
+        $this->em->flush();
+        return $draft;
     }
 
+    /**
+     * @param $entity
+     * @return string
+     */
+    private function getEntityClassName($entity)
+    {
+        return $entity_class = $this->em->getClassMetadata(get_class($entity))->getName();
+    }
+    
 }

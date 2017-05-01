@@ -3,6 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: liipimage.yml }
+    - { resource: bundle_config/nelmio.yml}
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -19,7 +20,7 @@ framework:
     form:            ~
     csrf_protection: ~
     validation:      { enable_annotations: true }
-    #serializer:      { enable_annotations: true }
+    serializer:      { enable_annotations: true }
     templating:
         engines: ['twig']
     default_locale:  "%locale%"
@@ -31,7 +32,13 @@ framework:
         save_path:   ~
     fragments:       ~
     http_method_override: true
-    assets: ~
+    assets:
+        packages:
+            cssjs:
+                base_urls: 'http://wp.touslesjours.dev/assets'
+            images:
+                base_urls: 'http://wp.touslesjours.dev/tp_images'
+
 
 # Twig Configuration
 twig:
@@ -99,6 +106,9 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: Labs\AdminBundle\Entity\Users
+    from_email:
+        address: "%mailer_user%"
+        sender_name: "%mailer_user%"
 
 ivory_ck_editor:
     default_config: my_custom_config

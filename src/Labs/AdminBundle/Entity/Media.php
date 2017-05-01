@@ -63,8 +63,15 @@ class Media
      * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      */
     protected $format;
-    
-    
+
+
+    /**
+     * @var
+     * @ORM\Column(name="has_cdn", type="boolean", nullable=true)
+     */
+    protected $hasCdn;
+
+
     public function __construct()
     {
         $this->actived = false;
@@ -201,7 +208,7 @@ class Media
     {
         return $this->format;
     }
-    
+
 
     public function getUploadDir()
     {
@@ -224,7 +231,7 @@ class Media
     {
         return $this->getUploadDir().'/'.$this->url;
     }
-    
+
 
     /**
      * @ORM\PostRemove()
@@ -236,5 +243,53 @@ class Media
             // On supprime le fichier
             unlink($this->getAssertPath());
         }
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     *
+     * @return Media
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set hasCdn
+     *
+     * @param boolean $hasCdn
+     *
+     * @return Media
+     */
+    public function setHasCdn($hasCdn)
+    {
+        $this->hasCdn = $hasCdn;
+
+        return $this;
+    }
+
+    /**
+     * Get hasCdn
+     *
+     * @return boolean
+     */
+    public function getHasCdn()
+    {
+        return $this->hasCdn;
     }
 }

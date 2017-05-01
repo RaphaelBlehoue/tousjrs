@@ -28,3 +28,7 @@ services:
     youtube_api.service:
         class: Labs\AdminBundle\Services\YoutubeApi
         arguments: ['@service_container']
+
+    upload.get_image_path:
+        class: Labs\AdminBundle\Services\getImagePath
+        arguments: ['@doctrine.orm.entity_manager']

@@ -23,7 +23,7 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         $qb = $this->createQueryBuilder('p');
         $qb->where(
             $qb->expr()->eq('p.user', ':user'),
-            $qb->expr()->eq('p.draft', 0)
+            $qb->expr()->eq('p.draft', -1)
         );
         $qb->setParameter('user', $user);
         return $qb->getQuery()->getOneOrNullResult();
@@ -35,7 +35,7 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
     public function getAll()
     {
         $qb = $this->createQueryBuilder('p');
-        $qb->where('p.draft <> 0');
+        $qb->where('p.draft <> -1');
         $qb->orderBy('p.created', 'Desc');
         return $qb->getQuery()->getResult();
     }
@@ -63,11 +63,28 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
 
     /**
      * @param Post $post
+     * @param $user
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException Recupere l'article avec l'id passé en paramètre
+     */
+    public function getArticles(Post $post, $user)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->where(
+            $qb->expr()->eq('p.id', ':post'),
+            $qb->expr()->eq('p.user', ':user')
+        );
+        $qb->setParameter('post', $post);
+        $qb->setParameter('user', $user);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    /**
+     * @param Post $post
      * @return mixed
      * @throws \Doctrine\ORM\NonUniqueResultException
-     * Recupere l'article avec l'id passé en paramètre
      */
-    public function getArticles(Post $post)
+    public function getCurrentPost(Post $post)
     {
         $qb = $this->createQueryBuilder('p');
         $qb->where(
@@ -133,7 +150,7 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
      * @return array
      * Recupère tout les articles avec un param $max
      */
-    public function findArticleNum($max)
+    public function getLastAricles($max)
     {
         $qb = $this->createQueryBuilder('p');
         $qb->leftJoin('p.medias', 'm');
@@ -228,7 +245,22 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         return $qb->getQuery()->getResult();
     }
     
-    
-    
-    
+    /*** version 2 ***/
+
+    /**
+     * @param $id
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getMediaByPostId($id)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->leftJoin('p.medias', 'm')
+           ->addSelect('m');
+        $qb->where(
+            $qb->expr()->eq('p.id', ':id')
+        );
+        $qb->setParameter('id', $id);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
 }
