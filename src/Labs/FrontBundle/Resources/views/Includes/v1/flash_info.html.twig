@@ -12,7 +12,7 @@
                                     {% for new in news %}
                                         <div class="td_module_trending_now td-trending-now-post-{{ loop.index }} td-trending-now-post">
                                             <h3 class="entry-title td-module-title">
-                                                <a href="" rel="bookmark" title="{{ new.content }}"> <strong class="timeago" title="{{ new.updated.date }}">{{ new.updated|date('m d, Y') }}</strong> - {{ new.content }}</a>
+                                                <a href="" rel="flash-info" title="{{ new.content }}"> <strong class="timeago" title="{{ new.updated.date }}">{{ new.updated|date('m d, Y') }}</strong> - {{ new.content }}</a>
                                             </h3>
                                         </div>
                                     {% endfor %}

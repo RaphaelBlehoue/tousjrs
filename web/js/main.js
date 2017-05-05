@@ -49,3 +49,4 @@ function loadTemplatePrepend(elt, data, output) {
    var rendered = Mustache.render(template, data);
    $(rendered).prependTo(output);
 }
+

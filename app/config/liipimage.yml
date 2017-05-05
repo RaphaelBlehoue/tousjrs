@@ -77,8 +77,15 @@ liip_imagine:
         thumb_dossier:
             quality: 95
             filters:
-                thumbnail: { size: [578, 449], mode: outbound }
-                background: { size: [580, 451], position: center, color: '#EEF1F5' }
+                thumbnail: { size: [324, 160], mode: outbound }
+            post_processors:
+                jpegoptim: { strip_all: true, max: 70, progressive: true }
+                optipng: { strip_all: true, level: 5 }
+
+        thumb_video:
+            quality: 95
+            filters:
+                thumbnail: { size: [324, 160], mode: outbound }
             post_processors:
                 jpegoptim: { strip_all: true, max: 70, progressive: true }
                 optipng: { strip_all: true, level: 5 }

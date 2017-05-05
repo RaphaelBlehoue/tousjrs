@@ -1,6 +1,8 @@
 $(document).ready(function(){
     //je récupère l'action où sera traité l'upload en PHP
-    var _actionToDropZone = $("#dropzone-upload").attr('action');
+    var _that = $("#dropzone-upload");
+    var _actionToDropZone = _that.attr('action');
+    var _entity = _that.data('name');
 
     //je définis ma zone de drop grâce à l'ID de ma div citée plus haut.
     Dropzone.autoDiscover = false;
@@ -14,15 +16,16 @@ $(document).ready(function(){
         acceptedFiles : "image/jpeg,image/png,image/gif",
         init : function(){
             this.on('addedfile', function(file){
-
+                
             });
             this.on('success', function(file, responseText, e){
                 var defaultButton = Dropzone.createElement('<div class="default_pic_container"><a id="'+responseText.media+'" class="btn btn-success btn-labeled link"><b><i class="icon-pushpin"></i></b>Mettre en avant</a></div>');
                 file.previewElement.appendChild(defaultButton);
+                console.log(_entity);
                 defaultButton.addEventListener('click', function (evt) {
                     evt.preventDefault();
                     evt.stopPropagation();
-                    addStatus(responseText.media, '.default_pic_container');
+                    addStatus(responseText.media, _entity, '.default_pic_container');
                 })
             });
 
@@ -40,9 +43,9 @@ $(document).ready(function(){
         return false;
     }
 
-    function addStatus(media, elt) {
+    function addStatus(media, entity,elt) {
         $.ajax({
-            url: Routing.generate('set_media_status', { id: media }),
+            url: Routing.generate('set_media_status', { id: media, name: entity}),
             cache: false,
             dataType: 'Json',
             method: 'GET',

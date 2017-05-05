@@ -1,0 +1,117 @@
+{% extends 'LabsAdminBundle::template.html.twig' %}
+{% block Title %}  {{ 'Gestion des Dossiers - Brouillon Edition'|capitalize }} {% endblock %}
+{% block stylesheets %}
+    <style type="text/css" media="all">
+        .link {
+            cursor: pointer !important;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    <!-- Main content -->
+    <!-- Form horizontal -->
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h5 class="panel-title">{{ 'Gestion des Dossiers -  Brouillon Edition' }}</h5>
+            <div class="heading-elements">
+                <div class="icons-list">
+                    <a href="{{ path('dossier_index') }}" class="btn btn-primary btn-labeled"><b><i class="icon-menu7"></i></b> Liste des dossiers</a>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            {{ form_start(form, { 'action': path('dossier_draft', {'id' : dossier.id , 'user_id': app.user.id}), attr : { 'class':'form-horizontal', 'novalidate': 'novalidate'}}) }}
+            <fieldset class="content-group col-lg-12">
+
+                <legend class="text-bold">Brouillon Edition du dossier - {% if dossier.name|length > 0 %}{{ dossier.name }}{% endif %}</legend>
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Type du Dossier</label>
+                    <div class="col-lg-4">
+                        {{ form_row(form.types) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Rubrique Associée au dossier</label>
+                    <div class="col-lg-4">
+                        {{ form_row(form.item) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Titre du dossier</label>
+                    <div class="col-lg-9">
+                        {{ form_row(form.name) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Legend du dossier</label>
+                    <div class="col-lg-9">
+                        {{ form_row(form.legend) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Status du dossier</label>
+                    <div class="col-lg-3">
+                        {{ form_row(form.online) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Ecrivez votre dossier ici</label>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-12">
+                        {{ form_row(form.content) }}
+                    </div>
+                </div>
+
+                <!-- File limits -->
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Inserez des fichiers dans le gestion de Media</h5>
+                        <div class="heading-elements">
+                            <ul class="icons-list">
+                                <li><a data-action="collapse"></a></li>
+                                <li><a data-action="reload"></a></li>
+                                <li><a data-action="close"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <p class="text-semibold">Importez les images ou photos de l'articles</p>
+                        <div action="{{ path('dossier_draft', {'id' : dossier.id, 'user_id': app.user.id }) }}" class="dropzone" id="dropzone-upload" data-name="Format"></div>
+                    </div>
+                </div>
+                <!-- /file limits -->
+                <div class="clear"></div>
+                <div class="col-md-6">
+                    <div class="text-left">
+                        {{ form_row(form.draft) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">Enregistrer & Continuer <i class="icon-database-add position-right"></i></button>
+                    </div>
+                </div>
+            </fieldset>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+{% block Core_JS_files %}
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/uploaders/dropzone.min.js') }}"></script>
+{% endblock %}
+
+{% block themes %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/pages/form_inputs.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/core/libraries/jquery_ui/interactions.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/labslimitlesstpl/assets/js/pages/form_select2.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/dropzone/main.js') }}"></script>
+{% endblock %}

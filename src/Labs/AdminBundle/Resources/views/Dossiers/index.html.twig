@@ -38,9 +38,15 @@
             {% for dossier in dossiers  %}
                 {% if dossier|length > 0 %}
                     <tr>
+                        {% if dossier|length > 0 %}
+                            {% if app.user.id == dossier.user.id %}
+                                {% set className = 'label-success' %}
+                            {% else %}
+                                {% set className = 'label-primary' %}
+                            {% endif %}
                         <td>{{ dossier.name }}</td>
                         <td>
-                            <span class="label {{ (dossier.online == 1) ? 'label-info' : 'label-danger' }}">
+                            <span class="label {{ (dossier.online == 1) ? className : 'label-danger' }}">
                                  {{ (dossier.online == 1) ? 'En ligne' : 'Hors Ligne' }}
                             </span>
                         </td>
@@ -52,12 +58,15 @@
                                         <i class="icon-menu9"></i>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="{{ path('dossier_edit', { 'id' : dossier.id}) }}"><i class="icon-pencil5"></i>{{ 'Modifier'|capitalize }}</a></li>
+                                        {% if dossier.user.id == app.user.id %}
+                                            <li><a href="{{ path('dossier_edit', { 'id' : dossier.id, 'user_id': dossier.user.id}) }}"><i class="icon-pencil5"></i>{{ 'Modifier'|capitalize }}</a></li>
+                                        {% endif %}
                                         <li><a href="{{ path('dossier_delete',{'id' : dossier.id} ) }}"><i class="icon-cancel-square2"></i>{{ 'Supprimer'|capitalize }}</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </td>
+                        {% endif %}
                     </tr>
                 {% endif %}
             {% endfor %}

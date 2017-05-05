@@ -1,0 +1,63 @@
+<div class="td-block-inner" id="block-dossier">
+    <div class="td-block-title-wrap">
+        <h4 class="block-title">
+            <span class="td-pulldown-size">{{ 'Videos du moment'|upper }}</span>
+        </h4>
+    </div>
+{% for video in youtube %}
+    {% if video|length > 0 %}
+        {% if loop.first %}
+            <div class="td-block-span12">
+                <div class="td_module_2 td_module_wrap td-animation-stack">
+                    <div class="td-module-image">
+                        <div class="td-module-thumb">
+                            <a href="{{ path('video_view', {'id' : video.Id}) }}" rel="{{ video.Title }}" title="{{ video.Title }}">
+                                <img width="324" height="160" class="entry-thumb" src="{{ video.Thumb.medium.url }}" srcset="{{ video.Thumb.medium.url }} 324w, {{ video.Thumb.medium.url }} 533w" sizes="(max-width: 324px) 100vw, 324px" alt="{{ video.Title }}" title="{{ video.Title }}"/>
+                                <span class="td-video-play-ico">
+                                    <img width="40" height="40" class="td-retina" src="{{ asset('images/icons/ico-video-large.png') }}" alt="video"/>
+                                </span>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/channel/{{ video.ChannelId }}" target="_blank" class="td-post-category">{{ video.Channel }}</a>
+                    </div>
+                    <h3 class="entry-title td-module-title">
+                        <a href="{{ path('video_view', {'id' : video.Id}) }}" rel="{{ video.Channel }}" title="{{ video.Title }}">{{ video.Title|capitalize }}</a>
+                    </h3>
+                    <div class="td-module-meta-info">
+                        <span class="td-post-author-name">
+                            <a href="#">Par TLJ</a> <span>-</span>
+                        </span>
+                        <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="{{ video.Published|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" >{{ video.Published|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time></span>
+                        <!--<div class="td-module-comments"><a href="../2017/04/09/i-built-an-app-that-does-triangulation-of-points-on-the-earth/index.html#respond">0</a></div>-->
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if loop.index > 1 %}
+        <div class="td-block-span12">
+            <div class="td_module_6 td_module_wrap td-animation-stack">
+                <div class="td-module-thumb">
+                    <a href="{{ path('video_view', {'id' : video.Id}) }}" rel="{{ video.Title }}" title="{{ video.Title }}">
+                        <img width="100" height="70" class="entry-thumb" src="{{ video.Thumb.default.url }}" srcset="{{ video.Thumb.default.url }} 100w, {{ video.Thumb.default.url }} 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="{{ video.Title }}"/>
+                        <span class="td-video-play-ico td-video-small">
+                            <img width="20" height="20" class="td-retina" src="{{ asset('images/icons/video-small.png') }}" alt="video"/>
+                        </span>
+                    </a>
+                </div>
+                <div class="item-details">
+                    <h3 class="entry-title td-module-title">
+                        <a href="{{ path('video_view', {'id' : video.Id}) }}" rel="{{ video.Title }}" title="{{ video.Title }}">{{ video.Title }}</a>
+                    </h3>
+                    <div class="td-module-meta-info">
+                        <span class="td-post-date">
+                            <time class="entry-date updated td-module-date" datetime="{{ video.Published|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" >{{ video.Published|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- ./td-block-span12 -->
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</div>

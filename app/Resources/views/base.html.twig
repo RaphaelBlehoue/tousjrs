@@ -8,13 +8,13 @@
     {% block meta_refresh %}{% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
-    <link rel="stylesheet" href="{{ asset('css/costum-block-color.css', 'cssjs') }}">
-    <link rel="stylesheet" href="{{ asset('css/wp-smiley.css', 'cssjs') }}">
-    <link rel='stylesheet' id='rs-plugin-settings-css'  href='{{ asset("assets/tdcontent/plugins/revslider/public/assets/css/settings.css?ver=5.3.1.5") }}' type='text/css' media='all' />
-    <link rel='stylesheet' crossorigin="anonymous" id='td-plugin-framework-css'  href='{{ asset('assets/tdcontent/plugins/td-api-plugin/css/styles.css?ver=4.7.3') }}' type='text/css' media='all' />
-    <link rel='stylesheet' id='google-fonts-style-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400%2C400italic%2C600%2C600italic%2C700%7CRoboto%3A300%2C400%2C400italic%2C500%2C500italic%2C700%2C900&amp;ver=4.7.3' type='text/css' media='all' />
-    <link rel='stylesheet' id='js_composer_front-css'  href='{{ asset('/tdcontent/plugins/js_composer/assets/css/js_composer.min972f.css?ver=5.0.1', 'cssjs') }}' type='text/css' media='all' />
-    <link rel='stylesheet' id='td-theme-css'  href='{{ asset('assets/tdcontent/themes/style.css?ver=7.7') }}' type='text/css' media='all' />
+    <link rel="stylesheet" href="{{ asset('assets/css/costum-block-color.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/wp-smiley.css') }}">
+    <link rel='stylesheet' id='rs-plugin-settings-css'  href="{{ asset('assets/tdcontent/plugins/revslider/public/assets/css/settings.css?ver=5.3.1.5') }}" type='text/css' media='all' />
+    <link rel='stylesheet' crossorigin="anonymous" id='td-plugin-framework-css'  href="{{ asset('assets/tdcontent/plugins/td-api-plugin/css/styles.css?ver=4.7.3') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='google-fonts-style-css'  href="http://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400%2C400italic%2C600%2C600italic%2C700%7CRoboto%3A300%2C400%2C400italic%2C500%2C500italic%2C700%2C900&amp;ver=4.7.3" type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css'  href="{{ asset('assets/tdcontent/plugins/js_composer/assets/css/js_composer.min972f.css?ver=5.0.1') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='td-theme-css'  href="{{ asset('assets/tdcontent/themes/style.css?ver=7.7') }}' type='text/css" media='all' />
     {% block stylesheets %}{% endblock %}
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('favicon/apple-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('favicon/apple-icon-60x60.png') }}">
@@ -30,14 +30,13 @@
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicon/favicon-96x96.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('favicon/manifest.json') }}">
-    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileColor" content="ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="{{ asset('tdcontent/plugins/js_composer/assets/css/vc_lte_ie9.min.css', 'cssjs') }}" media="screen"><![endif]-->
-    <meta name="generator" content="Powered by Slider Revolution 5.3.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="{{ asset('assets/tdcontent/plugins/js_composer/assets/css/vc_lte_ie9.min.css') }}" media="screen"><![endif]-->
     <noscript>
         <style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style>
     </noscript>
@@ -63,18 +62,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.5.4/jquery.timeago.min.js"></script>
-<script type="text/javascript" src="{{ asset('tdcontent/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.3.1.5','cssjs') }}"></script>
-<script type="text/javascript" src="{{ asset('tdcontent/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.3.1.5', 'cssjs') }}"></script>
-<script type="text/javascript" src="{{ asset('js/_wpemoji.js', 'cssjs') }}"></script>
-<script type="text/javascript" src="{{ asset('js/theme.js', 'cssjs') }}"></script>
-<script type='text/javascript' src='{{ asset('tdcontent/themes/js/tljsdiv_theme.mine98d.js?ver=7.7', 'cssjs') }}'></script>
-<script type='text/javascript' src='{{ asset('tdincludes/js/comment-reply.min.js?ver=4.7.3', 'cssjs') }}'></script>
-<script type='text/javascript' src='{{ asset('tdincludes/js/tp-embed.min.js?ver=4.7.3', 'cssjs') }}'></script>
-<script type='text/javascript' src='{{ asset('tdcontent/plugins/js_composer/assets/js/dist/js_composer_front.min972f.js?ver=5.0.1', 'cssjs') }}'></script>
+<script type="text/javascript" src="{{ asset('assets/tdcontent/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.3.1.5') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/tdcontent/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.3.1.5') }}"></script>
+<script type="text/javascript" src="{{ asset('js/_wpemoji.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/theme.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/tdcontent/themes/js/tljsdiv_theme.mine98d.js?ver=7.7') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/tdincludes/js/comment-reply.min.js?ver=4.7.3') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/tdincludes/js/tp-embed.min.js?ver=4.7.3') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/tdcontent/plugins/js_composer/assets/js/dist/js_composer_front.min972f.js?ver=5.0.1') }}"></script>
 <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
 <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 <!-- JS generated by theme -->
-<script type="text/javascript" src="{{ asset('js/apps.js', 'cssjs') }}"></script>
+<script type="text/javascript" src="{{ asset('js/apps.js') }}"></script>
+
 {% block javascripts %}{% endblock %}
 <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 </body>

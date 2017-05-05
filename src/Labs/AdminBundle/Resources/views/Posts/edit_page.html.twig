@@ -82,7 +82,7 @@
 
                     <div class="panel-body">
                         <p class="text-semibold">Importez les images ou photos de l'articles</p>
-                        <div action="{{ path('post_edit', {'id' : post.id, 'user_id': app.user.id }) }}" class="dropzone" id="dropzone-upload"></div>
+                        <div action="{{ path('post_edit', {'id' : post.id, 'user_id': app.user.id }) }}" class="dropzone" id="dropzone-upload" data-name="Post"></div>
                     </div>
                 </div>
                 <!-- /file limits -->

@@ -26,7 +26,7 @@ class DefaultController extends Controller
     public function getPageHomeAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $recent = $em->getRepository('LabsAdminBundle:Post')->getLastAricles(15);
+        $recent = $em->getRepository('LabsAdminBundle:Post')->getLastAricles(21);
         $sections = $this->FindBySection();
         return $this->render('LabsFrontBundle:Default:index.html.twig',[
             'recent' => $recent,
@@ -256,20 +256,21 @@ class DefaultController extends Controller
 
 
     /**
-     * @return \Symfony\Component\HttpFoundation\Response Recupere tout les flash informations (6) dernières et les envoi à un include flash.html.twig
-     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
-     * Recupere tout les flash informations (6) dernières et les envoi à un include flash.html.twig
+     * @param $template
+     * @param $max
+     * @return \Symfony\Component\HttpFoundation\Response Recupere tout les flash informations ($max) dernières et les envoi à un include ($template)
      */
-    public function getflashInfosAction(){
+    public function getflashInfosAction($template, $max){
         $em = $this->getDoctrine()->getManager();
-        $news = $em->getRepository('LabsAdminBundle:Info')->findInfoNum(6);
+        $news = $em->getRepository('LabsAdminBundle:Info')->findInfoNum($max);
         if(null === $news){
             throw new NotFoundHttpException('Element introuvable');
         }
-        return $this->render('LabsFrontBundle:Includes/v1:flash_info.html.twig',
+        return $this->render('LabsFrontBundle:Includes/v1:'.$template.'',
             ['news' => $news]
         );
     }
+    
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
@@ -278,8 +279,8 @@ class DefaultController extends Controller
     public function getDossierInfoAction(){
 
         $em = $this->getDoctrine()->getManager();
-        $dossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum(3);
-        return $this->render('LabsFrontBundle:Includes:list_dossier.html.twig',
+        $dossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum(4);
+        return $this->render('LabsFrontBundle:Includes/v1:dossier.html.twig',
             ['dossiers' => $dossiers]
         );
     }
@@ -346,7 +347,7 @@ class DefaultController extends Controller
     {
         $api = $this->get('youtube_api.service');
         $youtube = $api->getSearchVideo(3);
-        return $this->render('LabsFrontBundle:Includes:recent_video.html.twig',[
+        return $this->render('LabsFrontBundle:Includes/v1:video.html.twig',[
             'youtube' => $youtube
         ]);
     }

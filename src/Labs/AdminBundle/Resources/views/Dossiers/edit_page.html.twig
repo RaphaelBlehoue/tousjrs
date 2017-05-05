@@ -16,10 +16,17 @@
             </div>
         </div>
         <div class="panel-body">
-            {{ form_start(form, { 'action': path('dossier_edit', {'id' : format.id}), attr : { 'class':'form-horizontal', 'novalidate': 'novalidate'}}) }}
+            {{ form_start(form, { 'action': path('dossier_edit', {'id' : format.id , 'user_id': app.user.id}), attr : { 'class':'form-horizontal', 'novalidate': 'novalidate'}}) }}
             <fieldset class="content-group col-lg-12">
 
                 <legend class="text-bold">Edition du dossiers - {% if format.name|length > 0 %}{{ format.name }}{% endif %}</legend>
+
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Type du Dossier</label>
+                    <div class="col-lg-4">
+                        {{ form_row(form.types) }}
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <label class="control-label col-lg-3">Rubrique Associée au dossiers</label>
@@ -71,7 +78,7 @@
 
                     <div class="panel-body">
                         <p class="text-semibold">Importez les images ou photos du dossier</p>
-                        <div action="{{ path('dossier_edit', {'id' : format.id }) }}" class="dropzone" id="dropzone-upload"></div>
+                        <div action="{{ path('dossier_edit', {'id' : format.id, 'user_id': app.user.id }) }}" class="dropzone" id="dropzone-upload" data-name="Format"></div>
                     </div>
                 </div>
                 <!-- /file limits -->

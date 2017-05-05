@@ -110,7 +110,6 @@ class PostController extends Controller
      */
     public function postDraftAction(Request $request, Post $post)
     {
-        //dump($this->container->getParameter('gallery_directory')); die;
         $em = $this->getDoctrine()->getManager();
         $user = $this->getUser();
         $datas = $this->get('draft_create')->DraftCreate($user, $post);
@@ -138,7 +137,7 @@ class PostController extends Controller
             'label' => 'Enregistrer comme brouillon',
             'attr'  => array('class' => 'btn btn-danger')
         ));
-        
+
         $form->handleRequest($request);
         if($form->isValid() && $form->isSubmitted()){
 
@@ -182,12 +181,12 @@ class PostController extends Controller
      */
     private function getAllPosts()
     {
-      $em = $this->getDoctrine()->getManager();
-      $entity = $em->getRepository('LabsAdminBundle:Post')->getAll();
-      if(null === $entity){
-          throw new NotFoundHttpException('Entity introuvable');
-      }
-      return $entity;
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository('LabsAdminBundle:Post')->getAll();
+        if(null === $entity){
+            throw new NotFoundHttpException('Entity introuvable');
+        }
+        return $entity;
     }
 
     /**
@@ -198,21 +197,21 @@ class PostController extends Controller
      */
     private function uploadMedia(Request $request, Post $post)
     {
-            $em = $this->getDoctrine()->getManager();
-            $media = new Media();
-            $article = $em->getRepository('LabsAdminBundle:Post')->getCurrentPost($post);
-            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
-            $file = $request->files->get('file');
-            $fileName = $article->getSlug().'_'.md5(uniqid()).'.'.$file->guessExtension();
-            $file->move(
-                $this->getParameter('gallery_directory'),
-                $fileName
-            );
-            $media->setUrl($fileName);
-            $media->setPost($article);
-            $em->persist($media);
-            $em->flush($media);
-            return $media->getId();
+        $em = $this->getDoctrine()->getManager();
+        $media = new Media();
+        $article = $em->getRepository('LabsAdminBundle:Post')->getCurrentPost($post);
+        /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+        $file = $request->files->get('file');
+        $fileName = $article->getSlug().'_'.md5(uniqid()).'.'.$file->guessExtension();
+        $file->move(
+            $this->getParameter('gallery_directory'),
+            $fileName
+        );
+        $media->setUrl($fileName);
+        $media->setPost($article);
+        $em->persist($media);
+        $em->flush($media);
+        return $media->getId();
     }
-    
+
 }

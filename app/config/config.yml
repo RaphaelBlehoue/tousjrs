@@ -30,6 +30,9 @@ framework:
         # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
         handler_id:  session.handler.native_file
         save_path:   ~
+        cookie_lifetime: 3600
+        gc_probability: 0
+        gc_divisor: 100
     fragments:       ~
     http_method_override: true
     assets:

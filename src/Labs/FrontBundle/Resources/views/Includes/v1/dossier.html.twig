@@ -1,0 +1,76 @@
+<div class="td-block-inner" id="block-dossier">
+    <div class="td-block-title-wrap">
+        <h4 class="block-title"><span class="td-pulldown-size">{{ 'Nos Dossiers'|upper }}</span></h4>
+        <div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_uid_34_58eb574baae6f">
+            <ul class="td-subcat-list" id="td_pulldown_td_uid_34_58eb574baae6f_list2">
+                <li class="td-subcat-item">
+                    <a class="td-subcat-link" id="l_uid_35_58eb574bac572" href="#"><i class="td-icon-views"></i> {{ 'voir tous les dossiers'|capitalize }}</a>
+                </li>
+            </ul>
+            <div class="td-subcat-dropdown">
+                <div class="td-subcat-more" aria-haspopup="true">
+                    <span>Live du moment</span><i class="td-icon-read-down"></i>
+                </div>
+                <ul class="td-pulldown-filter-list"></ul>
+            </div>
+        </div>
+    </div>
+    {% for dossier in dossiers %}
+        {% if dossier|length > 0 %}
+            {% if loop.first %}
+            <div class="td-block-span12">
+                <div class="td_module_2 td_module_wrap td-animation-stack">
+                    <div class="td-module-image">
+                        <div class="td-module-thumb">
+                            <a href="{{ url('page_dossier_view', {'rubrique': dossier.item.name , 'slug': dossier.slug}) }}" rel="{{ dossier.item.name }}" title="{{ dossier.name }}">
+                                {% for media in dossier.medias %}
+                                    <img width="324" height="160" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_dossier') }}" srcset="{{ media.assertPath|imagine_filter('thumb_dossier') }} 324w, {{ media.assertPath|imagine_filter('thumb_dossier') }} 533w" sizes="(max-width: 324px) 100vw, 324px" alt="" title="{{ dossier.name }}"/>
+                                {% endfor %}
+                            </a>
+                        </div>
+                        <a href="{{ url('dossier_page') }}" class="td-post-category">{{ dossier.item.name }}</a>
+                    </div>
+                    <h3 class="entry-title td-module-title">
+                        <a href="{{ url('page_dossier_view', {'rubrique': dossier.item.name , 'slug': dossier.slug}) }}" rel="{{ dossier.item.name }}" title="{{ dossier.name }}">{{ dossier.name }}</a>
+                    </h3>
+                    <div class="td-module-meta-info">
+                        <span class="td-post-author-name">
+                            <a href="#">PAR TLJ</a> <span>-</span>
+                        </span>
+                        <span class="td-post-date">
+                            <time class="entry-date updated td-module-date" datetime="{{ dossier.created.date }}" title="{{ dossier.created.date }}">{{ dossier.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time>
+                        </span>
+                        <!--<div class="td-module-comments"><a href="../2017/04/09/health-star-ratings-kellogg-reveals-the-cereal/index.html#respond">0</a></div>-->
+                    </div>
+                    <div class="td-excerpt">
+                        {{ dossier.content|truncate('150', false, '...')|striptags }}
+                    </div>
+                </div>
+            </div> <!-- ./td-block-span12 -->
+            {% endif %}
+        {% endif %}
+        {% if loop.index > 1 %}
+            <div class="td-block-span12">
+                <div class="td_module_6 td_module_wrap td-animation-stack">
+                    <div class="td-module-thumb">
+                        <a href="{{ url('page_dossier_view', {'rubrique': dossier.item.name , 'slug': dossier.slug}) }}" rel="{{ dossier.item.name }}" title="{{ dossier.name }}">
+                            {% for media in dossier.medias %}
+                                <img width="100" height="70" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_dossier') }}" srcset="{{ media.assertPath|imagine_filter('thumb_dossier') }} 324w, {{ media.assertPath|imagine_filter('thumb_dossier') }} 533w" sizes="(max-width: 324px) 100vw, 324px" alt="{{ dossier.name }}" title="{{ dossier.name }}"/>
+                            {% endfor %}
+                        </a>
+                    </div>
+                    <div class="item-details">
+                        <h3 class="entry-title td-module-title">
+                            <a href="{{ url('page_dossier_view', {'rubrique': dossier.item.name , 'slug': dossier.slug}) }}" rel="{{ dossier.item.name }}" title="{{ dossier.name }}">{{ dossier.name }}</a>
+                        </h3>
+                        <div class="td-module-meta-info">
+                            <span class="td-post-date">
+                                <time class="entry-date updated td-module-date" datetime="{{ dossier.created.date }}" title="{{ dossier.created.date }}">{{ dossier.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- ./td-block-span12 -->
+        {% endif %}
+    {% endfor %}
+</div>

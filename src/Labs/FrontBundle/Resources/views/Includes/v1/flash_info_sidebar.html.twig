@@ -1,0 +1,42 @@
+<div class="td_block_inner" id="flash-info-sidebar">
+    <div class="td-block-title-wrap">
+        <h4 class="block-title"><span class="td-pulldown-size">{{ 'dernière minute'|upper }}</span></h4>
+        <div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_uid_34_58eb574baae6f">
+            <ul class="td-subcat-list" id="td_pulldown_td_uid_34_58eb574baae6f_list2">
+                <li class="td-subcat-item">
+                    <a class="td-subcat-link" id="l_uid_35_58eb574bac572" href="#"><i class="td-icon-views"></i> {{ 'voir tous les flash'|capitalize }}</a>
+                </li>
+            </ul>
+            <div class="td-subcat-dropdown">
+                <div class="td-subcat-more" aria-haspopup="true">
+                    <span>Live du moment</span><i class="td-icon-read-down"></i>
+                </div>
+                <ul class="td-pulldown-filter-list"></ul>
+            </div>
+        </div>
+    </div>
+    {% for new in news %}
+        <div class="td-block-span12">
+            <div class="td_module_6 td_module_wrap td-animation-stack pb15 lh">
+                <div class="td-module-thumb td-module-time">
+                    <h5>
+                        <a href="#" rel="bookmark" title="">
+                            {{ new.updated|date('H') ~'h'~ new.updated|date('m') }}
+                        </a>
+                    </h5>
+                </div>
+                <div class="item-details-2">
+                    <h5 class="entry-title td-module-title">
+                        <a href="" rel="flash-info" title="{{ new.content }}">{{ new.content }}</a>
+                    </h5>
+                    <div class="td-module-meta-info">
+                        <span class="td-post-date">
+                            <time class="entry-date updated td-module-date" datetime="{{ new.updated.date }}" title="{{ new.updated.date }}">{{ new.updated|date('d, M Y') }}</time>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- ./td-block-span12 -->
+        <hr/>
+    {% endfor %}
+</div>

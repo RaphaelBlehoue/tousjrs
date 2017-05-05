@@ -34,6 +34,12 @@ class Format
     protected $name;
 
     /**
+     * @var  boolean
+     * @ORM\Column(name="types", type="boolean", nullable=true)
+     */
+    protected $types;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="legend", type="string", length=255, nullable=true)
@@ -60,9 +66,9 @@ class Format
     protected $online;
 
     /**
-     * @var bool
+     * @var int
      *
-     * @ORM\Column(name="draft", type="boolean", nullable=true)
+     * @ORM\Column(name="draft", type="integer", nullable=true)
      */
     protected $draft;
 
@@ -373,5 +379,29 @@ class Format
         $this->legend = $legend;
 
         return $this;
+    }
+
+    /**
+     * Set types
+     *
+     * @param boolean $types
+     *
+     * @return Format
+     */
+    public function setTypes($types)
+    {
+        $this->types = $types;
+
+        return $this;
+    }
+
+    /**
+     * Get types
+     *
+     * @return boolean
+     */
+    public function getTypes()
+    {
+        return $this->types;
     }
 }

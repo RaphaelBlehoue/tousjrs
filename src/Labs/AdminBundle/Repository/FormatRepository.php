@@ -13,6 +13,7 @@ use Labs\AdminBundle\Entity\Users;
  */
 class FormatRepository extends \Doctrine\ORM\EntityRepository
 {
+
     /**
      * @param Users $user
      * @return mixed
@@ -23,7 +24,7 @@ class FormatRepository extends \Doctrine\ORM\EntityRepository
         $qb = $this->createQueryBuilder('f');
         $qb->where(
             $qb->expr()->eq('f.user', ':user'),
-            $qb->expr()->eq('f.draft', 0)
+            $qb->expr()->eq('f.draft', -1)
         );
         $qb->setParameter('user', $user);
         return $qb->getQuery()->getOneOrNullResult();
@@ -35,7 +36,7 @@ class FormatRepository extends \Doctrine\ORM\EntityRepository
     public function getAll()
     {
         $qb = $this->createQueryBuilder('f');
-        $qb->where('f.draft <> 0');
+        $qb->where('f.draft <> -1');
         $qb->orderBy('f.created', 'Desc');
         return $qb->getQuery()->getResult();
     }
@@ -74,6 +75,19 @@ class FormatRepository extends \Doctrine\ORM\EntityRepository
             $qb->expr()->eq('f.id', ':format')
         );
         $qb->setParameter('format', $format);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+    
+
+    public function getFormatsArticles(Format $format, $user)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->where(
+            $qb->expr()->eq('p.id', ':format'),
+            $qb->expr()->eq('p.user', ':user')
+        );
+        $qb->setParameter('format', $format);
+        $qb->setParameter('user', $user);
         return $qb->getQuery()->getOneOrNullResult();
     }
 
@@ -150,5 +164,22 @@ class FormatRepository extends \Doctrine\ORM\EntityRepository
         $qb->setMaxResults($max);
         $qb->setParameter('min', $min);
         return $qb->getQuery()->getResult();
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getMediaByFormatId($id)
+    {
+        $qb = $this->createQueryBuilder('f');
+        $qb->leftJoin('f.medias', 'm')
+            ->addSelect('m');
+        $qb->where(
+            $qb->expr()->eq('f.id', ':id')
+        );
+        $qb->setParameter('id', $id);
+        return $qb->getQuery()->getOneOrNullResult();
     }
 }
