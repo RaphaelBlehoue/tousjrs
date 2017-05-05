@@ -1,0 +1,61 @@
+    <div class="wpb_column vc_column_container td-pb-span12 pb25">
+        <div class="td-block-title-wrap">
+            <a href="{{ path('dossier_page') }}">
+                <h4 class="block-title">
+                    <span class="td-pulldown-size">{{ 'dossiers'|upper }}</span>
+                </h4>
+            </a>
+            <div class="td-pulldown-syle-default td-subcat-filter" id="category-dossier">
+                <ul class="td-subcat-list" id="list2_dossiers">
+                    <li class="td-subcat-item-2 li-none">
+                        <a class="td-subcat-link"  href="{{ path('dossier_page') }}"><i class="td-icon-views"></i> {{ 'voir tous les dossiers'|capitalize }}</a>
+                    </li>
+                </ul>
+                <div class="td-subcat-dropdown">
+                    <div class="td-subcat-more" aria-haspopup="true">
+                        <span>{{ 'voir tous les dossiers'|capitalize }}</span><i class="td-icon-read-down"></i>
+                    </div>
+                    <ul class="td-pulldown-filter-list"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="td_block_inner td-column-3" id="dossier-content">
+            <div class="td-block-row">
+
+            {% for dossier in dossiers %}
+                {% if dossier|length > 0 %}
+                        <div class="td-block-span4">
+                            <div class="td_module_mx1 td_module_wrap td-animation-stack">
+                                <div class="td-module-thumb">
+                                    <a href="{{ url('page_dossier_view', {'rubrique': dossier.item.name , 'slug': dossier.slug}) }}" rel="{{ dossier.item.name }}" title="{{ dossier.name }}">
+                                        {% for media in dossier.medias %}
+                                            <img width="356" height="220" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_dossier_inner') }}" alt="{{ dossier.name }}" title="{{ dossier.name }}"/>
+                                        {% endfor %}
+                                        <!--<span class="td-video-play-ico">
+                                            <img width="40" height="40" class="td-retina" src="{{ asset('images/icons/ico-video-large.png') }}" alt="video"/>
+                                        </span>-->
+                                    </a>
+                                </div>
+                                <div class="td-module-meta-info">
+                                    <h3 class="entry-title td-module-title">
+                                        <a href="{{ url('page_dossier_view', {'rubrique': dossier.item.name , 'slug': dossier.slug}) }}" rel="{{ dossier.item.name }}" title="{{ dossier.name }}">{{ dossier.name|truncate('100', false, '...') }}</a>
+                                    </h3>
+                                    <div class="td-editor-date">
+                                        <span class="td-author-date">
+                                            <span class="td-post-author-name">
+                                                 <img src="{{ asset('favicon/favicon-16x16.png') }}" alt="{{ dossier.name }}" style="vertical-align: middle">
+                                                  <a href="">{{ 'par tlj'|upper }}</a> <span>-</span>
+                                            </span>
+                                            <span class="td-post-date">
+                                                <time class="entry-date updated td-module-date" datetime="{{ dossier.created.date }}" title="{{ dossier.created.date }}"> {{ dossier.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- ./td-block-span4 -->
+                {% endif %}
+            {% endfor %}
+        </div>
+        </div>
+    </div> <!-- ./block -->

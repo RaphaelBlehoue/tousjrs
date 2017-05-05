@@ -33,6 +33,23 @@ class DefaultController extends Controller
             'sections' => $sections
         ]);
     }
+
+    /**
+     * @param $max
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function getPageFooterAction($max)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $articles = $em->getRepository('LabsAdminBundle:Post')->getLastAricles($max);
+        $dossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum($max);
+        $sections = $em->getRepository('LabsAdminBundle:Section')->getAll();
+        return $this->render('LabsFrontBundle:Includes/v1:footer.html.twig',[
+            'last_dossiers' => $dossiers,
+            'last_articles' => $articles,
+            'menu_sections' => $sections
+        ]);
+    }
     
 
     /**
@@ -270,20 +287,7 @@ class DefaultController extends Controller
             ['news' => $news]
         );
     }
-    
 
-    /**
-     * @return \Symfony\Component\HttpFoundation\Response
-     * Recupere les 3 dossiers ou grand Format et les envois à un include list_dossier pour la sideBar
-     */
-    public function getDossierInfoAction(){
-
-        $em = $this->getDoctrine()->getManager();
-        $dossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum(4);
-        return $this->render('LabsFrontBundle:Includes/v1:dossier.html.twig',
-            ['dossiers' => $dossiers]
-        );
-    }
     /**
      * @param $item
      * @return \Symfony\Component\HttpFoundation\Response
@@ -304,21 +308,23 @@ class DefaultController extends Controller
      */
     public function getArticleBySectionsAction($section)
     {
-        $articles = $this->findPostSection($section);
-        return $this->render('LabsFrontBundle:Includes:articles.html.twig',
+        $articles = $this->findPostSection($section, 11);
+        return $this->render('LabsFrontBundle:Includes/v1:articles.html.twig',
             ['articles' => $articles]
         );
     }
 
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @param $template
+     * @param $max
+     * @return \Symfony\Component\HttpFoundation\Response Recupère les dossiers avec une limit
      * Recupère les dossiers avec une limit
      */
-    public function getDossierLimitAction()
+    public function getDossierLimitAction($template, $max)
     {
         $em = $this->getDoctrine()->getManager();
-        $dossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum(5);
-        return $this->render('LabsFrontBundle:Includes:dossier.html.twig',[
+        $dossiers = $em->getRepository('LabsAdminBundle:Format')->findFormatNum($max);
+        return $this->render('LabsFrontBundle:Includes/v1:'.$template.'',[
             'dossiers' => $dossiers
         ]);
         
@@ -334,7 +340,7 @@ class DefaultController extends Controller
     {
         $api = $this->get('youtube_api.service');
         $youtube = $api->getSearchVideo(3);
-        return $this->render('LabsFrontBundle:Includes:youtube_video.html.twig',[
+        return $this->render('LabsFrontBundle:Includes/v1:recent_video.html.twig',[
             'youtube' => $youtube
         ]);
     }
@@ -369,13 +375,14 @@ class DefaultController extends Controller
 
     /**
      * @param $options
+     * @param $max
      * @return array
      * Recupère les publications de chaque sous-rubrique de la rubrique en param
      */
-    private function findPostSection($options)
+    private function findPostSection($options , $max = 9)
     {
         $em = $this->getDoctrine()->getManager();
-        $posts = $em->getRepository('LabsAdminBundle:Post')->findPostItemBySection($options);
+        $posts = $em->getRepository('LabsAdminBundle:Post')->findPostItemBySection($options, $max);
         return $posts;
     }
 

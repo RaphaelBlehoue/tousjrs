@@ -12,7 +12,7 @@
             'LabsFrontBundle:Default:getflashInfos',
             { 'template': 'flash_info.html.twig', 'max': 6 }
             )) }}
-            <div class="vc_row wpb_row td-pb-row">
+            <div class="vc_row wpb_row td-pb-row pb50">
                 <div class="wpb_column vc_column_container td-pb-span8">
                     <div class="vc_column-inner">
                         <div class="wpb_wrapper">
@@ -70,7 +70,7 @@
                                 </h4>
                                 <div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_uid_34_58eb574baae6f">
                                     <ul class="td-subcat-list" id="td_pulldown_td_uid_34_58eb574baae6f_list">
-                                        <li class="td-subcat-item">
+                                        <li class="td-subcat-item-2 li-none">
                                             <a class="td-subcat-link" id="l_uid_35_58eb574bac572" href="#">{{ 'voir toutes l\'actualité du jour'|capitalize }}</a>
                                         </li>
                                     </ul>
@@ -173,7 +173,10 @@
 
                             <!-- block last folder -->
                             <div class="td_block_wrap td-pb-border-top td_block_template_1">
-                                {{ render(controller('LabsFrontBundle:Default:getDossierInfo')) }}
+                                {{ render(controller(
+                                'LabsFrontBundle:Default:getDossierLimit',
+                                { 'template': 'dossier.html.twig', 'max':4 }
+                                )) }}
                             </div>
 
                             <!-- block last Rubriques -->
@@ -190,127 +193,53 @@
                     </div>
 
                 </div>
-                <div class="wpb_column vc_column_container td-pb-span12">
-                    <div class="td-block-title-wrap"><h4 class="block-title"><span class="td-pulldown-size">TECH AND GADGETS</span></h4><div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_uid_49_58eb574bb35cd"><ul class="td-subcat-list" id="td_pulldown_td_uid_49_58eb574bb35cd_list"><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_50_58eb574bb55da" data-td_filter_value="" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">All</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_51_58eb574bb5656" data-td_filter_value="13" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Business</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_52_58eb574bb56cc" data-td_filter_value="6" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Fashion</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_53_58eb574bb5741" data-td_filter_value="2" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Featured</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_54_58eb574bb57b6" data-td_filter_value="11" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Gadgets</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_55_58eb574bb582b" data-td_filter_value="14" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Health &amp; Fitness</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_56_58eb574bb58a3" data-td_filter_value="12" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Lifestyle</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_57_58eb574bb5923" data-td_filter_value="7" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">New Look 2015</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_58_58eb574bb5985" data-td_filter_value="15" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Recipes</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_59_58eb574bb5b52" data-td_filter_value="8" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Street Fashion</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_60_58eb574bb5bd1" data-td_filter_value="9" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Style Hunter</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_61_58eb574bb5c40" data-td_filter_value="16" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Travel</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_62_58eb574bb5c83" data-td_filter_value="17" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Video</a></li><li class="td-subcat-item"><a class="td-subcat-link" id="td_uid_63_58eb574bb5cb6" data-td_filter_value="10" data-td_block_id="td_uid_49_58eb574bb35cd" href="#">Vogue</a></li></ul><div class="td-subcat-dropdown"><div class="td-subcat-more" aria-haspopup="true"><span>More</span><i class="td-icon-read-down"></i></div><ul class="td-pulldown-filter-list"></ul></div></div></div><div id=td_uid_49_58eb574bb35cd class="td_block_inner">
-
-                        <div class="td-block-row">
-
-                            <div class="td-block-span4">
-
-                                <div class="td_module_4 td_module_wrap td-animation-stack">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="../2017/04/09/how-to-use-basic-design-principles-to-decorate-your-home/index.html" rel="bookmark" title="How To Use Basic Design Principles To Decorate Your Home"><img width="324" height="235" class="entry-thumb" src="../wp-content/uploads/2017/04/16-1-324x235.jpg" alt="" title="How To Use Basic Design Principles To Decorate Your Home"/></a></div>                <a href="../category/video/index.html" class="td-post-category">Video</a>            </div>
-
-                                    <h3 class="entry-title td-module-title"><a href="../2017/04/09/how-to-use-basic-design-principles-to-decorate-your-home/index.html" rel="bookmark" title="How To Use Basic Design Principles To Decorate Your Home">How To Use Basic Design Principles To Decorate Your Home</a></h3>
-                                    <div class="td-module-meta-info">
-                                        <span class="td-post-author-name"><a href="../author/admin/index.html">admin</a> <span>-</span> </span>                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:58+00:00" >9 avril 2017</time></span>                <div class="td-module-comments"><a href="../2017/04/09/how-to-use-basic-design-principles-to-decorate-your-home/index.html#respond">0</a></div>            </div>
-
-                                    <div class="td-excerpt">
-                                        The model is talking about booking her latest gig, modeling WordPress underwear in the brand latest Perfectly Fit campaign, which was shot by Lachian...            </div>
-
-
-                                </div>
-
-
-                            </div> <!-- ./td-block-span6 -->
-
-                            <div class="td-block-span4">
-
-                                <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                    <div class="td-module-thumb"><a href="../2017/04/09/my-microwave-is-too-small-to-fit-the-microwave-popcorn-bag/index.html" rel="bookmark" title="My microwave is too small to fit the microwave popcorn bag"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/12-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/12-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/12-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="My microwave is too small to fit the microwave popcorn bag"/></a></div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="../2017/04/09/my-microwave-is-too-small-to-fit-the-microwave-popcorn-bag/index.html" rel="bookmark" title="My microwave is too small to fit the microwave popcorn bag">My microwave is too small to fit the microwave popcorn bag</a></h3>            <div class="td-module-meta-info">
-                                            <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:54+00:00" >9 avril 2017</time></span>                            </div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                    <div class="td-module-thumb"><a href="../2017/04/09/sandbox-to-try-out-the-code-written-in-almost-all-languages/index.html" rel="bookmark" title="Sandbox to try out the code written in almost all languages"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/12-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/12-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/12-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Sandbox to try out the code written in almost all languages"/></a></div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="../2017/04/09/sandbox-to-try-out-the-code-written-in-almost-all-languages/index.html" rel="bookmark" title="Sandbox to try out the code written in almost all languages">Sandbox to try out the code written in almost all languages</a></h3>            <div class="td-module-meta-info">
-                                            <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:55+00:00" >9 avril 2017</time></span>                            </div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                    <div class="td-module-thumb"><a href="../2017/04/09/ssl-connectivity-for-all-central-repository-users-underway/index.html" rel="bookmark" title="SSL Connectivity for all Central Repository users Underway"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/1-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/1-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/1-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="SSL Connectivity for all Central Repository users Underway"/></a></div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="../2017/04/09/ssl-connectivity-for-all-central-repository-users-underway/index.html" rel="bookmark" title="SSL Connectivity for all Central Repository users Underway">SSL Connectivity for all Central Repository users Underway</a></h3>            <div class="td-module-meta-info">
-                                            <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:55+00:00" >9 avril 2017</time></span>                            </div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                    <div class="td-module-thumb"><a href="../2017/04/09/workout-routine-for-big-forearms-and-a-crushing-grip/index.html" rel="bookmark" title="Workout Routine for Big Forearms and a Crushing Grip"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/5-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/5-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/5-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Workout Routine for Big Forearms and a Crushing Grip"/></a></div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="../2017/04/09/workout-routine-for-big-forearms-and-a-crushing-grip/index.html" rel="bookmark" title="Workout Routine for Big Forearms and a Crushing Grip">Workout Routine for Big Forearms and a Crushing Grip</a></h3>            <div class="td-module-meta-info">
-                                            <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:57+00:00" >9 avril 2017</time></span>                            </div>
-                                    </div>
-
-                                </div>
-
-
-                            </div> <!-- ./td-block-span6 -->
-                            <div class="td-block-span4">
-
-                                <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                    <div class="td-module-thumb"><a href="../2017/04/09/my-microwave-is-too-small-to-fit-the-microwave-popcorn-bag/index.html" rel="bookmark" title="My microwave is too small to fit the microwave popcorn bag"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/12-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/12-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/12-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="My microwave is too small to fit the microwave popcorn bag"/></a></div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="../2017/04/09/my-microwave-is-too-small-to-fit-the-microwave-popcorn-bag/index.html" rel="bookmark" title="My microwave is too small to fit the microwave popcorn bag">My microwave is too small to fit the microwave popcorn bag</a></h3>            <div class="td-module-meta-info">
-                                            <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:54+00:00" >9 avril 2017</time></span>                            </div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                    <div class="td-module-thumb"><a href="../2017/04/09/sandbox-to-try-out-the-code-written-in-almost-all-languages/index.html" rel="bookmark" title="Sandbox to try out the code written in almost all languages"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/12-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/12-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/12-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Sandbox to try out the code written in almost all languages"/></a></div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="../2017/04/09/sandbox-to-try-out-the-code-written-in-almost-all-languages/index.html" rel="bookmark" title="Sandbox to try out the code written in almost all languages">Sandbox to try out the code written in almost all languages</a></h3>            <div class="td-module-meta-info">
-                                            <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:55+00:00" >9 avril 2017</time></span>                            </div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                    <div class="td-module-thumb"><a href="../2017/04/09/ssl-connectivity-for-all-central-repository-users-underway/index.html" rel="bookmark" title="SSL Connectivity for all Central Repository users Underway"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/1-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/1-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/1-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="SSL Connectivity for all Central Repository users Underway"/></a></div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="../2017/04/09/ssl-connectivity-for-all-central-repository-users-underway/index.html" rel="bookmark" title="SSL Connectivity for all Central Repository users Underway">SSL Connectivity for all Central Repository users Underway</a></h3>            <div class="td-module-meta-info">
-                                            <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:55+00:00" >9 avril 2017</time></span>                            </div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                    <div class="td-module-thumb"><a href="../2017/04/09/workout-routine-for-big-forearms-and-a-crushing-grip/index.html" rel="bookmark" title="Workout Routine for Big Forearms and a Crushing Grip"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/5-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/5-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/5-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Workout Routine for Big Forearms and a Crushing Grip"/></a></div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="../2017/04/09/workout-routine-for-big-forearms-and-a-crushing-grip/index.html" rel="bookmark" title="Workout Routine for Big Forearms and a Crushing Grip">Workout Routine for Big Forearms and a Crushing Grip</a></h3>            <div class="td-module-meta-info">
-                                            <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:57+00:00" >9 avril 2017</time></span>                            </div>
-                                    </div>
-
-                                </div>
-
-
-                            </div> <!-- ./td-block-span6 -->
-                        </div><!--./row-fluid--></div><div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_49_58eb574bb35cd" data-td_block_id="td_uid_49_58eb574bb35cd"><i class="td-icon-font td-icon-menu-left"></i></a><a href="#"  class="td-ajax-next-page" id="next-page-td_uid_49_58eb574bb35cd" data-td_block_id="td_uid_49_58eb574bb35cd"><i class="td-icon-font td-icon-menu-right"></i></a></div></div> <!-- ./block -->
-                </div>
             </div>
+            {%  for section in sections %}
+                {% if section|length > 0 %}
+                    <div class="vc_row wpb_row td-pb-row">
+                        <div class="wpb_column vc_column_container td-pb-span12">
+                            <div class="td-block-title-wrap">
+                                <a href="{{ path('front_section_page',{'slug': section.slug}) }}">
+                                    <h4 class="block-title" style="border-color: {{ section.color }};">
+                                        <span class="td-pulldown-size" style="background-color: {{ section.color }};">{{ section.name|upper }}</span>
+                                    </h4>
+                                </a>
+                                <div class="td-pulldown-syle-default td-subcat-filter" id="category-{{ section.name }}">
+                                    <ul class="td-subcat-list" id="list2_{{ section.slug }}">
+                                        <li class="td-subcat-item-2 li-none">
+                                            <a id="l_uid_{{ section.name }}" href="{{ path('front_section_page',{'slug': section.slug}) }}"><i class="td-icon-views"></i> {{ 'Consultez la rubrique '~ section.name|upper }}</a>
+                                        </li>
+                                    </ul>
+                                    <div class="td-subcat-dropdown">
+                                        <div class="td-subcat-more" aria-haspopup="true">
+                                            <span>{{ 'Consultez la rubrique '~ section.name|capitalize }}</span><i class="td-icon-read-down"></i>
+                                        </div>
+                                        <ul class="td-pulldown-filter-list"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="td_block_inner">
+                                <div class="td-block-row">
+                                    {{ render(controller('LabsFrontBundle:Default:getArticleBySections', {'section' : section.id })) }}
+                                </div><!--./row-fluid-->
+                            </div>
+                        </div> <!-- ./block -->
+                    </div>
+                    {% if loop.index0 >= 2 and loop.index0 < 3 %}
+                        <div class="vc_row wpb_row td-pb-row">
+                            {{ render(controller('LabsFrontBundle:Default:getVideosReport')) }}
+                        </div>
+                    {% endif %}
+                    {% if loop.index0 >= 4 and loop.index0 < 5 %}
+                        <div class="vc_row wpb_row td-pb-row">
+                            {{ render(controller(
+                            'LabsFrontBundle:Default:getDossierLimit',
+                            { 'template': 'dossier_inc_index.html.twig', 'max':3 }
+                            )) }}
+                        </div>
+                    {% endif %}
+            {% endif %}
+        {% endfor %}
         </div>
     </div>
     <!-- /.td-main-content-wrap -->

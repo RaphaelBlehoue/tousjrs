@@ -57,8 +57,7 @@ liip_imagine:
         thumb_block_article:
             quality: 95
             filters:
-                thumbnail: { size: [468, 316], mode: outbound }
-                background: { size: [470, 319], position: center, color: '#EEF1F5' }
+                thumbnail: { size: [324, 235], mode: outbound }
             post_processors:
                 jpegoptim: { strip_all: true, max: 70, progressive: true }
                 optipng: { strip_all: true, level: 5 }
@@ -78,6 +77,14 @@ liip_imagine:
             quality: 95
             filters:
                 thumbnail: { size: [324, 160], mode: outbound }
+            post_processors:
+                jpegoptim: { strip_all: true, max: 70, progressive: true }
+                optipng: { strip_all: true, level: 5 }
+
+        thumb_dossier_inner:
+            quality: 95
+            filters:
+                thumbnail: { size: [356, 220], mode: outbound }
             post_processors:
                 jpegoptim: { strip_all: true, max: 70, progressive: true }
                 optipng: { strip_all: true, level: 5 }

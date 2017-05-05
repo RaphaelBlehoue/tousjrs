@@ -53,7 +53,7 @@
     <!--Header style 1-->
     {{ include('LabsFrontBundle:Includes/v1:td-header-wrap.html.twig') }}
     {% block body %}{% endblock %}
-    {{ include('LabsFrontBundle:Includes/v1:footer.html.twig') }}
+    {{ render(controller('LabsFrontBundle:Default:getPageFooter', {'max' : 3})) }}
 </div>
 
 <!-- Footer -->

@@ -1,0 +1,106 @@
+{% for article in articles %}
+    {% if article|length > 0 %}
+        {% if loop.first %}
+            <div class="td-pb-span4">
+                <div class="td_module_4 td_module_wrap td-animation-stack">
+                    <div class="td-module-image">
+                        <div class="td-module-thumb">
+                            <a href="{{ path('page_view', {'slug': article.slug }) }}" rel="{{ article.item.name }}" title="{{ article.name }}">
+                                {% for media in article.medias %}
+                                    <img width="324" height="235" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_block_article') }}" alt="{{ article.name }}" title="{{ article.name }}"/>
+                                {% endfor %}
+                            </a>
+                        </div>
+                        <!--<a href="../category/video/index.html" class="td-post-category">Video</a>-->
+                    </div>
+
+                    <h3 class="entry-title td-module-title">
+                        <a href="{{ path('page_view', {'slug': article.slug }) }}" rel="{{ article.item.name }}" title="{{ article.name }}">{{ article.name|truncate('150', false, '...') }}</a>
+                    </h3>
+
+                    <div class="td-module-meta-info">
+                        <span class="td-post-author-name">
+                            <img src="{{ asset('favicon/favicon-16x16.png') }}" alt="{{ article.name }}" style="vertical-align: middle">
+                            <a href="">{{ 'par tlj'|upper }}</a> <span>-</span>
+                        </span>
+                        <span class="td-post-date">
+                            <time class="entry-date updated td-module-date" datetime="{{ article.created.date }}" title="{{ article.created.date }}">{{ article.created|date('H') ~'h'~ article.created|date('m') }} - {{ article.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time>
+                        </span>
+                        <!--<div class="td-module-comments">
+                            <a href="../2017/04/09/how-to-use-basic-design-principles-to-decorate-your-home/index.html#respond">0</a>
+                        </div>-->
+                    </div>
+
+                    <div class="td-excerpt">
+                        {{ article.content|truncate('250', false, '...')|striptags }}
+                    </div>
+                </div>
+            </div> <!-- ./td-block-span6 -->
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+<div class="td-pb-span4">
+    {% for arts in articles %}
+        {% if loop.first != loop.index and loop.index <= 6 %}
+            <div class="td_module_6 td_module_wrap td-animation-stack">
+                <div class="td-module-thumb">
+                    <a href="{{ path('page_view', {'slug': arts.slug }) }}" rel="{{ arts.item.name }}" title="{{ arts.name }}">
+                        {% for media in arts.medias %}
+                            <img width="100" height="70" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" srcset="{{ media.assertPath|imagine_filter('thumb_top_small') }} 100w, {{ media.assertPath|imagine_filter('thumb_top_small') }} 218w" sizes="(max-width: 100px) 100vw, 100px" alt="{{ arts.name }}" title="{{ arts.name }}"/>
+                        {% endfor %}
+                        <!--<span class="td-video-play-ico td-video-small">
+                            <img width="20" height="20" class="td-retina" src="{{ asset('images/icons/video-small.png') }}" alt="video"/>
+                        </span>-->
+                    </a>
+                </div>
+
+                <div class="item-details">
+                    <h3 class="entry-title td-module-title">
+                        <a href="{{ path('page_view', {'slug': arts.slug }) }}" rel="{{ arts.item.name }}" title="{{ arts.name }}">{{ arts.name|truncate('120', false, '...') }}</a>
+                    </h3>
+                    <div class="td-module-meta-info">
+                        <span class="td-post-date">
+                             <time class="entry-date updated td-module-date" datetime="{{ arts.created.date }}" title="{{ arts.created.date }}">{{ arts.created|date('H') ~'h'~ arts.created|date('m') }} - {{ arts.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        {% endif %}
+    {% endfor %}
+</div> <!-- ./td-block-span6 -->
+
+<div class="td-pb-span4">
+    {% for post in articles %}
+        {% if loop.index > 6 %}
+            <div class="td_module_6 td_module_wrap td-animation-stack">
+                <div class="td-module-thumb">
+                    <a href="{{ path('page_view', {'slug': post.slug }) }}" rel="{{ post.item.name }}" title="{{ post.name }}">
+                        {% for media in post.medias %}
+                            <img width="100" height="70" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" srcset="{{ media.assertPath|imagine_filter('thumb_top_small') }} 100w, {{ media.assertPath|imagine_filter('thumb_top_small') }} 218w" sizes="(max-width: 100px) 100vw, 100px" alt="{{ post.name }}" title="{{ post.name }}"/>
+                        {% endfor %}
+                        <!--<span class="td-video-play-ico td-video-small">
+                            <img width="20" height="20" class="td-retina" src="{{ asset('images/icons/video-small.png') }}" alt="video"/>
+                        </span>-->
+                    </a>
+                </div>
+
+                <div class="item-details">
+                    <h3 class="entry-title td-module-title">
+                        <a href="{{ path('page_view', {'slug': post.slug }) }}" rel="{{ post.item.name }}"  title="{{ post.name }}">{{ post.name|truncate('120', false, '...') }}</a>
+                    </h3>
+                    <div class="td-module-meta-info">
+                        <span class="td-post-date">
+                             <time class="entry-date updated td-module-date" datetime="{{ post.created.date }}" title="{{ post.created.date }}">{{ post.created|date('H') ~'h'~ post.created|date('m') }} - {{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        {% endif %}
+    {% endfor %}
+</div> <!-- ./td-block-span6 -->
+
+
+

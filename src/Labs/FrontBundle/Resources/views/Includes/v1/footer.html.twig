@@ -2,12 +2,12 @@
 <div class="td-main-content-wrap td-footer-instagram-container">
     <div class="td-instagram-user">
         <h4 class="td-footer-instagram-title">
-            Follow us on Instagram
+            Suivez nous sur Instagram
             <a class="td-footer-instagram-user-link" href="https://www.instagram.com/" target="_blank">@</a>
         </h4>
     </div>
     <div class="td_block_wrap td_block_instagram td_uid_41_58eb574de6f3a_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_41_58eb574de6f3a" >
-        <div id=td_uid_41_58eb574de6f3a class="td-instagram-wrap td_block_inner td-column-1"></div>
+        <div id="td_uid_41_58eb574de6f3a" class="td-instagram-wrap td_block_inner td-column-1"></div>
     </div>
     <!-- ./block -->
 </div>
@@ -19,105 +19,81 @@
             </div>
         </div>
         <div class="td-pb-row">
+            <div class="td-pb-span4">
+                <div class="td_block_wrap td_block_7 td_uid_43_58eb574de7852_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_43_58eb574de7852" >
+                    <div class="td-block-title-wrap">
+                        <h4 class="block-title"><span class="td-pulldown-size">{{ 'Derniers Dossiers'|upper }}</span></h4>
+                    </div>
+                    <div id=td_uid_43_58eb574de7852 class="td_block_inner">
+                        {% for dossier in last_dossiers %}
+                            <div class="td-block-span12">
+                                <div class="td_module_6 td_module_wrap td-animation-stack">
+                                    <div class="td-module-thumb">
+                                        <a href="{{ url('page_dossier_view', {'rubrique': dossier.item.name , 'slug': dossier.slug}) }}" rel="{{ dossier.item.name }}" title="{{ dossier.name }}">
+                                            {% for media in dossier.medias %}
+                                                <img width="100" height="70" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" srcset="{{ media.assertPath|imagine_filter('thumb_top_small') }} 100w, {{ media.assertPath|imagine_filter('thumb_top_small') }} 218w" sizes="(max-width: 100px) 100vw, 100px" alt="{{ dossier.name }}" title="{{ dossier.name }}"/>
+                                            {% endfor %}
+                                        </a>
+                                    </div>
+                                    <div class="item-details">
+                                        <h3 class="entry-title td-module-title">
+                                            <a href="{{ url('page_dossier_view', {'rubrique': dossier.item.name , 'slug': dossier.slug}) }}" rel="bookmark" title="{{ dossier.name }}">{{ dossier.name|truncate('120', false, '...') }}</a>
+                                        </h3>
+                                        <div class="td-module-meta-info">
+                                            <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="{{ dossier.created.date }}" >{{ dossier.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- ./td-block-span12 -->
+                        {% endfor %}
+                    </div>
+                </div> <!-- ./block -->
+            </div>
 
             <div class="td-pb-span4">
-                <div class="td_block_wrap td_block_7 td_uid_43_58eb574de7852_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_43_58eb574de7852" ><div class="td-block-title-wrap"><h4 class="block-title"><span class="td-pulldown-size">EDITOR PICKS</span></h4></div><div id=td_uid_43_58eb574de7852 class="td_block_inner">
-
-                        <div class="td-block-span12">
-
-                            <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                <div class="td-module-thumb"><a href="../2017/04/09/apple-server-most-powerful-rack-optimized-server/index.html" rel="bookmark" title="Apple Server Most Powerful rack optimized server"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/10-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/10-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/10-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Apple Server Most Powerful rack optimized server"/></a></div>
-                                <div class="item-details">
-                                    <h3 class="entry-title td-module-title"><a href="../2017/04/09/apple-server-most-powerful-rack-optimized-server/index.html" rel="bookmark" title="Apple Server Most Powerful rack optimized server">Apple Server Most Powerful rack optimized server</a></h3>            <div class="td-module-meta-info">
-                                        <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:54+00:00" >9 avril 2017</time></span>                            </div>
+                <div class="td_block_wrap td_block_7 td_uid_44_58eb574dea200_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_44_58eb574dea200" >
+                    <div class="td-block-title-wrap">
+                        <h4 class="block-title">
+                            <span class="td-pulldown-size">{{ 'A la une'|upper }}</span></h4>
+                    </div>
+                    <div id=td_uid_44_58eb574dea200 class="td_block_inner">
+                        {% for article in last_articles %}
+                            <div class="td-block-span12">
+                                <div class="td_module_6 td_module_wrap td-animation-stack">
+                                    <div class="td-module-thumb">
+                                        <a href="{{ path('page_view', {'slug': article.slug }) }}" rel="bookmark" title="{{ article.name }}">
+                                            {% for media in article.medias %}
+                                                <img width="100" height="70" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" srcset="{{ media.assertPath|imagine_filter('thumb_top_small') }} 100w, {{ media.assertPath|imagine_filter('thumb_top_small') }} 218w" sizes="(max-width: 100px) 100vw, 100px" alt="{{ article.name }}" title="{{ article.name }}"/>
+                                            {% endfor %}
+                                        </a>
+                                    </div>
+                                    <div class="item-details">
+                                        <h3 class="entry-title td-module-title">
+                                            <a href="{{ path('page_view', {'slug': article.slug }) }}" rel="{{ article.item.name }}" title="{{ article.name }}">{{ article.name|truncate('120', false, '...') }}</a>
+                                        </h3>
+                                        <div class="td-module-meta-info">
+                                            <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="{{ article.created.date }}" >{{ article.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time></span>
+                                        </div>
+                                    </div>
                                 </div>
-
-                            </div>
-
-
-                        </div> <!-- ./td-block-span12 -->
-
-                        <div class="td-block-span12">
-
-                            <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                <div class="td-module-thumb"><a href="../2017/04/09/simple-form-creation-and-storage-built-for-developers/index.html" rel="bookmark" title="Simple form creation and storage, built for developers."><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/13-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/13-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/13-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Simple form creation and storage, built for developers."/></a></div>
-                                <div class="item-details">
-                                    <h3 class="entry-title td-module-title"><a href="../2017/04/09/simple-form-creation-and-storage-built-for-developers/index.html" rel="bookmark" title="Simple form creation and storage, built for developers.">Simple form creation and storage, built for developers.</a></h3>            <div class="td-module-meta-info">
-                                        <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:53+00:00" >9 avril 2017</time></span>                            </div>
-                                </div>
-
-                            </div>
-
-
-                        </div> <!-- ./td-block-span12 -->
-
-                        <div class="td-block-span12">
-
-                            <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                <div class="td-module-thumb"><a href="../2017/04/09/robots-helped-inspire-deep-learning-might-become/index.html" rel="bookmark" title="Robots helped inspire deep learning might become"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/9-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/9-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/9-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Robots helped inspire deep learning might become"/><span class="td-video-play-ico td-video-small"><img width="20" height="20" class="td-retina" src="../wp-content/themes/Newspaper%20v7.7/Newspaper/images/icons/video-small.png" alt="video"/></span></a></div>
-                                <div class="item-details">
-                                    <h3 class="entry-title td-module-title"><a href="../2017/04/09/robots-helped-inspire-deep-learning-might-become/index.html" rel="bookmark" title="Robots helped inspire deep learning might become">Robots helped inspire deep learning might become</a></h3>            <div class="td-module-meta-info">
-                                        <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:53+00:00" >9 avril 2017</time></span>                            </div>
-                                </div>
-
-                            </div>
-
-
-                        </div> <!-- ./td-block-span12 --></div></div> <!-- ./block -->                            </div>
+                            </div> <!-- ./td-block-span12 -->
+                        {% endfor %}
+                    </div>
+                </div> <!-- ./block -->
+            </div>
 
             <div class="td-pb-span4">
-                <div class="td_block_wrap td_block_7 td_uid_44_58eb574dea200_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_44_58eb574dea200" ><div class="td-block-title-wrap"><h4 class="block-title"><span class="td-pulldown-size">POPULAR POSTS</span></h4></div><div id=td_uid_44_58eb574dea200 class="td_block_inner">
-
-                        <div class="td-block-span12">
-
-                            <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                <div class="td-module-thumb"><a href="../2017/04/09/apple-sells-10-million-iphone-6-and-iphone-6-pluses/index.html" rel="bookmark" title="Apple sells 10 million iPhone 6 and iPhone 6 Pluses"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/11-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/11-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/11-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Apple sells 10 million iPhone 6 and iPhone 6 Pluses"/></a></div>
-                                <div class="item-details">
-                                    <h3 class="entry-title td-module-title"><a href="../2017/04/09/apple-sells-10-million-iphone-6-and-iphone-6-pluses/index.html" rel="bookmark" title="Apple sells 10 million iPhone 6 and iPhone 6 Pluses">Apple sells 10 million iPhone 6 and iPhone 6 Pluses</a></h3>            <div class="td-module-meta-info">
-                                        <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:53+00:00" >9 avril 2017</time></span>                            </div>
-                                </div>
-
-                            </div>
-
-
-                        </div> <!-- ./td-block-span12 -->
-
-                        <div class="td-block-span12">
-
-                            <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                <div class="td-module-thumb"><a href="../2017/04/09/home-run-kitten-favored-in-competitive-san-simeon/index.html" rel="bookmark" title="Home Run Kitten Favored in Competitive San Simeon"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/15-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/15-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/15-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Home Run Kitten Favored in Competitive San Simeon"/></a></div>
-                                <div class="item-details">
-                                    <h3 class="entry-title td-module-title"><a href="../2017/04/09/home-run-kitten-favored-in-competitive-san-simeon/index.html" rel="bookmark" title="Home Run Kitten Favored in Competitive San Simeon">Home Run Kitten Favored in Competitive San Simeon</a></h3>            <div class="td-module-meta-info">
-                                        <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:55+00:00" >9 avril 2017</time></span>                            </div>
-                                </div>
-
-                            </div>
-
-
-                        </div> <!-- ./td-block-span12 -->
-
-                        <div class="td-block-span12">
-
-                            <div class="td_module_6 td_module_wrap td-animation-stack">
-
-                                <div class="td-module-thumb"><a href="../2017/04/09/robots-helped-inspire-deep-learning-might-become/index.html" rel="bookmark" title="Robots helped inspire deep learning might become"><img width="100" height="70" class="entry-thumb" src="../wp-content/uploads/2017/04/9-1-100x70.jpg" srcset="http://wp.touslesjours.dev/wp-content/uploads/2017/04/9-1-100x70.jpg 100w, http://wp.touslesjours.dev/wp-content/uploads/2017/04/9-1-218x150.jpg 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Robots helped inspire deep learning might become"/><span class="td-video-play-ico td-video-small"><img width="20" height="20" class="td-retina" src="../wp-content/themes/Newspaper%20v7.7/Newspaper/images/icons/video-small.png" alt="video"/></span></a></div>
-                                <div class="item-details">
-                                    <h3 class="entry-title td-module-title"><a href="../2017/04/09/robots-helped-inspire-deep-learning-might-become/index.html" rel="bookmark" title="Robots helped inspire deep learning might become">Robots helped inspire deep learning might become</a></h3>            <div class="td-module-meta-info">
-                                        <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-04-09T17:24:53+00:00" >9 avril 2017</time></span>                            </div>
-                                </div>
-
-                            </div>
-
-
-                        </div> <!-- ./td-block-span12 --></div></div> <!-- ./block -->                            </div>
-
-            <div class="td-pb-span4">
-                <div class="td_block_wrap td_block_popular_categories td_uid_45_58eb574ded41b_rand widget widget_categories td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_45_58eb574ded41b" ><h4 class="block-title"><span class="td-pulldown-size">POPULAR CATEGORY</span></h4><ul class="td-pb-padding-side"><li><a href="../category/lifestyle/travel/index.html">Travel<span class="td-cat-no">15</span></a></li><li><a href="../category/video/index.html">Video<span class="td-cat-no">15</span></a></li><li><a href="../category/gadgets/index.html">Gadgets<span class="td-cat-no">11</span></a></li><li><a href="../category/lifestyle/index.html">Lifestyle<span class="td-cat-no">11</span></a></li><li><a href="../category/lifestyle/business/index.html">Business<span class="td-cat-no">11</span></a></li><li><a href="../category/lifestyle/health-fitness/index.html">Health &amp; Fitness<span class="td-cat-no">11</span></a></li><li><a href="../category/lifestyle/recipes/index.html">Recipes<span class="td-cat-no">11</span></a></li><li><a href="../category/fashion/new-look-2015/index.html">New Look 2015<span class="td-cat-no">10</span></a></li><li><a href="../category/fashion/street-fashion/index.html">Street Fashion<span class="td-cat-no">10</span></a></li></ul></div> <!-- ./block -->                            </div>
+                <div class="td_block_wrap td_block_popular_categories td_uid_45_58eb574ded41b_rand widget widget_categories td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_45_58eb574ded41b" >
+                    <h4 class="block-title"><span class="td-pulldown-size">{{ 'Rubriques'|upper }}</span></h4>
+                    <ul class="td-pb-padding-side">
+                        {% for section in menu_sections %}
+                            <li><a href="{{ path('front_section_page', {'slug': section.slug}) }}">{{ section.name }}<span class="td-cat-no">{{ section.items|length }}</span></a></li>
+                        {% endfor %}
+                        <li><a href="{{ path('dossier_page') }}">{{ 'Dossier'|capitalize }}<span class="td-cat-no"></span></a></li>
+                        <li><a href="{{ path('videos_page') }}">{{ 'Video'|capitalize }}<span class="td-cat-no"></span></a></li>
+                    </ul>
+                </div> <!-- ./block -->
+            </div>
         </div>
     </div>
     <div class="td-footer-bottom-full">
@@ -133,16 +109,16 @@
                 <div class="td-pb-span5">
                     <aside class="footer-text-wrap">
                         <div class="block-title">
-                            <span>ABOUT US</span>
-                        </div>Newspaper is your news, entertainment, music fashion website. We provide you with the latest breaking news and videos straight from the entertainment industry.
-                        <div class="footer-email-wrap">Contact us: <a href="mailto:contact@yoursite.com">contact@yoursite.com</a>
+                            <span>{{ 'Qui sommes nous'|upper }}</span>
+                        </div> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto earum fuga fugit maxime nobis numquam possimus quod similique sunt ut. Dolorem, dolores error illo incidunt iste laborum ratione repellat voluptatibus.
+                        <div class="footer-email-wrap">Nous Contacter : <a href="mailto:info@touslesjoursci.com">info@touslesjoursci.com</a>
                         </div>
                     </aside>
                 </div>
                 <div class="td-pb-span4">
                     <aside class="footer-social-wrap td-social-style-2">
                         <div class="block-title">
-                            <span>FOLLOW US</span>
+                            <span>{{ 'Suivez-nous'|upper }}</span>
                         </div>
                                     <span class="td-social-icon-wrap">
                                         <a target="_blank" href="#" title="Facebook">
