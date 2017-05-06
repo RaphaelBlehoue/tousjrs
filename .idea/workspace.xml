@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85828300-8469-4298-9e55-7f970975b2ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/articles.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/dossier_inc_index.html.twig" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/dossier.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_block_article/uploads/posts/_09e1db0d226f8e01de181511185560ff.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumb_block_article/uploads/posts/premier-articles-en-texte-1_7babcbab89459c322077b46dc636edc9.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/resource/logo2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/resource/logo3.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/liipimage.yml" afterPath="$PROJECT_DIR$/app/config/liipimage.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Post.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Post.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/dossier.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/dossier.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/footer.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/footer.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/tdcontent/themes/style.css" afterPath="$PROJECT_DIR$/web/assets/tdcontent/themes/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/tdcontent/themes/stylee98d.css" afterPath="$PROJECT_DIR$/web/assets/tdcontent/themes/stylee98d.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/video.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/video.html.twig" />
     </list>
     <ignored path="touslesjours.dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,66 +44,87 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="230" column="51" selection-start-line="230" selection-start-column="51" selection-end-line="230" selection-end-column="51" />
+            <state relative-caret-position="371">
+              <caret line="124" column="87" selection-start-line="124" selection-start-column="87" selection-end-line="124" selection-end-column="87" />
               <folding>
                 <element signature="e#1449#1471#1#PHP" expanded="true" />
                 <element signature="e#1535#1559#1#PHP" expanded="true" />
                 <element signature="e#1622#1647#1#PHP" expanded="true" />
                 <element signature="e#1689#1735#0#PHP" expanded="true" />
+                <element signature="e#4652#4674#1#PHP" expanded="true" />
+                <element signature="e#4738#4760#1#PHP" expanded="true" />
+                <element signature="e#4823#4868#0#PHP" expanded="true" />
                 <element signature="e#8530#8550#0#PHP" expanded="true" />
                 <element signature="e#11326#11374#0#PHP" expanded="true" />
                 <element signature="e#11784#11808#1#PHP" expanded="true" />
                 <element signature="e#12289#12341#0#PHP" expanded="true" />
+                <element signature="e#12721#12766#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/footer.html.twig">
+      <file leaf-file-name="page_view.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-379">
-              <caret line="120" column="56" selection-start-line="120" selection-start-column="56" selection-end-line="120" selection-end-column="56" />
+            <state relative-caret-position="54">
+              <caret line="200" column="209" selection-start-line="200" selection-start-column="209" selection-end-line="200" selection-end-column="209" />
               <folding>
-                <element signature="e#4329#4338#0#Twig" expanded="true" />
-                <element signature="e#5230#5239#0#Twig" expanded="true" />
-                <element signature="e#6584#6602#0#Twig" expanded="true" />
-                <element signature="e#6801#6813#0#Twig" expanded="true" />
-                <element signature="e#6933#6944#0#Twig" expanded="true" />
+                <element signature="e#12#28#0#Twig" expanded="true" />
+                <element signature="e#3029#3037#0#Twig" expanded="true" />
+                <element signature="e#3402#3420#0#Twig" expanded="true" />
+                <element signature="e#3994#4009#0#Twig" expanded="true" />
+                <element signature="e#5091#5208#0#HTML" expanded="true" />
+                <element signature="e#5224#5239#0#Twig" expanded="true" />
+                <element signature="e#6930#6939#0#Twig" expanded="true" />
+                <element signature="e#7459#7468#0#Twig" expanded="true" />
+                <element signature="e#7871#7880#0#Twig" expanded="true" />
+                <element signature="e#8207#8216#0#Twig" expanded="true" />
+                <element signature="e#8663#8672#0#Twig" expanded="true" />
+                <element signature="e#9123#9132#0#Twig" expanded="true" />
+                <element signature="e#11702#11711#0#Twig" expanded="true" />
+                <element signature="e#12235#12244#0#Twig" expanded="true" />
+                <element signature="e#12653#12662#0#Twig" expanded="true" />
+                <element signature="e#12993#13002#0#Twig" expanded="true" />
+                <element signature="e#13453#13462#0#Twig" expanded="true" />
+                <element signature="e#13846#13855#0#Twig" expanded="true" />
+                <element signature="e#13997#14090#0#HTML" expanded="true" />
+                <element signature="e#14313#14322#0#Twig" expanded="true" />
+                <element signature="e#16391#16400#0#Twig" expanded="true" />
+                <element signature="e#16475#16497#0#HTML" expanded="true" />
+                <element signature="e#16618#16640#0#HTML" expanded="true" />
+                <element signature="e#17178#17200#0#HTML" expanded="true" />
+                <element signature="e#18843#18852#0#Twig" expanded="true" />
+                <element signature="e#19629#19644#0#Twig" expanded="true" />
+                <element signature="e#20059#20068#0#Twig" expanded="true" />
+                <element signature="e#20919#20940#0#HTML" expanded="true" />
+                <element signature="e#24366#24377#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="td-header-wrap.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/td-header-wrap.html.twig">
+      <file leaf-file-name="page_section.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Sections/page_section.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2276">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="articles.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/articles.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="85" />
+            <state relative-caret-position="184">
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding>
-                <element signature="e#3790#3799#0#Twig" expanded="true" />
+                <element signature="e#12#28#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="liipimage.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/liipimage.yml">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="299">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+              <folding>
+                <element signature="e#17758#17776#0#Twig" expanded="true" />
+                <element signature="e#18525#18543#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,8 +152,6 @@
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Sections/page_section.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Dossiers/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Dossiers/dossier_view_page.html.twig" />
-        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" />
-        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Post.php" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Form/PostType.php" />
         <option value="$PROJECT_DIR$/web/assets/tdcontent/plugins/news-box/jquery.bootstrap.newsbox.min.js" />
         <option value="$PROJECT_DIR$/web/js/main.js" />
@@ -159,19 +174,21 @@
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Resources/views/Dossiers/edit_page.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Controller/FormatController.php" />
-        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/video.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/articles.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/tdcontent/themes/stylee98d.css" />
         <option value="$PROJECT_DIR$/web/assets/tdcontent/themes/style.css" />
-        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/dossier.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/liipimage.yml" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/dossier.html.twig" />
-        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/recent_video.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/dossier_inc_index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/footer.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/dossier.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/video.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Post.php" />
+        <option value="$PROJECT_DIR$/app/config/liipimage.yml" />
+        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" />
       </list>
     </option>
   </component>
@@ -382,24 +399,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="media" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -444,7 +443,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="icons" />
+              <option name="myItemId" value="resource" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,59 +457,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tdcontent" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tdcontent" />
+              <option name="myItemId" value="var" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -628,45 +575,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Includes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touslesjours.dev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Labs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Includes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="v1" />
+              <option name="myItemId" value="Sections" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -1031,12 +940,12 @@
       <workItem from="1493852460270" duration="20589000" />
       <workItem from="1493915473789" duration="17760000" />
       <workItem from="1493982967862" duration="7417000" />
-      <workItem from="1493993174064" duration="7502000" />
+      <workItem from="1493993174064" duration="18588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="414566000" />
+    <option name="totallyTimeSpent" value="425652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="722" extended-state="0" />
@@ -1102,55 +1011,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/social-info.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/wp-smiley.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/tdcontent/plugins/js_composer/assets/js/dist/js_composer_front.min972f.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/tdcontent/plugins/js_composer/assets/css/vc_lte_ie9.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/_wpemoji.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/tdincludes/js/jquery/jqueryb8ff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/tdcontent/themes/js/tljsdiv_theme.mine98d.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2301">
@@ -1190,14 +1050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1373,13 +1225,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/video.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="53" column="241" selection-start-line="53" selection-start-column="241" selection-end-line="53" selection-end-column="241" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Repository/PostRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4071">
@@ -1418,7 +1263,7 @@
         <state relative-caret-position="207">
           <caret line="9" column="74" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="74" />
           <folding>
-            <element signature="e#725#735#0#Twig" expanded="true" />
+            <element signature="e#725#735#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1428,11 +1273,11 @@
         <state relative-caret-position="23">
           <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
           <folding>
-            <element signature="e#127#138#0#Twig" expanded="true" />
-            <element signature="e#560#571#0#Twig" expanded="true" />
-            <element signature="e#1447#1457#0#Twig" expanded="true" />
-            <element signature="e#2238#2248#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#127#138#0#Twig" expanded="false" />
+            <element signature="e#560#571#0#Twig" expanded="false" />
+            <element signature="e#1447#1457#0#Twig" expanded="false" />
+            <element signature="e#2238#2248#0#Twig" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1442,61 +1287,25 @@
         <state relative-caret-position="437">
           <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
           <folding>
-            <element signature="e#139#151#0#Twig" expanded="true" />
-            <element signature="e#598#610#0#Twig" expanded="true" />
+            <element signature="e#139#151#0#Twig" expanded="false" />
+            <element signature="e#598#610#0#Twig" expanded="false" />
             <element signature="e#1240#4028#0#Twig" expanded="false" />
-            <element signature="e#2618#2635#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#2618#2635#0#Twig" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/footer.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="229" column="66" selection-start-line="229" selection-start-column="66" selection-end-line="229" selection-end-column="66" />
+        <state relative-caret-position="219">
+          <caret line="128" column="28" selection-start-line="128" selection-start-column="28" selection-end-line="128" selection-end-column="28" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#15811#15829#0#Twig" expanded="true" />
-            <element signature="e#16578#16596#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/liipimage.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/dossier.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="67" column="153" selection-start-line="67" selection-start-column="153" selection-end-line="67" selection-end-column="229" />
-          <folding>
-            <element signature="e#496#508#0#Twig" expanded="true" />
-            <element signature="e#2253#2270#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/articles.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="85" />
-          <folding>
-            <element signature="e#3790#3799#0#Twig" expanded="true" />
+            <element signature="e#4329#4338#0#Twig" expanded="false" />
+            <element signature="e#5230#5239#0#Twig" expanded="false" />
+            <element signature="e#6584#6602#0#Twig" expanded="false" />
+            <element signature="e#6801#6813#0#Twig" expanded="false" />
+            <element signature="e#6933#6944#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1509,33 +1318,168 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/media/cache/thumb_block_article/uploads/posts/_4510ef787eeb1c703943d147472677f7.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/articles.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="26" column="234" selection-start-line="26" selection-start-column="234" selection-end-line="26" selection-end-column="288" />
+          <folding>
+            <element signature="e#1071#1080#0#Twig" expanded="false" />
+            <element signature="e#2802#2811#0#Twig" expanded="false" />
+            <element signature="e#3790#3799#0#Twig" expanded="false" />
+            <element signature="e#4764#4773#0#Twig" expanded="false" />
+            <element signature="e#5752#5761#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/dossier.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/video.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+          <folding>
+            <element signature="e#353#363#0#Twig" expanded="false" />
+            <element signature="e#1329#1339#0#Twig" expanded="false" />
+            <element signature="e#2463#2473#0#Twig" expanded="false" />
+            <element signature="e#3250#3260#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/resource/logo3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/resource/logo2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/resource/icon.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/resource/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/liipimage.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="72" column="25" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="230" column="51" selection-start-line="230" selection-start-column="51" selection-end-line="230" selection-end-column="51" />
+        <state relative-caret-position="371">
+          <caret line="124" column="87" selection-start-line="124" selection-start-column="87" selection-end-line="124" selection-end-column="87" />
           <folding>
             <element signature="e#1449#1471#1#PHP" expanded="true" />
             <element signature="e#1535#1559#1#PHP" expanded="true" />
             <element signature="e#1622#1647#1#PHP" expanded="true" />
             <element signature="e#1689#1735#0#PHP" expanded="true" />
+            <element signature="e#4652#4674#1#PHP" expanded="true" />
+            <element signature="e#4738#4760#1#PHP" expanded="true" />
+            <element signature="e#4823#4868#0#PHP" expanded="true" />
             <element signature="e#8530#8550#0#PHP" expanded="true" />
             <element signature="e#11326#11374#0#PHP" expanded="true" />
             <element signature="e#11784#11808#1#PHP" expanded="true" />
             <element signature="e#12289#12341#0#PHP" expanded="true" />
+            <element signature="e#12721#12766#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/footer.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-379">
-          <caret line="120" column="56" selection-start-line="120" selection-start-column="56" selection-end-line="120" selection-end-column="56" />
+        <state relative-caret-position="54">
+          <caret line="200" column="209" selection-start-line="200" selection-start-column="209" selection-end-line="200" selection-end-column="209" />
           <folding>
-            <element signature="e#4329#4338#0#Twig" expanded="true" />
-            <element signature="e#5230#5239#0#Twig" expanded="true" />
-            <element signature="e#6584#6602#0#Twig" expanded="true" />
-            <element signature="e#6801#6813#0#Twig" expanded="true" />
-            <element signature="e#6933#6944#0#Twig" expanded="true" />
+            <element signature="e#12#28#0#Twig" expanded="true" />
+            <element signature="e#3029#3037#0#Twig" expanded="true" />
+            <element signature="e#3402#3420#0#Twig" expanded="true" />
+            <element signature="e#3994#4009#0#Twig" expanded="true" />
+            <element signature="e#5091#5208#0#HTML" expanded="true" />
+            <element signature="e#5224#5239#0#Twig" expanded="true" />
+            <element signature="e#6930#6939#0#Twig" expanded="true" />
+            <element signature="e#7459#7468#0#Twig" expanded="true" />
+            <element signature="e#7871#7880#0#Twig" expanded="true" />
+            <element signature="e#8207#8216#0#Twig" expanded="true" />
+            <element signature="e#8663#8672#0#Twig" expanded="true" />
+            <element signature="e#9123#9132#0#Twig" expanded="true" />
+            <element signature="e#11702#11711#0#Twig" expanded="true" />
+            <element signature="e#12235#12244#0#Twig" expanded="true" />
+            <element signature="e#12653#12662#0#Twig" expanded="true" />
+            <element signature="e#12993#13002#0#Twig" expanded="true" />
+            <element signature="e#13453#13462#0#Twig" expanded="true" />
+            <element signature="e#13846#13855#0#Twig" expanded="true" />
+            <element signature="e#13997#14090#0#HTML" expanded="true" />
+            <element signature="e#14313#14322#0#Twig" expanded="true" />
+            <element signature="e#16391#16400#0#Twig" expanded="true" />
+            <element signature="e#16475#16497#0#HTML" expanded="true" />
+            <element signature="e#16618#16640#0#HTML" expanded="true" />
+            <element signature="e#17178#17200#0#HTML" expanded="true" />
+            <element signature="e#18843#18852#0#Twig" expanded="true" />
+            <element signature="e#19629#19644#0#Twig" expanded="true" />
+            <element signature="e#20059#20068#0#Twig" expanded="true" />
+            <element signature="e#20919#20940#0#HTML" expanded="true" />
+            <element signature="e#24366#24377#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Sections/page_section.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#12#28#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <element signature="e#17758#17776#0#Twig" expanded="true" />
+            <element signature="e#18525#18543#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

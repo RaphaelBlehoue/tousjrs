@@ -172,23 +172,48 @@
                             <!-- end block last time -->
 
                             <!-- block last folder -->
-                            <div class="td_block_wrap td-pb-border-top td_block_template_1">
-                                {{ render(controller(
-                                'LabsFrontBundle:Default:getDossierLimit',
-                                { 'template': 'dossier.html.twig', 'max':4 }
-                                )) }}
+                            <div class="td-block-inner" id="block-dossier">
+                                <div class="td-block-title-wrap">
+                                    <h4 class="block-title"><span class="td-pulldown-size">{{ 'Nos Dossiers'|upper }}</span></h4>
+                                    <div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_uid_34_58eb574baae6f">
+                                        <ul class="td-subcat-list" id="td_pulldown_td_uid_34_58eb574baae6f_list2">
+                                            <li class="td-subcat-item-2 li-none">
+                                                <a class="td-subcat-link"  href="{{ path('dossier_page') }}"><i class="td-icon-views"></i> {{ 'voir tous les dossiers'|capitalize }}</a>
+                                            </li>
+                                        </ul>
+                                        <div class="td-subcat-dropdown">
+                                            <div class="td-subcat-more" aria-haspopup="true">
+                                                <span>{{ 'voir tous les dossiers'|capitalize }}</span><i class="td-icon-read-down"></i>
+                                            </div>
+                                            <ul class="td-pulldown-filter-list"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="td_block_wrap td-pb-border-top td_block_template_1">
+                                    {{ render(controller(
+                                    'LabsFrontBundle:Default:getDossierLimit',
+                                    { 'template': 'dossier.html.twig', 'max':4 }
+                                    )) }}
+                                </div>
                             </div>
+
 
                             <!-- block last Rubriques -->
                             <div class="td-block-title-wrap">
                                 <h4 class="block-title"><span class="td-pulldown-size">{{ 'Rubrique day'|upper }}</span></h4>
                             </div>
 
-                            <!-- block last Rubriques -->
-                            <div class="td_block_wrap td-pb-border-top td_block_template_1">
-                                {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
+                            <!-- block last video -->
+                            <div class="td-block-inner" id="block-dossier">
+                                <div class="td-block-title-wrap">
+                                    <h4 class="block-title">
+                                        <span class="td-pulldown-size">{{ 'Videos du moment'|upper }}</span>
+                                    </h4>
+                                </div>
+                                <div class="td_block_wrap td-pb-border-top td_block_template_1">
+                                    {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
+                                </div>
                             </div>
-
                         </div>
                     </div>
 

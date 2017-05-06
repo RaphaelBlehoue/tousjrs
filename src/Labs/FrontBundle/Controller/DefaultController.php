@@ -122,7 +122,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $article = $em->getRepository('LabsAdminBundle:Post')->getPostSlug($post, $slug);
-        $old = $em->getRepository('LabsAdminBundle:Post')->OldPost($article->getId(), 8);
+        $old = $em->getRepository('LabsAdminBundle:Post')->OldPost($article->getId(), 3);
         return $this->render('LabsFrontBundle:Default:page_view.html.twig',[
             'article' => $article,
             'old'     => $old
