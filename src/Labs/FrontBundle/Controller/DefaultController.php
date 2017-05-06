@@ -290,13 +290,14 @@ class DefaultController extends Controller
 
     /**
      * @param $item
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @param $max
+     * @return \Symfony\Component\HttpFoundation\Response Recupère les 9 derniers articles organiser par date de creation pour chaque Items
      * Recupère les 9 derniers articles organiser par date de creation pour chaque Items
      */
-    public function getArticleByItemsAction($item)
+    public function getArticleByItemsAction($item, $max)
     {
-        $articles = $this->findPostItem($item);
-        return $this->render('LabsFrontBundle:Includes:posts_items.html.twig',
+        $articles = $this->findPostItem($item, $max);
+        return $this->render('LabsFrontBundle:Includes:v1/posts_items.html.twig',
             ['articles' => $articles]
         );
     }
@@ -388,13 +389,14 @@ class DefaultController extends Controller
 
     /**
      * @param $options
-     * @return array
+     * @param $max
+     * @return array Recupère les rubriques les derniers posts par date des differents Items
      * Recupère les rubriques les derniers posts par date des differents Items
      */
-    private function findPostItem($options)
+    private function findPostItem($options, $max)
     {
         $em = $this->getDoctrine()->getManager();
-        $posts = $em->getRepository('LabsAdminBundle:Post')->getCountPostByItems($options, 9);
+        $posts = $em->getRepository('LabsAdminBundle:Post')->getCountPostByItems($options, $max);
         return $posts;
     }
 

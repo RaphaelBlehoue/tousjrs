@@ -76,7 +76,7 @@
                                     </ul>
                                     <div class="td-subcat-dropdown">
                                         <div class="td-subcat-more" aria-haspopup="true">
-                                            <span>Live du moment</span><i class="td-icon-read-down"></i>
+                                            <span>{{ 'Plus' }}</span><i class="td-icon-read-down"></i>
                                         </div>
                                         <ul class="td-pulldown-filter-list"></ul>
                                     </div>
@@ -250,7 +250,7 @@
                             </div>
                         </div> <!-- ./block -->
                     </div>
-                    {% if loop.index0 >= 2 and loop.index0 < 3 %}
+                    {% if loop.index >= 2 and loop.index < 3 %}
                         <div class="vc_row wpb_row td-pb-row">
                             {{ render(controller('LabsFrontBundle:Default:getVideosReport')) }}
                         </div>

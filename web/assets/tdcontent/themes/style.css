@@ -105,6 +105,11 @@ body {
   list-style: none;
 }
 
+.item-style {
+  display: inline-block;
+  list-style-type: none;
+}
+
 
 /*  ----------------------------------------------------------------------------
     from title color

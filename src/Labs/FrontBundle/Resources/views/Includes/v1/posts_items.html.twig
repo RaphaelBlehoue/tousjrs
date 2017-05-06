@@ -1,0 +1,56 @@
+{% if articles|length > 0 %}
+<div id="" class="td_block_inner">
+    <div class="td-block-row">
+        {% for article in articles %}
+            {% if loop.first %}
+                <div class="td-block-span6">
+                    <div class="td_module_4 td_module_wrap td-animation-stack">
+                        <div class="td-module-image">
+                            <div class="td-module-thumb">
+                                <a href="{{ path('page_view', {'slug':article.slug}) }}" rel="{{ article.item.name }}" title="{{ article.name }}">
+                                    {% for media in article.medias %}
+                                        <img width="324" height="235" class="entry-thumb td-animation-stack-type0-2" src="{{ media.assertPath|imagine_filter('thumb_block_article') }}" alt="{{ article.name }}" title="{{ article.name }}">
+                                    {% endfor %}
+                                </a>
+                            </div>
+                            <a href="{{ path('front_item_page', {'rubrique': article.item.section.name ,'slug': article.item.slug}) }}" class="td-post-category">{{ article.item.name }}</a>
+                        </div>
+                        <h3 class="entry-title td-module-title">
+                            <a href="{{ path('page_view', {'slug':article.slug}) }}" rel="{{ article.item.name }}" title="{{ article.name }}">{{ article.name|truncate('90', true, '...') }}</a>
+                        </h3>
+                        <div class="td-module-meta-info">
+                            <span class="td-post-author-name"><a href="#">{{ 'Par TLJ' }}</a> <span>-</span> </span>
+                            <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="{{ article.created.date }}">{{ article.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time></span>
+                            <!--<div class="td-module-comments"><a href="">0</a></div>-->
+                        </div>
+                        <div class="td-excerpt">
+                            {{ article.content|striptags|truncate('120', false, '...') }}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        {% for arts in articles %}
+            {% if loop.first != loop.index %}
+                <div class="td-block-span6">
+                    <div class="td_module_6 td_module_wrap td-animation-stack">
+                        <div class="td-module-thumb">
+                            <a href="https://demo.tagdiv.com/newspaper/decorating-to-celebrate-the-great-outdoor-space/" rel="bookmark" title="Decorating to Celebrate the Great Outdoor Space">
+                                {% for media in arts.medias %}
+                                    <img width="100" height="70" class="entry-thumb td-animation-stack-type0-2" src="{{ media.assertPath|imagine_filter('thumb_top_small') }}" alt="{{ arts.name }}" title="{{ arts.name }}">
+                                {% endfor %}
+                            </a>
+                        </div>
+                        <div class="item-details">
+                            <h3 class="entry-title td-module-title"><a href="{{ path('page_view', {'slug': arts.slug}) }}" rel="{{ arts.item.name }}" title="{{ arts.name }}">{{ arts.name|truncate('90', true, '...') }}</a></h3>
+                            <div class="td-module-meta-info">
+                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="{{ arts.created.date }}">{{ arts.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</time></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

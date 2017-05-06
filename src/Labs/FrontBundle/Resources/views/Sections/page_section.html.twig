@@ -1,178 +1,183 @@
 {% extends '::base.html.twig' %}
-{% block stylesheets %}
-    <style type="text/css">
-        .menu > ul > li > a:hover{
-            color: {{ heading.color }}
-        }
-    </style>
+{% block title %}{{ 'TousLesJours.ci - Actualités et Infos en Côte d\'ivoire et dans le monde' }}{% endblock %}
+{% block meta_refresh %}
+    <meta http-equiv="refresh" content="360">
 {% endblock %}
-{% block submenu %}
-    <div class="heading">
-        <i class="fa fa-globe"></i><span>Rubrique</span>
-        <h1 class="" style="color: {{ heading.color }}">{{ heading.name|upper }}</h1>
-    </div>
-        <div class="menu-sec">
-            <div class="container">
-                <div class="menu">
-                    <ul>
-                        <li class="menu-item-has-children"><a itemprop="url" href="{{ path('front_section_page', {'slug': heading.slug }) }}" title="{{ heading.name }}" style="background-color: {{ heading.color }} !important; color:#fff;">{{ heading.name|capitalize }}</a></li>
-                        {% for item  in heading.items %}
-                            <li class="menu-item-has-children"><a itemprop="url" href="{{ path('front_item_page', {'rubrique':heading.slug, 'slug':item.slug}) }}" title="{{ item.name }}">{{ item.name }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-{% endblock %}
+{% block stylesheets %}{% endblock %}
 {% block body %}
-    <div class="container ">
-        <section class="block remove-top bg-section">
-            <div class="first-container">
-                <div class="first-row">
-                    <div class="col-md-8 column">
-                        {% for publication in lastpost %}
-                            {% if loop.first %}
-                                <div class="blog-single" itemscope itemType="http://schema.org/BlogPosting">
-                                    <div class="post-single-info">
-                                        <a href="{{ path('page_view', {'slug': publication.slug }) }}" title="{{ publication.name }}">
-                                            <h1 itemprop="headline">{{ publication.name }}</h1>
-                                        </a>
-                                        <ul>
-                                            <li><span>{{ 'Publié le '|upper }} :</span><a itemprop="url" href="#" title="">{{ publication.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</a></li>
-                                            <li><a itemprop="url" href="{{ path('front_item_page', {'rubrique':publication.item.section.slug , 'slug': publication.item.slug }) }}" title="{{ publication.item.name }}">{{ publication.item.name }}</a></li>
-                                            <li><a itemprop="url" href="" title="">{{ 'touslesjours' }}</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="single-post-thumb">
-                                        {% for media in publication.medias %}
-                                            <a href="{{ path('page_view', {'slug': publication.slug }) }}">
-                                                <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="" />
-                                            </a>
+    <div class="td-main-content-wrap td-main-page-wrap">
+        <div class="td-container td-post-template-default">
+            <!-- flash information section -->
+            {{ render(controller(
+            'LabsFrontBundle:Default:getflashInfos',
+            { 'template': 'flash_info.html.twig', 'max': 6 }
+            )) }}
+            <div class="td-pb-row pb50">
+                <div class="wpb_column vc_column_container td-pb-span8">
+                    <div class="vc_column-inner ">
+                        <div class="wpb_wrapper">
+                            <div class="td-block-title-wrap">
+                                <h4 class="block-title" style="border-color: {{ heading.color }};"><span class="td-pulldown-size" style="background-color: {{ heading.color }};">{{ heading.name|upper }}</span></h4>
+                                <div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_category-{{ heading.name ~ heading.slug }}">
+                                    <ul class="td-subcat-list" id="td_pulldown_td_uid_33_58eb574d7bd03_list">
+                                        {% for item  in heading.items %}
+                                            <li class="td-subcat-item-2 item-style"><a class="td-subcat-link" id="td_uid_34_{{ heading.name ~ heading.slug }}" data-td_filter_value="" data-td_block_id="td_uid_33_{{ heading.name ~ heading.slug }}" href="{{ path('front_item_page', {'rubrique':heading.slug, 'slug':item.slug}) }}" title="{{ item.name }}">{{ item.name }}</a></li>
                                         {% endfor %}
-                                        <div class="post-metas4">
-                                            <div class="date">
-                                                <ul>
-                                                    <li><a itemprop="url" href="#" title=""> {% if publication.legend|length > 0 %}{{publication.legend }} {% endif %}</a></li>
-                                                </ul>
+                                    </ul>
+                                    <div class="td-subcat-dropdown">
+                                        <div class="td-subcat-more" aria-haspopup="true"><span>{{ 'plus'|capitalize }}</span><i class="td-icon-read-down"></i></div>
+                                        <ul class="td-pulldown-filter-list"></ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% for post in lastpost %}
+                                {% if loop.first %}
+                                    <div class="td_block_wrap td_block_18 td_uid_31_58eb574db0676_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_31_58eb574db0676" >
+
+                                        <div class="td-block-title-wrap">
+                                            <h2 class="title">
+                                                <a href="{{ path('page_view', { 'slug': post.slug }) }}" title="{{ post.name }}" rel="{{ post.item.name }}">{{ post.name }}</a>
+                                            </h2>
+                                        </div>
+
+                                        <div id="{{ post.slug }}" class="td_block_inner td-column-2">
+                                            <div class="td_module_mx8 td_module_wrap td-animation-stack">
+                                                <div class="meta-info-container">
+                                                    <div class="td-module-thumb">
+                                                        <a href="{{ path('page_view', { 'slug': post.slug }) }}" rel="bookmark" title="{{ post.name }}">
+                                                            {% for media in post.medias %}
+                                                                <img width="696" height="385" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_top') }}" alt="{{ post.name }}" title="{{ post.name }}"
+                                                                     srcset="{{ media.assertPath|imagine_filter('thumb_top') }} 100w, {{ media.assertPath|imagine_filter('thumb_top') }} 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="{{ post.name }}"/>
+                                                            {% endfor %}
+                                                            {% if  post.types is not empty %}
+                                                                {% if  post.types == 0 %}
+                                                                    <span class="td-video-play-ico">
+                                                                        <img width="40" height="40" class="td-retina" src="{{ asset('images/icons/ico-video-large.png') }}" alt="video - {{ post.name }}"/>
+                                                                    </span>
+                                                                {% endif %}
+                                                            {% endif %}
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="td-module-meta-info">
+                                                        <h6 class="entry-title td-module-title">
+                                                            <img src="{{ asset('favicon/favicon-16x16.png') }}" alt="{{ post.name }}" style="vertical-align: middle">
+                                                            <a class="ft14" title="{{ post.legend }}"> {{ post.legend }}</a>
+                                                        </h6>
+                                                        <span class="td-author-date">
+                                                            <span class="td-post-author-name"><a href="">Par TLJ</a> <span>-</span> </span>
+                                                            <span class="td-post-date"><time class="entry-date timeago updated td-module-date" datetime="{{ post.created.date }}" title="{{ post.created.date }}">{{ post.created|date('m d, Y') }}</time></span>
+                                                            <!--<div class="td-module-comments"><a href="../2017/04/09/moogle-corp-company-you-might-be-working-for/index.html#respond">0</a></div>-->
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                {{ post.content|striptags|truncate('150', false, '...') }} <a href="{{ path('page_view', { 'slug': post.slug }) }}" title="{{ post.name }}">{{ 'Lire la suite' }}</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="blog-single-details">
-                                        <p itemprop="description">
-                                            {{ publication.content|truncate(350, true)|raw }}
-                                        </p>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        {%  for rubrique in heading.items %}
+                            {% if rubrique|length > 0 %}
+                                <div class="wpb_wrapper">
+                                    <div class="td-block-title-wrap">
+                                        <a href="{{ path('front_item_page', {'rubrique': heading.slug ,'slug': rubrique.slug}) }}" title="{{ rubrique.name }}">
+                                            <h4 class="block-title" style="border-color: {{ heading.color }};"><span class="td-pulldown-size" style="background-color: {{ heading.color }};">{{ rubrique.name|upper }}</span></h4>
+                                        </a>
+                                        <div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_category-{{ heading.name ~ heading.slug }}">
+                                            <ul class="td-subcat-list" id="td_pulldown_td_uid_33_58eb574d7bd03_list">
+                                               <li class="td-subcat-item-2 li-none"><a class="td-subcat-link" id="td_uid_34_{{ rubrique.name ~ rubrique.slug }}" data-td_filter_value="" data-td_block_id="td_uid_33_{{ rubrique.name ~ rubrique.slug }}" href="{{ path('front_item_page', {'rubrique':heading.slug, 'slug':rubrique.slug}) }}" title="{{ rubrique.name }}">{{ 'consultez la rubrique'|capitalize }}</a></li>
+                                            </ul>
+                                            <div class="td-subcat-dropdown">
+                                                <div class="td-subcat-more" aria-haspopup="true"><span>{{ 'plus'|capitalize }}</span><i class="td-icon-read-down"></i></div>
+                                                <ul class="td-pulldown-filter-list"></ul>
+                                            </div>
+                                        </div>
                                     </div>
+                                    {{ render(controller('LabsFrontBundle:Default:getArticleByItems', {'item' : rubrique.id , 'max': 5})) }}
                                 </div>
                             {% endif %}
                         {% endfor %}
-
-                        <section class="block top-margin">
-                            <div class="heading">
-                                <span>{{ sections.name |upper }}</span>
-                                <h2>{{ 'A la une'|capitalize }}</h2>
-                            </div><!-- Heading -->
-                            <div class="top-margin">
-                                <div class="row">
-                                    <ul id="itemContainer" class="loader-data">
-                                        {% for post in lastpost %}
-                                            {% if not loop.first %}
-                                                <li class="col-md-6">
-                                                    <div class="post-style4" itemscope itemType="http://schema.org/BlogPosting">
-                                                        {% for media in post.medias %}
-                                                            <div class="post-thumb4"><img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_top_bottom') }}" alt=""/>
-                                                                <a href="{{ path('page_view', {'slug': post.slug }) }}" title="{{ post.name }}" itemprop="url" class="img-link"></a>
-                                                            </div>
-                                                        {% endfor %}
-                                                        <div class="post-metas4">
-                                                            <div class="date">
-                                                                <ul>
-                                                                    <li><a itemprop="datePublished" content="{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" href="#" title="">{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }} |</a></li>
-                                                                    <li><a itemprop="url" href="{{ path('front_item_page', {'rubrique':post.item.section.slug, 'slug':post.item.slug}) }}" title="">{{ post.item.name }}</a></li>
-                                                                    <br/>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <h3 itemprop="headline"><a itemprop="url" href="{{ path('page_view', {'slug' : post.slug}) }}" title="{{ post.name }}">{{ post.name|truncate('40', true, '...') }}</a></h3>
-                                                        <p itemprop="description">
-                                                            {{ post.content|truncate('200', true)|raw }}
-                                                        </p>
-                                                    </div><!-- Post Stye 4 -->
-                                                </li>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- publicité -->
-                        <section class="block remove-top">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="centred">
-                                        <img src="http://placehold.it/600x216" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- end publicité -->
                     </div>
-                    <aside class="col-md-4 column">
-                        {{ render(controller('LabsFrontBundle:Default:getflashInfos')) }}
-                        <div class="widget">
-                            <ul class="review-widget">
-                                <div class="post-style6" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                    <div class="post-thumb6">
-                                        <a href="http://www.agrsici.com" target="_blank"><img itemprop="image" src="{{ asset('images/resource/pub.jpg') }}" alt="" /></a>
-                                    </div>
-                                </div><!-- Post Style 8 -->
-                            </ul>
+                </div>
+                <div class="td-pb-span4 td-main-sidebar" role="complementary">
+                    <div class="td-ss-main-sidebar">
+                        <div class="td-a-rec td-a-rec-id-sidebar ">
+                            <span class="td-adspot-title">- Advertisement -</span>
+                            <div class="td-all-devices"><a href="#"><img src="http://placehold.it/350x250"/></a></div>
                         </div>
-                        {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
-                    </aside>
+                        <!-- block network information -->
+                        {% include('LabsFrontBundle:Includes/v1:social-info.html.twig') %}
+                        <!-- end block network information -->
+                        <!-- block last time -->
+                        <div class="td_block_wrap td-pb-border-top td_block_template_1">
+                            {{ render(controller(
+                            'LabsFrontBundle:Default:getflashInfos',
+                            { 'template': 'flash_info_sidebar.html.twig', 'max':5 }
+                            )) }}
+                        </div>
+                        <!-- end block last time -->
+
+                        <div class="td_block_wrap td_block_18 td_block_widget td_uid_35_58eb576330145_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_35_58eb576330145" >
+                            <div class="td-block-title-wrap">
+                                <h4 class="block-title"><span class="td-pulldown-size">{{ 'Nos Dossiers'|upper }}</span></h4>
+                                <div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_uid_34_58eb574baae6f">
+                                    <ul class="td-subcat-list" id="td_pulldown_td_uid_34_58eb574baae6f_list2">
+                                        <li class="td-subcat-item-2 li-none">
+                                            <a class="td-subcat-link"  href="{{ path('dossier_page') }}"><i class="td-icon-views"></i> {{ 'voir tous les dossiers'|capitalize }}</a>
+                                        </li>
+                                    </ul>
+                                    <div class="td-subcat-dropdown">
+                                        <div class="td-subcat-more" aria-haspopup="true">
+                                            <span>{{ 'voir tous les dossiers'|capitalize }}</span><i class="td-icon-read-down"></i>
+                                        </div>
+                                        <ul class="td-pulldown-filter-list"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id=td_uid_35_58eb576330145 class="td_block_inner td-column-1">
+                                {{ render(controller(
+                                'LabsFrontBundle:Default:getDossierLimit',
+                                { 'template': 'dossier.html.twig', 'max':5 }
+                                )) }}
+                            </div>
+                        </div>
+                        <!-- ./block -->
+                        <div class="td_block_wrap td_block_9 td_block_widget td_uid_36_58eb576335107_rand td_with_ajax_pagination td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_36_58eb576335107" >
+                            <div class="td-block-title-wrap">
+                                <h4 class="block-title"><span class="td-pulldown-size">{{ 'Nos videos'|upper }}</span></h4>
+                                <div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_uid_34_58eb574baae6f">
+                                    <ul class="td-subcat-list" id="td_pulldown_td_uid_34_58eb574baae6f_list2">
+                                        <li class="td-subcat-item-2 li-none">
+                                            <a class="td-subcat-link"  href="{{ path('videos_page') }}"><i class="td-icon-views"></i> {{ 'voir toutes les videos'|capitalize }}</a>
+                                        </li>
+                                    </ul>
+                                    <div class="td-subcat-dropdown">
+                                        <div class="td-subcat-more" aria-haspopup="true">
+                                            <span>{{ 'voir toutes les videos'|capitalize }}</span><i class="td-icon-read-down"></i>
+                                        </div>
+                                        <ul class="td-pulldown-filter-list"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id=td_uid_36_58eb576335107 class="td_block_inner">
+                                {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
+                            </div>
+                        </div>
+                        <!-- ./block -->
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-    <div class="container">
-        {%  for rubrique in heading.items %}
-            {% if rubrique|length > 0 %}
-                <section class="block remove-top remove-bottom bg-section m-2">
-                    <div>
-                        <section class="block remove-top">
-                            <div class="col-md-12 column background-style" style="border-top: 3px solid {{ heading.color }};">
-                                <a href="{{ path('front_item_page', {'rubrique': heading.slug ,'slug': rubrique.slug}) }}">
-                                    <div class="heading5">
-                                        <h3 class="text-center titlecolor" style="color: {{ heading.color }};">
-                                            {{ rubrique.name|capitalize }}
-                                        </h3>
-                                    </div><!-- Heading -->
-                                </a>
-                            </div>
-                        </section>
-                        <div class="clear"></div>
-                        <section class="block remove-top">
-                            <div class="col-md-12 column">
-                                <div class="row">
-                                    {{ render(controller('LabsFrontBundle:Default:getArticleByItems', {'item' : rubrique.id })) }}
-                                </div>
-                            </div>
-                        </section>
-                        <div class="clear"></div>
-                        <div class="col-md-12 column background-style" style="border-top: 3px solid #EEF1F5;">
-                            <a href="{{ path('front_item_page', {'rubrique': heading.slug ,'slug': rubrique.slug}) }}">
-                                <h5 class="text-center" style="color:{{ heading.color }}; font-weight: 700;">
-                                    {{ 'Consultez la rubriques '~ rubrique.name }}
-                                </h5>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            {% endif %}
-        {% endfor %}
-    </div>
+    <!-- /.td-main-content-wrap -->
 {% endblock %}
 {% block javascripts %}
-    {{ parent() }}
-    <script type="text/javascript" src="{{ asset('js/apis/tjr.carousel.min.js') }}"></script>
+    <script type="text/javascript">
+        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/wp.touslesjours.dev\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.3"}};
+        !function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
 {% endblock %}
+
