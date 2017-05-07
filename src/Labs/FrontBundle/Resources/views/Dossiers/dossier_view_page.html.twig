@@ -1,106 +1,283 @@
 {% extends '::base.html.twig' %}
-{% block title %}{{ 'TousLesJours.ci - Actualités et Infos en Côte d\'ivoire et dans le monde' }}{% endblock %}
-{% block stylesheets %}{% endblock %}
+{% block title %}{{ article.name }}{% endblock %}
+{% block meta %}
+    <link rel="canonical" href="{{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}" />
+    <!-- sample facbook meta tags -->
+    <meta property="og:url" content="{{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}" />
+    <meta property="og:title" content="{{ article.name }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="{{ article.content|truncate(200, true, '...')|striptags }}" />
+    <meta property="og:image"  content="{{ absolute_url(article.medias.0.assertPath|imagine_filter('thumb_facebook') ) }}" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:site_name"  content="{{ 'touslesjours CI' }}" />
+    <meta property="og:locale"  content="fr_FR"/>
+    <meta property="og:updated_time" content="{{ article.created|date('d, m Y') }}" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:rich_attachment" content="true" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="315">
+    <meta property="fb:app_id" content="1651341078293386">
+    <!--- sample twitter card meta tags --->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@touslesjoursci">
+    <meta name="twitter:creator" content="@touslesjoursci">
+    <meta name="twitter:title" content="{{ article.name }}">
+    <meta name="twitter:description" content="{{ article.content|truncate(140, true, '...')|striptags }}">
+    <meta name="twitter:image" content="{{ absolute_url(article.medias.0.assertPath|imagine_filter('thumb_article_view') ) }}">
+    <meta name="twitter:image:alt" content="{{ article.legend }}">
+
+{% endblock %}
+
+{% block stylesheets %}
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
-  <div class="container">
-      <section class="block remove-top bg-section">
-          <div class="first-container">
-              <div class="first-row">
-                    <div class="col-md-8 column">
-                        <div class="blog-single" itemscope itemType="http://schema.org/BlogPosting">
-                            <div class="post-single-info">
-                                <h1 itemprop="headline">{{ article.name }}</h1>
-                                <ul>
-                                    <li><a itemprop="url" href="#" title="">Publié le : {{ article.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</a></li>
-                                    <li><a itemprop="url" href="{{ path('front_item_page', {'rubrique' : article.item.section.slug, 'slug': article.item.slug }) }}" title="{{ article.item.name }}">{{ article.item.name }}</a></li>
+    <div class="td-main-content-wrap td-main-page-wrap">
+        <div class="td-container td-post-template-default">
+            <!-- flash information section -->
+            {{ render(controller(
+            'LabsFrontBundle:Default:getflashInfos',
+            { 'template': 'flash_info.html.twig', 'max': 6 }
+            )) }}
+            <!-- breadcrumbs information section -->
+            <div class="td-crumb-container">
+                <div class="entry-crumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <span class="td-bred-first"><a href="{{ path('homepage') }}">{{ 'Accueil'|capitalize }}</a></span>
+                    <i class="td-icon-right td-bread-sep"></i>
+                    <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                        <a title="View all posts in Video" class="entry-crumb" itemscope itemprop="item" itemtype="http://schema.org/Thing" href="{{ path('front_section_page', {'slug': article.item.section.slug}) }}">
+                            <span itemprop="name">{{ article.item.section.name }}</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </span>
+                    <i class="td-icon-right td-bread-sep"></i>
+                    <span itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                        <a title="View all posts in Video" class="entry-crumb" itemscope itemprop="item" itemtype="http://schema.org/Thing" href="{{ path('front_item_page', {'rubrique' : article.item.section.slug, 'slug': article.item.slug }) }}">
+                            <span itemprop="name">{{ article.item.name }}</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </span>
+                    <i class="td-icon-right td-bread-sep td-bred-no-url-last"></i>
+                    <span class="td-bred-no-url-last">{{ article.name|truncate('150', false, '...') }}</span>
+                </div>
+            </div>
+            <!-- content -->
+            <div class="td-pb-row">
+                <div class="td-pb-span8 td-main-content" role="main">
+                    <div class="td-ss-main-content">
+                        <article id="post-117" class="post-117 post type-post status-publish format-standard has-post-thumbnail hentry category-video" itemscope itemtype="http://schema.org/Article">
+                            <div class="td-post-header">
+                                <ul class="td-category">
+                                    <li class="entry-category"><a  style="background-color:{{ article.item.section.color }}; color:#fff; border-color:{{ article.item.section.color }};" href="{{ path('front_item_page', {'rubrique' : article.item.section.slug, 'slug': article.item.slug }) }}">{{ article.item.name }}</a></li>
                                 </ul>
+                                <header class="td-post-title">
+                                    <h1 class="entry-title"> {{ article.name }} </h1>
+                                    <div class="td-module-meta-info">
+                                        <div class="td-post-author-name">
+                                            <div class="td-author-by">{{ 'par'|capitalize }}</div>
+                                            <a href="">{{ 'tlj'|upper }}</a>
+                                            <div class="td-author-line"> - </div>
+                                        </div>
+                                        <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="{{ article.created.date }}" >{{ article.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }} </time></span>
+                                        <!--<div class="td-post-comments"><a href="index.html#respond"><i class="td-icon-comments"></i>0</a></div>
+                                        <div class="td-post-views"><i class="td-icon-views"></i><span class="td-nr-views-117">1</span></div> -->
+                                    </div>
+                                </header>
                             </div>
-                            <div class="single-post-thumb">
-                                {% for media in article.medias  %}
-                                <img itemprop="image" src="{{ media.assertPath|imagine_filter('thumb_block_article') }}" alt="" />
-                                <ul class="share-post">
-                                    <li><span>{{ 'Partager l\'article' }}</span></li>
-                                    <li><a itemprop="url" href="#" title=""><i class="fa fa-facebook"></i></a></li>
-                                    <li><a itemprop="url" href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a itemprop="url" href="#" title=""><i class="fa fa-twitter"></i></a></li>
-                                    <li><a itemprop="url" href="#" title=""><i class="fa fa-pinterest"></i></a></li>
-                                    <li><a itemprop="url" href="#" title=""><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                                {% endfor %}
+                            <div class="td-post-sharing td-post-sharing-top">
+                                <div class="td-default-sharing">
+                                    <a class="td-social-sharing-buttons td-social-facebook" href="https://www.facebook.com/sharer.php?u={{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                        <i class="td-icon-facebook"></i>
+                                        <div class="td-social-but-text">Partage sur Facebook</div>
+                                    </a>
+                                    <a class="td-social-sharing-buttons td-social-twitter" href="https://twitter.com/intent/tweet?text={{ article.name }}&amp;url={{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}&amp;via=@touslesjoursci">
+                                        <i class="td-icon-twitter"></i>
+                                        <div class="td-social-but-text">Tweet sur Twitter</div>
+                                    </a>
+                                    <a class="td-social-sharing-buttons td-social-google" href="https://plus.google.com/share?url={{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-googleplus"></i></a>
+                                    <a class="td-social-sharing-buttons td-social-pinterest" href="https://pinterest.com/pin/create/button/?url={{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}&amp;media={{ absolute_url(article.medias.0.assertPath|imagine_filter('thumb_facebook') ) }}&amp;description={{ article.name }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-pinterest"></i></a>
+                                    <a class="td-social-sharing-buttons td-social-whatsapp" href="whatsapp://send?text={{ article.name }}-{{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}"><i class="td-icon-whatsapp"></i></a>
+                                </div>
                             </div>
-                            <div class="post-single-info">
-                                <p class="date">
-                                    {% if article.legend|length > 0 %}{{ article.legend }}{% endif %}
-                                </p>
+                            <div class="td-post-content td_module_mx8">
+                                <div class="td-module-thumb">
+                                    <figure id="article_attachment_{{ article.id }}" class="wp-caption aligncenter">
+                                        <a href="{{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}" data-caption="{{ article.name }}">
+                                            {% for media in article.medias  %}
+                                                <img width="696" height="464" class="entry-thumb" src="{{ media.assertPath|imagine_filter('thumb_article_view') }}" srcset="{{ absolute_url(asset(media.assertPath)) }} 696w, {{ absolute_url(asset(media.assertPath)) }} 300w, {{ absolute_url(asset(media.assertPath)) }} 768w, {{ absolute_url(asset(media.assertPath)) }} 1024w, {{ absolute_url(asset(media.assertPath)) }} 1068w, {{ absolute_url(asset(media.assertPath)) }} 630w" sizes="(max-width: 696px) 100vw, 696px" alt="{{ article.name }}" title="{{ article.name }}"/>
+                                            {% endfor %}
+                                        </a>
+                                        <figcaption class="wp-caption-text" title="{{ article.legend }}">{{ article.legend }}</figcaption>
+                                    </figure>
+                                    {% if  article.types is not empty %}
+                                        {% if  article.types == 0 %}
+                                            <span class="td-video-play-ico">
+                                                 <img width="40" height="40" class="td-retina" src="{{ asset('images/icons/ico-video-large.png') }}" alt="video - {{ article.name }}"/>
+                                            </span>
+                                        {% endif %}
+                                    {% endif %}
+                                </div>
+                                {{ article.content|raw }}
+                                <!-- pub -->
+                                <!--<div class="td-a-rec td-a-rec-id-content_bottom  ">
+                                    <div class="td-all-devices"><a href="#"><img src="../../../../wp-content/uploads/2017/04/rec728-1.jpg"/></a></div>
+                                </div>-->
                             </div>
-                            <!--<div class="post-rate">
-                                <span><i class="fa fa-eye"></i> 9875</span>
-                                <span><i class="fa fa-heart"></i> 78k</span>
-                                <div class="rating-detailed">
-                                    <strong class="rating-title">3</strong>
-                                    <div class="rating-stars">
-                                        <b class="fa fa-star star-on"></b>
-                                        <b class="fa fa-star star-on"></b>
-                                        <b class="fa fa-star star-on"></b>
-                                        <b class="fa fa-star star-on"></b>
-                                        <b class="fa fa-star star-off"></b>
+                            <footer>
+                                <div class="td-post-source-tags">
+                                </div>
+                                <div class="td-post-sharing td-post-sharing-bottom td-with-like">
+                                    <span class="td-post-share-title">{{ 'partager'|upper }}</span>
+                                    <div class="td-default-sharing">
+                                        <a class="td-social-sharing-buttons td-social-facebook" href="https://www.facebook.com/sharer.php?u={{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                            <i class="td-icon-facebook"></i>
+                                            <div class="td-social-but-text">Facebook</div>
+                                        </a>
+                                        <a class="td-social-sharing-buttons td-social-twitter" href="https://twitter.com/intent/tweet?text={{ article.name }}&amp;url={{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}&amp;via=@touslesjoursci">
+                                            <i class="td-icon-twitter"></i>
+                                            <div class="td-social-but-text">Twitter</div>
+                                        </a>
+                                        <a class="td-social-sharing-buttons td-social-google" href="https://plus.google.com/share?url={{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-googleplus"></i></a>
+                                        <a class="td-social-sharing-buttons td-social-pinterest" href="https://pinterest.com/pin/create/button/?url={{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}&amp;media={{ absolute_url(article.medias.0.assertPath|imagine_filter('thumb_facebook') ) }}&amp;description={{ article.name }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-pinterest"></i></a>
+                                        <a class="td-social-sharing-buttons td-social-whatsapp" href="whatsapp://send?text={{ article.name }}-{{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}"><i class="td-icon-whatsapp"></i></a>
+                                    </div>
+                                    <div class="td-classic-sharing">
+                                        <ul>
+                                            <li class="td-classic-facebook"><iframe frameBorder="0" src="http://www.facebook.com/plugins/like.php?href={{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}&amp;layout=button_count&amp;show_faces=false&amp;width=105&amp;action=like&amp;colorscheme=light&amp;height=21" style="border:none; overflow:hidden; width:105px; height:21px; background-color:transparent;"></iframe></li>
+                                            <li class="td-classic-twitter">
+                                                <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}" data-text="{{ article.name }}" data-via="@touslesjoursci" data-lang="fr">tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>-->
-                            <div class="blog-single-details">
-                                <p itemprop="description">
-                                    {{ article.content|raw }}
-                                </p>
-                                <div class="post-tags">
-                                    <span><i class="fa fa-tags"></i> TAG :</span>
-                                    <a href="{{ path('front_section_page', {'slug': article.item.section.slug}) }}" title="{{ article.item.section.name }}">{{ article.item.section.name }}</a>
-                                    <a href="{{ path('front_item_page', {'rubrique':article.item.section.slug, 'slug': article.item.slug}) }}" title="{{ article.item.name }}">{{ article.item.name }}</a>
-                                    <a href="" title="">{{ article.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}</a>
-                                </div>
-                            </div>
-                        </div><!-- Single Post -->
-                        <div class="rel-post-sec">
-                            <h3 class="heading4">Sur le même sujet</h3>
-                            <div class="top-margin">
-                                {% for post in old %}
-                                    <div class="col-md-6">
-                                    <div itemtype="http://schema.org/BlogPosting" itemscope="" class="post-style1">
-                                        {% for m in post.medias %}
-                                            <div class="post-thumb1">
-                                                <img alt="" src="{{ m.assertPath|imagine_filter('thumb_top_small') }}" itemprop="image">
-                                                <a href="{{ path('page_dossier_view', {'rubrique':post.item.slug ,'slug':post.slug}) }}" title="{{ post.name }}" itemprop="url" class="img-link"></a>
+                                <!--<div class="author-box-wrap">
+                                    <a href="../../../../author/admin/index.html"><img alt='' src='http://2.gravatar.com/avatar/896e2835bbe660a1c39776e9b222e4b5?s=96&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/896e2835bbe660a1c39776e9b222e4b5?s=192&amp;d=mm&amp;r=g 2x' class='avatar avatar-96 photo' height='96' width='96' /></a>
+                                    <div class="desc">
+                                        <div class="td-author-name vcard author"><span class="fn"><a href="../../../../author/admin/index.html">admin</a></span></div>
+                                        <div class="td-author-description"></div>
+                                        <div class="td-author-social"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div> -->
+                                <!--<span style="display: none;" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <meta itemprop="name" content="admin">
+                                </span>-->
+                                <meta itemprop="datePublished" content="{{ article.created.date }}">
+                                <meta itemprop="dateModified" content="{{ article.updated.date }}">
+                                <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{ url('page_dossier_view', {'rubrique':article.item.slug, 'slug':article.slug }) }}"/>
+                                    <span style="display: none;" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                       <span style="display: none;" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                          <meta itemprop="url" content="{{ asset('images/resource/logo.png') }}">
+                                       </span>
+                                       <meta itemprop="name" content="{{ article.content|truncate('150', false, '...')|raw }}">
+                                    </span>
+                                <meta itemprop="headline " content="{{ article.name }}">
+                                    <span style="display: none;" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                                       <meta itemprop="url" content="{{ absolute_url(article.medias.0.assertPath|imagine_filter('thumb_facebook') ) }}">
+                                       <meta itemprop="width" content="600">
+                                       <meta itemprop="height" content="315">
+                                    </span>
+                            </footer>
+                        </article>
+                        <!-- /.post -->
+                        <div class="td_block_wrap td_block_related_posts td_uid_31_58eb57632aa45_rand td_with_ajax_pagination td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_31_58eb57632aa45">
+                            <h4 class="td-related-title td-block-title">
+                                <a id="td_uid_32_58eb57632c31a" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_31_58eb57632aa45" href="#">{{ 'autres articles'|upper }}</a>
+                            </h4>
+                            <div id=td_uid_31_58eb57632aa45 class="td_block_inner">
+                                <div class="td-related-row">
+                                    {% for post in old %}
+                                        <div class="td-related-span4">
+                                            <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+                                                <div class="td-module-image">
+                                                    <div class="td-module-thumb"><a href="{{ url('page_dossier_view', {'rubrique':post.item.slug, 'slug':post.slug }) }}" rel="{{ post.item.name }}" title="{{ post.name }}">
+                                                            {% for m in post.medias %}
+                                                                <img width="218" height="150" class="entry-thumb" src="{{ m.assertPath|imagine_filter('thumb_article_old') }}" srcset="{{ absolute_url(asset(m.assertPath)) }} 218w, {{ absolute_url(asset(m.assertPath)) }} 100w" sizes="(max-width: 218px) 100vw, 218px" alt="" title="{{ post.name }}"/>
+                                                            {% endfor %}
+                                                        </a>
+                                                    </div>
+                                                    <a href="{{ path('front_item_page', {'rubrique':post.item.section.slug, 'slug': post.item.slug}) }}" class="td-post-category">{{ post.item.name }}</a>
+                                                </div>
+                                                <div class="item-details">
+                                                    <h3 class="entry-title td-module-title">
+                                                        <a href="{{ url('page_dossier_view', {'rubrique':post.item.slug, 'slug':post.slug }) }}" rel="{{ post.item.name }}" title="{{ post.name }}">{{ post.name }}</a>
+                                                    </h3>
+                                                </div>
                                             </div>
-                                        {% endfor %}
-                                        <div class="date">
-                                            <ul>
-                                                <li><a itemprop="datePublished" content="{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }}" href="#" title="">{{ post.created|localizeddate('none', 'none', null, null, 'dd MMMM Y') }} |</a></li>
-                                            </ul>
                                         </div>
-                                        <h3 itemprop="headline"><a title="{{ post.name }}" href="{{ path('page_dossier_view', {'rubrique': post.item.slug,'slug': post.slug}) }}" itemprop="url">{{ post.name|truncate('50', true, '...') }}</a></h3>
-                                    </div><!-- Post Style 1 -->
+                                    {% endfor %}
                                 </div>
-                                {% endfor %}
+                                <!--./row-fluid-->
                             </div>
-                        </div><!-- Related Post Sec -->
-
-                    </div>
-                    <aside class="col-md-4 column">
-                        {{ render(controller('LabsFrontBundle:Default:getflashInfos')) }}
-                        <div class="widget">
-                              <ul class="review-widget">
-                                    <div class="post-style6" itemtype="http://schema.org/BlogPosting" itemscope="">
-                                          <div class="post-thumb6">
-                                              <a href="http://www.agrsici.com" target="_blank"><img itemprop="image" src="{{ asset('images/resource/pub.jpg') }}" alt="" /></a>
-                                          </div>
-                                    </div><!-- Post Style 8 -->
-                              </ul>
                         </div>
-                        {{ render(controller('LabsFrontBundle:Default:getRecentArticle')) }}
-                        {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
-                        {{ render(controller('LabsFrontBundle:Default:getDossierInfo')) }}
-                    </aside>
-              </div>
-          </div>
-      </section>
-  </div>
+                        <!-- ./block -->
+                        <div class="comments" id="comments">
+                            <div id="respond" class="comment-respond">
+                                <h3 id="reply-title" class="comment-reply-title">{{ 'Commentaires'|upper }} <small><a rel="nofollow" id="cancel-comment-reply-link" style="display:none;">Cancel reply</a></small></h3>
+                            </div>
+                            <!-- #respond -->
+                        </div>
+                        <!-- /.content -->
+                    </div>
+                </div>
+                <div class="td-pb-span4 td-main-sidebar" role="complementary">
+                    <div class="td-ss-main-sidebar">
+                        <div class="td-a-rec td-a-rec-id-sidebar ">
+                            <span class="td-adspot-title">- Advertisement -</span>
+                            <div class="td-all-devices"><a href="#"><img src="http://placehold.it/350x250"/></a></div>
+                        </div>
+                        {% include 'LabsFrontBundle:Includes/v1:social-info.html.twig' %}
+                        <div class="td_block_wrap td_block_9 td_block_widget td_uid_36_58eb576335107_rand td_with_ajax_pagination td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_36_58eb576335107" >
+                            <div class="td-block-title-wrap">
+                                <h4 class="block-title"><span class="td-pulldown-size">{{ 'Nos videos'|upper }}</span></h4>
+                                <div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_uid_34_58eb574baae6f">
+                                    <ul class="td-subcat-list" id="td_pulldown_td_uid_34_58eb574baae6f_list2">
+                                        <li class="td-subcat-item-2 li-none">
+                                            <a class="td-subcat-link"  href="{{ path('videos_page') }}"><i class="td-icon-views"></i> {{ 'voir toutes les videos'|capitalize }}</a>
+                                        </li>
+                                    </ul>
+                                    <div class="td-subcat-dropdown">
+                                        <div class="td-subcat-more" aria-haspopup="true">
+                                            <span>{{ 'voir toutes les videos'|capitalize }}</span><i class="td-icon-read-down"></i>
+                                        </div>
+                                        <ul class="td-pulldown-filter-list"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id=td_uid_36_58eb576335107 class="td_block_inner">
+                                {{ render(controller('LabsFrontBundle:Default:getSideBarvideo')) }}
+                            </div>
+                        </div>
+                        <!-- ./block -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.td-pb-row -->
+        </div>
+        <!-- /.td-container -->
+    </div>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/wp.touslesjours.dev\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.3"}};
+        !function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
 {% endblock %}

@@ -99,7 +99,7 @@ class DefaultController extends Controller
         $findPost = $em->getRepository('LabsAdminBundle:Post')->getCountPostByItems($Items, 150);
         $posts = $this->get('knp_paginator')->paginate(
             $findPost,
-            $request->request->getInt('page', $page), 20);
+            $request->request->getInt('page', $page), 12);
         $currentItem = $Items->getId();
         return $this->render('LabsFrontBundle:Items:page_item.html.twig',[
             'heading' => $heading,

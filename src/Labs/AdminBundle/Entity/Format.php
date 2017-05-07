@@ -60,6 +60,13 @@ class Format
     protected $content;
 
     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated", type="datetime")
+     */
+    protected $updated;
+
+    /**
      * @var bool
      * @ORM\Column(name="online", type="boolean", nullable=true)
      */
@@ -117,6 +124,7 @@ class Format
     {
         $this->medias = new ArrayCollection();
         $this->created = new \DateTime("now");
+        $this->updated = new \DateTime("now");
         $this->draft = false;
     }
     
@@ -403,5 +411,38 @@ class Format
     public function getTypes()
     {
         return $this->types;
+    }
+
+
+    /**
+     * Set updated
+     *
+     * @param \DateTime $updated
+     *
+     * @return Post
+     */
+    public function setUpdated($updated)
+    {
+        $this->updated = $updated;
+
+        return $this;
+    }
+
+    /**
+     * Get updated
+     *
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->updated;
+    }
+
+    /**
+     * @return \DateTime
+     * @ORM\PostUpdate()
+     */
+    public function updatedSet(){
+        return $this->updated = new \DateTime('now');
     }
 }

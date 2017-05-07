@@ -1,23 +1,30 @@
 {# default Sliding pagination control implementation #}
 
 {% if pageCount > 1 %}
-    <ul class="pagination">
+<div class="page-nav td-pb-padding-side">
+    {% if previous is defined %}
+        <a href="{{ path(route, query|merge({(pageParameterName): previous})) }}"><i class="td-icon-menu-left"></i></a>
+    {% endif %}
 
-        {% if previous is defined %}
-            <li><a aria-label="Previous" href="{{ path(route, query|merge({(pageParameterName): previous})) }}"><span aria-hidden="true">← {{ 'précedent' }}</span></a></li>
+    {% for page in pagesInRange %}
+        {% if page != current %}
+            <a href="{{ path(route, query|merge({(pageParameterName): page})) }}" class="page" title="{{ page }}">{{ page }}</a>
+        {% else %}
+            <span class="current">{{ page }}</span>
         {% endif %}
+    {% endfor %}
+    {% if pagesInRange[0] - first >= 2 %}
+        <span class="extend">...</span>
+    {% endif %}
 
-        {% for page in pagesInRange %}
-            {% if page != current %}
-                <li><a href="{{ path(route, query|merge({(pageParameterName): page})) }}">{{ page }}</a></li>
-            {% else %}
-                <li><span class="current">{{ page }}</span></li>
-            {% endif %}
-        {% endfor %}
+    {% if next is defined %}
+        <a href="{{ path(route, query|merge({(pageParameterName): next})) }}"><i class="td-icon-menu-right"></i></a>
+    {% endif %}
 
-        {% if next is defined %}
-            <li><a aria-label="Next" href="{{ path(route, query|merge({(pageParameterName): next})) }}"><span aria-hidden="true">{{ 'suivant' }} →</span></a></li>
-        {% endif %}
+    {% if pageCount > endPage %}
+        <span class="pages">Page {{ pageCount }}</span>
+    {% endif %}
 
-    </ul>
+    <div class="clearfix"></div>
+</div>
 {% endif %}
