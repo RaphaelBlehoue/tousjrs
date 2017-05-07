@@ -17,7 +17,7 @@
                     </div>
                     <div class="td_data_time">
                         <div >
-                            {{ 'now'|date('d, M Y') }}
+                            {{ 'now'|localizeddate('none', 'none', null, null, 'd MMMM Y') }}
                         </div>
                     </div>
                     <ul class="top-header-menu td_ul_login">
@@ -66,7 +66,7 @@
             <div class="td-header-sp-logo">
                 <h1 class="td-logo">
                     <a class="td-main-logo" href="{{ path('homepage') }}" title="touslesjours.ci - 1er site d'information national & international. Les articles du journal , actualité en continu, Abidjan, Côte d'ivoire">
-                        <img class="td-retina-data" data-retina="{{ asset('logo_principal.png', 'images') }}" src="{{ asset('logo_principal.png', 'images') }}" alt="Touslesjours.ci logo - Abidjan Côte d'ivoire"/>
+                        <img class="td-retina-data" data-retina="{{ asset('images/resource/logo_principal.png') }}" src="{{ asset('images/resource/logo_principal.png') }}" alt="Touslesjours.ci logo - Abidjan Côte d'ivoire"/>
                         <span class="td-visual-hidden">{{ 'Accueil' }}</span>
                     </a>
                 </h1>
@@ -75,7 +75,7 @@
                 <div class="td-header-rec-wrap">
                     <div class="td-a-rec td-a-rec-id-header">
                         <div class="td-all-devices">
-                            <a href="http://agrsici.com" target="_blank" title="Agrsici.com - immobilier, construction , plan"><img src="{{ asset('ads.jpg', 'images') }}" alt="Agrsici.com - immobilier, construction , plan de maison, hotel"/></a>
+                            <a href="http://agrsici.com" target="_blank" title="Agrsici.com - immobilier, construction , plan"><img src="{{ asset('images/resource/ads.jpg') }}" alt="Agrsici.com - immobilier, construction , plan de maison, hotel"/></a>
                         </div>
                     </div>
                 </div>
@@ -91,10 +91,10 @@
                     <div id="td-top-mobile-toggle"><a href="#"><i class="td-icon-font td-icon-mobile"></i></a></div>
                     <div class="td-main-menu-logo td-logo-in-header">
                         <a class="td-mobile-logo td-sticky-header" href="{{ path('homepage') }}" title="touslesjours.ci - 1er site d'information national & international. Les articles du journal , actualité en continu, Abidjan, Côte d'ivoire">
-                            <img src="{{ asset('logo_white.png', 'images') }}" alt="Touslesjours.ci logo - Abidjan Côte d'ivoire"/>
+                            <img src="{{ asset('images/resource/logo_white.png') }}" alt="Touslesjours.ci logo - Abidjan Côte d'ivoire"/>
                         </a>
                         <a class="td-header-logo td-sticky-header" href="{{ path('homepage') }}" title="touslesjours.ci logo - 1er site d'information national & international. Les articles du journal , actualité en continu, Abidjan, Côte d'ivoire">
-                            <img class="td-retina-data" data-retina="{{ asset('logo_principal.png', 'images') }}" src="{{ asset('logo_principal.png', 'images') }}" alt="Touslesjours.ci - Abidjan Côte d'ivoire"/>
+                            <img class="td-retina-data" data-retina="{{ asset('images/resource/logo_principal.png') }}" src="{{ asset('images/resource/logo_principal.png') }}" alt="Touslesjours.ci - Abidjan Côte d'ivoire"/>
                         </a>
                     </div>
                     <div class="menu-td-demo-header-menu-container">

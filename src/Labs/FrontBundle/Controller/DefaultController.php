@@ -50,11 +50,14 @@ class DefaultController extends Controller
             'menu_sections' => $sections
         ]);
     }
-    
+
 
     /**
      * @param Section $section
      * @return \Symfony\Component\HttpFoundation\Response
+     * @throws \LogicException
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      * @Route("/tj/{slug}", name="front_section_page")
      * @Method({"GET"})
      * Page Rubrique
@@ -84,6 +87,9 @@ class DefaultController extends Controller
      * @param $rubrique
      * @param $page
      * @return \Symfony\Component\HttpFoundation\Response
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     * @throws \LogicException
      * @Route("/{rubrique}/p/{slug}/page-{page}", name="front_item_page", requirements={"id" = "\d+"}, defaults={"page" = 1})
      * @Method({"GET"})
      * Page Sous-Rubrique
@@ -131,16 +137,22 @@ class DefaultController extends Controller
 
 
     /**
+     * @param Request $request
+     * @param $page
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("pages/videos", name="videos_page")
+     * @throws \LogicException
+     * @Route("pages/videos/page-{page}", name="videos_page", defaults={"page" = 1})
      * @Method({"GET"})
      * Page Video
      * Page qui liste toute les videos du site
      */
-    public function videoListAction()
+    public function videoListAction(Request $request, $page)
     {
         $api = $this->get('youtube_api.service');
-        $youtube = $api->getSearchVideo(20);
+        $getYoutube = $api->getSearchVideo(50);
+        $youtube = $this->get('knp_paginator')->paginate(
+            $getYoutube,
+            $request->request->getAlnum('page', $page), 16);
         return $this->render('LabsFrontBundle:Videos:index.html.twig',[
             'youtube' => $youtube
         ]);
@@ -160,7 +172,7 @@ class DefaultController extends Controller
         foreach ($video_array as $k => $v){
             $video[$k] = $v;
         }
-        $youtube= $api->getSearchVideo(6);
+        $youtube= $api->getSearchVideo(20);
         return $this->render('LabsFrontBundle:Videos:view.html.twig',[
             'video' => $video,
             'medias' => $youtube

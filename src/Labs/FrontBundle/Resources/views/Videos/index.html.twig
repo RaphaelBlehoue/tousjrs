@@ -1,72 +1,107 @@
 {% extends '::base.html.twig' %}
-{% block title %}{{ 'TousLesJours.ci - Actualités et Infos en Côte d\'ivoire et dans le monde' }}{% endblock %}
-{% block meta_refresh %}
-    <meta http-equiv="refresh" content="720">
+{% block title %}{{ youtube.0.Title }}{% endblock %}
+{% block meta %}
+    <link rel="canonical" href="{{ url('video_view', { 'id': youtube.0.Id }) }}" />
+    <!-- sample facbook meta tags -->
+    <meta property="og:url" content="{{ url('video_view', { 'slug': youtube.0.Id }) }}" />
+    <meta property="og:title" content="{{ youtube.0.Title }}" />
+    <meta property="og:type" content="youtube.0.Title" />
+    <meta property="og:description" content="{{ youtube.0.Title }}" />
+    <meta property="og:image"  content="{{ youtube.0.Thumb.high.url }}" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:site_name"  content="{{ 'Touslesjoursci.com' }}" />
+    <meta property="og:locale"  content="fr_FR"/>
+    <meta property="og:updated_time" content="{{ youtube.0.Published|localizeddate('none', 'none', null, null, 'd MMMM Y') }}" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:rich_attachment" content="true" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="315">
+    <meta property="fb:app_id" content="1651341078293386">
+    <!--- sample twitter card meta tags --->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@touslesjoursci">
+    <meta name="twitter:creator" content="@touslesjoursci">
+    <meta name="twitter:title" content="{{ youtube.0.Title }}">
+    <meta name="twitter:description" content="{{ youtube.0.Title}}">
+    <meta name="twitter:image" content="{{ youtube.0.Thumb.high.url }}">
+    <meta name="twitter:image:alt" content="{{ youtube.0.Title }}">
 {% endblock %}
 {% block body %}
-
-    <article id="post-175" class="td-post-template-11 post-175 post type-post status-publish format-video has-post-thumbnail hentry category-tagdiv-music category-tagdiv-video post_format-post-format-video td-container-wrap" itemscope="" itemtype="https://schema.org/Article">
+{% if youtube|length > 0 %}
+    <youtube.0.Title id="post-175" class="td-post-template-11 post-175 post type-post status-publish format-video has-post-thumbnail hentry category-tagdiv-music category-tagdiv-video post_format-post-format-video td-container-wrap" itemscope="" itemtype="https://schema.org/youtube.0.Title">
         <div class="td-video-template-bg">
             <div class="td-container">
                 <div class="td-pb-row">
                     <div class="td-pb-span12 td-crumb-container">
                         <div class="entry-crumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                            <span class="td-bred-first"><a href="https://demo.tagdiv.com/newspaper/">Home</a></span> <i class="td-icon-right td-bread-sep"></i>
+                            <span class="td-bred-first"><a href="{{ path('homepage') }}">{{ 'Accueil' }}</a></span> <i class="td-icon-right td-bread-sep"></i>
                             <span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-                               <a title="View all posts in Music" class="entry-crumb" itemscope="" itemprop="item" itemtype="http://schema.org/Thing" href="https://demo.tagdiv.com/newspaper/category/tagdiv-music/">
-                               <span itemprop="name">Music</span> </a>
+                               <a title="Video - touslesjoursci.com - touslesjourstv" class="entry-crumb" itemscope="" itemprop="item" itemtype="http://schema.org/Thing" href="{{ path('videos_page') }}">
+                               <span itemprop="name">{{ 'videos'|capitalize }}</span> </a>
                                <meta itemprop="position" content="1">
                             </span>
-                            <i class="td-icon-right td-bread-sep td-bred-no-url-last"></i> <span class="td-bred-no-url-last">How to Make a Perfect Caffe Macchiato </span>
+
+                            {% for first in youtube %}
+                                {% if loop.first %}
+                                    <i class="td-icon-right td-bread-sep td-bred-no-url-last"></i> <span class="td-bred-no-url-last">{{ first.Title }} </span>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="td-pb-span4 td-post-header">
                         <ul class="td-category">
-                            <li class="entry-category"><a style="background-color:#5c69c1;color:#fff;border-color:#5c69c1" href="https://demo.tagdiv.com/newspaper/category/tagdiv-music/">Music</a></li>
-                            <li class="entry-category"><a style="background-color:#4ac5db;color:#fff;border-color:#4ac5db" href="https://demo.tagdiv.com/newspaper/category/tagdiv-video/">Video</a></li>
+                            <li class="entry-category"><a style="background-color:#5c69c1;color:#fff;border-color:#5c69c1" href="{{ chaine_link }}" target="_blank">{{ 'chaine'|capitalize }}</a></li>
+                            <li class="entry-category"><a style="background-color:#4ac5db;color:#fff;border-color:#4ac5db" href="{{ chaine_link }}" target="_blank">{{ youtube.0.Channel }}</a></li>
                         </ul>
                         <header class="td-post-title">
-                            <h1 class="entry-title">How to Make a Perfect Caffe Macchiato [video]</h1>
+                            <h1 class="entry-title ft18">{{ youtube.0.Title }}</h1>
                             <div class="td-module-meta-info">
                                 <div class="td-post-author-name">
-                                    <div class="td-author-by">By</div>
-                                    <a href="https://demo.tagdiv.com/newspaper/author/marius/">John Doe</a>
+                                    <div class="td-author-by">{{ 'Par' }}</div>
+                                    <a href="{{ chaine_link }}" title="TouslesjoursciTV" target="_blank">{{ youtube.0.Channel }}</a>
                                     <div class="td-author-line"> - </div>
                                 </div>
-                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-04-22T05:23:48+00:00">Apr 22, 2015</time></span>
-                                <div class="td-post-views"><i class="td-icon-views"></i><span class="td-nr-views-175">1804</span></div>
-                                <div class="td-post-comments"><a href="https://demo.tagdiv.com/newspaper/td-post-how-to-make-a-perfect-caffe-macchiato-video/#respond"><i class="td-icon-comments"></i>0</a></div>
+                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="{{ youtube.0.Published|date('Y m d hh:mm:ss') }}">{{ youtube.0.Published|localizeddate('none', 'none', null, null, 'd MMMM Y') }}</time></span>
                             </div>
                         </header>
                         <div class="td-a-rec td-a-rec-id-post_style_11  ">
                             <div class="td-visible-desktop">
-                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:300px" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2016/01/rec300.jpg" alt="" width="300" height="250"></a>
+                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:300px" src="http://placehold.it/300x250" alt="" width="300" height="250"></a>
                             </div>
                             <div class="td-visible-tablet-landscape">
-                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:300px" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2016/01/rec300.jpg" alt="" width="300" height="250"></a>
+                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:300px" src="http://placehold.it/300x250" alt="" width="300" height="250"></a>
                             </div>
                             <div class="td-visible-tablet-portrait">
-                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:468px" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2016/01/rec468.jpg" alt="" width="468" height="60"></a>
+                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:468px" src="http://placehold.it/468x60" alt="" width="468" height="60"></a>
                             </div>
                         </div>
                     </div>
                     <div class="td-pb-span8 td-post-featured-video">
+                        <!-- player -->
                         <div class="wpb_video_wrapper">
-                            <iframe id="td_youtube_player" width="100%" height="560" src="https://www.youtube.com/embed/1eiLFPuKjXE?enablejsapi=1&amp;feature=oembed&amp;wmode=opaque&amp;vq=hd720" frameborder="0" allowfullscreen="" style="height: 391.5px;"></iframe>
-                        </div>
+                            <iframe id="td_youtube_player"
+                                    width="100%"
+                                    height="560"
+                                    src="https://www.youtube.com/embed/{{ youtube.0.Id }}?enablejsapi=1&amp;feature=oembed&amp;wmode=opaque&amp;vq=hd720"
+                                    frameborder="0" allowfullscreen=""
+                                    style="height: 391.5px;">
+                            </iframe>
+                        </div> <!-- player end -->
+
                         <div class="td-post-sharing td-post-sharing-top ">
                             <div class="td-default-sharing">
-                                <a class="td-social-sharing-buttons td-social-facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdemo.tagdiv.com%2Fnewspaper%2Ftd-post-how-to-make-a-perfect-caffe-macchiato-video%2F" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                <a class="td-social-sharing-buttons td-social-facebook" href="https://www.facebook.com/sharer.php?u={{ url('video_view', { 'id' : youtube.0.Id }) }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                                     <i class="td-icon-facebook"></i>
-                                    <div class="td-social-but-text">Share on Facebook</div>
+                                    <div class="td-social-but-text">{{ 'Partager sur Facebook' }}</div>
                                 </a>
-                                <a class="td-social-sharing-buttons td-social-twitter" href="https://twitter.com/intent/tweet?text=How+to+Make+a+Perfect+Caffe+Macchiato+%5Bvideo%5D&amp;url=https%3A%2F%2Fdemo.tagdiv.com%2Fnewspaper%2Ftd-post-how-to-make-a-perfect-caffe-macchiato-video%2F&amp;via=Newspaper+7+Demo">
+                                <a class="td-social-sharing-buttons td-social-twitter" href="https://twitter.com/intent/tweet?text={{ youtube.0.Title }}&amp;url={{ url('video_view', { 'id' : youtube.0.Id }) }}&amp;via=TouslesjoursciTV">
                                     <i class="td-icon-twitter"></i>
-                                    <div class="td-social-but-text">Tweet on Twitter</div>
+                                    <div class="td-social-but-text">{{ 'Tweet on Twitter' }}</div>
                                 </a>
-                                <a class="td-social-sharing-buttons td-social-google" href="https://plus.google.com/share?url=https://demo.tagdiv.com/newspaper/td-post-how-to-make-a-perfect-caffe-macchiato-video/" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-googleplus"></i></a>
-                                <a class="td-social-sharing-buttons td-social-pinterest" href="https://pinterest.com/pin/create/button/?url=https://demo.tagdiv.com/newspaper/td-post-how-to-make-a-perfect-caffe-macchiato-video/&amp;media=https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/maxresdefault3.jpg&amp;description=How+to+Make+a+Perfect+Caffe+Macchiato+%5Bvideo%5D" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-pinterest"></i></a>
-                                <a class="td-social-sharing-buttons td-social-whatsapp" href="whatsapp://send?text=How+to+Make+a+Perfect+Caffe+Macchiato+%5Bvideo%5D%20-%20https%3A%2F%2Fdemo.tagdiv.com%2Fnewspaper%2Ftd-post-how-to-make-a-perfect-caffe-macchiato-video%2F"><i class="td-icon-whatsapp"></i></a>
+                                <a class="td-social-sharing-buttons td-social-google" href="https://plus.google.com/share?url={{ url('video_view', { 'id' : youtube.0.Id }) }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-googleplus"></i></a>
+                                <a class="td-social-sharing-buttons td-social-pinterest" href="https://pinterest.com/pin/create/button/?url={{ url('video_view', { 'id' : youtube.0.Id }) }}&amp;media={{ youtube.0.Thumb.high.url }}&amp;description={{ youtube.0.Title }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-pinterest"></i></a>
+                                <a class="td-social-sharing-buttons td-social-whatsapp" href="whatsapp://send?text={{ youtube.0.Title }}-{{ url('video_view', { 'id' : youtube.0.Id }) }}"><i class="td-icon-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>
@@ -76,73 +111,37 @@
         <div class="td-video-template-bg-small">
             <div class="td-container">
                 <div class="td_block_wrap td_block_related_posts td-related-full-width td_uid_17_590eaa2a1c1e1_rand td_with_ajax_pagination td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_17_590eaa2a1c1e1">
-                    <h4 class="td-related-title td-block-title"><a id="td_uid_18_590eaa2a1cae7" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_17_590eaa2a1c1e1" href="#">RELATED ARTICLES</a><a id="td_uid_19_590eaa2a1cb1e" class="td-related-right" data-td_filter_value="td_related_more_from_author" data-td_block_id="td_uid_17_590eaa2a1c1e1" href="#">MORE FROM AUTHOR</a></h4>
-                    <div id="td_uid_17_590eaa2a1c1e1" class="td_block_inner td_animated_xlong td_fadeInLeft" style="height: auto;">
+                    <h4 class="td-related-title td-block-title">
+                        <a id="td_uid_18_590eaa2a1cae7" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_last_video" href="#">{{ 'Dernière video'|upper }}</a>
+                    </h4>
+                    <div id="td_uid_last_video" class="td_block_inner td_animated_xlong td_fadeInLeft" style="height: auto;">
                         <div class="td-related-row">
-                            <div class="td-related-span4">
-                                <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/15-grooming-techniques-every-man-needs-to-know/" rel="bookmark" title="15 Grooming Techniques Every Man Needs to Know"><img width="218" height="150" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/02/bike-218x150.jpg" alt="" title="15 Grooming Techniques Every Man Needs to Know"></a></div>
-                                        <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-music/" class="td-post-category">Music</a>
+                            {% for video in youtube %}
+                                {% if not(loop.first)  and loop.index <= 6 %}
+                                <div class="td-related-span4">
+                                    <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+                                        <div class="td-module-image">
+                                            <div class="td-module-thumb">
+                                                <a href="{{ url('video_view', { 'id': video.Id }) }}" rel="video" title="{{ video.Title }}">
+                                                    <img width="218" height="150" class="entry-thumb td-animation-stack-type0-2" src="{{ video.Thumb.medium.url }}" alt="{{ video.Title }}" title="{{ video.Title }}">
+                                                    <span class="td-video-play-ico">
+                                                        <img width="40" height="40" class="td-retina td-animation-stack-type0-2" src="{{ asset('images/icons/ico-video-large.png') }}" alt="video">
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <a href="{{ chaine_link }}" class="td-post-category">{{ video.Channel }}</a>
+                                        </div>
+                                        <div class="item-details">
+                                            <h3 class="entry-title td-module-title"><a href="{{ url('video_view', { 'id': video.Id }) }}" rel="video" title="{{ video.Title }}">{{ video.Title }}</a></h3>
+                                        </div>
                                     </div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/15-grooming-techniques-every-man-needs-to-know/" rel="bookmark" title="15 Grooming Techniques Every Man Needs to Know">15 Grooming Techniques Every Man Needs to Know</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ./td-related-span4 -->
-                            <div class="td-related-span4">
-                                <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-best-dubstep-remixes-of-popular-songs-dubstep-mix-march-2015/" rel="bookmark" title="Best Dubstep Remixes Of Popular Songs Dubstep Mix March 2015"><img width="218" height="150" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/79-218x150.jpg" alt="" title="Best Dubstep Remixes Of Popular Songs Dubstep Mix March 2015"></a></div>
-                                        <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-music/" class="td-post-category">Music</a>
-                                    </div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-best-dubstep-remixes-of-popular-songs-dubstep-mix-march-2015/" rel="bookmark" title="Best Dubstep Remixes Of Popular Songs Dubstep Mix March 2015">Best Dubstep Remixes Of Popular Songs Dubstep Mix March 2015</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ./td-related-span4 -->
-                            <div class="td-related-span4">
-                                <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-the-quiet-city-winter-in-paris-by-andrew-julian/" rel="bookmark" title="The Quiet City: Winter in Paris by Andrew Julian"><img width="218" height="150" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/78-218x150.jpg" alt="" title="The Quiet City: Winter in Paris by Andrew Julian"></a></div>
-                                        <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-music/" class="td-post-category">Music</a>
-                                    </div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-the-quiet-city-winter-in-paris-by-andrew-julian/" rel="bookmark" title="The Quiet City: Winter in Paris by Andrew Julian">The Quiet City: Winter in Paris by Andrew Julian</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ./td-related-span4 -->
-                            <div class="td-related-span4">
-                                <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-after-effects-guru-tracking-and-stabilizing-footage/" rel="bookmark" title="After Effects Guru: Tracking and Stabilizing Footage"><img width="218" height="150" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/maxresdefault9-218x150.jpg" alt="" title="After Effects Guru: Tracking and Stabilizing Footage"><span class="td-video-play-ico"><img width="40" height="40" class="td-retina td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/themes/011/images/icons/ico-video-large.png" alt="video"></span></a></div>
-                                        <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-video/" class="td-post-category">Video</a>
-                                    </div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-after-effects-guru-tracking-and-stabilizing-footage/" rel="bookmark" title="After Effects Guru: Tracking and Stabilizing Footage">After Effects Guru: Tracking and Stabilizing Footage</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ./td-related-span4 -->
-                            <div class="td-related-span4">
-                                <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit"><img width="218" height="150" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/SWe_q-218x150.png" alt="" title="What happens when your carryon is over the limit"><span class="td-video-play-ico"><img width="40" height="40" class="td-retina td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/themes/011/images/icons/ico-video-large.png" alt="video"></span></a></div>
-                                        <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-music/" class="td-post-category">Music</a>
-                                    </div>
-                                    <div class="item-details">
-                                        <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit">What happens when your carryon is over the limit</a></h3>
-                                    </div>
-                                </div>
-                            </div>
+                                 </div>
+                                 {% endif %}
+                            {% endfor %}
                             <!-- ./td-related-span4 -->
                         </div>
                         <!--./row-fluid-->
                     </div>
-                    <div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_17_590eaa2a1c1e1" data-td_block_id="td_uid_17_590eaa2a1c1e1"><i class="td-icon-font td-icon-menu-left"></i></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_17_590eaa2a1c1e1" data-td_block_id="td_uid_17_590eaa2a1c1e1"><i class="td-icon-font td-icon-menu-right"></i></a></div>
                 </div>
             </div>
         </div>
@@ -153,126 +152,50 @@
                         <div class="clearfix"></div>
                         <div class="td-block-title-wrap"><h4 class="block-title"><span class="td-pulldown-size">{{ 'Autres videos' }}</span></h4></div>
                         <div class="td-block-row">
-                            <div class="td-block-span6">
-                                <div class="td_module_1 td_module_wrap td-animation-stack">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-vfx-techniques-creating-a-cg-flag-with-after-effects/" rel="bookmark" title="VFX Techniques: Creating a CG Flag with After Effects"><img width="324" height="160" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/516062670_6401-324x160.jpg" alt="" title="VFX Techniques: Creating a CG Flag with After Effects"><span class="td-video-play-ico"><img width="40" height="40" class="td-retina td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/themes/011/images/icons/ico-video-large.png" alt="video"></span></a></div>
-                                        <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-video/" class="td-post-category">Video</a>
+                            {% for other in youtube %}
+                                {% if loop.index > 6 %}
+                                    <div class="td-block-span6 td-min-height">
+                                        <div class="td_module_1 td_module_wrap td-animation-stack">
+                                            <div class="td-module-image">
+                                                <div class="td-module-thumb">
+                                                    <a href="{{ url('video_view', { 'id': other.Id }) }}" rel="bookmark" title="{{ other.Title }}">
+                                                        <img width="324" height="160" class="entry-thumb td-animation-stack-type0-2" src="{{ other.Thumb.medium.url }}" alt="{{ other.Title }}" title="{{ other.Title }}">
+                                                        <span class="td-video-play-ico">
+                                                            <img width="40" height="40" class="td-retina td-animation-stack-type0-2" src="{{ asset('images/icons/ico-video-large.png') }}" alt="video">
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <a href="{{ chaine_link }}" class="td-post-category">{{ other.Channel }}</a>
+                                            </div>
+                                            <h3 class="entry-title td-module-title">
+                                                <a href="{{ url('video_view', {'id': other.Id}) }}" rel="video" title="{{ other.Title }}">{{ other.Title }}</a>
+                                            </h3>
+                                            <div class="td-module-meta-info">
+                                                <span class="td-post-author-name"><a href="{{ chaine_link }}">{{ other.Channel }}</a> <span>-</span>
+                                                </span> <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="{{ other.Published|date('Y M d hh:mm:ss') }}">{{ other.Published|localizeddate('none', 'none', null, null, 'd MMMM Y') }}</time></span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-vfx-techniques-creating-a-cg-flag-with-after-effects/" rel="bookmark" title="VFX Techniques: Creating a CG Flag with After Effects">VFX Techniques: Creating a CG Flag with After Effects</a></h3>
-                                    <div class="td-module-meta-info">
-                                        <span class="td-post-author-name"><a href="https://demo.tagdiv.com/newspaper/author/marius2/">Matt Cloey</a> <span>-</span> </span> <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-04-22T05:23:47+00:00">Apr 22, 2015</time></span>
-                                        <div class="td-module-comments"><a href="https://demo.tagdiv.com/newspaper/td-post-vfx-techniques-creating-a-cg-flag-with-after-effects/#respond">0</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="td-block-span6">
-                                <div class="td_module_1 td_module_wrap td-animation-stack">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit"><img width="324" height="160" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/SWe_q-324x160.png" alt="" title="What happens when your carryon is over the limit"><span class="td-video-play-ico"><img width="40" height="40" class="td-retina td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/themes/011/images/icons/ico-video-large.png" alt="video"></span></a></div>
-                                        <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-video/" class="td-post-category">Video</a>
-                                    </div>
-                                    <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit">What happens when your carryon is over the limit</a></h3>
-                                    <div class="td-module-meta-info">
-                                        <span class="td-post-author-name"><a href="https://demo.tagdiv.com/newspaper/author/admin/">Armin Vans</a> <span>-</span> </span> <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-04-22T05:23:47+00:00">Apr 22, 2015</time></span>
-                                        <div class="td-module-comments"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/#respond">0</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="td-block-span6">
-                                <div class="td_module_1 td_module_wrap td-animation-stack">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit"><img width="324" height="160" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/SWe_q-324x160.png" alt="" title="What happens when your carryon is over the limit"><span class="td-video-play-ico"><img width="40" height="40" class="td-retina td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/themes/011/images/icons/ico-video-large.png" alt="video"></span></a></div>
-                                        <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-video/" class="td-post-category">Video</a>
-                                    </div>
-                                    <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit">What happens when your carryon is over the limit</a></h3>
-                                    <div class="td-module-meta-info">
-                                        <span class="td-post-author-name"><a href="https://demo.tagdiv.com/newspaper/author/admin/">Armin Vans</a> <span>-</span> </span> <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-04-22T05:23:47+00:00">Apr 22, 2015</time></span>
-                                        <div class="td-module-comments"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/#respond">0</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="td-block-span6">
-                                <div class="td_module_1 td_module_wrap td-animation-stack">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit"><img width="324" height="160" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/SWe_q-324x160.png" alt="" title="What happens when your carryon is over the limit"><span class="td-video-play-ico"><img width="40" height="40" class="td-retina td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/themes/011/images/icons/ico-video-large.png" alt="video"></span></a></div>
-                                        <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-video/" class="td-post-category">Video</a>
-                                    </div>
-                                    <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit">What happens when your carryon is over the limit</a></h3>
-                                    <div class="td-module-meta-info">
-                                        <span class="td-post-author-name"><a href="https://demo.tagdiv.com/newspaper/author/admin/">Armin Vans</a> <span>-</span> </span> <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-04-22T05:23:47+00:00">Apr 22, 2015</time></span>
-                                        <div class="td-module-comments"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/#respond">0</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="td-block-span6">
-                                <div class="td_module_1 td_module_wrap td-animation-stack">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit"><img width="324" height="160" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/SWe_q-324x160.png" alt="" title="What happens when your carryon is over the limit"><span class="td-video-play-ico"><img width="40" height="40" class="td-retina td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/themes/011/images/icons/ico-video-large.png" alt="video"></span></a></div>
-                                        <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-video/" class="td-post-category">Video</a>
-                                    </div>
-                                    <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit">What happens when your carryon is over the limit</a></h3>
-                                    <div class="td-module-meta-info">
-                                        <span class="td-post-author-name"><a href="https://demo.tagdiv.com/newspaper/author/admin/">Armin Vans</a> <span>-</span> </span> <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-04-22T05:23:47+00:00">Apr 22, 2015</time></span>
-                                        <div class="td-module-comments"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/#respond">0</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="td-block-span6">
-                                <div class="td_module_1 td_module_wrap td-animation-stack">
-                                    <div class="td-module-image">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit"><img width="324" height="160" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/SWe_q-324x160.png" alt="" title="What happens when your carryon is over the limit"><span class="td-video-play-ico"><img width="40" height="40" class="td-retina td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/themes/011/images/icons/ico-video-large.png" alt="video"></span></a></div>
-                                        <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-video/" class="td-post-category">Video</a>
-                                    </div>
-                                    <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/" rel="bookmark" title="What happens when your carryon is over the limit">What happens when your carryon is over the limit</a></h3>
-                                    <div class="td-module-meta-info">
-                                        <span class="td-post-author-name"><a href="https://demo.tagdiv.com/newspaper/author/admin/">Armin Vans</a> <span>-</span> </span> <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-04-22T05:23:47+00:00">Apr 22, 2015</time></span>
-                                        <div class="td-module-comments"><a href="https://demo.tagdiv.com/newspaper/td-post-what-happens-when-your-carryon-is-over-the-limit/#respond">0</a></div>
-                                    </div>
-                                </div>
-                            </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                         <footer>
                             <div class="td-post-source-tags"></div>
-                            <div class="td-post-sharing td-post-sharing-bottom td-with-like">
-                                <span class="td-post-share-title">{{ 'Partager' }}</span>
-                                <div class="td-default-sharing">
-                                    <a class="td-social-sharing-buttons td-social-facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdemo.tagdiv.com%2Fnewspaper%2Ftd-post-how-to-make-a-perfect-caffe-macchiato-video%2F" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
-                                        <i class="td-icon-facebook"></i>
-                                        <div class="td-social-but-text">Facebook</div>
-                                    </a>
-                                    <a class="td-social-sharing-buttons td-social-twitter" href="https://twitter.com/intent/tweet?text=How+to+Make+a+Perfect+Caffe+Macchiato+%5Bvideo%5D&amp;url=https%3A%2F%2Fdemo.tagdiv.com%2Fnewspaper%2Ftd-post-how-to-make-a-perfect-caffe-macchiato-video%2F&amp;via=Newspaper+7+Demo">
-                                        <i class="td-icon-twitter"></i>
-                                        <div class="td-social-but-text">Twitter</div>
-                                    </a>
-                                    <a class="td-social-sharing-buttons td-social-google" href="https://plus.google.com/share?url=https://demo.tagdiv.com/newspaper/td-post-how-to-make-a-perfect-caffe-macchiato-video/" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-googleplus"></i></a>
-                                    <a class="td-social-sharing-buttons td-social-pinterest" href="https://pinterest.com/pin/create/button/?url=https://demo.tagdiv.com/newspaper/td-post-how-to-make-a-perfect-caffe-macchiato-video/&amp;media=https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/maxresdefault3.jpg&amp;description=How+to+Make+a+Perfect+Caffe+Macchiato+%5Bvideo%5D" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-pinterest"></i></a>
-                                    <a class="td-social-sharing-buttons td-social-whatsapp" href="whatsapp://send?text=How+to+Make+a+Perfect+Caffe+Macchiato+%5Bvideo%5D%20-%20https%3A%2F%2Fdemo.tagdiv.com%2Fnewspaper%2Ftd-post-how-to-make-a-perfect-caffe-macchiato-video%2F"><i class="td-icon-whatsapp"></i></a>
-                                </div>
-                                <div class="td-classic-sharing">
-                                    <ul>
-                                        <li class="td-classic-facebook"><iframe frameborder="0" src="https://www.facebook.com/plugins/like.php?href=https://demo.tagdiv.com/newspaper/td-post-how-to-make-a-perfect-caffe-macchiato-video/&amp;layout=button_count&amp;show_faces=false&amp;width=105&amp;action=like&amp;colorscheme=light&amp;height=21" style="border:none;overflow:hidden;width:105px;height:21px;background-color:transparent"></iframe></li>
-                                        <li class="td-classic-twitter">
-                                            <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.5b6375bb17bd9edb2f4e7f8f12971999.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fdemo.tagdiv.com%2Fnewspaper%2Ftd-post-how-to-make-a-perfect-caffe-macchiato-video%2F&amp;size=m&amp;text=How%20to%20Make%20a%20Perfect%20Caffe%20Macchiato%20%5Bvideo%5D&amp;time=1494158779258&amp;type=share&amp;url=https%3A%2F%2Fdemo.tagdiv.com%2Fnewspaper%2Ftd-post-how-to-make-a-perfect-caffe-macchiato-video%2F" style="position: static; visibility: visible; width: 61px; height: 20px;" data-url="https://demo.tagdiv.com/newspaper/td-post-how-to-make-a-perfect-caffe-macchiato-video/"></iframe> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                                 <span style="display:none" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-                                   <meta itemprop="name" content="John Doe">
+                                   <meta itemprop="name" content="{{ youtube.0.Channel }}">
                                 </span>
-                                <meta itemprop="datePublished" content="2015-04-22T05:23:48+00:00">
-                                <meta itemprop="dateModified" content="2016-04-29T05:41:24+00:00">
-                                <meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://demo.tagdiv.com/newspaper/td-post-how-to-make-a-perfect-caffe-macchiato-video/">
+                                <meta itemprop="datePublished" content="{{ youtube.0.Published|date('Y M d hh:mm:ss') }}">
+                                <meta itemprop="dateModified" content="{{ youtube.0.Published|date('Y M d hh:mm:ss') }}">
+                                <meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="{{ url('video_view', { 'id': youtube.0.Id }) }}">
                                 <span style="display:none" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
                                    <span style="display:none" itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
-                                      <meta itemprop="url" content="https://demo.tagdiv.com/newspaper/wp-content/uploads/2016/01/logo-header.png">
+                                      <meta itemprop="url" content="{{ youtube.0.Thumb.high.url }}">
                                    </span>
-                                   <meta itemprop="name" content="Newspaper 7 Demo">
+                                   <meta itemprop="name" content="{{ youtube.0.Title }}">
                                 </span>
-                                          <meta itemprop="headline " content="How to Make a Perfect Caffe Macchiato [video]">
+                                <meta itemprop="headline" content="{{ youtube.0.Title }}">
                                 <span style="display:none" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
-                                   <meta itemprop="url" content="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/maxresdefault3.jpg">
+                                   <meta itemprop="url" content="{{ youtube.0.Thumb.high.url }}">
                                    <meta itemprop="width" content="1200">
                                    <meta itemprop="height" content="800">
                                 </span>
@@ -283,91 +206,51 @@
                             </div>
                         </div>
                         <div class="clearfix"></div>
+                        {{ knp_pagination_render(youtube) }}
+                        <div class="clearfix"></div>
+                        <a href="{{ youtube.0.Channel }}"  class="submit">{{ 'Visitez notre chaîne pour plus de videos' }}</a>
                     </div>
                 </div>
                 <div class="td-pb-span4 td-main-sidebar" role="complementary">
-                    <div class="td-ss-main-sidebar" style="width: 324px; position: absolute; top: 3616px; bottom: auto; z-index: 1;">
-                        <div class="clearfix"></div>
-                        <div class="td-a-rec td-a-rec-id-sidebar  ">
-                            <div class="td-visible-desktop">
-                                <a href="http://themeforest.net/item/newspaper/5489609"><img class="td-retina td-animation-stack-type0-2" style="max-width:300px" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2016/01/rec300.jpg" alt="" width="300" height="250"></a>
-                            </div>
-                            <div class="td-visible-tablet-landscape">
-                                <a href="http://themeforest.net/item/newspaper/5489609"><img class="td-retina td-animation-stack-type0-2" style="max-width:300px" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2016/01/rec300.jpg" alt="" width="300" height="250"></a>
-                            </div>
-                            <div class="td-visible-tablet-portrait">
-                                <a href="http://themeforest.net/item/newspaper/5489609"><img class="td-retina td-animation-stack-type0-2" style="max-width:200px" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2016/01/rec200.jpg" alt="" width="200" height="200"></a>
-                            </div>
-                            <div class="td-visible-phone">
-                                <a href="http://themeforest.net/item/newspaper/5489609"><img class="td-retina td-animation-stack-type0-2" style="max-width:300px" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2016/01/rec300.jpg" alt="" width="300" height="250"></a>
+                    <div class="td-ss-main-sidebar">
+                        <div class="td-a-rec td-a-rec-id-sidebar ">
+                            <span class="td-adspot-title">- Advertisement -</span>
+                            <div class="td-all-devices"><a href="#"><img src="http://placehold.it/350x250"/></a></div>
+                        </div>
+                        {% include 'LabsFrontBundle:Includes/v1:social-info.html.twig' %}
+                        <div class="td_block_wrap td_block_9 td_block_widget td_uid_36_58eb576335107_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_36_58eb576335107" >
+                            <div class="td-block-inner" id="block-dossier">
+                                <div class="td-block-title-wrap">
+                                    <h4 class="block-title"><span class="td-pulldown-size">{{ 'Nos Dossiers'|upper }}</span></h4>
+                                    <div class="td-pulldown-syle-default td-subcat-filter" id="td_pulldown_td_uid_34_58eb574baae6f">
+                                        <ul class="td-subcat-list" id="td_pulldown_td_uid_34_58eb574baae6f_list2">
+                                            <li class="td-subcat-item-2 li-none">
+                                                <a class="td-subcat-link"  href="{{ path('dossier_page') }}"><i class="td-icon-views"></i> {{ 'voir tous les dossiers'|capitalize }}</a>
+                                            </li>
+                                        </ul>
+                                        <div class="td-subcat-dropdown">
+                                            <div class="td-subcat-more" aria-haspopup="true">
+                                                <span>{{ 'voir tous les dossiers'|capitalize }}</span><i class="td-icon-read-down"></i>
+                                            </div>
+                                            <ul class="td-pulldown-filter-list"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="td_block_wrap td-pb-border-top td_block_template_1">
+                                    {{ render(controller(
+                                    'LabsFrontBundle:Default:getDossierLimit',
+                                    { 'template': 'dossier.html.twig', 'max':4 }
+                                    )) }}
+                                </div>
                             </div>
                         </div>
-                        <div class="td_block_wrap td_block_1 td_block_widget td_uid_22_590eaa2a1e819_rand td_with_ajax_pagination td-pb-border-top td_block_template_1 td-column-1" data-td-block-uid="td_uid_22_590eaa2a1e819">
-                            <script>var block_td_uid_22_590eaa2a1e819=new tdBlock();block_td_uid_22_590eaa2a1e819.id="td_uid_22_590eaa2a1e819";block_td_uid_22_590eaa2a1e819.atts='{"limit":"4","sort":"popular","post_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","category_id":"","category_ids":"","custom_title":"MUST READ","custom_url":"","show_child_cat":"","sub_cat_ajax":"","ajax_pagination":"next_prev","header_color":"#","header_text_color":"#","ajax_pagination_infinite_stop":"","td_column_number":1,"td_ajax_preloading":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_filter_default_txt":"All","color_preset":"","border_top":"","class":"td_block_widget td_uid_22_590eaa2a1e819_rand","el_class":"","offset":"","css":"","tdc_css":"","tdc_css_class":"td_uid_22_590eaa2a1e819_rand","live_filter":"","live_filter_cur_post_id":"","live_filter_cur_post_author":"","block_template_id":""}';block_td_uid_22_590eaa2a1e819.td_column_number="1";block_td_uid_22_590eaa2a1e819.block_type="td_block_1";block_td_uid_22_590eaa2a1e819.post_count="4";block_td_uid_22_590eaa2a1e819.found_posts="161";block_td_uid_22_590eaa2a1e819.header_color="#";block_td_uid_22_590eaa2a1e819.ajax_pagination_infinite_stop="";block_td_uid_22_590eaa2a1e819.max_num_pages="41";tdBlocksArray.push(block_td_uid_22_590eaa2a1e819);</script>
-                            <div class="td-block-title-wrap">
-                                <h4 class="block-title"><span class="td-pulldown-size">MUST READ</span></h4>
-                            </div>
-                            <div id="td_uid_22_590eaa2a1e819" class="td_block_inner">
-                                <div class="td-block-span12">
-                                    <div class="td_module_4 td_module_wrap td-animation-stack">
-                                        <div class="td-module-image">
-                                            <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/10-landscapes-wont-even-imagined-exist/" rel="bookmark" title="10 Landscapes You Won’t Have Even Imagined Exist"><img width="324" height="235" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/03/travel-girl-324x235.jpg" alt="" title="10 Landscapes You Won’t Have Even Imagined Exist"></a></div>
-                                            <a href="https://demo.tagdiv.com/newspaper/category/tagdiv-lifestyle/tagdiv-travel/" class="td-post-category">Travel</a>
-                                        </div>
-                                        <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/10-landscapes-wont-even-imagined-exist/" rel="bookmark" title="10 Landscapes You Won’t Have Even Imagined Exist">10 Landscapes You Won’t Have Even Imagined Exist</a></h3>
-                                        <div class="td-module-meta-info">
-                                            <span class="td-post-author-name"><a href="https://demo.tagdiv.com/newspaper/author/marius/">John Doe</a> <span>-</span> </span> <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-03-22T05:47:34+00:00">Mar 22, 2015</time></span>
-                                            <div class="td-module-comments"><a href="https://demo.tagdiv.com/newspaper/10-landscapes-wont-even-imagined-exist/#respond">0</a></div>
-                                        </div>
-                                        <div class="td-excerpt">
-                                            Prince Edward Island, Canada
-                                            Prince Edward Island is a Canadian province. It is one of the three Maritime provinces and it is the smallest in...
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="td-block-span12">
-                                    <div class="td_module_6 td_module_wrap td-animation-stack">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/decorating-to-celebrate-the-great-outdoor-space/" rel="bookmark" title="Decorating to Celebrate the Great Outdoor Space"><img width="100" height="70" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/01/outside-100x70.jpg" alt="" title="Decorating to Celebrate the Great Outdoor Space"></a></div>
-                                        <div class="item-details">
-                                            <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/decorating-to-celebrate-the-great-outdoor-space/" rel="bookmark" title="Decorating to Celebrate the Great Outdoor Space">Decorating to Celebrate the Great Outdoor Space</a></h3>
-                                            <div class="td-module-meta-info">
-                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-01-22T05:46:01+00:00">Jan 22, 2015</time></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="td-block-span12">
-                                    <div class="td_module_6 td_module_wrap td-animation-stack">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-zeta-architecture-hexagon-is-the-new-circle-in-2016/" rel="bookmark" title="Zeta Architecture: Hexagon is the new circle in 2016"><img width="100" height="70" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/01/house-interior-100x70.jpg" alt="" title="Zeta Architecture: Hexagon is the new circle in 2016"></a></div>
-                                        <div class="item-details">
-                                            <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-zeta-architecture-hexagon-is-the-new-circle-in-2016/" rel="bookmark" title="Zeta Architecture: Hexagon is the new circle in 2016">Zeta Architecture: Hexagon is the new circle in 2016</a></h3>
-                                            <div class="td-module-meta-info">
-                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-01-22T05:44:07+00:00">Jan 22, 2015</time></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="td-block-span12">
-                                    <div class="td_module_6 td_module_wrap td-animation-stack">
-                                        <div class="td-module-thumb"><a href="https://demo.tagdiv.com/newspaper/td-post-what-do-i-need-to-make-it-in-business/" rel="bookmark" title="What Do I Need To Make It In Business?"><img width="100" height="70" class="entry-thumb td-animation-stack-type0-2" src="https://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/bag-100x70.jpg" alt="" title="What Do I Need To Make It In Business?"></a></div>
-                                        <div class="item-details">
-                                            <h3 class="entry-title td-module-title"><a href="https://demo.tagdiv.com/newspaper/td-post-what-do-i-need-to-make-it-in-business/" rel="bookmark" title="What Do I Need To Make It In Business?">What Do I Need To Make It In Business?</a></h3>
-                                            <div class="td-module-meta-info">
-                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2015-04-21T06:15:43+00:00">Apr 21, 2015</time></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_22_590eaa2a1e819" data-td_block_id="td_uid_22_590eaa2a1e819"><i class="td-icon-font td-icon-menu-left"></i></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_22_590eaa2a1e819" data-td_block_id="td_uid_22_590eaa2a1e819"><i class="td-icon-font td-icon-menu-right"></i></a></div>
-                        </div>
-                        <div class="clearfix"></div>
+                        <!-- ./block -->
                     </div>
                 </div>
             </div>
         </div>
-    </article>
-
+    </youtube.0.Title>
+{% endif %}
 {% endblock %}
 {% block javascripts %}
     <script type="text/javascript">

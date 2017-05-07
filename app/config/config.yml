@@ -49,6 +49,8 @@ twig:
     strict_variables: "%kernel.debug%"
     form_themes:
         - 'form/costum_form.html.twig'
+    globals:
+        chaine_link: 'https://www.youtube.com/channel/UCfxFA4sCsppvbcRred327KQ'
 
 
 # Doctrine Configuration

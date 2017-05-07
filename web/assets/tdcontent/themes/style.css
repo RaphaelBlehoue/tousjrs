@@ -21,46 +21,48 @@ body {
     from fonts
 */
 .ft9{
-   font-size:9px;
+   font-size:9px !important;
 }
 
 .ft10{
-  font-size:10px;
+  font-size:10px !important;
 }
 .ft11{
-  font-size:11px;
+  font-size:11px !important;
 }
 .ft12{
-  font-size:12px;
+  font-size:12px !important;
 }
 
 .ft13{
-  font-size:13px;
+  font-size:13px !important;
 }
 .ft14{
-  font-size:14px;
+  font-size:14px !important;
 }
 .ft15{
-  font-size:15px;
+  font-size:15px !important;
 }
 .ft16{
-   font-size:16px;
+   font-size:16px !important;
  }
 .ft16{
-  font-size:16px;
+  font-size:16px !important;
 }
 .ft17{
-  font-size:17px;
+  font-size:17px !important;
 }
 .ft18{
-  font-size:18px;
+  font-size:18px !important;
 }
 .ft19{
-  font-size:19px;
+  font-size:19px !important;
 }
 
 /** padding **/
-
+.uppercase{
+   text-transform: uppercase;
+}
 .pb5{
   padding-bottom: 5px !important;
 }
@@ -1824,7 +1826,7 @@ Headers style
 .td-header-style-3 .black-menu .sf-menu > .current-category-ancestor > a,
 .td-header-style-3 .black-menu .sf-menu > li > a:hover,
 .td-header-style-3 .black-menu .sf-menu > .sfHover > a {
-  background-color: #4db2ec;
+  background-color: #D91804;
 }
 .td-header-style-3 .td-affix {
   background-color: transparent !important;
@@ -2041,7 +2043,7 @@ Headers style
 .td-header-style-4 .black-menu .sf-menu > .current-category-ancestor > a,
 .td-header-style-4 .black-menu .sf-menu > li > a:hover,
 .td-header-style-4 .black-menu .sf-menu > .sfHover > a {
-  background-color: #4db2ec;
+  background-color: #D91804;
 }
 .td-header-style-4 .sf-menu > li > a {
   color: #fff;
@@ -5044,7 +5046,7 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
 }
 .td-mega-menu-page .wpb_content_element ul li a:hover {
   background-color: transparent !important;
-  color: #4db2ec !important;
+  color: #D91804 !important;
 }
 .td-mega-menu-page .vc_wp_custommenu ul li {
   padding: 5px 0 !important;
@@ -5126,7 +5128,7 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
 }
 .td_mega_menu_sub_cats .cur-sub-cat {
   background-color: #fff;
-  color: #4db2ec;
+  color: #D91804;
   border-top: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
 }

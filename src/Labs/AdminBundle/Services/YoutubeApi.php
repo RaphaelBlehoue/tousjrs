@@ -61,7 +61,8 @@ class YoutubeApi {
     {
         $videos = [];
         $res = $this->service->search->listSearch('id,snippet',[
-            'channelId'  => $this->channelID,
+            //'channelId'  => $this->channelID,
+            'q'          => 'dessin animee biblique',
             'maxResults' => $num,
             'order'      => 'date',
             'type'       => 'video'
@@ -78,7 +79,9 @@ class YoutubeApi {
                 'Description' => $video['snippet']['description'],
                 'Published'   => $video['snippet']['publishedAt'],
                 'Channel'   => $video['snippet']['channelTitle'],
-                'ChannelId' => $video['snippet']['channelId']
+                'ChannelId' => $video['snippet']['channelId'],
+                'NextPageToken' => $video['nextPageToken'],
+                'PrevPageToken' => $video['prevPageToken']
             ];
         }
         return $videos;
@@ -95,14 +98,19 @@ class YoutubeApi {
         ]);
         $item = $res['items'];
         $video = [
-            'id' => $item[0]['id'],
-            'published' => $item[0]['snippet']['publishedAt'],
-            'channel' => $item[0]['snippet']['channelTitle'],
-            'channelId' => $item[0]['snippet']['channelId'],
-            'title'     => $item[0]['snippet']['title'],
-            'descript'  => $item[0]['snippet']['description'],
-            'duration'  => $item[0]['contentDetails']['duration'],
-            'player'    => [
+            'Id' => $item[0]['id'],
+            'Published' => $item[0]['snippet']['publishedAt'],
+            'Channel' => $item[0]['snippet']['channelTitle'],
+            'ChannelId' => $item[0]['snippet']['channelId'],
+            'Title'     => $item[0]['snippet']['title'],
+            'Thumb' => [
+                'default' => $item[0]['snippet']['thumbnails']['default'],
+                'medium'  => $item[0]['snippet']['thumbnails']['medium'],
+                'high'    => $item[0]['snippet']['thumbnails']['high']
+            ],
+            'Descript'  => $item[0]['snippet']['description'],
+            'Duration'  => $item[0]['contentDetails']['duration'],
+            'Player'    => [
                 'embedHtml'  => $item[0]['player']['embedHtml']
             ]
         ];
