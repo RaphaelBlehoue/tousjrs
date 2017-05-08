@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="td-excerpt">
-                        {{ article.content|truncate('250', false, '...')|striptags }}
+                        {{ article.content|truncate('150', false, '...')|striptags|raw }}
                     </div>
                 </div>
             </div> <!-- ./td-block-span6 -->
