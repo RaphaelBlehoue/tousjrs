@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85828300-8469-4298-9e55-7f970975b2ac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/index.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/view.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/AdminBundle/Services/YoutubeApi.php" afterPath="$PROJECT_DIR$/src/Labs/AdminBundle/Services/YoutubeApi.php" />
     </list>
     <ignored path="touslesjours.dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,110 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php">
+      <file leaf-file-name="page_view.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="324" column="57" selection-start-line="324" selection-start-column="57" selection-end-line="324" selection-end-column="57" />
-              <folding>
-                <element signature="e#965#987#1#PHP" expanded="true" />
-                <element signature="e#1083#1124#0#PHP" expanded="true" />
-                <element signature="e#1449#1471#1#PHP" expanded="true" />
-                <element signature="e#1535#1559#1#PHP" expanded="true" />
-                <element signature="e#1622#1647#1#PHP" expanded="true" />
-                <element signature="e#1689#1735#0#PHP" expanded="true" />
-                <element signature="e#2583#2608#1#PHP" expanded="true" />
-                <element signature="e#2679#2704#1#PHP" expanded="true" />
-                <element signature="e#2961#3010#0#PHP" expanded="true" />
-                <element signature="e#3831#3856#1#PHP" expanded="true" />
-                <element signature="e#3936#3958#1#PHP" expanded="true" />
-                <element signature="e#4149#4171#1#PHP" expanded="true" />
-                <element signature="e#4415#4458#0#PHP" expanded="true" />
-                <element signature="e#4972#4994#1#PHP" expanded="true" />
-                <element signature="e#5058#5080#1#PHP" expanded="true" />
-                <element signature="e#5143#5188#0#PHP" expanded="true" />
-                <element signature="e#5944#5984#0#PHP" expanded="true" />
-                <element signature="e#6577#6616#0#PHP" expanded="true" />
-                <element signature="e#7105#7129#1#PHP" expanded="true" />
-                <element signature="e#7324#7366#0#PHP" expanded="true" />
-                <element signature="e#7800#7824#1#PHP" expanded="true" />
-                <element signature="e#7893#7917#1#PHP" expanded="true" />
-                <element signature="e#7983#8037#0#PHP" expanded="true" />
-                <element signature="e#8595#8620#1#PHP" expanded="true" />
-                <element signature="e#9138#9158#0#PHP" expanded="true" />
-                <element signature="e#9426#9469#0#PHP" expanded="true" />
-                <element signature="e#9828#9853#1#PHP" expanded="true" />
-                <element signature="e#10019#10073#0#PHP" expanded="true" />
-                <element signature="e#10384#10406#1#PHP" expanded="true" />
-                <element signature="e#10457#10500#0#PHP" expanded="true" />
-                <element signature="e#10910#10932#1#PHP" expanded="true" />
-                <element signature="e#11612#11663#0#PHP" expanded="true" />
-                <element signature="e#12508#12532#1#PHP" expanded="true" />
-                <element signature="e#13013#13065#0#PHP" expanded="true" />
-                <element signature="e#13445#13490#0#PHP" expanded="true" />
-                <element signature="e#13761#13786#1#PHP" expanded="true" />
-                <element signature="e#14256#14278#1#PHP" expanded="true" />
-                <element signature="e#14722#14744#1#PHP" expanded="true" />
-                <element signature="e#15021#15043#1#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="articles.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/articles.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+            <state relative-caret-position="214">
+              <caret line="314" column="10" selection-start-line="314" selection-start-column="10" selection-end-line="314" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/index.html.twig">
+      <file leaf-file-name="YoutubeApi.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Services/YoutubeApi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6417">
-              <caret line="279" column="13" selection-start-line="279" selection-start-column="13" selection-end-line="279" selection-end-column="13" />
-              <folding>
-                <element signature="e#143#153#0#Twig" expanded="true" />
-                <element signature="e#270#280#0#Twig" expanded="true" />
-                <element signature="e#2454#2462#0#Twig" expanded="true" />
-                <element signature="e#2837#2848#0#Twig" expanded="true" />
-                <element signature="e#6900#6910#0#Twig" expanded="true" />
-                <element signature="e#7427#7437#0#Twig" expanded="true" />
-                <element signature="e#7833#7843#0#Twig" expanded="true" />
-                <element signature="e#8167#8177#0#Twig" expanded="true" />
-                <element signature="e#8576#8586#0#Twig" expanded="true" />
-                <element signature="e#10107#10117#0#Twig" expanded="true" />
-                <element signature="e#11179#11189#0#Twig" expanded="true" />
-                <element signature="e#12672#12682#0#Twig" expanded="true" />
-                <element signature="e#13761#13771#0#Twig" expanded="true" />
-                <element signature="e#15406#15416#0#Twig" expanded="true" />
-                <element signature="e#17844#17893#0#Twig" expanded="true" />
-                <element signature="e#18781#18793#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/view.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="265" column="13" selection-start-line="265" selection-start-column="13" selection-end-line="265" selection-end-column="13" />
-              <folding>
-                <element signature="e#262#272#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page_view.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="306" column="0" selection-start-line="306" selection-start-column="0" selection-end-line="323" selection-end-column="13" />
+            <state relative-caret-position="-890">
+              <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -244,7 +154,6 @@
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Dossiers/dossier_view_page.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Entity/Format.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Services/YoutubeApi.php" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/footer.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/td-header-wrap.html.twig" />
@@ -259,6 +168,7 @@
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/articles.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/view.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Labs/AdminBundle/Services/YoutubeApi.php" />
       </list>
     </option>
   </component>
@@ -826,6 +736,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Services" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touslesjours.dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Labs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Repository" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -1171,12 +1107,12 @@
       <workItem from="1493915473789" duration="17760000" />
       <workItem from="1493982967862" duration="7417000" />
       <workItem from="1493993174064" duration="29904000" />
-      <workItem from="1494094886217" duration="30721000" />
+      <workItem from="1494094886217" duration="30858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="467689000" />
+    <option name="totallyTimeSpent" value="467826000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="728" extended-state="6" />
@@ -1483,14 +1419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Services/YoutubeApi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/responsive-header.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1657,28 +1585,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="306" column="0" selection-start-line="306" selection-start-column="0" selection-end-line="323" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="265" column="13" selection-start-line="265" selection-start-column="13" selection-end-line="265" selection-end-column="13" />
-          <folding>
-            <element signature="e#262#272#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6417">
-          <caret line="279" column="13" selection-start-line="279" selection-start-column="13" selection-end-line="279" selection-end-column="13" />
+        <state relative-caret-position="414">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
           <folding>
             <element signature="e#143#153#0#Twig" expanded="true" />
             <element signature="e#270#280#0#Twig" expanded="true" />
@@ -1697,6 +1607,32 @@
             <element signature="e#17844#17893#0#Twig" expanded="true" />
             <element signature="e#18781#18793#0#Twig" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="265" column="13" selection-start-line="265" selection-start-column="13" selection-end-line="265" selection-end-column="13" />
+          <folding>
+            <element signature="e#262#272#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="314" column="10" selection-start-line="314" selection-start-column="10" selection-end-line="314" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Labs/AdminBundle/Services/YoutubeApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-890">
+          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

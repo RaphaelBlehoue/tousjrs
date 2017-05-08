@@ -61,8 +61,7 @@ class YoutubeApi {
     {
         $videos = [];
         $res = $this->service->search->listSearch('id,snippet',[
-            //'channelId'  => $this->channelID,
-            'q'          => 'dessin animee biblique',
+            'channelId'  => $this->channelID,
             'maxResults' => $num,
             'order'      => 'date',
             'type'       => 'video'
