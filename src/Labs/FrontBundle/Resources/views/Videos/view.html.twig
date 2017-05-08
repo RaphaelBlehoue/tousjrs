@@ -3,7 +3,7 @@
 {% block meta %}
     <link rel="canonical" href="{{ url('video_view', { 'id': video.Id }) }}" />
     <!-- sample facbook meta tags -->
-    <meta property="og:url" content="{{ url('video_view', { 'slug': video.Id }) }}" />
+    <meta property="og:url" content="{{ url('video_view', { 'id': video.Id }) }}" />
     <meta property="og:title" content="{{ video.Title }}" />
     <meta property="og:type" content="video.Title" />
     <meta property="og:description" content="{{ video.Title }}" />
