@@ -107,7 +107,7 @@
                                                         </div>
                                                         <a href="{{ path('front_item_page', { 'rubrique': articles.item.section.slug, 'slug':articles.item.slug }) }}" class="td-post-category">{{ articles.item.name }}</a>
                                                     </div>
-                                                    <h3 class="entry-title td-module-title"><a href="../2017/04/09/i-built-an-app-that-does-triangulation-of-points-on-the-earth/index.html" rel="{{ articles.item.name }}" title="{{ articles.name }}"> {{ articles.name|truncate('50', true, '...') }}</a></h3>
+                                                    <h3 class="entry-title td-module-title"><a href="{{ path('page_view', {'slug' : articles.slug}) }}" rel="{{ articles.item.name }}" title="{{ articles.name }}"> {{ articles.name|truncate('50', true, '...') }}</a></h3>
                                                     <div class="td-module-meta-info">
                                                         <span class="td-post-author-name">
                                                             <img src="{{ asset('favicon/favicon-16x16.png') }}" alt="{{ articles.name }}" style="vertical-align: middle">
@@ -117,7 +117,7 @@
                                                         <!--<div class="td-module-comments"><a href=link#respond">0</a></div>-->
                                                     </div>
                                                     <div class="td-excerpt">
-                                                        {{ articles.content|truncate('150', false, '...')|striptags }}
+                                                        {{ articles.content|truncate('120', false, '...')|striptags|raw }}
                                                     </div>
                                                 </div>
                                             </div> <!-- ./td-block-span6 -->
