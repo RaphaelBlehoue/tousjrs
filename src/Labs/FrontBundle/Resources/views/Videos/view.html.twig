@@ -191,7 +191,7 @@
                             </footer>
                             <div class="comments" id="comments">
                                 <div id="respond" class="comment-respond">
-                                    <h3 id="reply-title" class="comment-reply-title">{{'commentaires'|capitalize}} <small><a rel="nofollow" id="cancel-comment-reply-link" href="/newspaper/td-post-how-to-make-a-perfect-caffe-macchiato-video/#respond" style="display:none">Cancel reply</a></small></h3>
+                                    <div class="fb-comments" data-href="{{ url('video_view', { 'id': video.Id }) }}" data-numposts="5"></div>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
@@ -261,6 +261,14 @@
             if (d.getElementById(id)) {return;}
             js = d.createElement(s); js.id = id;
             js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.9&appId=1651341078293386";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>

@@ -228,7 +228,7 @@
                         <!-- ./block -->
                         <div class="comments" id="comments">
                             <div id="respond" class="comment-respond">
-                                <h3 id="reply-title" class="comment-reply-title">{{ 'Commentaires'|upper }} <small><a rel="nofollow" id="cancel-comment-reply-link" style="display:none;">Cancel reply</a></small></h3>
+                                <div class="fb-comments" data-href="{{ url('page_view', { 'slug': post.slug }) }}" data-numposts="5"></div>
                             </div>
                             <!-- #respond -->
                         </div>
@@ -239,7 +239,7 @@
                     <div class="td-ss-main-sidebar">
                         <div class="td-a-rec td-a-rec-id-sidebar ">
                             <span class="td-adspot-title">- Advertisement -</span>
-                            <div class="td-all-devices"><a href="#"><img src="http://placehold.it/350x250"/></a></div>
+                            <div class="td-all-devices"><a href="#"><img src="{{ asset('images/journal.jpg') }}"/></a></div>
                         </div>
                         <div class="td_block_wrap td_block_18 td_block_widget td_uid_35_58eb576330145_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_35_58eb576330145" >
                             <div class="td-block-title-wrap">
@@ -319,6 +319,14 @@
             if (d.getElementById(id)) {return;}
             js = d.createElement(s); js.id = id;
             js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.9&appId=1651341078293386";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
