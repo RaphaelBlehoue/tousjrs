@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85828300-8469-4298-9e55-7f970975b2ac" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/touslesjours.dev.iml" afterPath="$PROJECT_DIR$/.idea/touslesjours.dev.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/symfony_requirements" afterPath="$PROJECT_DIR$/bin/symfony_requirements" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" afterPath="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
     </list>
     <ignored path="touslesjours.dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,14 +33,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="page_view.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page_view.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="23">
               <caret line="215" column="74" selection-start-line="215" selection-start-column="74" selection-end-line="215" selection-end-column="74" />
-              <folding>
-                <element signature="e#20829#20838#0#Twig" expanded="true" />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,8 +111,8 @@
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Items/page_item.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Includes/v1/social-info.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/view.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Default/page_view.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       </list>
     </option>
   </component>
@@ -121,7 +129,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="2560" />
-    <option name="height" value="1338" />
+    <option name="height" value="1337" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -995,23 +1003,25 @@
       <workItem from="1493993174064" duration="29904000" />
       <workItem from="1494094886217" duration="31488000" />
       <workItem from="1494435887996" duration="4525000" />
+      <workItem from="1494445918682" duration="85000" />
+      <workItem from="1494520766552" duration="706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="472981000" />
+    <option name="totallyTimeSpent" value="473772000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1338" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2065131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20969023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18901454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32851407" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1083,7 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253207">
           <caret line="11009" column="1" selection-start-line="11009" selection-start-column="1" selection-end-line="11009" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1190,14 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1978">
           <caret line="86" column="218" selection-start-line="0" selection-start-column="0" selection-end-line="155" selection-end-column="14" />
-          <folding>
-            <element signature="e#1591#1608#0#Twig" expanded="false" />
-            <element signature="e#2305#2322#0#Twig" expanded="false" />
-            <element signature="e#5550#5567#0#Twig" expanded="false" />
-            <element signature="e#6435#6452#0#Twig" expanded="false" />
-            <element signature="e#7285#7302#0#Twig" expanded="false" />
-            <element signature="e#8489#8506#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1237,7 +1238,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
           <caret line="267" column="22" selection-start-line="237" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1273,13 +1273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1243">
           <caret line="15942" column="21" selection-start-line="15942" selection-start-column="14" selection-end-line="15942" selection-end-column="21" />
-          <folding>
-            <element signature="e#141735#141936#1" expanded="false" />
-            <element signature="e#231158#231511#1" expanded="false" />
-            <element signature="e#232254#232603#1" expanded="false" />
-            <element signature="e#506640#506817#1" expanded="false" />
-            <element signature="e#741246#741441#1" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1302,47 +1295,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="324" column="57" selection-start-line="324" selection-start-column="57" selection-end-line="324" selection-end-column="57" />
-          <folding>
-            <element signature="e#965#987#1#PHP" expanded="true" />
-            <element signature="e#1083#1124#0#PHP" expanded="true" />
-            <element signature="e#1449#1471#1#PHP" expanded="true" />
-            <element signature="e#1535#1559#1#PHP" expanded="true" />
-            <element signature="e#1622#1647#1#PHP" expanded="true" />
-            <element signature="e#1689#1735#0#PHP" expanded="true" />
-            <element signature="e#2583#2608#1#PHP" expanded="true" />
-            <element signature="e#2679#2704#1#PHP" expanded="true" />
-            <element signature="e#2961#3010#0#PHP" expanded="true" />
-            <element signature="e#3831#3856#1#PHP" expanded="true" />
-            <element signature="e#3936#3958#1#PHP" expanded="true" />
-            <element signature="e#4149#4171#1#PHP" expanded="true" />
-            <element signature="e#4415#4458#0#PHP" expanded="true" />
-            <element signature="e#4972#4994#1#PHP" expanded="true" />
-            <element signature="e#5058#5080#1#PHP" expanded="true" />
-            <element signature="e#5143#5188#0#PHP" expanded="true" />
-            <element signature="e#5944#5984#0#PHP" expanded="true" />
-            <element signature="e#6577#6616#0#PHP" expanded="true" />
-            <element signature="e#7105#7129#1#PHP" expanded="true" />
-            <element signature="e#7324#7366#0#PHP" expanded="true" />
-            <element signature="e#7800#7824#1#PHP" expanded="true" />
-            <element signature="e#7893#7917#1#PHP" expanded="true" />
-            <element signature="e#7983#8037#0#PHP" expanded="true" />
-            <element signature="e#8595#8620#1#PHP" expanded="true" />
-            <element signature="e#9138#9158#0#PHP" expanded="true" />
-            <element signature="e#9426#9469#0#PHP" expanded="true" />
-            <element signature="e#9828#9853#1#PHP" expanded="true" />
-            <element signature="e#10019#10073#0#PHP" expanded="true" />
-            <element signature="e#10384#10406#1#PHP" expanded="true" />
-            <element signature="e#10457#10500#0#PHP" expanded="true" />
-            <element signature="e#10910#10932#1#PHP" expanded="true" />
-            <element signature="e#11612#11663#0#PHP" expanded="true" />
-            <element signature="e#12508#12532#1#PHP" expanded="true" />
-            <element signature="e#13013#13065#0#PHP" expanded="true" />
-            <element signature="e#13445#13490#0#PHP" expanded="true" />
-            <element signature="e#13761#13786#1#PHP" expanded="true" />
-            <element signature="e#14256#14278#1#PHP" expanded="true" />
-            <element signature="e#14722#14744#1#PHP" expanded="true" />
-            <element signature="e#15021#15043#1#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1357,10 +1309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-278">
           <caret line="22" column="101" selection-start-line="22" selection-start-column="101" selection-end-line="22" selection-end-column="101" />
-          <folding>
-            <element signature="e#2503#2515#0#Twig" expanded="false" />
-            <element signature="e#2793#2804#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1368,7 +1316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1376,7 +1323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
           <caret line="119" column="4" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,7 +1330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1058">
           <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="105" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1392,28 +1337,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="203" column="137" selection-start-line="203" selection-start-column="28" selection-end-line="203" selection-end-column="137" />
-          <folding>
-            <element signature="e#143#153#0#Twig" expanded="true" />
-            <element signature="e#270#280#0#Twig" expanded="true" />
-            <element signature="e#2446#2454#0#Twig" expanded="true" />
-            <element signature="e#2829#2840#0#Twig" expanded="true" />
-            <element signature="e#5444#5467#0#HTML" expanded="false" />
-            <element signature="e#5743#5766#0#HTML" expanded="false" />
-            <element signature="e#6519#6543#0#HTML" expanded="false" />
-            <element signature="e#6911#6921#0#Twig" expanded="true" />
-            <element signature="e#7438#7448#0#Twig" expanded="true" />
-            <element signature="e#7844#7854#0#Twig" expanded="true" />
-            <element signature="e#8178#8188#0#Twig" expanded="true" />
-            <element signature="e#8587#8597#0#Twig" expanded="true" />
-            <element signature="e#10118#10128#0#Twig" expanded="true" />
-            <element signature="e#11190#11200#0#Twig" expanded="true" />
-            <element signature="e#12683#12693#0#Twig" expanded="true" />
-            <element signature="e#13772#13782#0#Twig" expanded="true" />
-            <element signature="e#15417#15427#0#Twig" expanded="true" />
-            <element signature="e#16680#16690#0#Twig" expanded="true" />
-            <element signature="e#17590#17639#0#Twig" expanded="true" />
-            <element signature="e#18527#18539#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1421,7 +1344,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-23">
           <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1429,7 +1351,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1357">
           <caret line="96" column="46" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1437,7 +1358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1445,7 +1365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="247" column="78" selection-start-line="247" selection-start-column="78" selection-end-line="247" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1457,21 +1376,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Labs/FrontBundle/Resources/views/Videos/view.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="250" column="0" selection-start-line="250" selection-start-column="0" selection-end-line="254" selection-end-column="15" />
           <folding>
-            <element signature="e#262#272#0#Twig" expanded="true" />
-            <element signature="e#16559#16569#0#Twig" expanded="true" />
+            <element signature="e#262#272#0#Twig" expanded="false" />
+            <element signature="e#16559#16569#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1480,9 +1391,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="215" column="74" selection-start-line="215" selection-start-column="74" selection-end-line="215" selection-end-column="74" />
-          <folding>
-            <element signature="e#20829#20838#0#Twig" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
