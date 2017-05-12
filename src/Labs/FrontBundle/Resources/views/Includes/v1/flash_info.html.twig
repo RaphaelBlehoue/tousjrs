@@ -11,8 +11,12 @@
                                 <div class="td-trending-now-display-area" id="td_flash_info">
                                     {% for new in news %}
                                         <div class="td_module_trending_now td-trending-now-post-{{ loop.index }} td-trending-now-post">
-                                            <h3 class="entry-title td-module-title">
-                                                <a href="" rel="flash-info" title="{{ new.content }}"> <strong class="timeago" title="{{ new.updated.date }}">{{ new.updated|date('m d, Y') }}</strong> - {{ new.content }}</a>
+                                            <h3 class="entry-title td-module-title {% if new.status == true %} urgent {% endif %} ">
+                                                {% if new.status == true %}
+                                                    <a href="{{ path('flash_view', {'id' : new.id }) }}" rel="flash-info" title="{{ new.content }}"> <strong class="timeago" title="{{ new.updated.date }}">{{ new.updated|date('m d, Y') }}</strong> - {{ new.content }}</a>
+                                                {% else %}
+                                                    <a href="javascript(void);" rel="flash-info" title="{{ new.content }}"> <strong class="timeago" title="{{ new.updated.date }}">{{ new.updated|date('m d, Y') }}</strong> - {{ new.content }}</a>
+                                                {% endif %}
                                             </h3>
                                         </div>
                                     {% endfor %}

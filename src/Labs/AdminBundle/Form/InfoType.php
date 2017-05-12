@@ -17,6 +17,15 @@ class InfoType extends AbstractType
     {
         $builder
             ->add('content', TextareaType::class, array('label' => false, 'attr' => array('rows' => 5, 'class'=>'flash')))
+            ->add('status', ChoiceType::class, array(
+                'label' => false,
+                'attr'  => array('class' => 'form-control'),
+                'placeholder' => 'Choix du degré',
+                'empty_data'  => null,
+                'choices' => array(
+                    'Urgent' => true,
+                    'Normal' => false
+                )))
             ->add('online', ChoiceType::class, array(
                 'label' => false,
                 'attr'  => array('class' => 'form-control'),

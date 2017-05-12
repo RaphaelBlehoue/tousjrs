@@ -301,6 +301,29 @@ class DefaultController extends Controller
     }
 
     /**
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     * @Route("/flash/information-tous-lesjours/{id}", name="flash_view")
+     */
+    public function getflashInfosViewAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $flash = $em->getRepository('LabsAdminBundle:Info')->findOneBy([
+            'id' => $id,
+            'status' => 1,
+            'online' => 1
+        ]);
+        $recent = $em->getRepository('LabsAdminBundle:Post')->getLastAricles(3);
+        if(null === $flash){
+            throw new NotFoundHttpException('Information introuvable sur nous serveur');
+        }
+        return $this->render('LabsFrontBundle:Default/Flash:flash_view.html.twig', [
+            'flash' => $flash,
+            'old'   => $recent
+        ]);
+    }
+
+    /**
      * @param $item
      * @param $max
      * @return \Symfony\Component\HttpFoundation\Response Recupère les 9 derniers articles organiser par date de creation pour chaque Items

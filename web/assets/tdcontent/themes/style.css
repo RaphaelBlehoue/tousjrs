@@ -59,6 +59,10 @@ body {
   font-size:19px !important;
 }
 
+.ft30{
+  font-size:30px !important;
+}
+
 /** padding **/
 .uppercase{
    text-transform: uppercase;
@@ -101,6 +105,17 @@ body {
 
 .urgent h5 > a{
    color:#D91804;
+}
+
+.flash-infos {
+  background-color:#D91804;
+  min-height: 235px;
+  padding: 25px;
+}
+
+.flash-infos > p {
+  color:#fff;
+  line-height: 1.375 !important;
 }
 
 .li-none {
