@@ -26,7 +26,7 @@
                         <!--<div class="td-module-comments"><a href="../2017/04/09/health-star-ratings-kellogg-reveals-the-cereal/index.html#respond">0</a></div>-->
                     </div>
                     <div class="td-excerpt">
-                        {{ dossier.content|truncate('150', false, '...')|striptags }}
+                        {{ dossier.content|truncate('150', false, '...')|striptags|raw }}
                     </div>
                 </div>
             </div> <!-- ./td-block-span12 -->

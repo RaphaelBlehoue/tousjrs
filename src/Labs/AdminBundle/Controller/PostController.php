@@ -24,6 +24,8 @@ class PostController extends Controller
     /**
      * @Route("/", name="post_index")
      * @Method({"GET"})
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function indexAction(Request $request)
     {
@@ -35,6 +37,8 @@ class PostController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @throws \Exception
+     * @throws \LogicException
      * @Route("/create", name="post_create")
      * @Method({"GET","POST"})
      */
@@ -50,6 +54,8 @@ class PostController extends Controller
      * @param Request $request
      * @param Post $post
      * @return JsonResponse|\Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @throws \InvalidArgumentException
+     * @throws \LogicException
      * @throws \Doctrine\ORM\NonUniqueResultException
      * @throws \Symfony\Component\Security\Core\Exception\AccessDeniedException
      * @Route("/{id}/{user_id}/edit", name="post_edit")

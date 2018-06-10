@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 {% block title %}{{ 'TousLesJours.ci - Actualités et Infos en Côte d\'ivoire et dans le monde' }}{% endblock %}
 {% block meta_refresh %}
-    <meta http-equiv="refresh" content="120">
+    <meta http-equiv="refresh" content="720">
 {% endblock %}
 {% block stylesheets %}{% endblock %}
 {% block body %}
@@ -160,7 +160,7 @@
                     <div class="vc_column-inner ">
                         <div class="wpb_wrapper">
                             <!-- block network information -->
-                                {% include('LabsFrontBundle:Includes/v1:social-info.html.twig') %}
+                                {# include('LabsFrontBundle:Includes/v1:social-info.html.twig') #}
                             <!-- end block network information -->
                             <!-- block last time -->
                                 <div class="td_block_wrap td-pb-border-top td_block_template_1">
@@ -195,12 +195,6 @@
                                     { 'template': 'dossier.html.twig', 'max':4 }
                                     )) }}
                                 </div>
-                            </div>
-
-
-                            <!-- block last Rubriques -->
-                            <div class="td-block-title-wrap">
-                                <h4 class="block-title"><span class="td-pulldown-size">{{ 'Rubrique day'|upper }}</span></h4>
                             </div>
 
                             <!-- block last video -->
