@@ -29,7 +29,7 @@
 {% endblock %}
 {% block body %}
 {% if youtube|length > 0 %}
-    <youtube.0.Title id="post-175" class="td-post-template-11 post-175 post type-post status-publish format-video has-post-thumbnail hentry category-tagdiv-music category-tagdiv-video post_format-post-format-video td-container-wrap" itemscope="" itemtype="https://schema.org/youtube.0.Title">
+    <article id="post-175" class="td-post-template-11 post-175 post type-post status-publish format-video has-post-thumbnail hentry category-tagdiv-music category-tagdiv-video post_format-post-format-video td-container-wrap" itemscope="" itemtype="https://schema.org/youtube.0.Title">
         <div class="td-video-template-bg">
             <div class="td-container">
                 <div class="td-pb-row">
@@ -67,13 +67,13 @@
                         </header>
                         <div class="td-a-rec td-a-rec-id-post_style_11  ">
                             <div class="td-visible-desktop">
-                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:300px" src="http://placehold.it/300x250" alt="" width="300" height="250"></a>
+                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:300px" src="{{ asset('images/journal.jpg') }}" alt="" width="300" height="250"></a>
                             </div>
                             <div class="td-visible-tablet-landscape">
-                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:300px" src="http://placehold.it/300x250" alt="" width="300" height="250"></a>
+                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:300px" src="{{ asset('images/journal.jpg') }}" alt="" width="300" height="250"></a>
                             </div>
                             <div class="td-visible-tablet-portrait">
-                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:468px" src="http://placehold.it/468x60" alt="" width="468" height="60"></a>
+                                <a href="#"><img class="td-retina td-animation-stack-type0-2" style="max-width:468px" src="{{ asset('images/journal.jpg') }}" alt="" width="468" height="60"></a>
                             </div>
                         </div>
                     </div>
@@ -201,9 +201,7 @@
                                 </span>
                         </footer>
                         <div class="comments" id="comments">
-                            <div id="respond" class="comment-respond">
-                                <h3 id="reply-title" class="comment-reply-title">{{'commentaires'|capitalize}} <small><a rel="nofollow" id="cancel-comment-reply-link" href="/newspaper/td-post-how-to-make-a-perfect-caffe-macchiato-video/#respond" style="display:none">Cancel reply</a></small></h3>
-                            </div>
+                            <div class="fb-comments" data-href="{{ url('video_view', { 'id': youtube.0.Id }) }}" data-numposts="5"></div>
                         </div>
                         <div class="clearfix"></div>
                         {{ knp_pagination_render(youtube) }}
@@ -249,7 +247,7 @@
                 </div>
             </div>
         </div>
-    </youtube.0.Title>
+    </article>
 {% endif %}
 {% endblock %}
 {% block javascripts %}
@@ -277,5 +275,14 @@
             js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.9&appId=1651341078293386";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
     </script>
 {% endblock %}

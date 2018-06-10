@@ -23,7 +23,7 @@
     <meta name="twitter:site" content="@touslesjoursci">
     <meta name="twitter:creator" content="@touslesjoursci">
     <meta name="twitter:title" content="{{ article.name }}">
-    <meta name="twitter:description" content="{{ article.content|truncate(140, true, '...')|striptags }}">
+    <meta name="twitter:description" content="{{ article.content|truncate(140, true, '...')|striptags|raw }}">
     <meta name="twitter:image" content="{{ absolute_url(article.medias.0.assertPath|imagine_filter('thumb_article_view') ) }}">
     <meta name="twitter:image:alt" content="{{ article.legend }}">
 {% endblock %}
@@ -142,15 +142,15 @@
                                 <div class="td-post-source-tags">
                                 </div>
                                 <div class="td-post-sharing td-post-sharing-bottom td-with-like">
-                                    <span class="td-post-share-title">{{ 'partager'|upper }}</span>
+                                    <span class="td-post-share-title">{{ 'partager sur les reseaux'|upper }}</span>
                                     <div class="td-default-sharing">
                                         <a class="td-social-sharing-buttons td-social-facebook" href="https://www.facebook.com/sharer.php?u={{ url('page_view', {'slug': article.slug}) }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                                             <i class="td-icon-facebook"></i>
-                                            <div class="td-social-but-text">Facebook</div>
+                                            <div class="td-social-but-text">Partager sur Facebook</div>
                                         </a>
                                         <a class="td-social-sharing-buttons td-social-twitter" href="https://twitter.com/intent/tweet?text={{ article.name }}&amp;url={{ url('page_view', {'slug': article.slug}) }}&amp;via=@touslesjoursci">
                                             <i class="td-icon-twitter"></i>
-                                            <div class="td-social-but-text">Twitter</div>
+                                            <div class="td-social-but-text">Partager sur Twitter</div>
                                         </a>
                                         <a class="td-social-sharing-buttons td-social-google" href="https://plus.google.com/share?url={{ url('page_view', {'slug': article.slug}) }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-googleplus"></i></a>
                                         <a class="td-social-sharing-buttons td-social-pinterest" href="https://pinterest.com/pin/create/button/?url={{ url('page_view', {'slug': article.slug}) }}&amp;media={{ absolute_url(article.medias.0.assertPath|imagine_filter('thumb_facebook') ) }}&amp;description={{ article.name }}" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-pinterest"></i></a>
@@ -197,6 +197,19 @@
                         <!-- /.post -->
                         <div class="td_block_wrap td_block_related_posts td_uid_31_58eb57632aa45_rand td_with_ajax_pagination td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_31_58eb57632aa45">
                             <h4 class="td-related-title td-block-title">
+                                <a id="td_uid_32_58eb57632c31a" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_31_58eb57_comment" href="#">{{ 'Laissez un commentaire et partager'|upper }}</a>
+                            </h4>
+                            <div class="comments" id="comments">
+                                <div id="respond" class="comment-respond">
+                                    <div class="fb-comments" data-href="{{ url('page_view', { 'slug': article.slug }) }}" data-numposts="5"></div>
+                                </div>
+                                <!-- #respond -->
+                            </div>
+                            <!-- /.content -->
+                        </div> <!-- /.commentaire -->
+
+                        <div class="td_block_wrap td_block_related_posts td_uid_31_58eb57632aa45_rand td_with_ajax_pagination td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_31_58eb57632aa45">
+                            <h4 class="td-related-title td-block-title">
                                 <a id="td_uid_32_58eb57632c31a" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_31_58eb57632aa45" href="#">{{ 'autres articles'|upper }}</a>
                             </h4>
                             <div id=td_uid_31_58eb57632aa45 class="td_block_inner">
@@ -226,20 +239,13 @@
                             </div>
                         </div>
                         <!-- ./block -->
-                        <div class="comments" id="comments">
-                            <div id="respond" class="comment-respond">
-                                <h3 id="reply-title" class="comment-reply-title">{{ 'Commentaires'|upper }} <small><a rel="nofollow" id="cancel-comment-reply-link" style="display:none;">Cancel reply</a></small></h3>
-                            </div>
-                            <!-- #respond -->
-                        </div>
-                        <!-- /.content -->
                     </div>
                 </div>
                 <div class="td-pb-span4 td-main-sidebar" role="complementary">
                     <div class="td-ss-main-sidebar">
                         <div class="td-a-rec td-a-rec-id-sidebar ">
                             <span class="td-adspot-title">- Advertisement -</span>
-                            <div class="td-all-devices"><a href="#"><img src="http://placehold.it/350x250"/></a></div>
+                            <div class="td-all-devices"><a href="#"><img src="{{ asset('images/journal.jpg') }}"/></a></div>
                         </div>
                         <div class="td_block_wrap td_block_18 td_block_widget td_uid_35_58eb576330145_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_35_58eb576330145" >
                             <div class="td-block-title-wrap">
@@ -319,6 +325,14 @@
             if (d.getElementById(id)) {return;}
             js = d.createElement(s); js.id = id;
             js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.9&appId=1651341078293386";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>

@@ -51,6 +51,13 @@ class Info
     protected $updated;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="status", type="boolean")
+     */
+    protected $status;
+
+    /**
      * @var bool
      *
      * @ORM\Column(name="online", type="boolean")
@@ -181,4 +188,28 @@ class Info
         return $this;
     }
     
+
+    /**
+     * Set status
+     *
+     * @param boolean $status
+     *
+     * @return Info
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return boolean
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
 }

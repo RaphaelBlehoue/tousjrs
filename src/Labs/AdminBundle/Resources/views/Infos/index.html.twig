@@ -30,6 +30,7 @@
             <tr>
                 <th>Contenu</th>
                 <th>Status</th>
+                <th>Degré</th>
                 <th>Date de Mise à jour</th>
                 <th class="text-center">Actions</th>
             </tr>
@@ -42,6 +43,11 @@
                         <td>
                             <span class="label {{ (info.online == 1) ? 'label-info' : 'label-danger' }}">
                                  {{ (info.online == 1) ? 'En ligne' : 'Hors Ligne' }}
+                            </span>
+                        </td>
+                        <td>
+                            <span class="label {{ (info.status == 1) ? 'label-danger' : 'label-info' }}">
+                                 {{ (info.online == 1) ? 'Urgent' : 'Normal' }}
                             </span>
                         </td>
                         <td>{{ info.updated|date('d, m Y') }}</td>

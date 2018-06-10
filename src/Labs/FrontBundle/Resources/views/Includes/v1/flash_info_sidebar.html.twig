@@ -17,17 +17,27 @@
     </div>
     {% for new in news %}
         <div class="td-block-span12">
-            <div class="td_module_6 td_module_wrap td-animation-stack pb15 lh">
+            <div class="td_module_6 td_module_wrap td-animation-stack pb15 lh {% if new.status == true %} urgent {% endif %}">
                 <div class="td-module-thumb td-module-time">
                     <h5>
-                        <a href="#" rel="bookmark" title="">
-                            {{ new.updated|date('H') ~'h'~ new.updated|date('m') }}
-                        </a>
+                        {% if new.status == true %}
+                            <a href="{{ path('flash_view', {'id' : new.id }) }} " rel="bookmark" title="">
+                                {{ new.updated|date('H') ~'h'~ new.updated|date('m') }}
+                            </a>
+                        {% else %}
+                            <strong rel="flash-info" title="{{ new.content }}">
+                                {{ new.updated|date('H') ~'h'~ new.updated|date('m') }}
+                            </strong>
+                        {% endif %}
                     </h5>
                 </div>
                 <div class="item-details-2">
                     <h5 class="entry-title td-module-title">
-                        <a href="" rel="flash-info" title="{{ new.content }}">{{ new.content }}</a>
+                        {% if new.status == true %}
+                            <a href="{{ path('flash_view', {'id' : new.id }) }}" rel="flash-info" title="{{ new.content }}">{{ new.content }}</a>
+                        {% else%}
+                            <strong rel="flash-info" title="{{ new.content }}">{{ new.content }}</strong>
+                        {% endif %}
                     </h5>
                     <div class="td-module-meta-info">
                         <span class="td-post-date">
