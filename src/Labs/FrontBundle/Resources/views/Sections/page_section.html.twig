@@ -72,7 +72,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                {{ post.content|striptags|raw|truncate('200', false, '...') }} <a href="{{ path('page_view', { 'slug': post.slug }) }}" title="{{ post.name }}">{{ 'Lire la suite' }}</a>
+                                                {{ post.content|raw|striptags|truncate('200', false, '...') }} <a href="{{ path('page_view', { 'slug': post.slug }) }}" title="{{ post.name }}">{{ 'Lire la suite' }}</a>
                                             </div>
                                         </div>
                                     </div>
