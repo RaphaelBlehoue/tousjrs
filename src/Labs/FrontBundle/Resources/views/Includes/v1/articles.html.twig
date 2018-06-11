@@ -57,7 +57,7 @@
 
                 <div class="item-details">
                     <h3 class="entry-title td-module-title">
-                        <a href="{{ path('page_view', {'slug': arts.slug }) }}" rel="{{ arts.item.name }}" title="{{ arts.name }}">{{ arts.name|truncate('120', false, '...') }}</a>
+                        <a href="{{ path('page_view', {'slug': arts.slug }) }}" rel="{{ arts.item.name }}" title="{{ arts.name }}">{{ arts.name|truncate('120', false, '...')|striptags|raw }}</a>
                     </h3>
                     <div class="td-module-meta-info">
                         <span class="td-post-date">
@@ -88,7 +88,7 @@
 
                 <div class="item-details">
                     <h3 class="entry-title td-module-title">
-                        <a href="{{ path('page_view', {'slug': post.slug }) }}" rel="{{ post.item.name }}"  title="{{ post.name }}">{{ post.name|truncate('120', false, '...') }}</a>
+                        <a href="{{ path('page_view', {'slug': post.slug }) }}" rel="{{ post.item.name }}"  title="{{ post.name }}">{{ post.name|truncate('120', false, '...')|striptags|raw }}</a>
                     </h3>
                     <div class="td-module-meta-info">
                         <span class="td-post-date">

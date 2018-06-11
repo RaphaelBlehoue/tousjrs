@@ -24,7 +24,7 @@
                             <!--<div class="td-module-comments"><a href="">0</a></div>-->
                         </div>
                         <div class="td-excerpt">
-                            {{ article.content|striptags|truncate('120', false, '...') }}
+                            {{ article.content|truncate('120', false, '...')|striptags|raw }}
                         </div>
                     </div>
                 </div>

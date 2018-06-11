@@ -72,7 +72,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                {{ post.content|raw|striptags|truncate('200', false, '...') }} <a href="{{ path('page_view', { 'slug': post.slug }) }}" title="{{ post.name }}">{{ 'Lire la suite' }}</a>
+                                                {{ post.content|truncate('200', false, '...')|striptags|raw }} <a href="{{ path('page_view', { 'slug': post.slug }) }}" title="{{ post.name }}">{{ 'Lire la suite' }}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -104,12 +104,8 @@
                 </div>
                 <div class="td-pb-span4 td-main-sidebar" role="complementary">
                     <div class="td-ss-main-sidebar">
-                        <div class="td-a-rec td-a-rec-id-sidebar ">
-                            <span class="td-adspot-title">- Advertisement -</span>
-                            <div class="td-all-devices"><a href="#"><img src="{{ asset('images/journal.jpg') }}"/></a></div>
-                        </div>
                         <!-- block network information -->
-                        {% include('LabsFrontBundle:Includes/v1:social-info.html.twig') %}
+                        {# include('LabsFrontBundle:Includes/v1:social-info.html.twig') #}
                         <!-- end block network information -->
                         <!-- block last time -->
                         <div class="td_block_wrap td-pb-border-top td_block_template_1">

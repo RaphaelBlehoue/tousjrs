@@ -73,7 +73,7 @@
                         <meta itemprop="position" content="1">
                     </span>
                     <i class="td-icon-right td-bread-sep td-bred-no-url-last"></i>
-                    <span class="td-bred-no-url-last">{{ article.name|truncate('150', false, '...') }}</span>
+                    <span class="td-bred-no-url-last">{{ article.name|truncate('150', false, '...')|striptags|raw }}</span>
                 </div>
             </div>
             <!-- content -->
